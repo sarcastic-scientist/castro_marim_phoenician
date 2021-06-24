@@ -51,7 +51,7 @@ preamble: |
   \sloppy
 bibliography: bibliography.bib
 #linenumbers: true
-layout: 5p #review,3p,5p
+layout: 3p #review,3p,5p
 numbersections: true
 csl: elsevier-harvard.csl
 output: 
@@ -89,7 +89,6 @@ Agricultural techniques from the East, such as irrigation, were used to improve 
 
 ```{r castro-marim-loc, dpi=600, fig.show="hold", out.width='0.98\\textwidth', fig.env='figure*', fig.cap= 'Map indicating the location of Castro Marim on the banks of Guadiana Estuary, Algarve Region of Portugal (www.openstreetmap.org).'}
 
-here::here()
 
 knitr::include_graphics(
   'C:/Users/rosha/OneDrive - Universidade de Évora/Documents/R/Projects/castro_marim_phoenician/images/Castro Marim Map.jpg',
@@ -143,7 +142,7 @@ dffinal <- here::here("./data/castrokable.csv") %>%
 ```{r, echo=FALSE, results='asis'}
 dffinal %>%
   select(Sample,Phase, Species, Element, dC, dN, dS) %>%
-  kable(caption = "Isotope Data of Castro Marim", digits = 2, booktabs = T, format = "latex", escape = FALSE, col.names=c("ID","Phase","Species","Element", "$\\delta^{13}C (\\text{\\textperthousand})$","$\\delta^{15}N (\\text{\\textperthousand})$","$\\delta^{34}S (\\text{\\textperthousand})$")) %>%
+  kable(caption = "Isotope Data of Castro Marim", digits = 2, booktabs = T, format = "latex", escape = FALSE,table.env='table*', col.names=c("ID","Phase","Species","Element", "$\\delta^{13}C (\\text{\\textperthousand})$","$\\delta^{15}N (\\text{\\textperthousand})$","$\\delta^{34}S (\\text{\\textperthousand})$")) %>%
   kable_styling(latex_options = c("basic", "hold_position"), full_width = TRUE)
   
 ```

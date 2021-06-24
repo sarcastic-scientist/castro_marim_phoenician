@@ -1,0 +1,214 @@
+---
+title: Stable isotope approach to farming and husbandry practices at Phoenician site of Castro Marim between 8th – 5th century B.C.E
+author:
+  - name: Roshan Paladugu
+    email: rpaladugu@uevora.pt
+    affiliation: Universidade de Évora,Laboratório HERCULES
+    footnote: 1
+  - name: Alessandra Celant
+    email: alessandra.celant@uniroma1.it
+    affiliation: SAPIENZA Università di Roma
+  - name: Federico Di Rita
+    email: federico.dirita@uniroma1.it
+    affiliation: SAPIENZA Università di Roma
+    footnote: 2
+  - name: Ana Margarida Arruda
+    email: ana2@campus.ul.pt
+    affiliation: Universidade de Lisboa
+    footnote: 2
+  - name: Donatella Magri
+    email: donatella.magri@uniroma1.it 
+    affiliation: SAPIENZA Università di Roma
+    footnote: 2  
+  - name: Cristina Barrocas Dias
+    email: cmbd@uevora.pt
+    affiliation: Universidade de Évora,Laboratório HERCULES
+    footnote: 2
+address:
+  - code: Universidade de Évora
+    address: Departamento de Química, Escola de Ciências e Tecnologia, Universidade de Évora, Colégio Luís António Verney, Rua Romão Ramalho 59, Évora, Portugal (7000-671)
+  - code: Laboratório HERCULES
+    address: Laboratório HERCULES, Universidade de Évora, Palácio do Vimioso, Largo Marquês de Marialva 8, 7000-554 Évora, Portugal
+  - code: SAPIENZA Università di Roma
+    address: Dipartimento di Biologia Ambientale, SAPIENZA Università di Roma, Piazzale A. Moro 5, 00185 Roma, Italy
+  - code: Universidade de Lisboa
+    address: Centro de Arqueologia da Universidade de Lisboa, Faculdade de Letras da Universidade de Lisboa, Alameda da Universidade, 1600-214, Lisboa, Portugal
+footnote:
+  - code: 1
+    text: "Corresponding Author"
+  - code: 2
+    text: "Equal contribution"
+abstract: |
+  This is the abstract.
+
+  It consists of two paragraphs.
+
+journal: "Journal of Archaeological Science"
+date: "`r Sys.Date()`"
+preamble: |
+  \usepackage{wasysym}
+  \usepackage{geometry}
+  \sloppy
+bibliography: bibliography.bib
+#linenumbers: true
+layout: 5p #review,3p,5p
+numbersections: true
+csl: elsevier-harvard.csl
+output: 
+    bookdown::pdf_book:
+      base_format: rticles::elsevier_article
+      extra_dependencies: "subfig"
+---
+
+# Introduction
+
+Iberian Peninsula underwent Oriental colonization by thalassocracy influences originating from the Near East in the Early Iron Age (8th -- early 5th centuries B.C.E). These colonizers, referred to as Phoenicians, were mostly culturally homogeneous and politically independent city-states with the Levant's power nucleus (present-day Lebanon) [@dietler09; @gomes_arruda18; @quinn19]. The city-states served as nodes of an expansive trade network across the Mediterranean, including the Atlantic coast of Europe [@aubet01; @markoe05]. It is widely accepted that the main driving force behind this westward expansion was the need to establish a stable supply of metalliferous resources [@arruda09; @aubet01; @eshel_etal19; @markoe05]. Phoenicians have mined the Iberian Pyrite belt for silver, tin, lead, and copper circa early 800 B.C.E [@eshel_etal19; @renzi_etal12; @wood_etal19]. These mined metals were hauled back to the inner Mediterranean region through their well-established networks through posts along the rivers and southern shore of the Iberian Peninsula [@eshel_etal19].
+
+The intense and prolonged density of settlements along the Southern Iberian coast cannot simply be explained by the quest for mineral sources, primarily because most of them are situated in locations with neither metallogenic minerals nor indigenous settlements. This settlement pattern is further emphasized by the contrast between the densely clustered settlements of Iberia and sparsely scattered settlements of North Africa. Other factors influencing the settlement density include agricultural resources [@wagner_alvar03; @wagner_alvar89], exploitation of marine resources (salt [@manfredi92], and Tyrrhenian Purple production [@uriel00]), timber [@treumann09; @treumann98], and labor force [@arrastio99; @arrastio00]. The Phoenician traders had to ensure stable sources of food for the population apart from the industrial activities. Southwestern Iberia has been noted for its rich mineral veins and abundant natural fertility, and the Phoenicians exploited this fertile landscape while actively transforming it -- including cultivable land [@arruda03; @arruda09; @neville98; @roller14]. The Phoenicians' metal exploitation perspective has been studied, but the agricultural aspects have received very little attention. This study aims to shed light on the stable isotope approach to reconstruct the farming strategies and animal husbandry practices in the Phoenician -- Punic period of Portugal, specifically at Castro Marim.
+
+```{r global_options, include=FALSE, dev=c('png', 'pdf', 'svg', 'tiff')}
+library(tidyverse)
+library(here)
+library(ggsci)
+library(kableExtra)
+library(knitr)
+
+knitr::opts_chunk$set(echo=FALSE, message = FALSE, error = FALSE, warning = FALSE)
+
+```
+
+# Context
+
+## Phoenician - Punic Agriculture
+
+Most knowledge about Phoenician and Punic agriculture comes from the famous treaty by Mago, of which only a few fragments have survived and subsequently translated [@martin71]. Other accounts are by authors from the Greek and Roman domains, usually written centuries after the demise of the Phoenician -- Punic civilization. The current understanding has been mainly developed due to systematic excavations of different Phoenician -- Punic settlements in Iberia and subsequent zooarchaeological and archaeobotanical studies on the recovered faunal and botanical remains [@aubet01; @wagner_alvar03; @wagner_alvar89].
+The Southwest Iberian region has been praised by Strabo (3, 2, 8) for possessing the rare combination of abundant mineral deposits and natural fertility [@roller14].  From the 9th century B.C.E, Phoenician presence is noted in the Iberian Peninsula along the Atlantic's coastal zone. This strategic location gave them reasonable access to the sailing routes and provided them with a plethora of cultivable land [@aubet01]. The colonies in Iberia were located in a landscape similar to that in the Levant with proximity to the coast and marked with steep mountain ranges and riverine valleys. Being located in a river valley gave the colonizers the ease of adapting existing practices from the Mediterranean in the Iberian hinterland. This included modifying and adapting the landscape to suit their agricultural needs, comprising farming and animal husbandry [@gomezbellard19].
+
+Agricultural techniques from the East, such as irrigation, were used to improve upon the native practices. The iron production technology gave more robust implements such as plowshare etc., to the farmers. Better yielding cultivars (Eg: grapes and olives) and new species of animals (Eg: horse, donkey, and chicken) were introduced [@davis07; @queiroz_etal06]. Following the "sixth century crisis", the colonies in Iberia came under Carthage's influence, and this period is referred to as the Punic period [@arruda_etal13]. The crisis had multiple facets of which one of the leading cause was the exhaustion of Iberia's mineral resources. This crisis forced the settlements to change their economy from an industry-driven one to a more agronomic-based one. This economic change brought a drastic change in space use concerning both settlement and domain. In the Punic period, in addition to the cultivation of cash crops and wine, local usable arboreal products were identified and exploited to boost exports [@gomezbellard19; @neville98]. The exploitation of arboreal products and perennial crops meant the existence of both short-term and long-term agricultural investments. Such diverse investments with different harvest times must have led to the development of a complex agricultural economy.
+
+```{r castro-marim-loc, dpi=600, fig.show="hold", out.width='0.98\\textwidth', fig.env='figure*', fig.cap= 'Map indicating the location of Castro Marim on the banks of Guadiana Estuary, Algarve Region of Portugal (www.openstreetmap.org).'}
+
+knitr::include_graphics(
+  'C:/Users/rosha/Documents/test01/Castro Marim Map.jpg',
+  auto_pdf = getOption("knitr.graphics.auto_pdf", FALSE),
+  error = getOption("knitr.graphics.error", TRUE)
+)
+
+```
+
+## Site Background
+
+Castro Marim is located on the Guadiana estuary (Fig. \ref{fig:castro-marim-loc}) as a portal to the metallogenic mineral-rich Baixo -- Alentejo region as well as to the fertile cultivable lands in the interior regions. The Iron Age settlement was located on an elevation with adequate natural defensive elements and overlooked vast swatches of land, which allowed domination of estuarine traffic and agricultural activities in its domain of influence. These conditions allowed trade and cultural networks between the indigenous communities with the Mediterranean communities to flourish. The earliest human activities are traced back to the Late Bronze Age with East-West orthogonal settlement architecture around the first half of 7th century B.C.E, in the Orientalising period [@arruda96; @arruda_etal13]. Phoenician imports and other human presence signs declined from the second half of 6th-century B.C.E till the first half of 5th-century B.C.E [@arruda96]. Significant changes in material culture and restructuring of the settlement architecture with a Northeast -- Southwest orientation are observed from the second half of the 5th-century B.C.E [@arruda_etal06; @arruda_etal13; @arruda_freitas08]. The earlier period's departure was marked with imports from Greek products -- specifically ceramics such as kilikes, skyphoi, and kantharoi [@arruda_etal13]. This resurgence put Castro Marim back in the Phoenician string of pearls along the Iberian Peninsula's Atlantic coast till the 3rd-century B.C.E [@arruda_etal06; @arruda_etal13; @neville98; @niemeyer84]. The Phoenician -- Punic period is represented by archaeological phases III, IV, and V.
+
+Being in a littoral zone made it was possible to adopt a wide range of agricultural strategies and husbandry practices at Castro Marim. The presence of cereals (*Hordeum* / *Triticum*), grapes (*Vitis*), pulses (*Vicia* / *Cicer*), and other cultivated species (*Olea* / *Coriandrum*) as well as exploitation of wild woody plants (*Pinus* / *Arbutus* etc.) have been elucidated from the archaeological record [@queiroz_etal06]. The animals (native to Portugal) include cattle (*Bos taurus*), goat (*Capra hircus*), sheep (*Ovis aries*), pig (*Sus scrofa/domesticus*), red deer (*Cervus elaphus*), and rabbit (*Oryctolagus cuniculus*) [@davis07]. The sudden arrival of chicken (*Gallus domesticus*) has been documented, which the Phoenicians introduced in the second half of 5th-century B.C.E [@davis07].
+
+## Zooarchaeological assessment
+
+Davis, 2007 carried out the zooarchaeological assessment. Ovicaprids (sheep and goats) followed by pigs and cattle dominate the Castro Marim mammal taxa. Both sheep and goats were equally represented with negligible fluctuations throughout the Iron Age at Castro Marim. The wild species in the assemblage consisted mainly of red deer and rabbits. It is worth mentioning here that no morphometric distinction could be made between wild and domesticated pigs. Both the species are present consistently in all the phases of the settlement. It is worth mentioning that the wild relative of the domesticated pig was not distinguishable from the latter. There is a spike in the presence of bird remains in the later phases of the Iron Age (Phase IV - V), primarily due to the introduction of domesticated chicken. The presence of partridge, a common wild species of Iberia, is also noted. Unlike the chicken, partridge has never been domesticated. Ovicaprids and cattle were kept well into maturity as they were prized more for their secondary purposes than their meat. Sheep and goat were kept for their milk and wool, usually slaughtered after they reach at least two years of age. Cattle were valued for their power to plow in the fields as well as to pull heavy loads. Also, they too were a source of milk. Pigs, on the other hand, were slaughtered as juveniles as they were primarily reared for slaughter. Most of the red deer found were adults, suggesting a hunting preference of that period as a vital subsidiary source of meat. Chicken seems to be slaughtered at a young age, whereas the partridges at an adult age. The slaughter age indicates the domesticated status of chicken and wild status of partridge, respectively.
+
+## Archaeobotanical assessment
+
+The original archaeobotanical assessment was carried out by @queiroz_etal06. Cereals make up the most significant fraction of the carpological remains. The bulk of cereals is barley (*Hordeum vulgare*) with a tiny fraction of wheat (*Triticum durum/aestivum*). Pulses are mainly broad beans (*Vicia faba*) and chickpeas (*Cicer arietinum*), of which the former has been present in Portugal since prehistoric times, whereas the latter is introduced as a luxury food in the Roman period from Asia. The presence of grape (*Vitis vinifera/sylvestris*) seeds and carbonized wood is typical, starting from the Roman period in Portugal. The presence of grape seeds in Iron Age Castro Marim indicates cultivation by the local population. The most exciting carpological remains are of coriander (*Coriandrum sativum*) which is not native to Portugal and was supposed to be introduced during medieval times, making this the earliest coriander occurrence in Portugal. Charred pine, oak, ash, and poplar wood were recovered abundantly. The exploitation of wild woody plants for timber and fruits marks the Iberian peninsula's Phoenician colonization. Due to unforeseen circumstances, these identified remains could not be accessed for isotope analyses. Previously unprocessed sediments were studied again to gain botanical remains.
+
+
+# Methodological approach 
+
+## ZooMS Analysis of Ovicaprids
+
+Skeletal elements of goats and sheep are a common occurrence in archaeological contexts. A major issue plaguing comparative husbandry studies between sheep and goat is the overlap of skeletal elements [@boessneck_etal64; @payne69; @schramm67]. This is further complicated by the environmental modifications which erode diagnostic markers and produce undistinguishable fragments [@buckley_etal10]. Zooarchaeology by Mass Spectrometry (ZooMS) is a high-throughput analytical technique which can discriminate unidentifiable bone fragments. ZooMS exploits the the genetically distinct alpha 2 ($\alpha2$) chain of the collagen (I) protein to distinguish between different species. Collagen is the most abundant protein in mammalian tissues and this allows for its extraction in most scenarios where DNA cannot be retrieved [@lyman94]. The genus *Capra* is identified by an m/z at 3093 whereas that of *Ovis* has a peptide marker with an observed m/z at 3033 [@buckley_etal10].
+
+
+## Stable isotope analysis of plants and animals
+
+Stable isotope ($\delta ^{13}C$, and $\delta ^{15}N$) analyses of faunal bones are valuable means of reconstructing foddering practices and other animal husbandry aspects [@price_etal17]. The variation in $\delta ^{13}C$ of terrestrial organisms is determined by the primary producers' photosynthetic pathway, distinguished as C~3~, C~4~, and CAM plants [@deniro_epstein78; @farquhar_etal89; @kohn10; @tieszen91]. Plant species are overwhelmingly C~3~ in nature, including most cultivated plants such as barley, wheat, oats, potato, and other wild edible plants [@fernandez-crespo_etal19]. C~4~ plants consist primarily of tropical grasses, millets, sugarcane, corn, and sorghum. C~4~ plants thrive in warm and high-temperature environments and thus are restricted to coastal zones in regions with temperate climates [@leegood13; @price_etal17]. $\delta ^{13}C$ measurements are also helpful to differentiate between terrestrial and aquatic food sources [@froehle_etal10; @kellner_schoeninger07]. $\delta ^{15}N$ values indicate the isotopic composition of the consumers and their dietary intake to consumers in a food chain [@price_etal17]. $\delta ^{15}N$ values can also be used to distinguish between terrestrial and marine diets [@deniro_epstein81; @webb_etal17a], consumption of manured, and unmanured crops [@bogaard_etal13; @deniro_epstein81; @fernandez-crespo_etal19; @fraser_etal13a], and trophic level within an established ecosystem [@hedges_reynard07; @schoeninger85].
+
+There are only two significant inputs, which humans can manipulate to cultivate plants: water and nitrogen input. Variation in $\delta ^{13}C$ values of plants is primarily due to water availability as any dry spells affect the movement of carbon dioxide through the stomata [@ferrio_etal05; @ferrio_etal07]. The water status of crops can be artificially controlled by irrigation regimes which are also reflected in $\delta ^{13}C$ values [@ferrio_etal05; @wallace_etal13]. It is essential to convert the absolute $\delta ^{13}C$ values to carbon discrimination values to facilitate the comparison with the values of the modern crops grown under controlled watering regimes [@farquhar_etal89;@wallace_etal13]:
+
+$$\Delta^{13}C = \frac{\delta ^{13}C_{air} - \delta ^{13}C_{plant}}{1+\delta ^{13}C_{plant}/1000}$$
+Another major factor, which affects the $\delta ^{13}C$ measurements, is the canopy effect where forested areas are more depleted in the heavier ^13^C isotope compared to open areas [@bonafini_etal13]. One of the most ancient practices to increase soil fertility is by manuring with animal waste as animal manure is much higher than endogenous soil in terms of nitrogen isotopic composition [@bogaard_etal13]. Usually, the plants treated with manure exhibit higher $\delta ^{15}N$ values (as much as 10\permil) when compared to unfertilized plants [@bogaard_etal07; @fraser_etal11]. The $\delta ^{13}C$ and $\delta ^{15}N$ values themselves do not reveal the agricultural practices but reveal patterns when interpreted within the context of a specific site.
+
+The mean $\delta ^{34}S$ value of terrestrial sources is assumed to be 0\permil. Inorganic sulfur enters the food web through plants from the weathered bedrock (in a complete terrestrial setting), precipitation (sea spray), and microbial activity due to flooding events [@nitsch_etal19]. As the inorganic sulfur passes through the food web in the form of proteins, only a negligible fractionation occurs between diet and consumer [@hobson99; @nehlich15]. Thus, the $\delta ^{34}S$ ratio of collagen closely reflects that of the native water source, bedrock, and soluble sulphur-bearing minerals.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE)
+
+dffinal <- here::here("castrokable.csv") %>%
+  readr::read_csv(col_names = TRUE)
+```
+
+
+```{r, echo=FALSE, results='asis'}
+dffinal %>%
+  select(Sample,Phase, Species, Element, dC, dN, dS) %>%
+  kable(caption = "Isotope Data of Castro Marim", digits = 2, booktabs = T, format = "latex", escape = FALSE, col.names=c("ID","Phase","Species","Element", "$\\delta^{13}C (\\text{\\textperthousand})$","$\\delta^{15}N (\\text{\\textperthousand})$","$\\delta^{34}S (\\text{\\textperthousand})$")) %>%
+  kable_styling(latex_options = c("basic", "hold_position"), full_width = TRUE)
+  
+```
+
+
+# Materials and Methods
+
+## Archaeobotanical Analysis
+
+200 grams of sediment from each stratigraphic layer of the excavation site was weighed and handpicked for plant macro remains (fruits and charcoal). The recovered remains were examined under a stereo-microscope and taxonomically identified (Table 2).
+In carbonized plant macro remains, barley grain samples consist of at least 10 whole grains, and pine samples consist of 1 fruit. Morphologically intact samples were chosen after examination under a stereomicroscope (7-45x magnification) and removing any visibly adhering foreign contaminant. An acid-base-acid (ABA) treatment was applied as a pre-treatment [@bogaard_etal13; @fraser_etal13a]. First, the samples are treated with 10 mL of 0.5 M HCl at 70 $\text{\textdegree}$C for 60 minutes (or until effervescing stops) and then rinsed with ultrapure water until a neutral pH was achieved. 10 mL of 0.1 NaOH solution was added to the samples at 70 $\text{\textdegree}$C for 60 minutes and then rinsed with ultrapure water to achieve a neutral pH. Finally, the samples were treated with 0.5 M HCl at 70 $\text{\textdegree}$C for 30-60 minutes, followed by 3 rinses with ultrapure water and subsequent freeze-drying.
+
+## Sample Selection
+
+Fifty faunal bone samples from conclusively adult individuals as well as 9 charred plant macro-remains of *Hordeum vulgare* subsp. *vulgare*, *Hordeum vulgare* subsp. *nudum*, and *Pinus* sp. each have been selected for this study. The sampled faunal bones represent the Phoenician -- Punic period of the settlement (phases III, IV, and V), whereas the charred plant macro -- remains are from only from phase V due to the absence of plant remains from the older phases.
+
+## Bone Preservation: Fourier Transform Infrared Spectroscopy
+500 -- 700 mg of bone was cut using a DREMEL$\text{\textregistered}$ rotary drill with a diamond disc and cleaned of dirt, discoloration, and other foreign content with a dental burr. In addition, compact bone was sampled over spongy bone. Bone fragments were slightly polished with fine sandpaper to obtain a flat surface [@hollund_etal13]. Infrared spectra were collected using a Bruker$^\text{\textregistered}$ Alpha$^\text{\texttrademark}$ Spectrometer with a single-reflection diamond crystal ATR module. Each spectrum was obtained by an accumulation of 128 scans with a spectral resolution of 4 cm^-1^, from 2000 cm^-1^ to 375 cm^-1^. Infrared Splitting Factor (IRSF) and relative carbonate content (C/P) were calculated using absorbance heights at 565 cm^-1^, 590 cm^-1^, 605 cm^-1^, 1035 cm^-1^, and 1415 cm^-1^ wavenumbers [@trueman_etal08; @weiner_bar-yosef90; @wright_schwarcz96].
+
+## Collagen Extraction
+The modified @longin71 method was used to extract collagen from faunal bones [@richards_hedges99]. Approximately 600 mg of bone sample was demineralized using 0.5 M HCl at 4 $\text{\textdegree}$C for a fortnight with daily vortex and an acid change after 7 days. Repeated rinses with ultrapure water to reach neutral pH were performed, and the demineralized bones were subjected to an overnight treatment in 0.125 M NaOH at room temperature to remove fulvic and humic acid contamination. The samples were then rinsed repeatedly with ultrapure water to achieve neutrality and gelatinized in 0.01 M HCl at 70 $\text{\textdegree}$C for 48 hours. The impurities were separated by filtering the collagen-containing liquid fraction using Ezee -- Filter$^\text{\texttrademark}$ filters (Elkay$^\text{\textregistered}$ Laboratory Products). The solubilized collagen was frozen and subsequently lyophilized for 48 hours.
+
+
+## Stable carbon and nitrogen isotope analysis
+0.5 - 0.7 mg of freeze-dried collagen powder/barley grain samples were weighed in tin capsules and combusted in an elemental analyzer (EA) with oxygen (Flash 2000 HT$^\text{\texttrademark}$, Thermo Fisher Scientific$^\text{\textregistered}$, Bremen, Germany) using pure helium as carrier gas. Isotopic ratios were obtained on a Delta V Advantage Continuous Flow$^\text{\texttrademark}$ -- Isotope Ratio Mass Spectrometer (Thermo Fisher Scientific$^\text{\textregistered}$, Bremen, Germany). The raw machine output was normalised by a three-point calibration using international standard reference materials (SRM), namely IAEA-CH-6 (sucrose, $\delta ^{13}C$ = -- 10.499\permil), IAEA-600 (caffeine, $\delta ^{13}C$ = -- 27.771\permil; $\delta ^{15}N$ = + 1\permil), and IAEA-N-2 (ammonium sulphate, $\delta ^{15}N$ = + 20.3\permil) and in-house standard L-Alanine ($\delta ^{13}C$ = -- 19.17\permil; $\delta ^{15}N$ = + 4.26\permil). The standards are regularly (after eleven analyses) included in the analytical routine to correct for instrumental drifts. The isotope values are expressed in per mill (\permil) relative to VPDB (Vienna Pee-Dee Belemnite) for carbon and AIR (Ambient Inhalable Reservoir) for nitrogen. The fluctuations in $\delta ^{13}C$ of the atmospheric CO~2~ throughout the Holocene were considered while interpreting the stable carbon isotope ratios. The $\delta ^{13}C$ of atmospheric CO~2~ during the period in the study was approximated using the AIRCO~2~_LOESS system, and then this value was used to compute the $\delta ^{13}C$ discrimination of plants independent of the source CO~2~ [@farquhar_etal82; @ferrio_etal05].
+
+## Stable sulphur isotope analysis
+The collagen samples were combusted with additional V~2~O~5~ and a oxygen pulse (IsoPrime$^\text{\texttrademark}$ Mass spectrometer, Elementar Analysensysteme GmbH$^\text{\textregistered}$, Langenselbold, Germany). Calibration of $\delta ^{34}S$ values was performed using international inorganic standards for stable sulphur isotope analysis: NBS127 (+20.3\permil) and IAEA S1 (-0.3\permil). B2155 protein (+6.96 ± 0.04\permil) was used as an internal quality control standard. Stable sulphur isotope values are reported in parts per thousand relative to Vienna-Canyon Diablo Troilite (VCDT).
+
+
+## Statistical Analysis
+The obtained data were subjected to statistical analysis using R programming language [@rcoreteam20; @wickham16]. Initially, means and standard deviations were calculated per species. Z-scores were calculated to detect the presence of outliers. Deviance from normal distribution was assessed using Shapiro-Wilks test. F-tests were first used to check for significant equal variance, and subsequently, Student's t-tests were used for two-sample comparison since all the datasets were normally distributed.
+
+# Results
+
+## Bone Preservation
+
+### Fourier Transform - Infrared Spectroscopy
+The IRSF index values are in a range of 2.37 - 3.37 (accepted range is 2.96 - 4.04) and the C/P index values are in the range of 0.2-0.428 (accepted range is 0.054 - 0.47) which fall well within the accepted range for well-preserved archaeological bones [@hollund_etal13; @lebon_etal16].
+
+### Collagen Quality
+Collagen extraction was successful for all the bone samples, based on published criteria, with carbon content between 15.3% and 47.0% [@ambrose90], nitrogen content between 5.5% and 17.3% [@ambrose90], C/N values between 2.9 and 3.6 [@deniro85], C/S values between 300% and 900% [@nehlich_richards09], and collagen yields greater than 1% [@vanklinken99]. The extracted bone collagen samples exhibit C/N values ranged between 3.1 and 3.5 and C/S values between 225.9 and 688.4. Carbon and nitrogen amounts range from 20.3% to 50.0% and 7.3% and 18.1% respectively. Collagen yields range between 2.5% to 49.1%.
+
+## Botanical Remains
+No botanical remains could be recovered from the soil samples of phases I – IV due to the smaller scale of settlements as well as poor preservation conditions. The bulk of the recovered remains are from phase V representing the most mature chronological period of the occupation.
+
+## Faunal bone collagen isotope values
+```{r comp-iso-plot, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, out.width='0.98\\textwidth', fig.height=8, fig.env='figure*', fig.cap= 'Plot showing isotope values of faunal bone collagen.'}
+
+#Setting the Working Directory
+setwd('C:/Users/rosha/Documents/')
+#Importing the data in ASCII format 
+Dfraw = read.table(file = 'Castrofauna.txt', header = TRUE)
+#Ordering the sample occurrence according to species
+Dfmain = Dfraw[order(Dfraw$Species), ]
+
+#Command for plotting all data
+theme<-theme(panel.background = element_blank(),legend.position="right",panel.border=element_rect(fill=NA),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),strip.background=element_blank(),axis.text.x=element_text(colour="black"),axis.text.y=element_text(colour="black"),axis.ticks=element_line(colour="black"),plot.margin=unit(c(1,1,1,1),"line"))
+
+compplot<-ggplot(Dfmain, aes(x = dC, y = dN, shape = factor(Species), colour = factor(Species))) + geom_point(size = 4, alpha = 0.65) + scale_color_aaas() + scale_shape_manual(values = c(15,16,17,18,19,15,16,17,18,19)) +
+labs(x = expression(paste(delta^{13}, "C (\u2030 vs. VPDB)")), y = expression(paste(delta^{15}, "N (\u2030 vs. Air)")), shape = 'Species', colour = 'Species') + coord_fixed(0.5) + scale_y_continuous(breaks=seq(2.5,16,1)) + scale_x_reverse(breaks=seq(-22,-14,1)) + theme
+
+compplot
+
+```
+
+All the faunal samples exhibited collagen quality parameters indicative of good preservation. 
+
+
+
+# References

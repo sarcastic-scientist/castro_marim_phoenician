@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.6.24)  24 JUN 2021 15:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.6.24)  24 JUN 2021 18:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -911,107 +911,74 @@ ents/R/Projects/castro_marim_phoenician/images/Castro Marim Map.jpg  used on in
 put line 155.
 (pdftex.def)             Requested size: 458.638pt x 280.3924pt.
 [2] [3 <c:/Users/rosha/OneDrive - Universidade de Évora/Documents/R/Projects/c
-astro_marim_phoenician/images/Castro Marim Map.jpg>] [4] (c:/Users/rosha/AppDat
-a/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd)
-Overfull \hbox (13.80153pt too wide) in paragraph at lines 275--275
-[]\T1/lmr/m/n/10 (-20) Tarsometatarsal|  
- []
+astro_marim_phoenician/images/Castro Marim Map.jpg>] [4]
 
+LaTeX Warning: Float too large for page by 190.02716pt on input line 277.
 
-Overfull \hbox (13.80153pt too wide) in paragraph at lines 275--275
-[]\T1/lmr/m/n/10 (-20) Tarsometatarsal|  
- []
-
-
-Overfull \hbox (59.29271pt too wide) in paragraph at lines 275--275
-[]\T1/lmr/m/n/10 (-20) Gallus/Numida/Phasianus|  
- []
-
-
-Overfull \hbox (59.29271pt too wide) in paragraph at lines 275--275
-[]\T1/lmr/m/n/10 (-20) Gallus/Numida/Phasianus|  
- []
-
-
-Overfull \hbox (59.29271pt too wide) in paragraph at lines 275--275
-[]\T1/lmr/m/n/10 (-20) Gallus/Numida/Phasianus|  
- []
-
-
-Overfull \hbox (59.29271pt too wide) in paragraph at lines 275--275
-[]\T1/lmr/m/n/10 (-20) Gallus/Numida/Phasianus|  
- []
-
-
-Overfull \hbox (18.97461pt too wide) in paragraph at lines 275--275
-[]\T1/lmr/m/n/10 (-20) Carpometacarpal|  
- []
-
-
-Overfull \hbox (59.29271pt too wide) in paragraph at lines 275--275
-[]\T1/lmr/m/n/10 (-20) Gallus/Numida/Phasianus|  
- []
-
-
-Overfull \hbox (18.97461pt too wide) in paragraph at lines 275--275
-[]\T1/lmr/m/n/10 (-20) Carpometacarpal|  
- []
-
-
-Overfull \hbox (59.29271pt too wide) in paragraph at lines 275--275
-[]\T1/lmr/m/n/10 (-20) Gallus/Numida/Phasianus|  
- []
-
-
-Overfull \hbox (18.97461pt too wide) in paragraph at lines 275--275
-[]\T1/lmr/m/n/10 (-20) Carpometacarpal|  
- []
-
-
-Overfull \hbox (13.80153pt too wide) in paragraph at lines 275--275
-[]\T1/lmr/m/n/10 (-20) Tarsometatarsal|  
- []
-
-
-Overfull \hbox (59.29271pt too wide) in paragraph at lines 275--275
-[]\T1/lmr/m/n/10 (-20) Gallus/Numida/Phasianus|  
- []
-
-
-Overfull \hbox (59.29271pt too wide) in paragraph at lines 275--275
-[]\T1/lmr/m/n/10 (-20) Gallus/Numida/Phasianus|  
- []
-
-
-Overfull \hbox (18.97461pt too wide) in paragraph at lines 275--275
-[]\T1/lmr/m/n/10 (-20) Carpometacarpal|  
- []
-
-
-LaTeX Warning: Float too large for page by 377.25182pt on input line 276.
-
-[5] [6] [7]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
+86.
+(c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [5] [6] [7]
 <castro_main_body_files/figure-latex/comp-iso-plot-1.pdf, id=181, 435.6275pt x 
 220.825pt>
 File: castro_main_body_files/figure-latex/comp-iso-plot-1.pdf Graphic file (typ
 e pdf)
 <use castro_main_body_files/figure-latex/comp-iso-plot-1.pdf>
 Package pdftex.def Info: castro_main_body_files/figure-latex/comp-iso-plot-1.pd
-f  used on input line 342.
+f  used on input line 343.
 (pdftex.def)             Requested size: 458.638pt x 232.4897pt.
+
+Overfull \hbox (12.86241pt too wide) in paragraph at lines 429--429
+ []\T1/lmr/m/n/10 (-20) Tarsometatarsal| 
+ []
+
+
+Overfull \hbox (12.86241pt too wide) in paragraph at lines 429--429
+ []\T1/lmr/m/n/10 (-20) Tarsometatarsal| 
+ []
+
+
+Overfull \hbox (18.03549pt too wide) in paragraph at lines 429--429
+ []\T1/lmr/m/n/10 (-20) Carpometacarpal| 
+ []
+
+
+Overfull \hbox (18.03549pt too wide) in paragraph at lines 429--429
+ []\T1/lmr/m/n/10 (-20) Carpometacarpal| 
+ []
+
+
+Overfull \hbox (18.03549pt too wide) in paragraph at lines 429--429
+ []\T1/lmr/m/n/10 (-20) Carpometacarpal| 
+ []
+
+
+Overfull \hbox (12.86241pt too wide) in paragraph at lines 429--429
+ []\T1/lmr/m/n/10 (-20) Tarsometatarsal| 
+ []
+
+
+Overfull \hbox (18.03549pt too wide) in paragraph at lines 429--429
+ []\T1/lmr/m/n/10 (-20) Carpometacarpal| 
+ []
+
+
+LaTeX Warning: Float too large for page by 190.02716pt on input line 430.
+
 [8 <./castro_main_body_files/figure-latex/comp-iso-plot-1.pdf>] [9] [10] [11] [
-12] (./castro_main_body.aux)
+12] [13] (./castro_main_body.aux)
 Package rerunfilecheck Info: File `castro_main_body.out' has not changed.
-(rerunfilecheck)             Checksum: 76555405C732A57781F364711C947B35;4413.
+(rerunfilecheck)             Checksum: EBA742AA3F4E8F088090D7D40EF8590E;4413.
  ) 
 Here is how much of TeX's memory you used:
- 16216 strings out of 480470
- 251622 string characters out of 5897265
- 668624 words of memory out of 5000000
- 33299 multiletter control sequences out of 15000+600000
+ 16219 strings out of 480470
+ 251665 string characters out of 5897265
+ 652165 words of memory out of 5000000
+ 33300 multiletter control sequences out of 15000+600000
  468571 words of font info for 156 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,19n,80p,1786b,582s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,20n,80p,1786b,561s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.
 enc}{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ma
 thsy.enc}{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/
@@ -1034,10 +1001,10 @@ ha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb><c:/Users
 /rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt8.pfb><c:/U
 sers/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/wasy-type1/was
 y10.pfb>
-Output written on castro_main_body.pdf (12 pages, 837553 bytes).
+Output written on castro_main_body.pdf (13 pages, 839617 bytes).
 PDF statistics:
- 444 PDF objects out of 1000 (max. 8388607)
- 388 compressed objects within 4 object streams
- 143 named destinations out of 1000 (max. 500000)
+ 452 PDF objects out of 1000 (max. 8388607)
+ 395 compressed objects within 4 object streams
+ 145 named destinations out of 1000 (max. 500000)
  37579 words of extra memory for PDF output out of 42996 (max. 10000000)
 

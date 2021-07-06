@@ -140,10 +140,13 @@ dffinal <- here::here("./data/castrokable.csv") %>%
 
 
 ```{r, echo=FALSE, results='asis'}
+options(knitr.kable.NA = "--")
+
 dffinal %>%
-  select(Sample,Phase, Species, Element, dC, dN, dS) %>%
-  kable(caption = "Isotope Data of Castro Marim", digits = 2, booktabs = T, format = "latex", escape = FALSE,table.env='table*', col.names=c("ID","Phase","Species","Element", "$\\delta^{13}C (\\text{\\textperthousand})$","$\\delta^{15}N (\\text{\\textperthousand})$","$\\delta^{34}S (\\text{\\textperthousand})$")) %>%
-  kable_styling(latex_options = c("basic", "hold_position"), full_width = TRUE)
+  select(Sample,Phase, Species, Element) %>%
+  kable(caption = "Selected faunal samples from all phases of settlement.", digits = 2, align="lccr", booktabs = T, format = "latex", escape = FALSE,table.env='table*', col.names=c("ID","Phase","Species","Element")) %>%
+  kable_styling(latex_options = c("basic", "hold_position","repeat_header","scale_down"), full_width = TRUE) %>%
+  column_spec(3,italic = TRUE)
   
 ```
 
@@ -206,6 +209,17 @@ compplot
 ```
 
 All the faunal samples exhibited collagen quality parameters indicative of good preservation. 
+
+```{r, echo=FALSE, results='asis'}
+options(knitr.kable.NA = "--")
+
+dffinal %>%
+  select(Sample, Species, Element, dC, dN, dS) %>%
+  kable(caption = "Carbon, nitrogen, and sulphur isotope composition of the fauna.", digits = 2, align="lccrrc", booktabs = T, format = "latex", escape = FALSE,table.env='table*', col.names=c("ID","Species","Element", "$\\delta^{13}C (\\text{\\textperthousand})$","$\\delta^{15}N (\\text{\\textperthousand})$","$\\delta^{34}S (\\text{\\textperthousand})$")) %>%
+  kable_styling(latex_options = c("basic", "hold_position","repeat_header","scale_down"), full_width = TRUE) %>%
+  column_spec(2,italic = TRUE)
+  
+```
 
 
 

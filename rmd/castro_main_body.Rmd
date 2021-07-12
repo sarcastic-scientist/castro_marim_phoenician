@@ -43,7 +43,7 @@ abstract: |
 
   It consists of two paragraphs.
 
-journal: "Journal of Archaeological Science"
+journal: "Journal of Archaeological Science: Reports"
 date: "`r Sys.Date()`"
 preamble: |
   \usepackage{wasysym}
@@ -51,7 +51,7 @@ preamble: |
   \sloppy
 bibliography: bibliography.bib
 #linenumbers: true
-layout: 3p #review,3p,5p
+layout: 5p #review,3p,5p
 numbersections: true
 csl: elsevier-harvard.csl
 output: 
@@ -72,6 +72,9 @@ library(here)
 library(ggsci)
 library(kableExtra)
 library(knitr)
+library(patchwork)
+
+options(kableExtra.auto_format = FALSE)
 
 knitr::opts_chunk$set(echo=FALSE, message = FALSE, error = FALSE, warning = FALSE)
 
@@ -91,7 +94,7 @@ Agricultural techniques from the East, such as irrigation, were used to improve 
 
 
 knitr::include_graphics(
-  'C:/Users/rosha/OneDrive - Universidade de Évora/Documents/R/Projects/castro_marim_phoenician/images/Castro Marim Map.jpg',
+  here::here('./images/castro_marim_map.jpg'),
   auto_pdf = getOption("knitr.graphics.auto_pdf", FALSE),
   error = getOption("knitr.graphics.error", TRUE)
 )
@@ -134,18 +137,27 @@ The mean $\delta ^{34}S$ value of terrestrial sources is assumed to be 0\permil.
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo=TRUE)
 
-dffinal <- here::here("./data/castrokable.csv") %>%
+dffinal <- here::here("./data/castro_iso_fauna.csv") %>%
+  readr::read_csv(col_names = TRUE)
+
+df_counts_bota <- here::here("./data/castro_counts_bota.csv") %>%
+  readr::read_csv(col_names = TRUE)
+
+df_iso_bota <- here::here("./data/castro_iso_bota.csv") %>%
+  readr::read_csv(col_names = TRUE)
+
+df_iso_hord <- here::here("./data/castro_iso_hord.csv") %>%
   readr::read_csv(col_names = TRUE)
 ```
 
 
-```{r, echo=FALSE, results='asis'}
+```{r table1, echo=FALSE, results='asis'}
 options(knitr.kable.NA = "--")
 
 dffinal %>%
-  select(Sample,Phase, Species, Element) %>%
-  kable(caption = "Selected faunal samples from all phases of settlement.", digits = 2, align="lccr", booktabs = T, format = "latex", escape = FALSE,table.env='table*', col.names=c("ID","Phase","Species","Element")) %>%
-  kable_styling(latex_options = c("basic", "hold_position","repeat_header","scale_down"), full_width = TRUE) %>%
+  select(Sample,Phase, Species, Element, col, IRSF, CP) %>%
+  kable(caption = "Selected faunal samples from all phases of settlement.", digits = 2, align="lcccccc", booktabs = T,linesep = "", format = "latex", escape = F,table.env='table*', col.names=c("ID","Phase","Species","Element","Collagen yield (\\%)","IRSF","C/P")) %>%
+  kable_styling(latex_options = c("basic","hold_position"), full_width = TRUE, font_size = 7.5) %>%
   column_spec(3,italic = TRUE)
   
 ```
@@ -153,17 +165,31 @@ dffinal %>%
 
 # Materials and Methods
 
+## Sample Selection
+Fifty faunal bone samples (Table \ref{tab:table1}) from conclusively adult individuals as well as 9 charred plant macro-remains of *Hordeum vulgare* subsp. *vulgare*, *Hordeum vulgare* subsp. *nudum*, and *Pinus* sp. each have been selected for this study. The sampled faunal bones represent the Phoenician -- Punic period of the settlement (phases III, IV, and V), whereas the charred plant macro -- remains are from only from phase V due to the absence of plant remains from the older phases.
+
 ## Archaeobotanical Analysis
 
-200 grams of sediment from each stratigraphic layer of the excavation site was weighed and handpicked for plant macro remains (fruits and charcoal). The recovered remains were examined under a stereo-microscope and taxonomically identified (Table 2).
-In carbonized plant macro remains, barley grain samples consist of at least 10 whole grains, and pine samples consist of 1 fruit. Morphologically intact samples were chosen after examination under a stereomicroscope (7-45x magnification) and removing any visibly adhering foreign contaminant. An acid-base-acid (ABA) treatment was applied as a pre-treatment [@bogaard_etal13; @fraser_etal13a]. First, the samples are treated with 10 mL of 0.5 M HCl at 70 $\text{\textdegree}$C for 60 minutes (or until effervescing stops) and then rinsed with ultrapure water until a neutral pH was achieved. 10 mL of 0.1 NaOH solution was added to the samples at 70 $\text{\textdegree}$C for 60 minutes and then rinsed with ultrapure water to achieve a neutral pH. Finally, the samples were treated with 0.5 M HCl at 70 $\text{\textdegree}$C for 30-60 minutes, followed by 3 rinses with ultrapure water and subsequent freeze-drying.
+```{r table2, echo=FALSE, results='asis'}
+options(knitr.kable.NA = "--")
 
-## Sample Selection
+df_counts_bota %>%
+  select(Species, Quantity, Phase) %>%
+  kable(caption = "Recovered botanical remains from archaeological sediments.", align="lcc", booktabs = T,linesep = "", format = "latex", escape = F, col.names=c("Species", "Recovered Quantity", "Phase")) %>%
+  kable_styling(latex_options = c("basic","hold_position"), font_size = 7.5) %>%
+  column_spec(1,italic = TRUE)
+  
+```
 
-Fifty faunal bone samples from conclusively adult individuals as well as 9 charred plant macro-remains of *Hordeum vulgare* subsp. *vulgare*, *Hordeum vulgare* subsp. *nudum*, and *Pinus* sp. each have been selected for this study. The sampled faunal bones represent the Phoenician -- Punic period of the settlement (phases III, IV, and V), whereas the charred plant macro -- remains are from only from phase V due to the absence of plant remains from the older phases.
+
+200 grams of sediment from each stratigraphic layer of the excavation site was weighed and handpicked for plant macro remains (fruits and charcoal). The recovered remains were examined under a stereo-microscope and taxonomically identified (Table \ref{tab:table2}).
+
 
 ## Bone Preservation: Fourier Transform Infrared Spectroscopy
 500 -- 700 mg of bone was cut using a DREMEL$\text{\textregistered}$ rotary drill with a diamond disc and cleaned of dirt, discoloration, and other foreign content with a dental burr. In addition, compact bone was sampled over spongy bone. Bone fragments were slightly polished with fine sandpaper to obtain a flat surface [@hollund_etal13]. Infrared spectra were collected using a Bruker$^\text{\textregistered}$ Alpha$^\text{\texttrademark}$ Spectrometer with a single-reflection diamond crystal ATR module. Each spectrum was obtained by an accumulation of 128 scans with a spectral resolution of 4 cm^-1^, from 2000 cm^-1^ to 375 cm^-1^. Infrared Splitting Factor (IRSF) and relative carbonate content (C/P) were calculated using absorbance heights at 565 cm^-1^, 590 cm^-1^, 605 cm^-1^, 1035 cm^-1^, and 1415 cm^-1^ wavenumbers [@trueman_etal08; @weiner_bar-yosef90; @wright_schwarcz96].
+
+## Pretreament of macrobotanical remains
+In carbonized plant macro remains, barley grain samples consist of at least 10 whole grains, and pine samples consist of 1 fruit. Morphologically intact samples were chosen after examination under a stereomicroscope (7-45x magnification) and removing any visibly adhering foreign contaminant. An acid-base-acid (ABA) treatment was applied as a pre-treatment [@bogaard_etal13; @fraser_etal13a]. First, the samples are treated with 10 mL of 0.5 M HCl at 70 $\text{\textdegree}$C for 60 minutes (or until effervescing stops) and then rinsed with ultrapure water until a neutral pH was achieved. 10 mL of 0.1 NaOH solution was added to the samples at 70 $\text{\textdegree}$C for 60 minutes and then rinsed with ultrapure water to achieve a neutral pH. Finally, the samples were treated with 0.5 M HCl at 70 $\text{\textdegree}$C for 30-60 minutes, followed by 3 rinses with ultrapure water and subsequent freeze-drying.
 
 ## Collagen Extraction
 The modified @longin71 method was used to extract collagen from faunal bones [@richards_hedges99]. Approximately 600 mg of bone sample was demineralized using 0.5 M HCl at 4 $\text{\textdegree}$C for a fortnight with daily vortex and an acid change after 7 days. Repeated rinses with ultrapure water to reach neutral pH were performed, and the demineralized bones were subjected to an overnight treatment in 0.125 M NaOH at room temperature to remove fulvic and humic acid contamination. The samples were then rinsed repeatedly with ultrapure water to achieve neutrality and gelatinized in 0.01 M HCl at 70 $\text{\textdegree}$C for 48 hours. The impurities were separated by filtering the collagen-containing liquid fraction using Ezee -- Filter$^\text{\texttrademark}$ filters (Elkay$^\text{\textregistered}$ Laboratory Products). The solubilized collagen was frozen and subsequently lyophilized for 48 hours.
@@ -179,7 +205,7 @@ The collagen samples were combusted with additional V~2~O~5~ and a oxygen pulse 
 ## Statistical Analysis
 The obtained data were subjected to statistical analysis using R programming language [@rcoreteam20; @wickham16]. Initially, means and standard deviations were calculated per species. Z-scores were calculated to detect the presence of outliers. Deviance from normal distribution was assessed using Shapiro-Wilks test. F-tests were first used to check for significant equal variance, and subsequently, Student's t-tests were used for two-sample comparison since all the datasets were normally distributed.
 
-# Results
+# Results and Discussion
 
 ## Bone Preservation
 
@@ -187,36 +213,44 @@ The obtained data were subjected to statistical analysis using R programming lan
 The IRSF index values are in a range of 2.37 - 3.37 (accepted range is 2.96 - 4.04) and the C/P index values are in the range of 0.2-0.428 (accepted range is 0.054 - 0.47) which fall well within the accepted range for well-preserved archaeological bones [@hollund_etal13; @lebon_etal16].
 
 ### Collagen Quality
-Collagen extraction was successful for all the bone samples, based on published criteria, with carbon content between 15.3% and 47.0% [@ambrose90], nitrogen content between 5.5% and 17.3% [@ambrose90], C/N values between 2.9 and 3.6 [@deniro85], C/S values between 300% and 900% [@nehlich_richards09], and collagen yields greater than 1% [@vanklinken99]. The extracted bone collagen samples exhibit C/N values ranged between 3.1 and 3.5 and C/S values between 225.9 and 688.4. Carbon and nitrogen amounts range from 20.3% to 50.0% and 7.3% and 18.1% respectively. Collagen yields range between 2.5% to 49.1%.
+Collagen extraction was successful for all the bone samples, based on published criteria, with carbon content between 15.3% and 47.0% [@ambrose90], nitrogen content between 5.5% and 17.3% [@ambrose90], C/N values between 2.9 and 3.6 [@deniro85], C/S values between 300% and 900% [@nehlich_richards09], and collagen yields greater than 1% [@vanklinken99]. The extracted bone collagen samples exhibit C/N values ranged between 3.1 and 3.5 and C/S values between 225.9 and 688.4. Carbon and nitrogen amounts range from 20.3% to 50.0% and 7.3% and 18.1% respectively. Collagen yields range between 2.5% to 49.1%. All the faunal samples exhibited collagen quality parameters indicative of good preservation. 
+
+```{r castro-archbot-assemblage, echo=FALSE, dpi=600, fig.show="hold", out.width='0.98\\textwidth', fig.env='figure*', fig.cap= 'The recovered archaeobotanical remains from the sediments.'}
+
+
+knitr::include_graphics(
+  here::here('./images/castro_bot_assemblage.jpg'),
+  auto_pdf = getOption("knitr.graphics.auto_pdf", FALSE),
+  error = getOption("knitr.graphics.error", TRUE)
+)
+
+```
 
 ## Botanical Remains
 No botanical remains could be recovered from the soil samples of phases I – IV due to the smaller scale of settlements as well as poor preservation conditions. The bulk of the recovered remains are from phase V representing the most mature chronological period of the occupation.
 
 ## Faunal bone collagen isotope values
-```{r comp-iso-plot, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, out.width='0.98\\textwidth', fig.height=8, fig.env='figure*', fig.cap= 'Plot showing isotope values of faunal bone collagen.'}
+```{r carb-nitro-iso-plot, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, out.width='0.98\\textwidth', fig.height=8, fig.env='figure*', fig.cap= 'Plot showing isotope values of faunal bone collagen.'}
 
 
-Dfmain = dffinal[order(dffinal$Species), ]
+theme1<-theme(panel.background = element_blank(),legend.key.size = unit(0.6, 'cm'),legend.text = element_text(size=6),text = element_text(size=7),legend.title=element_text(size=7),axis.title.x = element_text(size=5), axis.title.y = element_text(size=5), panel.border=element_rect(fill=NA),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),strip.background=element_blank(),axis.text.x=element_text(colour="black"),axis.text.y=element_text(colour="black"),axis.ticks=element_line(colour="black"),plot.margin=unit(c(1,1,1,1),"line"))
 
-#Command for plotting all data
-theme<-theme(panel.background = element_blank(),legend.position="right",panel.border=element_rect(fill=NA),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),strip.background=element_blank(),axis.text.x=element_text(colour="black"),axis.text.y=element_text(colour="black"),axis.ticks=element_line(colour="black"),plot.margin=unit(c(1,1,1,1),"line"))
+carb_nitro_iso_plot <- ggplot(dffinal, aes(x = dC, y = dN, shape = factor(Species), colour = factor(Species))) + geom_point(size = 2, alpha = 0.5) + scale_color_aaas() + scale_shape_manual(values = c(15,16,17,18,19,15,16,17,18,19)) +
+labs(x = expression(paste(delta^{13}, "C (\u2030 vs. VPDB)")), y = expression(paste(delta^{15}, "N (\u2030 vs. Air)")), shape = 'Species', colour = 'Species') + coord_fixed(0.5) + scale_y_continuous(breaks=seq(2.5,16,1)) + scale_x_reverse(breaks=seq(-22,-14,1)) + theme1
 
-compplot<-ggplot(Dfmain, aes(x = dC, y = dN, shape = factor(Species), colour = factor(Species))) + geom_point(size = 4, alpha = 0.65) + scale_color_aaas() + scale_shape_manual(values = c(15,16,17,18,19,15,16,17,18,19,15)) +
-labs(x = expression(paste(delta^{13}, "C (\u2030 vs. VPDB)")), y = expression(paste(delta^{15}, "N (\u2030 vs. Air)")), shape = 'Species', colour = 'Species') + coord_fixed(0.5) + scale_y_continuous(breaks=seq(2.5,16,1)) + scale_x_reverse(breaks=seq(-22,-14,1)) + theme
-
-compplot
+carb_nitro_iso_plot
 
 ```
 
-All the faunal samples exhibited collagen quality parameters indicative of good preservation. 
+
 
 ```{r, echo=FALSE, results='asis'}
 options(knitr.kable.NA = "--")
 
 dffinal %>%
-  select(Sample, Species, Element, dC, dN, dS) %>%
-  kable(caption = "Carbon, nitrogen, and sulphur isotope composition of the fauna.", digits = 2, align="lccrrc", booktabs = T, format = "latex", escape = FALSE,table.env='table*', col.names=c("ID","Species","Element", "$\\delta^{13}C (\\text{\\textperthousand})$","$\\delta^{15}N (\\text{\\textperthousand})$","$\\delta^{34}S (\\text{\\textperthousand})$")) %>%
-  kable_styling(latex_options = c("basic", "hold_position","repeat_header","scale_down"), full_width = TRUE) %>%
+  select(Sample, Species,percentC,percentN,percentS,CN,CS,NS, dC, dN, dS) %>%
+  kable(caption = "Carbon, nitrogen, and sulphur isotope composition of the fauna.", digits = 2, booktabs = T,linesep = "", align = "ccccccccccc", format = "latex", escape = FALSE,table.env='table*', col.names=c("ID","Species","\\% C","\\% N","\\% S","C:N","C:S","N:S", "$\\delta^{13}C (\\text{\\textperthousand})$","$\\delta^{15}N (\\text{\\textperthousand})$","$\\delta^{34}S (\\text{\\textperthousand})$")) %>%
+  kable_styling(latex_options = c("basic", "hold_position","repeat_header","scale_down"), full_width = TRUE, font_size = 7.5) %>%
   column_spec(2,italic = TRUE)
   
 ```

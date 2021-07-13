@@ -221,7 +221,7 @@ Collagen extraction was successful for all the bone samples, based on published 
 
 
 knitr::include_graphics(
-  here::here('./images/castro_bot_assemblage.tif'),
+  here::here('./images/castro_bot_assemblage.tiff'),
   auto_pdf = getOption("knitr.graphics.auto_pdf", FALSE),
   error = getOption("knitr.graphics.error", TRUE)
 )
@@ -229,7 +229,7 @@ knitr::include_graphics(
 ```
 
 ## Botanical Remains
-No botanical remains could be recovered from the soil samples of phases I – IV due to the smaller scale of settlements as well as poor preservation conditions. The bulk of the recovered remains are from phase V representing the most mature chronological period of the occupation.
+No botanical remains could be recovered from the soil samples of phases I – IV due to the smaller scale of settlements as well as poor preservation conditions. The bulk of the recovered remains are from phase V representing the most mature chronological period of the occupation. Barley (*Hordeum vulgare*) is the most dominant taxon in the botanical record (Table \ref{tab:table2}). *Hordeum vulgare nudum* and *Hordeum vulgare vulgare* (Fig. \ref{fig:castro-archbot-assemblage} **(f)** and **(g)** respectively) are the two cultivars which constitute the barley fraction with equal abundance. Wheat (*Triticum aestivum*) is second most abundant taxon after barley. Large scale cereal cultivation has been observed in sites located in river valleys near South Iberian sea coast (Eg: Castillo de Doña Blanca (Guadalquivir Valley, Spain) and El Villar (Guadalhorce valley, Spain), two sites which are located in similar geographical settings to Castro Marim). Cereal cultivation seems to be a major activity with implication being that cereals were the principle source of carbohydrates for both humans and animals. The greater presence of barley compared to wheat can be a strategy of 'minimum returns on investment' against dry climatic conditions exploiting the fact that barley has higher tolerance to drier conditions compared to wheat [@riehl09]. Two taxa of leguminous plants have been noted namely, peas (*Pisum sativum*) and broad bean (*Vicia faba*) (Fig. \ref{fig:castro-archbot-assemblage} **(d)** and **(i)** respectively). The leguminous plants serve as a rich source of proteins and act as an alternate to animal sourced protein for humans. The combined cultivation of leguminous plants with cereals helps maintain adequate soil nitrogen levels, leading to a sustainable and diverse production.
 
 ## Faunal bone collagen isotope values
 ```{r carb-nitro-iso-plot, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, out.width='0.98\\textwidth', fig.height=8, fig.env='figure*', fig.cap= 'Plot showing isotope values of faunal bone collagen.'}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.7.6)  12 JUL 2021 23:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.7.6)  13 JUL 2021 02:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -944,17 +944,17 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [4] [5]
 <C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castro_bo
-t_assemblage.jpg, id=172, 1669.73813pt x 1898.59312pt>
+t_assemblage.jpg, id=172, 1670.49094pt x 1872.9975pt>
 File: C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/cast
 ro_bot_assemblage.jpg Graphic file (type jpg)
 <use C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castr
 o_bot_assemblage.jpg>
 Package pdftex.def Info: C:/Users/rosha/Documents/R/Projects/castro_marim_phoen
 ician/./images/castro_bot_assemblage.jpg  used on input line 353.
-(pdftex.def)             Requested size: 511.55777pt x 581.66289pt.
+(pdftex.def)             Requested size: 511.55777pt x 573.56407pt.
 [6] [7 <c:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/ca
 stro_bot_assemblage.jpg>]
-<castro_main_body_files/figure-latex/carb-nitro-iso-plot-1.pdf, id=193, 435.627
+<castro_main_body_files/figure-latex/carb-nitro-iso-plot-1.pdf, id=196, 435.627
 5pt x 227.85126pt>
 File: castro_main_body_files/figure-latex/carb-nitro-iso-plot-1.pdf Graphic fil
 e (type pdf)
@@ -1282,7 +1282,7 @@ Underfull \hbox (badness 1590) in paragraph at lines 489--491
 \T1/lmr/m/n/10 (+20) Jour-nal of Ar-chae-o-log-i-cal Sci-ence 40, 3926--3935.
  []
 
-
+[8] [9]
 Underfull \hbox (badness 1097) in paragraph at lines 510--512
 \T1/lmr/m/n/10 (+20) ear-li-est Phoeni-cian quest for met-als in the west
  []
@@ -1292,7 +1292,7 @@ Underfull \hbox (badness 1205) in paragraph at lines 516--518
 \T1/lmr/m/n/10 (+20) Re-la-tion-ship Be-tween Car-bon Iso-tope Dis-crim-i-na-
  []
 
-[8] [9]
+[10 <./castro_main_body_files/figure-latex/carb-nitro-iso-plot-1.pdf>]
 Underfull \hbox (badness 2057) in paragraph at lines 549--551
 \T1/lmr/m/n/10 (+20) Kars, H., 2013. Test-ing an Al-ter-na-tive High-
  []
@@ -1307,8 +1307,8 @@ Underfull \hbox (badness 2435) in paragraph at lines 549--551
 \T1/lmr/m/n/10 (+20) e-sis: Ftir in At-ten-u-ated To-tal Re-flec-tion (atr)
  []
 
-[10 <./castro_main_body_files/figure-latex/carb-nitro-iso-plot-1.pdf>] [11]
-Underfull \hbox (badness 1237) in paragraph at lines 663--665
+[11]
+Underfull \hbox (badness 1237) in paragraph at lines 666--668
 [][]\T1/lmr/m/n/10 (+20) Wright, L.E., Schwarcz, H.P., 1996. In-frared and
  []
 
@@ -1323,13 +1323,13 @@ Package rerunfilecheck Info: File `castro_main_body.out' has not changed.
 (rerunfilecheck)             Checksum: 7504E18111A0383ECBC0C75B44AB9B30;4746.
  ) 
 Here is how much of TeX's memory you used:
- 16366 strings out of 480477
- 254796 string characters out of 5897581
- 722934 words of memory out of 5000000
+ 16375 strings out of 480477
+ 254899 string characters out of 5897581
+ 726412 words of memory out of 5000000
  33377 multiletter control sequences out of 15000+600000
- 500057 words of font info for 205 fonts, out of 8000000 for 9000
+ 500541 words of font info for 209 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,20n,80p,1786b,621s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,20n,80p,1918b,621s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.
 enc}{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm
 .enc}{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-m
@@ -1355,10 +1355,10 @@ ers/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy6.pfb><c
 b><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt
 8.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/was
 y-type1/wasy10.pfb>
-Output written on castro_main_body.pdf (12 pages, 1599598 bytes).
+Output written on castro_main_body.pdf (12 pages, 1601305 bytes).
 PDF statistics:
- 482 PDF objects out of 1000 (max. 8388607)
- 416 compressed objects within 5 object streams
- 148 named destinations out of 1000 (max. 500000)
+ 487 PDF objects out of 1000 (max. 8388607)
+ 421 compressed objects within 5 object streams
+ 149 named destinations out of 1000 (max. 500000)
  60120 words of extra memory for PDF output out of 61914 (max. 10000000)
 

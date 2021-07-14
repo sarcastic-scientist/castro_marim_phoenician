@@ -215,7 +215,7 @@ The IRSF index values are in a range of 2.37 - 3.37 (accepted range is 2.96 - 4.
 ### Collagen Quality
 Collagen extraction was successful for all the bone samples, based on published criteria, with carbon content between 15.3% and 47.0% [@ambrose90], nitrogen content between 5.5% and 17.3% [@ambrose90], C/N values between 2.9 and 3.6 [@deniro85], C/S values between 300% and 900% [@nehlich_richards09], and collagen yields greater than 1% [@vanklinken99]. The extracted bone collagen samples exhibit C/N values ranged between 3.1 and 3.5 and C/S values between 225.9 and 688.4. Carbon and nitrogen amounts range from 20.3% to 50.0% and 7.3% and 18.1% respectively. Collagen yields range between 2.5% to 49.1%. All the faunal samples exhibited collagen quality parameters indicative of good preservation. 
 
-(ref:archbot-caption) Charred botanical remains of settlement phase V from Castro Marim; **(a)** *Brassica niger*; **(b)** *Apium* sp.; **(c)** *Galeopsis tetrahit*; **(d)** *Pisum sativum*; **(e)** *Triticum aestivum/durum*; **(f)** *Hordeum vulgare nudum*; **(g)** *Hordeum vulgare vulgare*; **(h)** *Pinus* sp.; **(i)** *Vicia faba*
+(ref:archbot-caption) Charred botanical remains of settlement phase V from Castro Marim; **(a)** *Brassica nigra*; **(b)** *Apium* sp.; **(c)** *Galeopsis tetrahit*; **(d)** *Pisum sativum*; **(e)** *Triticum aestivum/durum*; **(f)** *Hordeum vulgare nudum*; **(g)** *Hordeum vulgare vulgare*; **(h)** *Pinus* sp.; **(i)** *Vicia faba*
 
 ```{r castro-archbot-assemblage, echo=FALSE, dpi=600, fig.show="hold", out.width='0.98\\textwidth', fig.env='figure*', fig.cap= '(ref:archbot-caption)'}
 
@@ -231,19 +231,11 @@ knitr::include_graphics(
 ## Botanical Remains
 No botanical remains could be recovered from the soil samples of phases I – IV due to the smaller scale of settlements as well as poor preservation conditions. The bulk of the recovered remains are from phase V representing the most mature chronological period of the occupation. Barley (*Hordeum vulgare*) is the most dominant taxon in the botanical record (Table \ref{tab:table2}). *Hordeum vulgare nudum* and *Hordeum vulgare vulgare* (Fig. \ref{fig:castro-archbot-assemblage} **(f)** and **(g)** respectively) are the two cultivars which constitute the barley fraction with equal abundance. Wheat (*Triticum aestivum*) is second most abundant taxon after barley. Large scale cereal cultivation has been observed in sites located in river valleys near South Iberian sea coast (Eg: Castillo de Doña Blanca (Guadalquivir Valley, Spain) and El Villar (Guadalhorce valley, Spain), two sites which are located in similar geographical settings to Castro Marim). Cereal cultivation seems to be a major activity with implication being that cereals were the principle source of carbohydrates for both humans and animals. The greater presence of barley compared to wheat can be a strategy of 'minimum returns on investment' against dry climatic conditions exploiting the fact that barley has higher tolerance to drier conditions compared to wheat [@riehl09]. Two taxa of leguminous plants have been noted namely, peas (*Pisum sativum*) and broad bean (*Vicia faba*) (Fig. \ref{fig:castro-archbot-assemblage} **(d)** and **(i)** respectively). The leguminous plants serve as a rich source of proteins and act as an alternate to animal sourced protein for humans. The combined cultivation of leguminous plants with cereals helps maintain adequate soil nitrogen levels, leading to a sustainable and diverse production.
 
+
+## Watering regimes and manuring intensity of cultivated crops
+
+
 ## Faunal bone collagen isotope values
-```{r carb-nitro-iso-plot, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, out.width='0.98\\textwidth', fig.height=8, fig.env='figure*', fig.cap= 'Plot showing isotope values of faunal bone collagen.'}
-
-
-theme1<-theme(panel.background = element_blank(),legend.key.size = unit(0.6, 'cm'),legend.text = element_text(size=6),text = element_text(size=7),legend.title=element_text(size=7),axis.title.x = element_text(size=5), axis.title.y = element_text(size=5), panel.border=element_rect(fill=NA),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),strip.background=element_blank(),axis.text.x=element_text(colour="black"),axis.text.y=element_text(colour="black"),axis.ticks=element_line(colour="black"),plot.margin=unit(c(1,1,1,1),"line"))
-
-carb_nitro_iso_plot <- ggplot(dffinal, aes(x = dC, y = dN, shape = factor(Species), colour = factor(Species))) + geom_point(size = 2, alpha = 0.5) + scale_color_aaas() + scale_shape_manual(values = c(15,16,17,18,19,15,16,17,18,19)) +
-labs(x = expression(paste(delta^{13}, "C (\u2030 vs. VPDB)")), y = expression(paste(delta^{15}, "N (\u2030 vs. Air)")), shape = 'Species', colour = 'Species') + coord_fixed(0.5) + scale_y_continuous(breaks=seq(2.5,16,1)) + scale_x_reverse(breaks=seq(-22,-14,1)) + theme1
-
-carb_nitro_iso_plot
-
-```
-
 
 
 ```{r, echo=FALSE, results='asis'}
@@ -256,6 +248,20 @@ dffinal %>%
   column_spec(2,italic = TRUE)
   
 ```
+
+
+```{r carb-nitro-iso-plot, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, out.width='0.98\\textwidth', fig.height=8, fig.env='figure*', fig.cap= 'Plot showing isotope values of faunal bone collagen.'}
+
+
+theme1<-theme(panel.background = element_blank(),legend.key.size = unit(0.6, 'cm'),legend.text = element_text(size=6),text = element_text(size=7),legend.title=element_text(size=7),axis.title.x = element_text(size=5), axis.title.y = element_text(size=5), panel.border=element_rect(fill=NA),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),strip.background=element_blank(),axis.text.x=element_text(colour="black"),axis.text.y=element_text(colour="black"),axis.ticks=element_line(colour="black"),plot.margin=unit(c(1,1,1,1),"line"))
+
+carb_nitro_iso_plot <- ggplot(dffinal, aes(x = dC, y = dN, shape = factor(Species), colour = factor(Species))) + geom_point(size = 2, alpha = 0.5) + scale_color_aaas() + scale_shape_manual(values = c(15,16,17,18,19,15,16,17,18,19)) +
+labs(x = expression(paste(delta^{13}, "C (\u2030 vs. VPDB)")), y = expression(paste(delta^{15}, "N (\u2030 vs. Air)")), shape = 'Species', colour = 'Species') + coord_fixed(0.5) + scale_y_continuous(breaks=seq(2.5,16,1)) + scale_x_reverse(breaks=seq(-22,-14,1)) + theme1
+
+carb_nitro_iso_plot
+
+```
+
 
 
 

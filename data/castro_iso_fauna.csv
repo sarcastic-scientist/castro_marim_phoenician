@@ -1,4 +1,4 @@
-Sample,Phase,Code,Species,Common Name,Class,Element,col,IRSF,CP,dC,percentC,dN,percentN,CN,percentS,dS,CS,NS
+Sample,Phase,Code,Species,Common_Name,Class,Element,col,IRSF,CP,dC,percentC,dN,percentN,CN,percentS,dS,CS,NS
 CMOF435,III,BOS,Bos taurus,Cattle,Mammal,Humerus,10.9,2.98,0.214,-20.2,41.1,8.9,14.9,3.2,0.2,10.3,477.5,88.9
 CMOF397,III,CAH,Capra hircus,Goat,Mammal,Astragalus,13.3,2.87,0.428,-19.8,38.7,4.2,14.2,3.2,0.2,10.9,688.4,64.5
 CMOF388,III,CEE,Cervus elaphus,Red Deer,Mammal,Calcaneum,6.7,2.59,0.287,-20,28.3,4.1,10.3,3.2,0.2,15.6,504.4,62.6

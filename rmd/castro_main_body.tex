@@ -34,6 +34,7 @@
 \IfFileExists{microtype.sty}{\usepackage{microtype}}{}
 \bibliographystyle{elsarticle-harv}
 \usepackage{longtable}
+\usepackage{graphicx}
 \ifxetex
   \usepackage[setpagesize=false, % page size defined by xetex
               unicode=false, % unicode breaks when used with xetex
@@ -114,9 +115,11 @@
    \ead{federico.dirita@uniroma1.it} 
     \author[Universidade de Lisboa]{Ana Margarida Arruda\corref{2}}
    \ead{ana2@campus.ul.pt} 
+    \author[Laboratório HERCULES]{Anne-France Maurer\corref{2}}
+   \ead{annefrance.maurer@gmail.com} 
     \author[SAPIENZA Università di Roma]{Donatella Magri\corref{2}}
    \ead{donatella.magri@uniroma1.it} 
-    \author[Universidade de Évora,Laboratório HERCULES]{Cristina Barrocas Dias\corref{2}}
+    \author[Universidade de Évora,Laboratório HERCULES]{Cristina Barrocas Dias\corref{1}}
    \ead{cmbd@uevora.pt} 
       \address[Universidade de Évora]{Departamento de Química, Escola de Ciências e Tecnologia, Universidade de Évora, Colégio Luís António Verney, Rua Romão Ramalho 59, Évora, Portugal (7000-671)}
     \address[Laboratório HERCULES]{Laboratório HERCULES, Universidade de Évora, Palácio do Vimioso, Largo Marquês de Marialva 8, 7000-554 Évora, Portugal}
@@ -329,7 +332,7 @@ The collagen samples were combusted with additional V\textsubscript{2}O\textsubs
 \hypertarget{statistical-analysis}{%
 \subsection{Statistical Analysis}\label{statistical-analysis}}
 
-The obtained data were subjected to statistical analysis using R programming language (R Core Team, 2020; Wickham, 2016). Initially, means and standard deviations were calculated per species. Z-scores were calculated to detect the presence of outliers. Deviance from normal distribution was assessed using Shapiro-Wilks test. F-tests were first used to check for significant equal variance, and subsequently, Student's t-tests were used for two-sample comparison since all the datasets were normally distributed.
+The obtained data were subjected to statistical analysis using R programming language (R Core Team, 2020; Wickham, 2016). Initially, means and standard deviations were calculated per species. Z-scores were calculated to detect the presence of outliers. Deviance from normal distribution was assessed using Shapiro-Wilks test. F-tests were first used to check for significant equal variance, and subsequently, unpaired Student's t-tests were used for two-sample comparison since all the datasets were normally distributed.
 
 \hypertarget{results-and-discussion}{%
 \section{Results and Discussion}\label{results-and-discussion}}
@@ -353,20 +356,54 @@ Collagen extraction was successful for all the bone samples, based on published 
 \includegraphics[width=0.98\textwidth]{C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castro_bot_assemblage} \caption{Charred botanical remains of settlement phase V from Castro Marim; \textbf{(a)} \emph{Brassica nigra}; \textbf{(b)} \emph{Apium} sp.; \textbf{(c)} \emph{Galeopsis tetrahit}; \textbf{(d)} \emph{Pisum sativum}; \textbf{(e)} \emph{Triticum aestivum/durum}; \textbf{(f)} \emph{Hordeum vulgare nudum}; \textbf{(g)} \emph{Hordeum vulgare vulgare}; \textbf{(h)} \emph{Pinus} sp.; \textbf{(i)} \emph{Vicia faba}}\label{fig:castro-archbot-assemblage}
 \end{figure*}
 
-\hypertarget{botanical-remains}{%
-\subsection{Botanical Remains}\label{botanical-remains}}
 
-No botanical remains could be recovered from the soil samples of phases I -- IV due to the smaller scale of settlements as well as poor preservation conditions. The bulk of the recovered remains are from phase V representing the most mature chronological period of the occupation. Barley (\emph{Hordeum vulgare}) is the most dominant taxon in the botanical record (Table \ref{tab:table2}). \emph{Hordeum vulgare nudum} and \emph{Hordeum vulgare vulgare} (Fig. \ref{fig:castro-archbot-assemblage} \textbf{(f)} and \textbf{(g)} respectively) are the two cultivars which constitute the barley fraction with equal abundance. Wheat (\emph{Triticum aestivum}) is second most abundant taxon after barley. Large scale cereal cultivation has been observed in sites located in river valleys near South Iberian sea coast (Eg: Castillo de Doña Blanca (Guadalquivir Valley, Spain) and El Villar (Guadalhorce valley, Spain), two sites which are located in similar geographical settings to Castro Marim). Cereal cultivation seems to be a major activity with implication being that cereals were the principle source of carbohydrates for both humans and animals. The greater presence of barley compared to wheat can be a strategy of `minimum returns on investment' against dry climatic conditions exploiting the fact that barley has higher tolerance to drier conditions compared to wheat (Riehl, 2009). Two taxa of leguminous plants have been noted namely, peas (\emph{Pisum sativum}) and broad bean (\emph{Vicia faba}) (Fig. \ref{fig:castro-archbot-assemblage} \textbf{(d)} and \textbf{(i)} respectively). The leguminous plants serve as a rich source of proteins and act as an alternate to animal sourced protein for humans. The combined cultivation of leguminous plants with cereals helps maintain adequate soil nitrogen levels, leading to a sustainable and diverse production. The presence of black mustard (\emph{Brassica nigra}) (Fig. \ref{fig:castro-archbot-assemblage} \textbf{(a)}) has been recorded. Black mustard is a common species along the rocky Mediterranean coasts and have long found their place as a culinary taste enhancer (Dixon, 2006). Like many members of \emph{Brassica}, black mustard was also used as a source of oil.
 
-\hypertarget{watering-regimes-and-manuring-intensity-of-cultivated-crops}{%
-\subsection{Watering regimes and manuring intensity of cultivated crops}\label{watering-regimes-and-manuring-intensity-of-cultivated-crops}}
 
-\hypertarget{faunal-bone-collagen-isotope-values}{%
-\subsection{Faunal bone collagen isotope values}\label{faunal-bone-collagen-isotope-values}}
 
 \begin{table*}
 
-\caption{\label{tab:unnamed-chunk-1}Carbon, nitrogen, and sulphur isotope composition of the fauna.}
+\caption{\label{tab:table3}\(\delta ^{13}C\) and \(\delta ^{15}N\) values of the two charred \emph{Hordeum vulgare} cultivars.}
+\centering
+\fontsize{7.5}{9.5}\selectfont
+\begin{tabu} to \linewidth {>{\raggedright}X>{}c>{\raggedleft}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X}
+\toprule
+Sample ID & Species & \% C & \% N & $\delta^{13}C (\text{\textperthousand})$ & $\delta^{15}N (\text{\textperthousand})$ & $\delta^{13}C_{corr} (\text{\textperthousand}) ^{*}$ & $\delta^{15}N_{corr} (\text{\textperthousand}) ^{*}$ & $\Delta^{13}C (\text{\textperthousand})$\\
+\midrule
+CMHV1 & \em{Hordeum vulgare vulgare} & 37.7 & 2.1 & -22.1 & 9.6 & -22.21 & 9.29 & 16.07\\
+CMHV2 & \em{Hordeum vulgare vulgare} & 49.7 & 2.8 & -22.6 & 9.4 & -22.71 & 9.09 & 16.59\\
+CMHV3 & \em{Hordeum vulgare vulgare} & 50.0 & 2.2 & -24.7 & 9.1 & -24.81 & 8.79 & 18.78\\
+CMHN1 & \em{Hordeum vulgare nudum} & 49.1 & 3.6 & -23.0 & 8.9 & -23.11 & 8.59 & 17.00\\
+CMHN2 & \em{Hordeum vulgare nudum} & 49.5 & 3.9 & -23.2 & 8.4 & -23.31 & 8.09 & 17.21\\
+CMHN3 & \em{Hordeum vulgare nudum} & 47.6 & 2.6 & -23.1 & 9.8 & -23.21 & 9.49 & 17.11\\
+\bottomrule
+\multicolumn{9}{l}{\rule{0pt}{1em}\textsuperscript{*} \(\delta ^{13}C\) and \(\delta ^{15}N\) values corrected for charring effect.}\\
+\end{tabu}
+\end{table*}
+
+\hypertarget{botanical-remains}{%
+\subsection{Botanical Remains}\label{botanical-remains}}
+
+No botanical remains could be recovered from the soil samples of phases I -- IV due to the smaller scale of settlements as well as poor preservation conditions. The bulk of the recovered remains are from phase V representing the most mature chronological period of the occupation. Barley (\emph{Hordeum vulgare}) is the most dominant taxon in the botanical record (Table \ref{tab:table2}). \emph{Hordeum vulgare nudum} and \emph{Hordeum vulgare vulgare} (Fig. \ref{fig:castro-archbot-assemblage} \textbf{(f)} and \textbf{(g)} respectively) are the two cultivars which constitute the barley fraction with equal abundance. Wheat (\emph{Triticum aestivum}) is second most abundant taxon after barley. Large scale cereal cultivation has been observed in sites located in river valleys near South Iberian sea coast (Eg: Castillo de Doña Blanca (Guadalquivir Valley, Spain) and El Villar (Guadalhorce valley, Spain), two sites which are located in similar geographical settings to Castro Marim). Cereal cultivation seems to be a major activity with implication being that cereals were the principle source of carbohydrates for both humans and animals. The greater presence of barley compared to wheat can be a strategy of `minimum returns on investment' against dry climatic conditions exploiting the fact that barley has higher tolerance to drier conditions compared to wheat (Riehl, 2009). Two taxa of leguminous plants have been noted namely, peas (\emph{Pisum sativum}) and broad bean (\emph{Vicia faba}) (Fig. \ref{fig:castro-archbot-assemblage} \textbf{(d)} and \textbf{(i)} respectively). The leguminous plants serve as a rich source of proteins and act as an alternate to animal sourced protein for humans. The combined cultivation of leguminous plants with cereals helps maintain adequate soil nitrogen levels, leading to a sustainable and diverse production. The presence of black mustard (\emph{Brassica nigra}) (Fig. \ref{fig:castro-archbot-assemblage} \textbf{(a)}) has been recorded. Black mustard is a common species along the rocky Mediterranean coasts and have long found their place as a culinary taste enhancer (Dixon, 2006). Like many members of \emph{Brassica}, black mustard was also used as a source of oil. A fragment of a charred seed has been attributed to \emph{Apium} taxon, suspected to be a seed of celery (\emph{Apium graveolens}) (Fig. \ref{fig:castro-archbot-assemblage} \textbf{(b)}). This attribution is done due to the presence of five slender longitudinal ridges on the surface of the seed (Wilson, 2016). The species is native to the coastal Mediterranean region, considered to be its centre of origin. The recorded use of celery as a vegetable in Europe is only from the 1600s, originating in Italy, with gradual spread westwards in the subsequent centuries (Tobyn et al., 2011). Hortulus, a Strabo poem from 9th century B.C.E describes the use of celery as a medicinal plant implying that even if the plant was cultivated as a medicinal herb rather than as a food plant (Sturtevant, 1886) in the Phoenician - Punic period. Shells of pine nuts (\emph{Pinus} sp.) (Fig. \ref{fig:castro-archbot-assemblage} \textbf{(h)}) are suspected to be from the \emph{Pinus pinea} species, commonly known as Mediterranean stone pine. Pine nut consumption has been documented in Portugal since Palaeolithic period (Gale and Carruthers, 2000). The nuts of stone pine are high in protein ansd fat with low carbohydrates (Haws, 2004). The nuts are a valuable source of nutrition and could have been stored to deal with periods of low cultivated food production.
+
+
+
+\begin{figure}
+\centering
+\includegraphics{castro_main_body_files/figure-latex/iso-hord-plots-1.pdf}
+\caption{\label{fig:iso-hord-plots}\textbf{(a).} Beeswarm plot showing \(\Delta ^{13}C\) values of barley cultivars where the blue dashed lines represent `well-watered,' `moderately-watered,' and `poorly watered' reference lines based on the study of modern crops in varying watering conditions (Wallace et al., 2013). \textbf{(b).} Beeswarm plot showing the manuring status of barley cultivars with green shaded region representing 1 SD range of estimated wild herbivore forage value (calculated from subtraction 4 \permil from red deer \(\delta ^{15}N\) mean ± 1 SD range).}
+\end{figure}
+
+\hypertarget{watering-regimes-and-manuring-intensity-of-barley}{%
+\subsection{Watering regimes and manuring intensity of barley}\label{watering-regimes-and-manuring-intensity-of-barley}}
+
+Table \ref{tab:table3}. shows the results of stable isotope results of the two barley cultivars. The isotope measurements fall within the established predicted ranges obtained from experimentally charred modern cereals (Fraser et al., 2013). The \(\delta ^{13}C\) values are within the range expected for a C\textsubscript{3} plant with \emph{Hordeum vulgare nudum} having a mean of -23.21 ± 0.1\permil, while that of \emph{Hordeum vulgare vulgare} is -23.24 ± 1.38\permil. The \(\delta ^{13}C\) means of both cultivars show no statistically significant difference (t-statistic: -0.04, degrees of freedom: 4, \emph{p}-value: 0.97). The \(\Delta ^{13}C\) values (Figure \ref{fig:iso-hord-plots} \textbf{(a)}) show barley cultivated in a poor to moderate watering conditions which would indicate that the plants have been dependant on natural precipitation with little or no artificial irrigation. The barley however was not growing in water deficit conditions since Castro Marim is surrounded by marshlands, being on the Guadiana estuary. Both the cultivars exhibit high \(\delta ^{15}N\) values (\emph{Hordeum vulgare nudum}, 8.72 ± 0.71\permil; \emph{Hordeum vulgare vulgare} a mean of 9.06 ± 0.25\permil) with no significant difference (t-statistic: 0.77, degrees of freedom: 4, \emph{p}-value: 0.49). The \(\delta ^{15}N\) values indicate high manuring intensity which is consequential due to the close proximity of the agricultural plots to the settlement and the river. The lack of artificial irrigation with relatively intense manuring of barley at Castro Marim indicates a strategy of minimal effort and risk while ensuring optimal produce.
+
+\hypertarget{faunal-bone-collagen-delta-13c-and-delta-15n-values}{%
+\subsection{\texorpdfstring{Faunal bone collagen \(\delta ^{13}C\) and \(\delta ^{15}N\) values}{Faunal bone collagen \textbackslash delta \^{}\{13\}C and \textbackslash delta \^{}\{15\}N values}}\label{faunal-bone-collagen-delta-13c-and-delta-15n-values}}
+
+\begin{table*}
+
+\caption{\label{tab:table4}Carbon, nitrogen, and sulphur isotope composition of the fauna.}
 \centering
 \resizebox{\linewidth}{!}{
 \fontsize{7.5}{9.5}\selectfont
@@ -440,9 +477,36 @@ CMOF745 & \em{Gallus domesticus} & 41.0 & 15.3 & 0.2 & 3.1 & 476.1 & 95.2 & -18.
 \end{tabu}}
 \end{table*}
 
+
+
 \begin{figure*}
-\includegraphics[width=0.98\textwidth]{castro_main_body_files/figure-latex/carb-nitro-iso-plot-1} \caption{Plot showing isotope values of faunal bone collagen.}\label{fig:carb-nitro-iso-plot}
+\includegraphics[width=0.98\textwidth]{castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1} \caption{Plot showing mean \(\delta ^{13}C\) and \(\delta ^{15}N\) values of faunal bone collagen.}\label{fig:fauna-carbnitro-iso-plot}
 \end{figure*}
+
+\begin{table*}
+
+\caption{\label{tab:table5}Statistical summary of mean and standard deviation of isotope composition of the fauna.}
+\centering
+\begin{tabular}[t]{ccllllll}
+\toprule
+\multicolumn{2}{c}{ } & \multicolumn{2}{c}{\$\textbackslash{}delta\textasciicircum{}\{13\}C (\textbackslash{}text\{\textbackslash{}textperthousand\})\$} & \multicolumn{2}{c}{\$\textbackslash{}delta\textasciicircum{}\{15\}N (\textbackslash{}text\{\textbackslash{}textperthousand\})\$} & \multicolumn{2}{c}{\$\textbackslash{}delta\textasciicircum{}\{34\}S (\textbackslash{}text\{\textbackslash{}textperthousand\})\$} \\
+\cmidrule(l{3pt}r{3pt}){3-4} \cmidrule(l{3pt}r{3pt}){5-6} \cmidrule(l{3pt}r{3pt}){7-8}
+Species & n & meandC & stddevdC & meandN & stddevdN & meandS & stddevdS\\
+\midrule
+Cattle & 9 & -20.70 & 0.89 & 6.56 & 1.91 & 11.42 & 3.27\\
+Chicken & 12 & -18.55 & 0.84 & 9.81 & 0.90 & 14.51 & 1.26\\
+Goat & 7 & -19.69 & 0.37 & 4.96 & 0.92 & 12.32 & 1.99\\
+Partridge & 2 & -20.30 & 0.42 & 5.70 & 0.14 & 13.90 & 0.00\\
+Pig & 7 & -19.63 & 0.81 & 9.23 & 2.04 & 13.07 & 1.66\\
+Rabbit & 7 & -21.61 & 1.07 & 7.91 & 3.53 & 13.84 & 2.00\\
+Red Deer & 7 & -19.97 & 0.19 & 3.67 & 0.49 & 15.50 & 0.85\\
+Sheep & 9 & -19.96 & 1.11 & 6.67 & 1.60 & 11.51 & 3.84\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+All fifty faunal samples with the exception of rabbits (in case of \(\delta ^{15}N\)), demonstrate (Table \ref{tab:table4}) stable isotope values within the range expected for a C\textsubscript{3} temperate ecosystem.
+Sheep show mean \(\delta ^{13}C\) values of -19.96 ± 1.11\permil and mean \(\delta ^{15}N\) values of 6.67 ± 1.6\permil, while goats exhibit mean \(\delta ^{13}C\) values of -19.69 ± 0.37\permil and mean \(\delta ^{15}N\) values of 4.96 ± 0.92\permil. Goat mean \(\delta ^{13}C\) values are not significantly different than that of sheep (t-statistic: 0.61, degrees of freedom: 14, \emph{p}-value: 0.55). The \(\delta ^{13}C\) values of ovicaprines are indicative of feeding in forested patches of land. Feeding in forested areas causes the \(\delta ^{13}C\) values to increase due to canopy effect (Bonafini et al., 2013). Sheep also exhibit significantly higher \(\delta ^{15}N\) values than goats (t-statistic: 2.5, degrees of freedom: 14, \emph{p}-value: 0.03) which demonstrates that sheep were fed on food sourced from manured vegetation (Fig. \ref{fig:fauna-carbnitro-iso}. Sheep are superior to goats both in terms of secondary products and ease of management (Davis, 2007; Rutter, 2002). Owing to the more attached economic interests with sheep, it is natural to give food sourced from cultivated crops.
 
 \hypertarget{references}{%
 \section*{References}\label{references}}
@@ -540,11 +604,17 @@ Fraser, R.A., Bogaard, A., Heaton, T., Charles, M., Jones, G., Christensen, B.T.
 \leavevmode\hypertarget{ref-froehle_etal10}{}%
 Froehle, A.W., Kellner, C.M., Schoeninger, M.J., 2010. {FOCUS}: Effect of diet and protein source on carbon stable isotope ratios in collagen: Follow up to {Warinner} and {Tuross} (2009). Journal of Archaeological Science 37, 2662--2670. doi:\href{https://doi.org/10.1016/j.jas.2010.06.003}{10.1016/j.jas.2010.06.003}
 
+\leavevmode\hypertarget{ref-gale_carruthers00}{}%
+Gale, R., Carruthers, W., 2000. Charcoal and charred seed remains from {Middle Palaeolithic} levels at {Gorham}'s and {Vanguard Caves}. Neanderthals on the Edge. Oxford: Oxbow Books 207--210.
+
 \leavevmode\hypertarget{ref-gomes_arruda18}{}%
 Gomes, F.B., Arruda, A.M., 2018. On the edge of history? {The Early Iron Age} of southern {Portugal}, between texts and archaeology. World Archaeology 50, 764--780. doi:\href{https://doi.org/10.1080/00438243.2019.1604258}{10.1080/00438243.2019.1604258}
 
 \leavevmode\hypertarget{ref-gomezbellard19}{}%
 Gómez Bellard, C., 2019. Agriculture, in: The {Oxford Handbook} of {The Phoenician} and {Punic Mediterranean}. {Oxford University Press}, pp. 732--745.
+
+\leavevmode\hypertarget{ref-haws04}{}%
+Haws, J., 2004. An {Iberian} perspective on {Upper Paleolithic} plant consumption. Promontoria 2, 49--106.
 
 \leavevmode\hypertarget{ref-hedges_reynard07}{}%
 Hedges, R.E.M., Reynard, L.M., 2007. Nitrogen isotopes and the trophic level of humans in archaeology. Journal of Archaeological Science 34, 1240--1251. doi:\href{https://doi.org/10.1016/j.jas.2006.10.015}{10.1016/j.jas.2006.10.015}
@@ -630,14 +700,23 @@ Riehl, S., 2009. Archaeobotanical evidence for the interrelationship of agricult
 \leavevmode\hypertarget{ref-roller14}{}%
 Roller, D.W., 2014. The geography of {Strabo}: {An English} translation, with introduction and notes. {Cambridge University Press}.
 
+\leavevmode\hypertarget{ref-rutter02}{}%
+Rutter, S.M., 2002. Behaviour of {Sheep} and {Goats}, in: The Ethology of Domestic Animals: {An} Introductory Text. pp. 148--155.
+
 \leavevmode\hypertarget{ref-schoeninger85}{}%
 Schoeninger, M.J., 1985. Trophic level effects on {15N}/{14N} and {13C}/{12C} ratios in bone collagen and strontium levels in bone mineral. Journal of Human Evolution 14, 515--525. doi:\href{https://doi.org/10.1016/S0047-2484(85)80030-0}{10.1016/S0047-2484(85)80030-0}
 
 \leavevmode\hypertarget{ref-schramm67}{}%
 Schramm, Z., 1967. Morphological differences of some goat and sheep bones. {Wyższa Szkoła Rolnicza}.
 
+\leavevmode\hypertarget{ref-sturtevant86}{}%
+Sturtevant, E.L., 1886. History of {Celery}. The American Naturalist 20, 599--606. doi:\href{https://doi.org/10.1086/274288}{10.1086/274288}
+
 \leavevmode\hypertarget{ref-tieszen91}{}%
 Tieszen, L.L., 1991. Natural variations in the carbon isotope values of plants: {Implications} for archaeology, ecology, and paleoecology. Journal of Archaeological Science 18, 227--248. doi:\href{https://doi.org/10.1016/0305-4403(91)90063-U}{10.1016/0305-4403(91)90063-U}
+
+\leavevmode\hypertarget{ref-tobyn_etal11}{}%
+Tobyn, G., Denham, A., Whitelegg, M., 2011. {CHAPTER} 9 - {Apium} graveolens, wild celery, in: Tobyn, G., Denham, A., Whitelegg, M. (Eds.), Medical {Herbs}. {Churchill Livingstone}, {Edinburgh}, pp. 79--89. doi:\href{https://doi.org/10.1016/B978-0-443-10344-5.00014-8}{10.1016/B978-0-443-10344-5.00014-8}
 
 \leavevmode\hypertarget{ref-treumann09}{}%
 Treumann, B., 2009. Lumbermen and {Shipwrights}: {Phoenicians} on the {Mediterranean Coast} of {Southern Spain}.
@@ -668,6 +747,9 @@ Weiner, S., Bar-Yosef, O., 1990. States of preservation of bones from prehistori
 
 \leavevmode\hypertarget{ref-wickham16}{}%
 Wickham, H., 2016. Ggplot2: {Elegant Graphics} for {Data Analysis}. {Springer-Verlag New York}.
+
+\leavevmode\hypertarget{ref-wilson16}{}%
+Wilson, L., 2016. Spices and {Flavoring Crops}: {Fruits} and {Seeds}, in: Caballero, B., Finglas, P.M., Toldrá, F. (Eds.), Encyclopedia of {Food} and {Health}. {Academic Press}, {Oxford}, pp. 73--83. doi:\href{https://doi.org/10.1016/B978-0-12-384947-2.00647-4}{10.1016/B978-0-12-384947-2.00647-4}
 
 \leavevmode\hypertarget{ref-wood_etal19}{}%
 Wood, J.R., Montero-Ruiz, I., Martinón-Torres, M., 2019. From {Iberia} to the {Southern Levant}: {The Movement} of {Silver Across} the {Mediterranean} in the {Early Iron Age}. Journal of World Prehistory 32, 1--31. doi:\href{https://doi.org/10.1007/s10963-018-09128-3}{10.1007/s10963-018-09128-3}

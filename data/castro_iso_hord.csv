@@ -1,7 +1,7 @@
-Sample ID,Site,Species,%C,%N,dC,dN
-CMHV1,Castro Marim,Hordeum vulgare vulgare,37.7,2.1,-22.1,9.6
-CMHV2,Castro Marim,Hordeum vulgare vulgare,49.7,2.8,-22.6,9.4
-CMHV3,Castro Marim,Hordeum vulgare vulgare,50,2.2,-24.7,9.1
-CMHN1,Castro Marim,Hordeum vulgare nudum,49.1,3.6,-23,8.9
-CMHN2,Castro Marim,Hordeum vulgare nudum,49.5,3.9,-23.2,8.4
-CMHN3,Castro Marim,Hordeum vulgare nudum,47.6,2.6,-23.1,9.8
+ID,Site,Species,percentC,percentN,dC,dN,dC_corr,dN_corr
+CMHV1,Castro Marim,Hordeum vulgare vulgare,37.7,2.1,-22.1,9.6,-22.21,9.29
+CMHV2,Castro Marim,Hordeum vulgare vulgare,49.7,2.8,-22.6,9.4,-22.71,9.09
+CMHV3,Castro Marim,Hordeum vulgare vulgare,50,2.2,-24.7,9.1,-24.81,8.79
+CMHN1,Castro Marim,Hordeum vulgare nudum,49.1,3.6,-23,8.9,-23.11,8.59
+CMHN2,Castro Marim,Hordeum vulgare nudum,49.5,3.9,-23.2,8.4,-23.31,8.09
+CMHN3,Castro Marim,Hordeum vulgare nudum,47.6,2.6,-23.1,9.8,-23.21,9.49

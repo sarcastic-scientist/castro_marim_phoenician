@@ -16,14 +16,18 @@ author:
     email: ana2@campus.ul.pt
     affiliation: Universidade de Lisboa
     footnote: 2
+  - name: Anne-France Maurer
+    email: annefrance.maurer@gmail.com
+    affiliation: Laboratório HERCULES
+    footnote: 2
   - name: Donatella Magri
     email: donatella.magri@uniroma1.it 
     affiliation: SAPIENZA Università di Roma
-    footnote: 2  
+    footnote: 2
   - name: Cristina Barrocas Dias
     email: cmbd@uevora.pt
     affiliation: Universidade de Évora,Laboratório HERCULES
-    footnote: 2
+    footnote: 1
 address:
   - code: Universidade de Évora
     address: Departamento de Química, Escola de Ciências e Tecnologia, Universidade de Évora, Colégio Luís António Verney, Rua Romão Ramalho 59, Évora, Portugal (7000-671)
@@ -73,6 +77,7 @@ library(ggsci)
 library(kableExtra)
 library(knitr)
 library(patchwork)
+library(ggbeeswarm)
 
 options(kableExtra.auto_format = FALSE)
 
@@ -137,24 +142,25 @@ The mean $\delta ^{34}S$ value of terrestrial sources is assumed to be 0\permil.
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo=TRUE)
 
-dffinal <- here::here("./data/castro_iso_fauna.csv") %>%
+df_iso_fauna <- here::here("./data/castro_iso_fauna.csv") %>%
   readr::read_csv(col_names = TRUE)
 
 df_counts_bota <- here::here("./data/castro_counts_bota.csv") %>%
   readr::read_csv(col_names = TRUE)
 
-df_iso_bota <- here::here("./data/castro_iso_bota.csv") %>%
+df_iso_fauna_summ <- here::here("./data/castro_fauna_iso_summ.csv") %>%
   readr::read_csv(col_names = TRUE)
 
 df_iso_hord <- here::here("./data/castro_iso_hord.csv") %>%
-  readr::read_csv(col_names = TRUE)
+  readr::read_csv(col_names = TRUE) %>%
+  mutate(DC = (-6.5-dC_corr) / (1+(dC_corr/1000)))
 ```
 
 
 ```{r table1, echo=FALSE, results='asis'}
 options(knitr.kable.NA = "--")
 
-dffinal %>%
+df_iso_fauna %>%
   select(Sample,Phase, Species, Element, col, IRSF, CP) %>%
   kable(caption = "Selected faunal samples from all phases of settlement.", digits = 2, align="lcccccc", booktabs = T,linesep = "", format = "latex", escape = F,table.env='table*', col.names=c("ID","Phase","Species","Element","Collagen yield (\\%)","IRSF","C/P")) %>%
   kable_styling(latex_options = c("basic","hold_position"), full_width = TRUE, font_size = 7.5) %>%
@@ -203,7 +209,7 @@ The collagen samples were combusted with additional V~2~O~5~ and a oxygen pulse 
 
 
 ## Statistical Analysis
-The obtained data were subjected to statistical analysis using R programming language [@rcoreteam20; @wickham16]. Initially, means and standard deviations were calculated per species. Z-scores were calculated to detect the presence of outliers. Deviance from normal distribution was assessed using Shapiro-Wilks test. F-tests were first used to check for significant equal variance, and subsequently, Student's t-tests were used for two-sample comparison since all the datasets were normally distributed.
+The obtained data were subjected to statistical analysis using R programming language [@rcoreteam20; @wickham16]. Initially, means and standard deviations were calculated per species. Z-scores were calculated to detect the presence of outliers. Deviance from normal distribution was assessed using Shapiro-Wilks test. F-tests were first used to check for significant equal variance, and subsequently, unpaired Student's t-tests were used for two-sample comparison since all the datasets were normally distributed.
 
 # Results and Discussion
 
@@ -217,7 +223,7 @@ Collagen extraction was successful for all the bone samples, based on published 
 
 (ref:archbot-caption) Charred botanical remains of settlement phase V from Castro Marim; **(a)** *Brassica nigra*; **(b)** *Apium* sp.; **(c)** *Galeopsis tetrahit*; **(d)** *Pisum sativum*; **(e)** *Triticum aestivum/durum*; **(f)** *Hordeum vulgare nudum*; **(g)** *Hordeum vulgare vulgare*; **(h)** *Pinus* sp.; **(i)** *Vicia faba*
 
-```{r castro-archbot-assemblage, echo=FALSE, dpi=600, fig.show="hold", out.width='0.98\\textwidth', fig.env='figure*', fig.cap= '(ref:archbot-caption)'}
+```{r castro-archbot-assemblage, echo=FALSE, dpi=600, fig.show="hold", out.width='0.98\\textwidth', fig.height=8, fig.env='figure*', fig.cap= '(ref:archbot-caption)'}
 
 
 knitr::include_graphics(
@@ -228,20 +234,96 @@ knitr::include_graphics(
 
 ```
 
-## Botanical Remains
-No botanical remains could be recovered from the soil samples of phases I – IV due to the smaller scale of settlements as well as poor preservation conditions. The bulk of the recovered remains are from phase V representing the most mature chronological period of the occupation. Barley (*Hordeum vulgare*) is the most dominant taxon in the botanical record (Table \ref{tab:table2}). *Hordeum vulgare nudum* and *Hordeum vulgare vulgare* (Fig. \ref{fig:castro-archbot-assemblage} **(f)** and **(g)** respectively) are the two cultivars which constitute the barley fraction with equal abundance. Wheat (*Triticum aestivum*) is second most abundant taxon after barley. Large scale cereal cultivation has been observed in sites located in river valleys near South Iberian sea coast (Eg: Castillo de Doña Blanca (Guadalquivir Valley, Spain) and El Villar (Guadalhorce valley, Spain), two sites which are located in similar geographical settings to Castro Marim). Cereal cultivation seems to be a major activity with implication being that cereals were the principle source of carbohydrates for both humans and animals. The greater presence of barley compared to wheat can be a strategy of 'minimum returns on investment' against dry climatic conditions exploiting the fact that barley has higher tolerance to drier conditions compared to wheat [@riehl09]. Two taxa of leguminous plants have been noted namely, peas (*Pisum sativum*) and broad bean (*Vicia faba*) (Fig. \ref{fig:castro-archbot-assemblage} **(d)** and **(i)** respectively). The leguminous plants serve as a rich source of proteins and act as an alternate to animal sourced protein for humans. The combined cultivation of leguminous plants with cereals helps maintain adequate soil nitrogen levels, leading to a sustainable and diverse production. The presence of black mustard (*Brassica nigra*) (Fig. \ref{fig:castro-archbot-assemblage} **(a)**) has been recorded. Black mustard is a common species along the rocky Mediterranean coasts and have long found their place as a culinary taste enhancer [@dixon06]. Like many members of *Brassica*, black mustard was also used as a source of oil. A fragment of a charred seed has been attributed to *Apium* taxon, suspected to be a seed of celery (*Apium graveolens*) (Fig. \ref{fig:castro-archbot-assemblage} **(b)**). This attribution is done due to the presence of characteristic of five slender longitudinal ridges on the surface of the seed [@wilson16]. The species is native to the coastal Mediterranean region which is also considered to be its centre of origin. The recorded use of celery as a vegetable in Europe is only from the 1600s in Italy with gradual introduction westwards in the subsequent centuries [@tobyn_etal11]. Hortulus, a Strabo poem from 9th century B.C.E describes the use of celery as a medicinal plant implying that even if the plant was cultivated as a medicinal herb rather than as a food plant [@sturtevant86].
 
 
-## Watering regimes and manuring intensity of cultivated crops
+(ref:isobot-caption) $\delta ^{13}C$ and $\delta ^{15}N$ values of the two charred *Hordeum vulgare* cultivars.
 
+(ref:isobot-footnote) $\delta ^{13}C$ and $\delta ^{15}N$ values corrected for charring effect. 
 
-## Faunal bone collagen isotope values
-
-
-```{r, echo=FALSE, results='asis'}
+```{r table3, echo=FALSE, results='asis'}
 options(knitr.kable.NA = "--")
 
-dffinal %>%
+df_iso_hord %>%
+  select(ID,Species,percentC,percentN,dC,dN,dC_corr,dN_corr,DC) %>%
+  kable(caption = "(ref:isobot-caption)", align="lcrllllll", booktabs = T, table.env='table*', , digits = 2, linesep = "", format = "latex", escape = FALSE, col.names=c("Sample ID", "Species", "\\% C", "\\% N", "$\\delta^{13}C (\\text{\\textperthousand})$", "$\\delta^{15}N (\\text{\\textperthousand})$", "$\\delta^{13}C_{corr} (\\text{\\textperthousand}) ^{*}$", "$\\delta^{15}N_{corr} (\\text{\\textperthousand}) ^{*}$", "$\\Delta^{13}C (\\text{\\textperthousand})$")) %>%
+  kable_styling(latex_options = c("basic","hold_position"), font_size = 7.5, full_width = TRUE) %>%
+  column_spec(2,italic = TRUE) %>%
+footnote(symbol = c("(ref:isobot-footnote)"))
+
+MC <- df_iso_hord %>% 
+  group_by(Species) %>%
+  dplyr::summarize(Mean = mean(dC_corr, na.rm=TRUE))
+MN <- df_iso_hord %>% 
+  group_by(Species) %>%
+  dplyr::summarize(Mean = mean(dN_corr, na.rm=TRUE))
+SDC <- df_iso_hord %>% 
+  group_by(Species) %>%
+  dplyr::summarize(SD = sd(dC_corr, na.rm=TRUE))
+SDN <- df_iso_hord %>% 
+  group_by(Species) %>%
+  dplyr::summarize(SD = sd(dN_corr, na.rm=TRUE))
+
+df_iso_hord_vv <- dplyr::filter(df_iso_hord,Species == 'Hordeum vulgare vulgare')
+df_iso_hord_vn <- dplyr::filter(df_iso_hord,Species == 'Hordeum vulgare nudum')
+
+
+meanC_hord_vv <- round(MC$Mean[2],2)
+meanC_hord_vn <- round(MC$Mean[1],2)
+meanN_hord_vv <- round(MN$Mean[2],2)
+meanN_hord_vn <- round(MN$Mean[1],2)
+SDC_hord_vv <- round(SDC$SD[2],2)
+SDC_hord_vn <- round(SDC$SD[1],2)
+SDN_hord_vv <- round(SDN$SD[2],2)
+SDN_hord_vn <- round(SDN$SD[1],2)
+
+hord_dC_ttest <- t.test(df_iso_hord_vv$dC_corr, df_iso_hord_vn$dC_corr, 
+                        alternative = "two.sided", paired = FALSE, 
+                        var.equal = TRUE, conf.level = 0.95)
+hord_dC_ttest_statistic <- round(hord_dC_ttest$statistic,2)
+hord_dC_ttest_df <- round(hord_dC_ttest$parameter,2)
+hord_dC_ttest_p <- round(hord_dC_ttest$p.value,2)
+
+hord_dN_ttest <- t.test(df_iso_hord_vv$dN_corr, df_iso_hord_vn$dN_corr, 
+                        alternative = "two.sided", paired = FALSE, 
+                        var.equal = TRUE, conf.level = 0.95)
+hord_dN_ttest_statistic <- round(hord_dN_ttest$statistic,2)
+hord_dN_ttest_df <- round(hord_dN_ttest$parameter,2)
+hord_dN_ttest_p <- round(hord_dN_ttest$p.value,2)
+```
+
+
+## Botanical Remains
+No botanical remains could be recovered from the soil samples of phases I – IV due to the smaller scale of settlements as well as poor preservation conditions. The bulk of the recovered remains are from phase V representing the most mature chronological period of the occupation. Barley (*Hordeum vulgare*) is the most dominant taxon in the botanical record (Table \ref{tab:table2}). *Hordeum vulgare nudum* and *Hordeum vulgare vulgare* (Fig. \ref{fig:castro-archbot-assemblage} **(f)** and **(g)** respectively) are the two cultivars which constitute the barley fraction with equal abundance. Wheat (*Triticum aestivum*) is second most abundant taxon after barley. Large scale cereal cultivation has been observed in sites located in river valleys near South Iberian sea coast (Eg: Castillo de Doña Blanca (Guadalquivir Valley, Spain) and El Villar (Guadalhorce valley, Spain), two sites which are located in similar geographical settings to Castro Marim). Cereal cultivation seems to be a major activity with implication being that cereals were the principle source of carbohydrates for both humans and animals. The greater presence of barley compared to wheat can be a strategy of 'minimum returns on investment' against dry climatic conditions exploiting the fact that barley has higher tolerance to drier conditions compared to wheat [@riehl09]. Two taxa of leguminous plants have been noted namely, peas (*Pisum sativum*) and broad bean (*Vicia faba*) (Fig. \ref{fig:castro-archbot-assemblage} **(d)** and **(i)** respectively). The leguminous plants serve as a rich source of proteins and act as an alternate to animal sourced protein for humans. The combined cultivation of leguminous plants with cereals helps maintain adequate soil nitrogen levels, leading to a sustainable and diverse production. The presence of black mustard (*Brassica nigra*) (Fig. \ref{fig:castro-archbot-assemblage} **(a)**) has been recorded. Black mustard is a common species along the rocky Mediterranean coasts and have long found their place as a culinary taste enhancer [@dixon06]. Like many members of *Brassica*, black mustard was also used as a source of oil. A fragment of a charred seed has been attributed to *Apium* taxon, suspected to be a seed of celery (*Apium graveolens*) (Fig. \ref{fig:castro-archbot-assemblage} **(b)**). This attribution is done due to the presence of five slender longitudinal ridges on the surface of the seed [@wilson16]. The species is native to the coastal Mediterranean region, considered to be its centre of origin. The recorded use of celery as a vegetable in Europe is only from the 1600s, originating in Italy, with gradual spread westwards in the subsequent centuries [@tobyn_etal11]. Hortulus, a Strabo poem from 9th century B.C.E describes the use of celery as a medicinal plant implying that even if the plant was cultivated as a medicinal herb rather than as a food plant [@sturtevant86] in the Phoenician - Punic period. Shells of pine nuts (*Pinus* sp.) (Fig. \ref{fig:castro-archbot-assemblage} **(h)**) are suspected to be from the *Pinus pinea* species, commonly known as Mediterranean stone pine. Pine nut consumption has been documented in Portugal since Palaeolithic period [@gale_carruthers00]. The nuts of stone pine are high in protein ansd fat with low carbohydrates [@haws04]. The nuts are a valuable source of nutrition and could have been stored to deal with periods of low cultivated food production.
+
+(ref:isohord-caption) **(a).** Beeswarm plot showing $\Delta ^{13}C$ values of barley cultivars where the blue dashed lines represent 'well-watered', 'moderately-watered', and 'poorly watered' reference lines based on the study of modern crops in varying watering conditions [@wallace_etal13]. **(b).** Beeswarm plot showing the manuring status of barley cultivars with green shaded region representing 1 SD range of estimated wild herbivore forage value (calculated from subtraction 4 \permil from red deer $\delta ^{15}N$ mean ± 1 SD range).
+
+```{r iso-hord-plots, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, fig.width=5, fig.height=3, fig.cap= '(ref:isohord-caption)'}
+
+
+theme1<-theme(panel.background = element_blank(),legend.key.size = unit(0.5, 'cm'),legend.position="right", legend.text = element_text(size=4),text = element_text(size=4),legend.title=element_text(size=4),axis.title.x = element_blank(), axis.title.y = element_text(size=7), panel.border=element_rect(fill=NA),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),strip.background=element_blank(),axis.text.x=element_blank(),axis.text.y=element_text(colour="black"),axis.ticks.y=element_line(colour="black"), axis.ticks.x=element_blank(), plot.margin=unit(c(1,1,1,1),"line"))
+
+theme2<-theme(panel.background = element_blank(),legend.key.size = unit(0.6, 'cm'),legend.text = element_text(size=6), legend.position="none", text = element_text(size=4),legend.title=element_text(size=7),axis.title.x = element_blank(), axis.title.y = element_text(size=7), panel.border=element_rect(fill=NA),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),strip.background=element_blank(),axis.text.x=element_blank(),axis.text.y=element_text(colour="black"),axis.ticks.y=element_line(colour="black"), axis.ticks.x=element_blank(),plot.margin=unit(c(1,1,1,1),"line"))
+
+p1<-ggplot(df_iso_hord, aes(x=Site,y=DC, color=Species)) + geom_quasirandom() + scale_color_aaas()  + theme2 + labs(x='',y=expression(paste(Delta^{13}, "C (\u2030 vs. Air)")), tag = "(a)") + coord_fixed(1.65) + geom_hline(yintercept = 17, color='deepskyblue3', linetype="dotted", size=1) + geom_hline(yintercept = 19, color='deepskyblue3', linetype="dotted", size=1, show.legend = T)
+
+p2<-ggplot(df_iso_hord, aes(x=Site,y=dN, color=Species)) + geom_quasirandom() + scale_color_aaas() + theme1 + labs(x='',y=expression(paste(delta^{15}, "N (\u2030 vs. Air)")), tag = "(b)") + coord_fixed(0.5) + geom_hline(yintercept = 0, color='seagreen3', linetype="dotted", size=1) + geom_hline(yintercept = 5, color='seagreen3', linetype="dotted", size=1, show.legend = T) + annotate("rect", xmin = 0, xmax = Inf, ymin = 0, ymax = 5, alpha = .2, fill = "seagreen2")
+
+p1 | p2
+
+```
+
+## Watering regimes and manuring intensity of barley
+Table \ref{tab:table3}. shows the results of stable isotope results of the two barley cultivars. The isotope measurements fall within the established predicted ranges obtained from experimentally charred modern cereals [@fraser_etal13a]. The $\delta ^{13}C$ values are within the range expected for a C~3~ plant with *Hordeum vulgare nudum* having a mean of `r meanC_hord_vn` ± `r SDC_hord_vn`\permil, while that of *Hordeum vulgare vulgare* is `r meanC_hord_vv` ± `r SDC_hord_vv`\permil. The $\delta ^{13}C$ means of both cultivars show no statistically significant difference (t-statistic: `r hord_dC_ttest_statistic`, degrees of freedom: `r hord_dC_ttest_df`, *p*-value: `r hord_dC_ttest_p`). The $\Delta ^{13}C$ values (Figure \ref{fig:iso-hord-plots} **(a)**) show barley cultivated in a poor to moderate watering conditions which would indicate that the plants have been dependant on natural precipitation with little or no artificial irrigation. The barley however was not growing in water deficit conditions since Castro Marim is surrounded by marshlands, being on the Guadiana estuary. Both the cultivars exhibit high $\delta ^{15}N$ values (*Hordeum vulgare nudum*, `r meanN_hord_vn` ± `r SDN_hord_vn`\permil; *Hordeum vulgare vulgare* a mean of `r meanN_hord_vv` ± `r SDN_hord_vv`\permil) with no significant difference (t-statistic: `r hord_dN_ttest_statistic`, degrees of freedom: `r hord_dN_ttest_df`, *p*-value: `r hord_dN_ttest_p`). The $\delta ^{15}N$ values indicate high manuring intensity which is consequential due to the close proximity of the agricultural plots to the settlement and the river. The lack of artificial irrigation with relatively intense manuring of barley at Castro Marim indicates a  strategy of minimal effort and risk while ensuring optimal produce.
+
+
+
+
+## Faunal bone collagen $\delta ^{13}C$ and $\delta ^{15}N$ values
+
+```{r table4, echo=FALSE, results='asis'}
+options(knitr.kable.NA = "--")
+
+df_iso_fauna %>%
   select(Sample, Species,percentC,percentN,percentS,CN,CS,NS, dC, dN, dS) %>%
   kable(caption = "Carbon, nitrogen, and sulphur isotope composition of the fauna.", digits = 2, booktabs = T,linesep = "", align = "ccccccccccc", format = "latex", escape = FALSE,table.env='table*', col.names=c("ID","Species","\\% C","\\% N","\\% S","C:N","C:S","N:S", "$\\delta^{13}C (\\text{\\textperthousand})$","$\\delta^{15}N (\\text{\\textperthousand})$","$\\delta^{34}S (\\text{\\textperthousand})$")) %>%
   kable_styling(latex_options = c("basic", "hold_position","repeat_header","scale_down"), full_width = TRUE, font_size = 7.5) %>%
@@ -250,17 +332,125 @@ dffinal %>%
 ```
 
 
-```{r carb-nitro-iso-plot, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, out.width='0.98\\textwidth', fig.height=8, fig.env='figure*', fig.cap= 'Plot showing isotope values of faunal bone collagen.'}
+
+(ref:fauna-carbnitro-iso) Plot showing mean $\delta ^{13}C$ and $\delta ^{15}N$ values of faunal bone collagen.
+
+```{r fauna-carbnitro-iso-plot, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, out.width='0.98\\textwidth', fig.height=5, fig.env='figure*', fig.cap= '(ref:fauna-carbnitro-iso)'}
+
+theme<-theme(panel.background = element_blank(),legend.key.size = unit(0.5, 'cm'), legend.position="right",legend.text = element_text(size=5),text = element_text(size=5),legend.title=element_text(size=6),axis.title.x = element_text(size=6), axis.title.y = element_text(size=6), panel.border=element_rect(fill=NA),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),strip.background=element_blank(),
+axis.text.x=element_text(colour="black"),axis.text.y=element_text(colour="black"),axis.ticks=element_line(colour="black"),plot.margin=unit(c(1,1,1,1),"line"))
 
 
-theme1<-theme(panel.background = element_blank(),legend.key.size = unit(0.6, 'cm'),legend.text = element_text(size=6),text = element_text(size=7),legend.title=element_text(size=7),axis.title.x = element_text(size=5), axis.title.y = element_text(size=5), panel.border=element_rect(fill=NA),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),strip.background=element_blank(),axis.text.x=element_text(colour="black"),axis.text.y=element_text(colour="black"),axis.ticks=element_line(colour="black"),plot.margin=unit(c(1,1,1,1),"line"))
+dffinal_iso_summ <- df_iso_fauna %>%
+  select(Species, Common_Name, dC, dN, dS) %>%
+  group_by(Common_Name) %>%
+  summarize(
+    n = n(),
+    mean_dC = mean(dC, na.rm = TRUE),
+    std.dev_dC = sd(dC, na.rm = TRUE),
+    mean_dN = mean(dN, na.rm = TRUE),
+    std.dev_dN = sd(dN, na.rm = TRUE),
+    mean_dS = mean(dS, na.rm = TRUE),
+    std.dev_dS = sd(dS, na.rm = TRUE),
+    min_dC = min(dC, na.rm = TRUE),
+    max_dC = max(dC, na.rm = TRUE),
+    min_dN = min(dN, na.rm = TRUE),
+    max_dN = max(dN, na.rm = TRUE),
+    min_dS = min(dS, na.rm = TRUE),
+    max_dN = max(dS, na.rm = TRUE))
 
-carb_nitro_iso_plot <- ggplot(dffinal, aes(x = dC, y = dN, shape = factor(Species), colour = factor(Species))) + geom_point(size = 2, alpha = 0.5) + scale_color_aaas() + scale_shape_manual(values = c(15,16,17,18,19,15,16,17,18,19)) +
-labs(x = expression(paste(delta^{13}, "C (\u2030 vs. VPDB)")), y = expression(paste(delta^{15}, "N (\u2030 vs. Air)")), shape = 'Species', colour = 'Species') + coord_fixed(0.5) + scale_y_continuous(breaks=seq(2.5,16,1)) + scale_x_reverse(breaks=seq(-22,-14,1)) + theme1
 
-carb_nitro_iso_plot
+iso_carbnitro_mean_plot <- ggplot(dffinal_iso_summ, aes(x=mean_dC, y=mean_dN, shape = as.factor(Common_Name), colour= as.factor(Common_Name))) + 
+  geom_errorbar(aes(ymin=mean_dN-std.dev_dN, ymax=mean_dN+std.dev_dN), width=.1) + geom_errorbarh(aes(xmin=mean_dC-std.dev_dC, xmax=mean_dC+std.dev_dC)) +
+  geom_point(size = 3, alpha = 0.65) + labs(x = expression(paste(delta^{13}, "C (\u2030 vs. VPDB)")), y = expression(paste(delta^{15}, "N (\u2030 vs. Air)")), shape = 'Species', colour = 'Species') + scale_color_aaas() + scale_shape_manual(values = c(15,16,17,18,19,15,16,17,18,19)) + scale_y_continuous(breaks=seq(2.5,16,1)) + scale_x_continuous(breaks=seq(-25,-14,1)) + annotate("text", x = -22, y = 15.5, colour = "gray44" , size = 2, label = "Pure C3 feeders") + annotate("text", x = -17.5, y = 15.5, colour = "gray44" , size = 2, label = "Addition of C4 plants") + theme + geom_vline(xintercept = -21, color='gray62', linetype="dotted", size=1)
+
+iso_carbnitro_mean_plot
 
 ```
+
+```{r table5, echo=FALSE, results='asis'}
+options(knitr.kable.NA = "--")
+
+df_iso_fauna_summ %>%
+  select(Species,n,meandC,stddevdC,meandN,stddevdN,meandS,stddevdS) %>%
+  kable(caption = "Statistical summary of mean and standard deviation of isotope composition of the fauna.", digits = 2, booktabs = T,linesep = "", align = "ccllllll", format = "latex", escape = FALSE,table.env='table*') %>%
+add_header_above(c(" " = 2, "$\\delta^{13}C (\\text{\\textperthousand})$" = 2, "$\\delta^{15}N (\\text{\\textperthousand})$" = 2, "$\\delta^{34}S (\\text{\\textperthousand})$" = 2))
+  
+```
+
+```{r iso-fauna-summ, echo=FALSE, results='asis'}
+
+df_iso_fauna_sheep <- dplyr::filter(df_iso_fauna_summ,Species == 'Sheep')
+df_iso_fauna_goat <- dplyr::filter(df_iso_fauna_summ,Species == 'Goat')
+df_iso_fauna_cattle <- dplyr::filter(df_iso_fauna_summ,Species == 'Cattle')
+df_iso_fauna_pig <- dplyr::filter(df_iso_fauna_summ,Species == 'Pig')
+df_iso_fauna_chicken <- dplyr::filter(df_iso_fauna_summ,Species == 'Chicken')
+df_iso_fauna_rabbit <- dplyr::filter(df_iso_fauna_summ,Species == 'Rabbit')
+df_iso_fauna_partridge <- dplyr::filter(df_iso_fauna_summ,Species == 'Partridge')
+df_iso_fauna_reddeer <- dplyr::filter(df_iso_fauna_summ,Species == 'Red Deer')
+
+iso_meandC_sheep <- round(df_iso_fauna_sheep$meandC, 2)
+iso_stddevC_sheep <- round(df_iso_fauna_sheep$stddevdC, 2)
+iso_meandN_sheep <- round(df_iso_fauna_sheep$meandN, 2)
+iso_stddevN_sheep <- round(df_iso_fauna_sheep$stddevdN, 2)
+iso_meandC_goat <- round(df_iso_fauna_goat$meandC, 2)
+iso_stddevC_goat <- round(df_iso_fauna_goat$stddevdC, 2)
+iso_meandN_goat <- round(df_iso_fauna_goat$meandN, 2)
+iso_stddevN_goat <- round(df_iso_fauna_goat$stddevdN, 2)
+iso_meandC_cattle <- round(df_iso_fauna_cattle$meandC, 2)
+iso_stddevC_cattle <- round(df_iso_fauna_cattle$stddevdC, 2)
+iso_meandN_cattle <- round(df_iso_fauna_cattle$meandN, 2)
+iso_stddevN_cattle <- round(df_iso_fauna_cattle$stddevdN, 2)
+iso_meandC_pig <- round(df_iso_fauna_pig$meandC, 2)
+iso_stddevC_pig <- round(df_iso_fauna_pig$stddevdC, 2)
+iso_meandN_pig <- round(df_iso_fauna_pig$meandN, 2)
+iso_stddevN_pig <- round(df_iso_fauna_pig$stddevdN, 2)
+iso_meandC_chicken <- round(df_iso_fauna_chicken$meandC, 2)
+iso_stddevC_chicken <- round(df_iso_fauna_chicken$stddevdC, 2)
+iso_meandN_chicken <- round(df_iso_fauna_chicken$meandN, 2)
+iso_stddevN_chicken <- round(df_iso_fauna_chicken$stddevdN, 2)
+iso_meandC_rabbit <- round(df_iso_fauna_rabbit$meandC, 2)
+iso_stddevC_rabbit <- round(df_iso_fauna_rabbit$stddevdC, 2)
+iso_meandN_rabbit <- round(df_iso_fauna_rabbit$meandN, 2)
+iso_stddevN_rabbit <- round(df_iso_fauna_rabbit$stddevdN, 2)
+iso_meandC_partridge <- round(df_iso_fauna_partridge$meandC, 2)
+iso_stddevC_partridge <- round(df_iso_fauna_partridge$stddevdC, 2)
+iso_meandN_partridge <- round(df_iso_fauna_partridge$meandN, 2)
+iso_stddevN_partridge <- round(df_iso_fauna_partridge$stddevdN, 2)
+iso_meandC_reddeer <- round(df_iso_fauna_reddeer$meandC, 2)
+iso_stddevC_reddeer <- round(df_iso_fauna_reddeer$stddevdC, 2)
+iso_meandN_reddeer <- round(df_iso_fauna_reddeer$meandN, 2)
+iso_stddevN_reddeer <- round(df_iso_fauna_reddeer$stddevdN, 2)
+
+df_complete_sheep <- dplyr::filter(df_iso_fauna,Common_Name == 'Sheep')
+df_complete_goat <- dplyr::filter(df_iso_fauna,Common_Name == 'Goat')
+df_complete_cattle <- dplyr::filter(df_iso_fauna,Common_Name == 'Cattle')
+df_complete_pig <- dplyr::filter(df_iso_fauna,Common_Name == 'Pig')
+df_complete_chicken <- dplyr::filter(df_iso_fauna,Common_Name == 'Chicken')
+df_complete_rabbit <- dplyr::filter(df_iso_fauna,Common_Name == 'Rabbit')
+df_complete_partridge <- dplyr::filter(df_iso_fauna,Common_Name == 'Partridge')
+df_complete_reddeer <- dplyr::filter(df_iso_fauna,Common_Name == 'Red Deer')
+
+
+sheep_goat_dC_ttest <- t.test(df_complete_goat$dC, df_complete_sheep$dC,
+                        alternative = "two.sided", paired = FALSE,
+                        var.equal = TRUE, conf.level = 0.95)
+sheep_goat_dC_ttest_statistic <- round(sheep_goat_dC_ttest$statistic,2)
+sheep_goat_dC_ttest_df <- round(sheep_goat_dC_ttest$parameter,2)
+sheep_goat_dC_ttest_p <- round(sheep_goat_dC_ttest$p.value,2)
+sheep_goat_dN_ttest <- t.test(df_complete_sheep$dN, df_complete_goat$dN,
+                        alternative = "two.sided", paired = FALSE,
+                        var.equal = TRUE, conf.level = 0.95)
+sheep_goat_dN_ttest_statistic <- round(sheep_goat_dN_ttest$statistic,2)
+sheep_goat_dN_ttest_df <- round(sheep_goat_dN_ttest$parameter,2)
+sheep_goat_dN_ttest_p <- round(sheep_goat_dN_ttest$p.value,2)
+
+```
+
+
+All fifty faunal samples with the exception of rabbits (in case of $\delta ^{15}N$), demonstrate (Table \ref{tab:table4}) stable isotope values within the range expected for a C~3~ temperate ecosystem. 
+ Sheep show mean $\delta ^{13}C$ values of `r iso_meandC_sheep` ± `r iso_stddevC_sheep`\permil and mean $\delta ^{15}N$ values of `r iso_meandN_sheep` ± `r iso_stddevN_sheep`\permil, while goats exhibit mean $\delta ^{13}C$ values of `r iso_meandC_goat` ± `r iso_stddevC_goat`\permil and mean $\delta ^{15}N$ values of `r iso_meandN_goat` ± `r iso_stddevN_goat`\permil. Goat mean $\delta ^{13}C$ values are not significantly different than that of sheep (t-statistic: `r sheep_goat_dC_ttest_statistic`, degrees of freedom: `r sheep_goat_dC_ttest_df`, *p*-value: `r sheep_goat_dC_ttest_p`). The $\delta ^{13}C$ values of ovicaprines are indicative of feeding in forested patches of land. Feeding in forested areas causes the $\delta ^{13}C$ values to increase due to canopy effect [@bonafini_etal13]. Sheep also exhibit significantly higher $\delta ^{15}N$ values than goats (t-statistic: `r sheep_goat_dN_ttest_statistic`, degrees of freedom: `r sheep_goat_dN_ttest_df`, *p*-value: `r sheep_goat_dN_ttest_p`) which demonstrates that sheep were fed on food sourced from manured vegetation (Fig. \ref{fig:auna-carbnitro-iso-plot}. Sheep are superior to goats both in terms of secondary products and ease of management [@davis07; @rutter02]. Owing to the more attached economic interests with sheep, it is natural to give food sourced from cultivated crops.
+
 
 
 

@@ -161,10 +161,9 @@ df_iso_hord <- here::here("./data/castro_iso_hord.csv") %>%
 options(knitr.kable.NA = "--")
 
 df_iso_fauna %>%
-  select(Sample,Phase, Species, Element, col, IRSF, CP) %>%
-  kable(caption = "Selected faunal samples from all phases of settlement.", digits = 2, align="lcccccc", booktabs = T,linesep = "", format = "latex", escape = F,table.env='table*', col.names=c("ID","Phase","Species","Element","Collagen yield (\\%)","IRSF","C/P")) %>%
-  kable_styling(latex_options = c("basic","hold_position"), full_width = TRUE, font_size = 7.5) %>%
-  column_spec(3,italic = TRUE)
+  select(Sample,Phase, col, IRSF, CP) %>%
+  kable(caption = "Collagen yield and FT-IR results (IRSF and C/P) of selected faunal bone samples.", digits = 2, align="ccccccc", booktabs = T,linesep = "", format = "latex", escape = F, col.names=c("ID","Phase","Collagen yield (\\%)","IRSF","C/P")) %>%
+  kable_styling(latex_options = c("basic","hold_position"), full_width = TRUE, font_size = 7.5)
   
 ```
 
@@ -172,7 +171,7 @@ df_iso_fauna %>%
 # Materials and Methods
 
 ## Sample Selection
-Fifty faunal bone samples (Table \ref{tab:table1}) from conclusively adult individuals as well as 9 charred plant macro-remains of *Hordeum vulgare* subsp. *vulgare*, *Hordeum vulgare* subsp. *nudum*, and *Pinus* sp. each have been selected for this study. The sampled faunal bones represent the Phoenician -- Punic period of the settlement (phases III, IV, and V), whereas the charred plant macro -- remains are from only from phase V due to the absence of plant remains from the older phases.
+Fifty faunal bone samples (Table \ref{tab:table4}) from conclusively adult individuals as well as 9 charred plant macro-remains of *Hordeum vulgare* subsp. *vulgare*, *Hordeum vulgare* subsp. *nudum*, and *Pinus* sp. each have been selected for this study. The sampled faunal bones represent the Phoenician -- Punic period of the settlement (phases III, IV, and V), whereas the charred plant macro -- remains are from only from phase V due to the absence of plant remains from the older phases.
 
 ## Archaeobotanical Analysis
 
@@ -211,16 +210,6 @@ The collagen samples were combusted with additional V~2~O~5~ and a oxygen pulse 
 ## Statistical Analysis
 The obtained data were subjected to statistical analysis using R programming language [@rcoreteam20; @wickham16]. Initially, means and standard deviations were calculated per species. Z-scores were calculated to detect the presence of outliers. Deviance from normal distribution was assessed using Shapiro-Wilks test. F-tests were first used to check for significant equal variance, and subsequently, unpaired Student's t-tests were used for two-sample comparison since all the datasets were normally distributed.
 
-# Results and Discussion
-
-## Bone Preservation
-
-### Fourier Transform - Infrared Spectroscopy
-The IRSF index values are in a range of 2.37 - 3.37 (accepted range is 2.96 - 4.04) and the C/P index values are in the range of 0.2-0.428 (accepted range is 0.054 - 0.47) which fall well within the accepted range for well-preserved archaeological bones [@hollund_etal13; @lebon_etal16].
-
-### Collagen Quality
-Collagen extraction was successful for all the bone samples, based on published criteria, with carbon content between 15.3% and 47.0% [@ambrose90], nitrogen content between 5.5% and 17.3% [@ambrose90], C/N values between 2.9 and 3.6 [@deniro85], C/S values between 300% and 900% [@nehlich_richards09], and collagen yields greater than 1% [@vanklinken99]. The extracted bone collagen samples exhibit C/N values ranged between 3.1 and 3.5 and C/S values between 225.9 and 688.4. Carbon and nitrogen amounts range from 20.3% to 50.0% and 7.3% and 18.1% respectively. Collagen yields range between 2.5% to 49.1%. All the faunal samples exhibited collagen quality parameters indicative of good preservation. 
-
 (ref:archbot-caption) Charred botanical remains of settlement phase V from Castro Marim; **(a)** *Brassica nigra*; **(b)** *Apium* sp.; **(c)** *Galeopsis tetrahit*; **(d)** *Pisum sativum*; **(e)** *Triticum aestivum/durum*; **(f)** *Hordeum vulgare nudum*; **(g)** *Hordeum vulgare vulgare*; **(h)** *Pinus* sp.; **(i)** *Vicia faba*
 
 ```{r castro-archbot-assemblage, echo=FALSE, dpi=600, fig.show="hold", out.width='0.98\\textwidth', fig.height=8, fig.env='figure*', fig.cap= '(ref:archbot-caption)'}
@@ -234,6 +223,16 @@ knitr::include_graphics(
 
 ```
 
+
+# Results and Discussion
+
+## Bone Preservation
+
+### Fourier Transform - Infrared Spectroscopy
+The IRSF index values are in a range of 2.37 - 3.37 (accepted range is 2.96 - 4.04) and the C/P index values are in the range of 0.2-0.428 (accepted range is 0.054 - 0.47) which fall well within the accepted range for well-preserved archaeological bones [@hollund_etal13; @lebon_etal16].
+
+### Collagen Quality
+Collagen extraction was successful for all the bone samples, based on published criteria, with carbon content between 15.3% and 47.0% [@ambrose90], nitrogen content between 5.5% and 17.3% [@ambrose90], C/N values between 2.9 and 3.6 [@deniro85], C/S values between 300% and 900% [@nehlich_richards09], and collagen yields greater than 1% [@vanklinken99]. The extracted bone collagen samples exhibit C/N values ranged between 3.1 and 3.5 and C/S values between 225.9 and 688.4. Carbon and nitrogen amounts range from 20.3% to 50.0% and 7.3% and 18.1% respectively. Collagen yields range between 2.5% to 49.1%. All the faunal samples exhibited collagen quality parameters indicative of good preservation. 
 
 
 (ref:isobot-caption) $\delta ^{13}C$ and $\delta ^{15}N$ values of the two charred *Hordeum vulgare* cultivars.
@@ -291,6 +290,17 @@ hord_dN_ttest_df <- round(hord_dN_ttest$parameter,2)
 hord_dN_ttest_p <- round(hord_dN_ttest$p.value,2)
 ```
 
+```{r table4, echo=FALSE, results='asis'}
+options(knitr.kable.NA = "--")
+
+df_iso_fauna %>%
+  select(Sample, Species,percentC,percentN,percentS,CN,CS,NS, dC, dN, dS) %>%
+  kable(caption = "Carbon, nitrogen, and sulphur isotope composition of the fauna.", digits = 2, booktabs = T,linesep = "", align = "ccccccccccc", format = "latex", escape = FALSE,table.env='table*', col.names=c("ID","Species","\\% C","\\% N","\\% S","C:N","C:S","N:S", "$\\delta^{13}C (\\text{\\textperthousand})$","$\\delta^{15}N (\\text{\\textperthousand})$","$\\delta^{34}S (\\text{\\textperthousand})$")) %>%
+  kable_styling(latex_options = c("basic", "hold_position","repeat_header","scale_down"), full_width = TRUE, font_size = 7.5) %>%
+  column_spec(2,italic = TRUE)
+  
+```
+
 
 ## Botanical Remains
 No botanical remains could be recovered from the soil samples of phases I – IV due to the smaller scale of settlements as well as poor preservation conditions. The bulk of the recovered remains are from phase V representing the most mature chronological period of the occupation. Barley (*Hordeum vulgare*) is the most dominant taxon in the botanical record (Table \ref{tab:table2}). *Hordeum vulgare nudum* and *Hordeum vulgare vulgare* (Fig. \ref{fig:castro-archbot-assemblage} **(f)** and **(g)** respectively) are the two cultivars which constitute the barley fraction with equal abundance. Wheat (*Triticum aestivum*) is second most abundant taxon after barley. Large scale cereal cultivation has been observed in sites located in river valleys near South Iberian sea coast (Eg: Castillo de Doña Blanca (Guadalquivir Valley, Spain) and El Villar (Guadalhorce valley, Spain), two sites which are located in similar geographical settings to Castro Marim). Cereal cultivation seems to be a major activity with implication being that cereals were the principle source of carbohydrates for both humans and animals. The greater presence of barley compared to wheat can be a strategy of 'minimum returns on investment' against dry climatic conditions exploiting the fact that barley has higher tolerance to drier conditions compared to wheat [@riehl09]. Two taxa of leguminous plants have been noted namely, peas (*Pisum sativum*) and broad bean (*Vicia faba*) (Fig. \ref{fig:castro-archbot-assemblage} **(d)** and **(i)** respectively). The leguminous plants serve as a rich source of proteins and act as an alternate to animal sourced protein for humans. The combined cultivation of leguminous plants with cereals helps maintain adequate soil nitrogen levels, leading to a sustainable and diverse production. The presence of black mustard (*Brassica nigra*) (Fig. \ref{fig:castro-archbot-assemblage} **(a)**) has been recorded. Black mustard is a common species along the rocky Mediterranean coasts and have long found their place as a culinary taste enhancer [@dixon06]. Like many members of *Brassica*, black mustard was also used as a source of oil. A fragment of a charred seed has been attributed to *Apium* taxon, suspected to be a seed of celery (*Apium graveolens*) (Fig. \ref{fig:castro-archbot-assemblage} **(b)**). This attribution is done due to the presence of five slender longitudinal ridges on the surface of the seed [@wilson16]. The species is native to the coastal Mediterranean region, considered to be its centre of origin. The recorded use of celery as a vegetable in Europe is only from the 1600s, originating in Italy, with gradual spread westwards in the subsequent centuries [@tobyn_etal11]. Hortulus, a Strabo poem from 9th century B.C.E describes the use of celery as a medicinal plant implying that even if the plant was cultivated as a medicinal herb rather than as a food plant [@sturtevant86] in the Phoenician - Punic period. Shells of pine nuts (*Pinus* sp.) (Fig. \ref{fig:castro-archbot-assemblage} **(h)**) are suspected to be from the *Pinus pinea* species, commonly known as Mediterranean stone pine. Pine nut consumption has been documented in Portugal since Palaeolithic period [@gale_carruthers00]. The nuts of stone pine are high in protein ansd fat with low carbohydrates [@haws04]. The nuts are a valuable source of nutrition and could have been stored to deal with periods of low cultivated food production.
@@ -320,24 +330,11 @@ Table \ref{tab:table3}. shows the results of stable isotope results of the two b
 
 ## Faunal bone collagen $\delta ^{13}C$ and $\delta ^{15}N$ values
 
-```{r table4, echo=FALSE, results='asis'}
-options(knitr.kable.NA = "--")
-
-df_iso_fauna %>%
-  select(Sample, Species,percentC,percentN,percentS,CN,CS,NS, dC, dN, dS) %>%
-  kable(caption = "Carbon, nitrogen, and sulphur isotope composition of the fauna.", digits = 2, booktabs = T,linesep = "", align = "ccccccccccc", format = "latex", escape = FALSE,table.env='table*', col.names=c("ID","Species","\\% C","\\% N","\\% S","C:N","C:S","N:S", "$\\delta^{13}C (\\text{\\textperthousand})$","$\\delta^{15}N (\\text{\\textperthousand})$","$\\delta^{34}S (\\text{\\textperthousand})$")) %>%
-  kable_styling(latex_options = c("basic", "hold_position","repeat_header","scale_down"), full_width = TRUE, font_size = 7.5) %>%
-  column_spec(2,italic = TRUE)
-  
-```
-
-
-
 (ref:fauna-carbnitro-iso) Plot showing mean $\delta ^{13}C$ and $\delta ^{15}N$ values of faunal bone collagen.
 
-```{r fauna-carbnitro-iso-plot, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, out.width='0.98\\textwidth', fig.height=5, fig.env='figure*', fig.cap= '(ref:fauna-carbnitro-iso)'}
+```{r fauna-carbnitro-iso-plot, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, fig.width=5, fig.height=5, fig.cap= '(ref:fauna-carbnitro-iso)'}
 
-theme<-theme(panel.background = element_blank(),legend.key.size = unit(0.5, 'cm'), legend.position="right",legend.text = element_text(size=5),text = element_text(size=5),legend.title=element_text(size=6),axis.title.x = element_text(size=6), axis.title.y = element_text(size=6), panel.border=element_rect(fill=NA),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),strip.background=element_blank(),
+theme<-theme(panel.background = element_blank(),legend.background = element_blank(), legend.key.size = unit(0.3, 'cm'), legend.box.background = element_rect(colour = "black"), legend.position=c(0.9,0.18),legend.text = element_text(size=3),text = element_text(size=3),legend.title=element_text(size=4),axis.title.x = element_text(size=6), axis.title.y = element_text(size=6), panel.border=element_rect(fill=NA),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),strip.background=element_blank(),
 axis.text.x=element_text(colour="black"),axis.text.y=element_text(colour="black"),axis.ticks=element_line(colour="black"),plot.margin=unit(c(1,1,1,1),"line"))
 
 
@@ -362,7 +359,7 @@ dffinal_iso_summ <- df_iso_fauna %>%
 
 iso_carbnitro_mean_plot <- ggplot(dffinal_iso_summ, aes(x=mean_dC, y=mean_dN, shape = as.factor(Common_Name), colour= as.factor(Common_Name))) + 
   geom_errorbar(aes(ymin=mean_dN-std.dev_dN, ymax=mean_dN+std.dev_dN), width=.1) + geom_errorbarh(aes(xmin=mean_dC-std.dev_dC, xmax=mean_dC+std.dev_dC)) +
-  geom_point(size = 3, alpha = 0.65) + labs(x = expression(paste(delta^{13}, "C (\u2030 vs. VPDB)")), y = expression(paste(delta^{15}, "N (\u2030 vs. Air)")), shape = 'Species', colour = 'Species') + scale_color_aaas() + scale_shape_manual(values = c(15,16,17,18,19,15,16,17,18,19)) + scale_y_continuous(breaks=seq(2.5,16,1)) + scale_x_continuous(breaks=seq(-25,-14,1)) + annotate("text", x = -22, y = 15.5, colour = "gray44" , size = 2, label = "Pure C3 feeders") + annotate("text", x = -17.5, y = 15.5, colour = "gray44" , size = 2, label = "Addition of C4 plants") + theme + geom_vline(xintercept = -21, color='gray62', linetype="dotted", size=1)
+  geom_point(size = 3, alpha = 0.65) + labs(x = expression(paste(delta^{13}, "C (\u2030 vs. VPDB)")), y = expression(paste(delta^{15}, "N (\u2030 vs. Air)")), shape = 'Species', colour = 'Species') + scale_color_aaas() + scale_shape_manual(values = c(15,16,17,18,19,15,16,17,18,19)) + scale_y_continuous(breaks=seq(2.5,16,1)) + scale_x_continuous(breaks=seq(-25,-14,1)) + annotate("text", x = -22, y = 15.5, colour = "gray44" , size = 2, label = "Pure C3 feeders") + annotate("text", x = -17.5, y = 15.5, colour = "gray44" , size = 2, label = "Addition of C4 plants") + theme + geom_vline(xintercept = -21, color='gray62', linetype="dotted", size=1) + coord_fixed(ratio=1)
 
 iso_carbnitro_mean_plot
 

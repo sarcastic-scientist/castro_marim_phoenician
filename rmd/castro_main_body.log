@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.7.25)  28 JUL 2021 10:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.7.25)  28 JUL 2021 15:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -910,7 +910,7 @@ tex.map}
 
 ]
 <C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castro_ma
-rim_map.jpg, id=133, 1297.84875pt x 793.46437pt>
+rim_map.jpg, id=137, 1297.84875pt x 793.46437pt>
 File: C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/cast
 ro_marim_map.jpg Graphic file (type jpg)
 <use C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castr
@@ -944,7 +944,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [4] [5]
 <C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castro_bo
-t_assemblage.jpg, id=176, 1670.49094pt x 1872.9975pt>
+t_assemblage.jpg, id=180, 1670.49094pt x 1872.9975pt>
 File: C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/cast
 ro_bot_assemblage.jpg Graphic file (type jpg)
 <use C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castr
@@ -962,7 +962,7 @@ Overfull \hbox (11.34238pt too wide) in paragraph at lines 380--380
 []$\OML/lmm/m/it/7.5 ^^N[]N[]\OT1/lmr/m/n/7.5 (-20) ([])[]$|  
  []
 
-<castro_main_body_files/figure-latex/iso-hord-plots-1.pdf, id=195, 252.945pt x 
+<castro_main_body_files/figure-latex/iso-hord-plots-1.pdf, id=199, 252.945pt x 
 174.6525pt>
 File: castro_main_body_files/figure-latex/iso-hord-plots-1.pdf Graphic file (ty
 pe pdf)
@@ -1285,7 +1285,7 @@ Overfull \hbox (4.37775pt too wide) in paragraph at lines 477--477
  []\T1/lmr/m/n/7.5 (-20) CMOF745| 
  []
 
-<castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf, id=198, 43
+<castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf, id=202, 43
 6.63126pt x 332.24126pt>
 File: castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf Graphi
 c file (type pdf)
@@ -1293,76 +1293,63 @@ c file (type pdf)
 Package pdftex.def Info: castro_main_body_files/figure-latex/fauna-carbnitro-is
 o-plot-1.pdf  used on input line 483.
 (pdftex.def)             Requested size: 511.55777pt x 389.25807pt.
-
-Overfull \hbox (157.17015pt too wide) in paragraph at lines 490--506
- [][] 
- []
-
-
-LaTeX Warning: Reference `fig:fauna-carbnitro-iso' on page 7 undefined on input
- line 509.
-
 [7] [8 <c:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/ca
-stro_bot_assemblage.jpg>]
-Underfull \hbox (badness 2503) in paragraph at lines 556--558
+stro_bot_assemblage.jpg>] [9 <./castro_main_body_files/figure-latex/iso-hord-pl
+ots-1.pdf>] [10] [11 <./castro_main_body_files/figure-latex/fauna-carbnitro-iso
+-plot-1.pdf>]
+Underfull \hbox (badness 2503) in paragraph at lines 541--543
 \T1/lmr/m/n/10 (+20) in the iso-tope ecol-ogy of tem-per-ate wood-lands.
  []
 
 
-Underfull \hbox (badness 1590) in paragraph at lines 556--558
+Underfull \hbox (badness 1590) in paragraph at lines 541--543
 \T1/lmr/m/n/10 (+20) Jour-nal of Ar-chae-o-log-i-cal Sci-ence 40, 3926--3935.
  []
 
-[9 <./castro_main_body_files/figure-latex/iso-hord-plots-1.pdf>] [10] [11 <./ca
-stro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf>]
-Underfull \hbox (badness 1097) in paragraph at lines 580--582
+
+Underfull \hbox (badness 1097) in paragraph at lines 565--567
 \T1/lmr/m/n/10 (+20) ear-li-est Phoeni-cian quest for met-als in the west
  []
 
 
-Underfull \hbox (badness 1205) in paragraph at lines 586--588
+Underfull \hbox (badness 1205) in paragraph at lines 571--573
 \T1/lmr/m/n/10 (+20) Re-la-tion-ship Be-tween Car-bon Iso-tope Dis-crim-i-na-
  []
 
-
-Underfull \hbox (badness 2057) in paragraph at lines 625--627
+[12]
+Underfull \hbox (badness 2057) in paragraph at lines 610--612
 \T1/lmr/m/n/10 (+20) Kars, H., 2013. Test-ing an Al-ter-na-tive High-
  []
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 625--627
+Underfull \hbox (badness 1888) in paragraph at lines 610--612
 \T1/lmr/m/n/10 (+20) Throughput Tool for In-ves-ti-gat-ing Bone Di-a-ge-n-
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 625--627
+Underfull \hbox (badness 2435) in paragraph at lines 610--612
 \T1/lmr/m/n/10 (+20) e-sis: Ftir in At-ten-u-ated To-tal Re-flec-tion (atr)
  []
 
-[12] [13]
-Underfull \hbox (badness 1237) in paragraph at lines 757--759
+[13]
+Underfull \hbox (badness 1237) in paragraph at lines 742--744
 [][]\T1/lmr/m/n/10 (+20) Wright, L.E., Schwarcz, H.P., 1996. In-frared and
  []
 
-[14
-
-] (./castro_main_body.aux)
+[14] (./castro_main_body.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.25pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `castro_main_body.out' has not changed.
-(rerunfilecheck)             Checksum: 1B4B9C9A747A454C00896593C2A0440C;5224.
+(rerunfilecheck)             Checksum: DC0C4F3BBBC5AEF78EA1DB119A3AA311;5513.
  ) 
 Here is how much of TeX's memory you used:
- 16431 strings out of 480502
- 256076 string characters out of 5898081
- 747703 words of memory out of 5000000
+ 16444 strings out of 480502
+ 256202 string characters out of 5898081
+ 747699 words of memory out of 5000000
  33366 multiletter control sequences out of 15000+600000
- 502051 words of font info for 223 fonts, out of 8000000 for 9000
+ 502589 words of font info for 229 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  72i,20n,80p,3632b,592s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.e
@@ -1394,10 +1381,10 @@ lm/lmsy7.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/pub
 lic/lm/lmtt8.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1
 /public/wasy-type1/wasy10.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dis
 t/fonts/type1/public/wasy-type1/wasy8.pfb>
-Output written on castro_main_body.pdf (14 pages, 1649715 bytes).
+Output written on castro_main_body.pdf (14 pages, 1651851 bytes).
 PDF statistics:
- 563 PDF objects out of 1000 (max. 8388607)
- 483 compressed objects within 5 object streams
- 164 named destinations out of 1000 (max. 500000)
- 62181 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 569 PDF objects out of 1000 (max. 8388607)
+ 489 compressed objects within 5 object streams
+ 165 named destinations out of 1000 (max. 500000)
+ 62189 words of extra memory for PDF output out of 74296 (max. 10000000)
 

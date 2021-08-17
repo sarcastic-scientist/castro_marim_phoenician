@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.7.25)  28 JUL 2021 15:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.9)  17 AUG 2021 22:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -93,79 +93,48 @@ LaTeX Info: Redefining \cite on input line 694.
 \splwrite=\write3
 \openout3 = `castro_main_body.spl'.
 
-
-(c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/geometry/geometry.
-sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
-
-(c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-(c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
-))
-\Gm@cnth=\count197
-\Gm@cntv=\count198
-\c@Gm@tempcnt=\count199
-\Gm@bindingoffset=\dimen145
-\Gm@wd@mp=\dimen146
-\Gm@odd@mp=\dimen147
-\Gm@even@mp=\dimen148
-\Gm@layoutwidth=\dimen149
-\Gm@layoutheight=\dimen150
-\Gm@layouthoffset=\dimen151
-\Gm@layoutvoffset=\dimen152
-\Gm@dimlist=\toks19
-) (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fleqn.clo
-File: fleqn.clo 2016/12/29 v1.2b Standard LaTeX option (flush left equations)
-\mathindent=\skip53
-Applying: [2015/01/01] Make \[ robust on input line 50.
-LaTeX Info: Redefining \[ on input line 51.
-Already applied: [0000/00/00] Make \[ robust on input line 62.
-Applying: [2015/01/01] Make \] robust on input line 74.
-LaTeX Info: Redefining \] on input line 75.
-Already applied: [0000/00/00] Make \] robust on input line 83.
-)) (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
+) (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ) (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lineno/lineno.st
 y
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count266
-\output=\toks20
-\linenoprevgraf=\count267
-\linenumbersep=\dimen153
-\linenumberwidth=\dimen154
-\c@linenumber=\count268
-\c@pagewiselinenumber=\count269
-\c@LN@truepage=\count270
-\c@internallinenumber=\count271
-\c@internallinenumbers=\count272
-\quotelinenumbersep=\dimen155
-\bframerule=\dimen156
-\bframesep=\dimen157
+\linenopenalty=\count197
+\output=\toks19
+\linenoprevgraf=\count198
+\linenumbersep=\dimen145
+\linenumberwidth=\dimen146
+\c@linenumber=\count199
+\c@pagewiselinenumber=\count266
+\c@LN@truepage=\count267
+\c@internallinenumber=\count268
+\c@internallinenumbers=\count269
+\quotelinenumbersep=\dimen147
+\bframerule=\dimen148
+\bframesep=\dimen149
 \bframebox=\box54
 LaTeX Info: Redefining \\ on input line 3056.
 )
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.
 sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen158
-\lightrulewidth=\dimen159
-\cmidrulewidth=\dimen160
-\belowrulesep=\dimen161
-\belowbottomsep=\dimen162
-\aboverulesep=\dimen163
-\abovetopsep=\dimen164
-\cmidrulesep=\dimen165
-\cmidrulekern=\dimen166
-\defaultaddspace=\dimen167
-\@cmidla=\count273
-\@cmidlb=\count274
-\@aboverulesep=\dimen168
-\@belowrulesep=\dimen169
-\@thisruleclass=\count275
-\@lastruleclass=\count276
-\@thisrulewidth=\dimen170
+\heavyrulewidth=\dimen150
+\lightrulewidth=\dimen151
+\cmidrulewidth=\dimen152
+\belowrulesep=\dimen153
+\belowbottomsep=\dimen154
+\aboverulesep=\dimen155
+\abovetopsep=\dimen156
+\cmidrulesep=\dimen157
+\cmidrulekern=\dimen158
+\defaultaddspace=\dimen159
+\@cmidla=\count270
+\@cmidlb=\count271
+\@aboverulesep=\dimen160
+\@belowrulesep=\dimen161
+\@thisruleclass=\count272
+\@lastruleclass=\count273
+\@thisrulewidth=\dimen162
 ) (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
@@ -210,7 +179,7 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.
 sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks21
+\@emptytoks=\toks20
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
@@ -220,7 +189,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.st
 y
 Package: amsmath 2021/04/20 v2.17j AMS math features
-\@mathmargin=\skip54
+\@mathmargin=\skip53
 For additional information on amsmath, use the `?' option.
 
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.st
@@ -229,58 +198,60 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks22
-\ex@=\dimen171
+\@emptytoks=\toks21
+\ex@=\dimen163
 ))
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen172
+\pmbraise@=\dimen164
 )
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count277
+\inf@bad=\count274
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count278
-\leftroot@=\count279
+\uproot@=\count275
+\leftroot@=\count276
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count280
-\DOTSCASE@=\count281
+\classnum@=\count277
+\DOTSCASE@=\count278
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
 \Mathstrutbox@=\box55
 \strutbox@=\box56
-\big@size=\dimen173
+\big@size=\dimen165
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count282
-\c@MaxMatrixCols=\count283
+\macc@depth=\count279
+\c@MaxMatrixCols=\count280
 \dotsspace@=\muskip17
-\c@parentequation=\count284
-\dspbrk@lvl=\count285
-\tag@help=\toks23
-\row@=\count286
-\column@=\count287
-\maxfields@=\count288
-\andhelp@=\toks24
-\eqnshift@=\dimen174
-\alignsep@=\dimen175
-\tagshift@=\dimen176
-\tagwidth@=\dimen177
-\totwidth@=\dimen178
-\lineht@=\dimen179
-\@envbody=\toks25
-\multlinegap=\skip55
-\multlinetaggap=\skip56
-\mathdisplay@stack=\toks26
+\c@parentequation=\count281
+\dspbrk@lvl=\count282
+\tag@help=\toks22
+\row@=\count283
+\column@=\count284
+\maxfields@=\count285
+\andhelp@=\toks23
+\eqnshift@=\dimen166
+\alignsep@=\dimen167
+\tagshift@=\dimen168
+\tagwidth@=\dimen169
+\totwidth@=\dimen170
+\lineht@=\dimen171
+\@envbody=\toks24
+\multlinegap=\skip54
+\multlinetaggap=\skip55
+\mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifxetex.st
 y
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-)
+(c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifluatex.s
 ty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
@@ -297,18 +268,18 @@ Already applied: [0000/00/00] Old fixltx2e package on input line 53.
 ) (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/inputenc.st
 y
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks27
-\inpenc@posthook=\toks28
+\inpenc@prehook=\toks26
+\inpenc@posthook=\toks27
 )
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/microtyp
 e.sty
 Package: microtype 2021/03/14 v2.8c Micro-typographical refinements (RS)
-\MT@toks=\toks29
-\MT@count=\count289
+\MT@toks=\toks28
+\MT@count=\count286
 LaTeX Info: Redefining \textls on input line 790.
-\MT@outer@kern=\dimen180
+\MT@outer@kern=\dimen172
 LaTeX Info: Redefining \textmicrotypecontext on input line 1374.
-\MT@listname@count=\count290
+\MT@listname@count=\count287
 
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/microtyp
 e-pdftex.def
@@ -316,7 +287,7 @@ File: microtype-pdftex.def 2021/03/14 v2.8c Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 915.
 LaTeX Info: Redefining \lslig on input line 915.
-\MT@outer@space=\skip57
+\MT@outer@space=\skip56
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
@@ -327,22 +298,22 @@ File: microtype.cfg 2021/03/14 v2.8c microtype main configuration file (RS)
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.st
 y
 Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
-\LTleft=\skip58
-\LTright=\skip59
-\LTpre=\skip60
-\LTpost=\skip61
-\LTchunksize=\count291
-\LTcapwidth=\dimen181
+\LTleft=\skip57
+\LTright=\skip58
+\LTpre=\skip59
+\LTpost=\skip60
+\LTchunksize=\count288
+\LTcapwidth=\dimen173
 \LT@head=\box57
 \LT@firsthead=\box58
 \LT@foot=\box59
 \LT@lastfoot=\box60
 \LT@gbox=\box61
-\LT@cols=\count292
-\LT@rows=\count293
-\c@LT@tables=\count294
-\c@LT@chunks=\count295
-\LT@p@ftn=\toks30
+\LT@cols=\count289
+\LT@rows=\count290
+\c@LT@tables=\count291
+\c@LT@chunks=\count292
+\LT@p@ftn=\toks29
 )
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.
 sty
@@ -393,9 +364,9 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 s.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-\@linkdim=\dimen182
-\Hy@linkcounter=\count296
-\Hy@pagecounter=\count297
+\@linkdim=\dimen174
+\Hy@linkcounter=\count293
+\Hy@pagecounter=\count294
 
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.de
 f
@@ -416,7 +387,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 s.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count298
+\Hy@SavedSpaceFactor=\count295
 
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
@@ -431,9 +402,9 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count299
+\c@Hy@tempcnt=\count296
 LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen183
+\XeTeXLinkMargin=\dimen175
 
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bitset.st
 y
@@ -444,9 +415,9 @@ tcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count300
-\Field@Width=\dimen184
-\Fld@charsize=\dimen185
+\Fld@menulength=\count297
+\Field@Width=\dimen176
+\Fld@charsize=\dimen177
 Package hyperref Info: Hyper figures OFF on input line 6076.
 Package hyperref Info: Link nesting OFF on input line 6081.
 Package hyperref Info: Hyper index ON on input line 6084.
@@ -462,9 +433,9 @@ sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count301
-\c@Item=\count302
-\c@Hfootnote=\count303
+\Hy@abspage=\count298
+\c@Item=\count299
+\c@Hfootnote=\count300
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -478,8 +449,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
 )
-\Fld@listcount=\count304
-\c@bookmark@seq@number=\count305
+\Fld@listcount=\count301
+\c@bookmark@seq@number=\count302
 
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rer
 unfilecheck.sty
@@ -492,7 +463,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip62
+\Hy@SectionHShift=\skip61
 )
 Package hyperref Info: Option `breaklinks' set `true' on input line 52.
 
@@ -500,20 +471,20 @@ Package hyperref Warning: Option `bookmarks' has already been used,
 (hyperref)                setting the option has no effect on input line 52.
 
 Package hyperref Info: Option `colorlinks' set `false' on input line 52.
-\cslhangindent=\skip63
-\csllabelwidth=\skip64
+\cslhangindent=\skip62
+\csllabelwidth=\skip63
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count306
-\calc@Bcount=\count307
-\calc@Adimen=\dimen186
-\calc@Bdimen=\dimen187
-\calc@Askip=\skip65
-\calc@Bskip=\skip66
+\calc@Acount=\count303
+\calc@Bcount=\count304
+\calc@Adimen=\dimen178
+\calc@Bdimen=\dimen179
+\calc@Askip=\skip64
+\calc@Bskip=\skip65
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count308
-\calc@Cskip=\skip67
+\calc@Ccount=\count305
+\calc@Cskip=\skip66
 ) (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/subfig/subfig.st
 y
 Package: subfig 2005/06/28 ver: 1.3 subfig package
@@ -525,13 +496,13 @@ Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption3.s
 ty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen188
-\captionmargin@=\dimen189
-\captionwidth=\dimen190
-\caption@tempdima=\dimen191
-\caption@indent=\dimen192
-\caption@parindent=\dimen193
-\caption@hangindent=\dimen194
+\captionmargin=\dimen180
+\captionmargin@=\dimen181
+\captionwidth=\dimen182
+\caption@tempdima=\dimen183
+\caption@indent=\dimen184
+\caption@parindent=\dimen185
+\caption@hangindent=\dimen186
 Package caption Info: elsarticle document class detected.
 
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption-el
@@ -539,8 +510,8 @@ sarticle.sto
 File: caption-elsarticle.sto 2020/08/22 v2.0 Adaption of the caption package to
  the elsarticle document class (AR)
 ))
-\c@caption@flags=\count309
-\c@continuedfloat=\count310
+\c@caption@flags=\count306
+\c@continuedfloat=\count307
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 
@@ -548,51 +519,51 @@ Package caption Info: longtable package is loaded.
 sty
 Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 ))
-\c@KVtest=\count311
-\sf@farskip=\skip68
-\sf@captopadj=\dimen195
-\sf@capskip=\skip69
-\sf@nearskip=\skip70
-\c@subfigure=\count312
-\c@subfigure@save=\count313
-\c@lofdepth=\count314
-\c@subtable=\count315
-\c@subtable@save=\count316
-\c@lotdepth=\count317
-\sf@top=\skip71
-\sf@bottom=\skip72
+\c@KVtest=\count308
+\sf@farskip=\skip67
+\sf@captopadj=\dimen187
+\sf@capskip=\skip68
+\sf@nearskip=\skip69
+\c@subfigure=\count309
+\c@subfigure@save=\count310
+\c@lofdepth=\count311
+\c@subtable=\count312
+\c@subtable@save=\count313
+\c@lotdepth=\count314
+\sf@top=\skip70
+\sf@bottom=\skip71
 ) (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
 Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
-\col@sep=\dimen196
+\col@sep=\dimen188
 \ar@mcellbox=\box62
-\extrarowheight=\dimen197
-\NC@list=\toks31
-\extratabsurround=\skip73
-\backup@length=\skip74
+\extrarowheight=\dimen189
+\NC@list=\toks30
+\extratabsurround=\skip72
+\backup@length=\skip73
 \ar@cellbox=\box63
 )
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/multirow/multirow.
 sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip75
-\multirow@cntb=\count318
-\multirow@dima=\skip76
-\bigstrutjot=\dimen198
+\multirow@colwidth=\skip74
+\multirow@cntb=\count315
+\multirow@dima=\skip75
+\bigstrutjot=\dimen190
 )
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.st
 y
-\wrapoverhang=\dimen199
-\WF@size=\dimen256
-\c@WF@wrappedlines=\count319
+\wrapoverhang=\dimen191
+\WF@size=\dimen192
+\c@WF@wrappedlines=\count316
 \WF@box=\box64
-\WF@everypar=\toks32
+\WF@everypar=\toks31
 Package: wrapfig 2003/01/31  v 3.6
 ) (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count320
-\float@exts=\toks33
+\c@float@type=\count317
+\float@exts=\toks32
 \float@box=\box65
-\@float@everytoks=\toks34
+\@float@everytoks=\toks33
 \@floatcapt=\box66
 )
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.
@@ -608,8 +579,8 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
 )
-\everycr=\toks35
-\minrowclearance=\skip77
+\everycr=\toks34
+\minrowclearance=\skip76
 )
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscap
 e.sty
@@ -627,32 +598,32 @@ Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box67
-\sift@deathcycles=\count321
-\@vwid@loff=\dimen257
-\@vwid@roff=\dimen258
+\sift@deathcycles=\count318
+\@vwid@loff=\dimen193
+\@vwid@roff=\dimen194
 )
-\c@taburow=\count322
-\tabu@nbcols=\count323
-\tabu@cnt=\count324
-\tabu@Xcol=\count325
-\tabu@alloc=\count326
-\tabu@nested=\count327
-\tabu@target=\dimen259
-\tabu@spreadtarget=\dimen260
-\tabu@naturalX=\dimen261
-\tabucolX=\dimen262
-\tabu@Xsum=\dimen263
-\extrarowdepth=\dimen264
-\abovetabulinesep=\dimen265
-\belowtabulinesep=\dimen266
-\tabustrutrule=\dimen267
-\tabu@thebody=\toks36
-\tabu@footnotes=\toks37
+\c@taburow=\count319
+\tabu@nbcols=\count320
+\tabu@cnt=\count321
+\tabu@Xcol=\count322
+\tabu@alloc=\count323
+\tabu@nested=\count324
+\tabu@target=\dimen195
+\tabu@spreadtarget=\dimen196
+\tabu@naturalX=\dimen197
+\tabucolX=\dimen198
+\tabu@Xsum=\dimen199
+\extrarowdepth=\dimen256
+\abovetabulinesep=\dimen257
+\belowtabulinesep=\dimen258
+\tabustrutrule=\dimen259
+\tabu@thebody=\toks35
+\tabu@footnotes=\toks36
 \tabu@box=\box68
 \tabu@arstrutbox=\box69
 \tabu@hleads=\box70
 \tabu@vleads=\box71
-\tabu@cellskip=\skip78
+\tabu@cellskip=\skip77
 )
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/threeparttable/thr
 eeparttable.sty
@@ -671,25 +642,25 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 ces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\TPTL@width=\skip79
+\TPTL@width=\skip78
 ) (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box73
 \UL@hyphenbox=\box74
-\UL@skip=\skip80
-\UL@hook=\toks38
-\UL@height=\dimen268
-\UL@pe=\count328
-\UL@pixel=\dimen269
+\UL@skip=\skip79
+\UL@hook=\toks37
+\UL@height=\dimen260
+\UL@pe=\count325
+\UL@pixel=\dimen261
 \ULC@box=\box75
 Package: ulem 2019/11/18
-\ULdepth=\dimen270
+\ULdepth=\dimen262
 )
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/makecell/makecell.
 sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen271
-\c@nlinenum=\count329
-\TeXr@lab=\toks39
+\rotheadsize=\dimen263
+\c@nlinenum=\count326
+\TeXr@lab=\toks38
 ) (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.st
 y
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -717,6 +688,26 @@ Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
 LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 (Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
 )
+(c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/geometry/geometry.
+sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count327
+\Gm@cntv=\count328
+\c@Gm@tempcnt=\count329
+\Gm@bindingoffset=\dimen264
+\Gm@wd@mp=\dimen265
+\Gm@odd@mp=\dimen266
+\Gm@even@mp=\dimen267
+\Gm@layoutwidth=\dimen268
+\Gm@layoutheight=\dimen269
+\Gm@layouthoffset=\dimen270
+\Gm@layoutvoffset=\dimen271
+\Gm@dimlist=\toks39
+)
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 10
 6.
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
@@ -724,10 +715,23 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backen
 d-pdftex.def
-File: l3backend-pdftex.def 2021-07-12 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count330
 \l__pdf_internal_box=\box76
-) (./castro_main_body.aux)
+) (./castro_main_body.aux
+
+LaTeX Warning: Label `tab:table1' multiply defined.
+
+
+LaTeX Warning: Label `tab:table1' multiply defined.
+
+
+LaTeX Warning: Label `tab:table4' multiply defined.
+
+
+LaTeX Warning: Label `tab:table4' multiply defined.
+
+)
 \openout1 = `castro_main_body.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
@@ -760,42 +764,6 @@ df-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: custom
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* hratio: 1:1
-* vratio: 1:1
-* modes: 
-* h-part:(L,W,R)=(37.75394pt, 522.0pt, 37.75394pt)
-* v-part:(T,H,B)=(81.52342pt, 682.0pt, 81.52342pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=522.0pt
-* \textheight=682.0pt
-* \oddsidemargin=-34.51605pt
-* \evensidemargin=-34.51605pt
-* \topmargin=-52.74657pt
-* \headheight=50.0pt
-* \headsep=12.0pt
-* \topskip=10.0pt
-* \footskip=18.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
-* \columnsep=18.0pt
-* \skip\footins=24.0pt plus 2.0pt minus 12.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumntrue
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
 LaTeX Info: Redefining \microtypecontext on input line 106.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
@@ -842,6 +810,40 @@ Package caption Info: float package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
+* v-part:(T,H,B)=(95.39737pt, 556.47656pt, 143.09605pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=430.00462pt
+* \textheight=556.47656pt
+* \oddsidemargin=19.8752pt
+* \evensidemargin=19.8752pt
+* \topmargin=-13.87262pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=24.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
 37.
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
@@ -863,9 +865,9 @@ LaTeX Font Info:    Trying to load font information for OMX+lmex on input line
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 137.
+(Font)              <8> on input line 137.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 137.
+(Font)              <6> on input line 137.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 137.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 137
@@ -891,10 +893,6 @@ LaTeX Font Info:    Trying to load font information for U+wasy on input line 13
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 137.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 137.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
 37.
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
@@ -904,469 +902,174 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-[1{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdf
-tex.map}
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 137.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 137.
+[1
 
 
-]
+{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdfte
+x.map}] [2]
 <C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castro_ma
-rim_map.jpg, id=137, 1297.84875pt x 793.46437pt>
+rim_map.jpg, id=145, 1297.84875pt x 793.46437pt>
 File: C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/cast
 ro_marim_map.jpg Graphic file (type jpg)
 <use C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castr
 o_marim_map.jpg>
 Package pdftex.def Info: C:/Users/rosha/Documents/R/Projects/castro_marim_phoen
 ician/./images/castro_marim_map.jpg  used on input line 158.
-(pdftex.def)             Requested size: 511.55777pt x 312.74304pt.
-[2] [3 <c:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/ca
-stro_marim_map.jpg>]
-LaTeX Font Info:    Calculating math sizes for size <7.5> on input line 203.
+(pdftex.def)             Requested size: 421.40268pt x 257.63072pt.
+[3] [4 <c:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/ca
+stro_marim_map.jpg>] [5] [6] [7] [8] [9]
+LaTeX Font Info:    Calculating math sizes for size <7.5> on input line 296.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.5> on input line 203.
+(Font)              <7.5> on input line 296.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5.24997> on input line 203.
+(Font)              <5.24997> on input line 296.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <3.75> on input line 203.
+(Font)              <3.75> on input line 296.
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <7.5> not available
-(Font)              size <7> substituted on input line 203.
+(Font)              size <7> substituted on input line 296.
 
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <3.75> not available
-(Font)              size <5> substituted on input line 203.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+(Font)              size <5> substituted on input line 296.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
-10.
+17.
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [4]
-
-LaTeX Warning: Text page 5 contains only floats.
-
-[5]
+) [10] [11] [12]
 <C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castro_bo
-t_assemblage.jpg, id=183, 1670.49094pt x 1872.9975pt>
+t_assemblage.jpg, id=217, 1670.49094pt x 1872.9975pt>
 File: C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/cast
 ro_bot_assemblage.jpg Graphic file (type jpg)
 <use C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castr
 o_bot_assemblage.jpg>
 Package pdftex.def Info: C:/Users/rosha/Documents/R/Projects/castro_marim_phoen
-ician/./images/castro_bot_assemblage.jpg  used on input line 340.
-(pdftex.def)             Requested size: 511.55777pt x 573.56407pt.
+ician/./images/castro_bot_assemblage.jpg  used on input line 347.
+(pdftex.def)             Requested size: 421.40268pt x 472.47801pt.
 
-Overfull \hbox (10.69693pt too wide) in paragraph at lines 380--380
+Overfull \hbox (3.34944pt too wide) in paragraph at lines 387--387
+[]$\OML/lmm/m/it/7.5 ^^N[]C\OT1/lmr/m/n/7.5 (-20) ([])$|  
+ []
+
+
+Overfull \hbox (4.26376pt too wide) in paragraph at lines 387--387
+[]$\OML/lmm/m/it/7.5 ^^N[]N\OT1/lmr/m/n/7.5 (-20) ([])$|  
+ []
+
+
+Overfull \hbox (22.19635pt too wide) in paragraph at lines 387--387
 []$\OML/lmm/m/it/7.5 ^^N[]C[]\OT1/lmr/m/n/7.5 (-20) ([])[]$|  
  []
 
 
-Overfull \hbox (11.34238pt too wide) in paragraph at lines 380--380
+Overfull \hbox (22.8418pt too wide) in paragraph at lines 387--387
 []$\OML/lmm/m/it/7.5 ^^N[]N[]\OT1/lmr/m/n/7.5 (-20) ([])[]$|  
  []
 
 
-Overfull \hbox (1.4642pt too wide) in paragraph at lines 456--456
- []$\OML/lmm/m/it/7.5 ^^N[]C\OT1/lmr/m/n/7.5 (-20) ([])$| 
+Overfull \hbox (5.38867pt too wide) in paragraph at lines 387--387
+[]$\OT1/lmr/m/n/7.5 (-20) ^^A[]\OML/lmm/m/it/7.5 C\OT1/lmr/m/n/7.5 (-20) ([])$|
+  
  []
 
 
-Overfull \hbox (2.37852pt too wide) in paragraph at lines 456--456
- []$\OML/lmm/m/it/7.5 ^^N[]N\OT1/lmr/m/n/7.5 (-20) ([])$| 
+Overfull \hbox (10.56001pt too wide) in alignment at lines 392--397
+ [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.52045pt too wide) in paragraph at lines 456--456
- []$\OML/lmm/m/it/7.5 ^^N[]S\OT1/lmr/m/n/7.5 (-20) ([])$| 
+Overfull \hbox (10.56001pt too wide) in alignment at lines 397--402
+ [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF435| 
+Overfull \hbox (10.56001pt too wide) in alignment at lines 402--404
+ [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF397| 
+Overfull \hbox (10.56001pt too wide) in alignment at lines 404--406
+ [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF388| 
+Overfull \hbox (10.56001pt too wide) in alignment at lines 406--469
+ [] [] [] [] [] [] [] [] [] [] [] 
  []
 
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF424| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF230| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF181| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF158| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF779| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF370| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF373| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF402| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF374| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF254| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF756| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF419| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF439| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF677| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF201| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF420| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF463| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF480| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF673| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF660| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF656| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF260| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF147| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF354| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF253| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF467| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF338| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF466| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF710| 
- []
-
-
-Overfull \hbox (6.54706pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF'737| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF774| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF750| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF323| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF508| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF751| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF772| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF743| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF777| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF691| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF457| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF468| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF746| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF744| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF731| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF730| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF709| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF643| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF504| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF477| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF394| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF393| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF353| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF334| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF324| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF303| 
- []
-
-
-Overfull \hbox (4.37775pt too wide) in paragraph at lines 456--456
- []\T1/lmr/m/n/7.5 (-20) CMOF745| 
- []
-
-[6] [7 <c:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/ca
-stro_bot_assemblage.jpg>]
-<castro_main_body_files/figure-latex/iso-hord-plots-1.pdf, id=208, 252.945pt x 
+[13] [14] [15] [16 <c:/Users/rosha/Documents/R/Projects/castro_marim_phoenician
+/./images/castro_bot_assemblage.jpg>] [17]
+<castro_main_body_files/figure-latex/iso-hord-plots-1.pdf, id=262, 252.945pt x 
 174.6525pt>
 File: castro_main_body_files/figure-latex/iso-hord-plots-1.pdf Graphic file (ty
 pe pdf)
 <use castro_main_body_files/figure-latex/iso-hord-plots-1.pdf>
 Package pdftex.def Info: castro_main_body_files/figure-latex/iso-hord-plots-1.p
-df  used on input line 468.
+df  used on input line 481.
 (pdftex.def)             Requested size: 252.94438pt x 174.65207pt.
-
-Overfull \hbox (0.94438pt too wide) in paragraph at lines 468--469
- [][] 
- []
-
-<castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf, id=211, 22
+[18 <./castro_main_body_files/figure-latex/iso-hord-plots-1.pdf>]
+<castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf, id=283, 22
 0.825pt x 332.24126pt>
 File: castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf Graphi
 c file (type pdf)
 <use castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf>
 Package pdftex.def Info: castro_main_body_files/figure-latex/fauna-carbnitro-is
-o-plot-1.pdf  used on input line 484.
+o-plot-1.pdf  used on input line 497.
 (pdftex.def)             Requested size: 220.82445pt x 332.24043pt.
-[8 <./castro_main_body_files/figure-latex/iso-hord-plots-1.pdf> <./castro_main_
-body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf>] [9] [10]
-Underfull \hbox (badness 2503) in paragraph at lines 543--545
-\T1/lmr/m/n/10 (+20) in the iso-tope ecol-ogy of tem-per-ate wood-lands.
+<castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf, id=284, 441.65
+pt x 252.945pt>
+File: castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf Graphic fi
+le (type pdf)
+<use castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf>
+Package pdftex.def Info: castro_main_body_files/figure-latex/fauna-sulph-iso-pl
+ot-1.pdf  used on input line 504.
+(pdftex.def)             Requested size: 421.40268pt x 241.36163pt.
+[19 <./castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf>] [20
+ <./castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf>] [21] [22]
+Underfull \hbox (badness 1859) in paragraph at lines 586--588
+[][]\T1/lmr/m/n/10 (+20) Dixon, G.R., 2006. Ori-gins and di-ver-sity of Bras-si
+ca and its rel-a-tives., in: Dixon,
  []
 
-
-Underfull \hbox (badness 1590) in paragraph at lines 543--545
-\T1/lmr/m/n/10 (+20) Jour-nal of Ar-chae-o-log-i-cal Sci-ence 40, 3926--3935.
+[23]
+Underfull \hbox (badness 1205) in paragraph at lines 619--621
+\T1/lmr/m/n/10 (+20) south-ern Por-tu-gal, be-tween texts and ar-chae-ol-ogy. W
+orld Ar-chae-ol-ogy 50, 764--780.
  []
 
-
-Underfull \hbox (badness 1097) in paragraph at lines 567--569
-\T1/lmr/m/n/10 (+20) ear-li-est Phoeni-cian quest for met-als in the west
- []
-
-
-Underfull \hbox (badness 1205) in paragraph at lines 573--575
-\T1/lmr/m/n/10 (+20) Re-la-tion-ship Be-tween Car-bon Iso-tope Dis-crim-i-na-
- []
-
-
-Underfull \hbox (badness 2057) in paragraph at lines 612--614
-\T1/lmr/m/n/10 (+20) Kars, H., 2013. Test-ing an Al-ter-na-tive High-
- []
-
-
-Underfull \hbox (badness 1888) in paragraph at lines 612--614
-\T1/lmr/m/n/10 (+20) Throughput Tool for In-ves-ti-gat-ing Bone Di-a-ge-n-
- []
-
-
-Underfull \hbox (badness 2435) in paragraph at lines 612--614
-\T1/lmr/m/n/10 (+20) e-sis: Ftir in At-ten-u-ated To-tal Re-flec-tion (atr)
- []
-
-[11] [12]
-Underfull \hbox (badness 1237) in paragraph at lines 744--746
-[][]\T1/lmr/m/n/10 (+20) Wright, L.E., Schwarcz, H.P., 1996. In-frared and
- []
-
-[13
-
-] (./castro_main_body.aux)
+[24] [25] [26] [27] [28] (./castro_main_body.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.25pt have occurred.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `castro_main_body.out' has not changed.
-(rerunfilecheck)             Checksum: DC0C4F3BBBC5AEF78EA1DB119A3AA311;5513.
+(rerunfilecheck)             Checksum: 0391BE67327B3E75BA19386E1BD2BFC0;5612.
  ) 
 Here is how much of TeX's memory you used:
- 16443 strings out of 480502
- 256077 string characters out of 5898081
- 738805 words of memory out of 5000000
- 33364 multiletter control sequences out of 15000+600000
- 502673 words of font info for 230 fonts, out of 8000000 for 9000
+ 16346 strings out of 480502
+ 255411 string characters out of 5898082
+ 665595 words of memory out of 5000000
+ 33262 multiletter control sequences out of 15000+600000
+ 502188 words of font info for 224 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,20n,80p,3632b,590s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,19n,80p,3632b,585s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.e
 nc}{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mat
 hsy.enc}{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/l
 m-mathit.enc}{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips
-/lm/lm-ts1.enc}{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvi
-ps/lm/lm-rm.enc}<c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/
+/lm/lm-rm.enc}{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvip
+s/lm/lm-ts1.enc}<c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/
 public/lm/lmbx10.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/t
 ype1/public/lm/lmbx8.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fon
 ts/type1/public/lm/lmmi10.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dis
@@ -1390,10 +1093,10 @@ lm/lmsy7.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/pub
 lic/lm/lmtt8.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1
 /public/wasy-type1/wasy10.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dis
 t/fonts/type1/public/wasy-type1/wasy8.pfb>
-Output written on castro_main_body.pdf (13 pages, 1650856 bytes).
+Output written on castro_main_body.pdf (28 pages, 1660723 bytes).
 PDF statistics:
- 565 PDF objects out of 1000 (max. 8388607)
- 486 compressed objects within 5 object streams
- 164 named destinations out of 1000 (max. 500000)
- 62189 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 645 PDF objects out of 1000 (max. 8388607)
+ 547 compressed objects within 6 object streams
+ 182 named destinations out of 1000 (max. 500000)
+ 62202 words of extra memory for PDF output out of 74296 (max. 10000000)
 

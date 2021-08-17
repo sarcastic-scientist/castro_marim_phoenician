@@ -55,7 +55,7 @@ preamble: |
   \sloppy
 bibliography: bibliography.bib
 #linenumbers: true
-layout: 5p #review,3p,5p
+layout: review #review,3p,5p
 numbersections: true
 csl: elsevier-harvard.csl
 output: 
@@ -162,8 +162,8 @@ options(knitr.kable.NA = "--")
 
 df_iso_fauna %>%
   select(Sample,Phase, col, IRSF, CP) %>%
-  kable(caption = "Collagen yield and FT-IR results (IRSF and C/P) of selected faunal bone samples.", digits = 2, align="ccccccc", booktabs = T,linesep = "", format = "latex", escape = F, col.names=c("ID","Phase","Collagen yield (\\%)","IRSF","C/P")) %>%
-  kable_styling(latex_options = c("basic","hold_position"), full_width = TRUE, font_size = 7.5)
+  kable(caption = "Collagen yield and FT-IR results (IRSF and C/P) of selected faunal bone samples.", digits = 2, align="ccccccc", booktabs = T, longtable = T, linesep = "", format = "latex", escape = F, col.names=c("Sample ID","Phase","Collagen yield (\\%)","IRSF","C/P")) %>%
+  kable_styling(latex_options = c("basic","HOLD_position","repeat_header"), font_size = 7.5)
   
 ```
 
@@ -295,8 +295,8 @@ options(knitr.kable.NA = "--")
 
 df_iso_fauna %>%
   select(Sample, Species,percentC,percentN,percentS,CN,CS,NS, dC, dN, dS) %>%
-  kable(caption = "Carbon, nitrogen, and sulphur isotope composition of the fauna.", digits = 2, booktabs = T,linesep = "", align = "ccccccccccc", format = "latex", escape = FALSE,table.env='table*', col.names=c("ID","Species","\\% C","\\% N","\\% S","C:N","C:S","N:S", "$\\delta^{13}C (\\text{\\textperthousand})$","$\\delta^{15}N (\\text{\\textperthousand})$","$\\delta^{34}S (\\text{\\textperthousand})$")) %>%
-  kable_styling(latex_options = c("basic", "hold_position","repeat_header","scale_down"), full_width = TRUE, font_size = 7.5) %>%
+  kable(caption = "Carbon, nitrogen, and sulphur isotope composition of the fauna.", digits = 2, booktabs = T,linesep = "", longtable = T, align = "ccccccccccc", format = "latex", escape = FALSE,table.env='table*', col.names=c("Sample ID","Species","\\% C","\\% N","\\% S","C:N","C:S","N:S", "$\\delta^{13}C (\\text{\\textperthousand})$","$\\delta^{15}N (\\text{\\textperthousand})$","$\\delta^{34}S (\\text{\\textperthousand})$")) %>%
+  kable_styling(latex_options = c("basic", "hold_position","repeat_header"), font_size = 7.5) %>%
   column_spec(2,italic = TRUE)
   
 ```
@@ -354,7 +354,9 @@ dffinal_iso_summ <- df_iso_fauna %>%
     min_dN = min(dN, na.rm = TRUE),
     max_dN = max(dN, na.rm = TRUE),
     min_dS = min(dS, na.rm = TRUE),
-    max_dN = max(dS, na.rm = TRUE))
+    max_dS = max(dS, na.rm = TRUE))
+
+
 
 
 iso_carbnitro_mean_plot <- ggplot(dffinal_iso_summ, aes(x=mean_dC, y=mean_dN, shape = as.factor(Common_Name), colour= as.factor(Common_Name))) + 
@@ -460,16 +462,35 @@ chicken_partridge_dN_ttest_p <- round(chicken_partridge_dN_ttest$p.value,5)
 
 ```
 
+(ref:fauna-sulph-iso) Plot showing mean $\delta ^{34}S$ values of faunal bone collagen.
+
+```{r fauna-sulph-iso-plot, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, out.width='0.98\\textwidth', fig.height=4, fig.env='figure*', fig.cap= '(ref:fauna-sulph-iso)'}
+
+theme5<-theme(panel.background = element_blank(),legend.background = element_blank(), legend.key.size = unit(0.3, 'cm'), legend.box.background = element_rect(colour = "black"), legend.position="right",legend.text = element_text(size=3),text = element_text(size=6),legend.title=element_text(size=4),axis.title.x = element_text(size=6), axis.title.y = element_text(size=6), panel.border=element_rect(fill=NA),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),strip.background=element_blank(),
+axis.text.x=element_text(colour="black"),axis.text.y=element_text(colour="black"),axis.ticks=element_line(colour="black"),plot.margin=unit(c(1,1,1,1),"line"))
+
+
+iso_sulphur_plot <- ggplot(dffinal_iso_summ, aes(x=Common_Name,y=mean_dS, color=as.factor(Common_Name), shape=as.factor(Common_Name))) +
+  geom_point(size = 3, alpha = 0.65) + geom_errorbar(aes(ymin=mean_dS-std.dev_dS, ymax=mean_dS+std.dev_dS), width=.1) + theme5 + labs( x='',y=expression(paste(delta^{34}, "S (\u2030 vs. Air)")), shape = 'Species', colour = 'Species') + scale_color_aaas() + scale_shape_manual(values = c(15,16,17,18,19,15,16,17,18,19))
+
+iso_sulphur_plot
+
+```
+
 
 All fifty faunal samples with the exception of rabbits (in case of $\delta ^{15}N$), demonstrate (Table \ref{tab:table4}) stable isotope values within the range expected for a C~3~ temperate ecosystem. The mean $\delta ^{13}C$ and $\delta ^{15}N$ values of red deer are `r iso_meandC_reddeer` ± `r iso_stddevC_reddeer`\permil and `r iso_meandN_reddeer` ± `r iso_stddevN_reddeer`\permil respectively. The other undomesticated specie is the rabbit which has mean $\delta ^{13}C$ values of `r iso_meandC_rabbit` ± `r iso_stddevC_rabbit`\permil and mean $\delta ^{15}N$ values of `r iso_meandN_rabbit` ± `r iso_stddevN_rabbit`\permil. The mean $\delta ^{13}C$ values of red deer are significantly higher than those of rabbit (t-statistic: `r rabbit_reddeer_dC_ttest_statistic`, degrees of freedom: `r rabbit_reddeer_dC_ttest_df`, *p*-value: `r rabbit_reddeer_dC_ttest_p`). This can attributed to the foraging area of the rabbits which is usually at the ground level with high recycling of CO~2~ and shade from the higher levels of the canopy. The $\delta ^{15}N$ values of rabbits are anomalous with a standard deviation spanning almost a trophic level. This large spread of $\delta ^{15}N$ values is explained in section \@ref(sulphur). 
 
-Sheep show mean $\delta ^{13}C$ values of `r iso_meandC_sheep` ± `r iso_stddevC_sheep`\permil and mean $\delta ^{15}N$ values of `r iso_meandN_sheep` ± `r iso_stddevN_sheep`\permil, while goats exhibit mean $\delta ^{13}C$ values of `r iso_meandC_goat` ± `r iso_stddevC_goat`\permil and mean $\delta ^{15}N$ values of `r iso_meandN_goat` ± `r iso_stddevN_goat`\permil. Goat mean $\delta ^{13}C$ values are not significantly different than that of sheep (t-statistic: `r sheep_goat_dC_ttest_statistic`, degrees of freedom: `r sheep_goat_dC_ttest_df`, *p*-value: `r sheep_goat_dC_ttest_p`). Sheep also exhibit significantly higher $\delta ^{15}N$ values than goats (t-statistic: `r sheep_goat_dN_ttest_statistic`, degrees of freedom: `r sheep_goat_dN_ttest_df`, *p*-value: `r sheep_goat_dN_ttest_p`) which demonstrates that sheep were fed on food sourced from manured vegetation. Sheep are superior to goats both in terms of secondary products and ease of management [@davis07; @rutter02]. Owing to the more attached economic interests with sheep, it is natural to give food sourced from cultivated crops.
+Sheep show mean $\delta ^{13}C$ values of `r iso_meandC_sheep` ± `r iso_stddevC_sheep`\permil and mean $\delta ^{15}N$ values of `r iso_meandN_sheep` ± `r iso_stddevN_sheep`\permil, while goats exhibit mean $\delta ^{13}C$ values of `r iso_meandC_goat` ± `r iso_stddevC_goat`\permil and mean $\delta ^{15}N$ values of `r iso_meandN_goat` ± `r iso_stddevN_goat`\permil. Goat mean $\delta ^{13}C$ values are not significantly different than that of sheep (t-statistic: `r sheep_goat_dC_ttest_statistic`, degrees of freedom: `r sheep_goat_dC_ttest_df`, *p*-value: `r sheep_goat_dC_ttest_p`). Sheep also exhibit significantly higher $\delta ^{15}N$ values than goats (t-statistic: `r sheep_goat_dN_ttest_statistic`, degrees of freedom: `r sheep_goat_dN_ttest_df`, *p*-value: `r sheep_goat_dN_ttest_p`) which demonstrates that sheep were fed on food sourced from manured vegetation. Sheep are superior to goats both in terms of secondary products and ease of management [@davis07; @rutter02]. Owing to the more attached economic interests with sheep, it is natural to give food sourced from cultivated crops. 
 Cattle show mean $\delta ^{13}C$ values of `r iso_meandC_cattle` ± `r iso_stddevC_cattle`\permil and mean $\delta ^{15}N$ values of `r iso_meandN_cattle` ± `r iso_stddevN_cattle`\permil. Most of the cattle bones are from adults indicative that they were used as a source of power and only slaughtered for meat towards the end of their life [@davis07]. The cattle seem to have grazed in a more forested area in contrast to ovicaprines feeding in open pastures.Feeding in forested areas causes the $\delta ^{13}C$ values to increase due to canopy effect [@bonafini_etal13]. Pigs show mean $\delta ^{13}C$ values of `r iso_meandC_pig` ± `r iso_stddevC_pig`\permil and mean $\delta ^{15}N$ values of `r iso_meandN_pig` ± `r iso_stddevN_pig`\permil. The high $\delta ^{15}N$ values of pigs, reflect an omnivorous diet. The pigs could have been penned in spaces attached to human residences, giving rise to the possibility to be fed remnants of human diet. Partridges show mean $\delta ^{13}C$ values of `r iso_meandC_partridge` ± `r iso_stddevC_partridge`\permil and mean $\delta ^{15}N$ values of `r iso_meandN_partridge` ± `r iso_stddevN_partridge`\permil while chicken exhibit mean $\delta ^{13}C$ values of `r iso_meandC_chicken` ± `r iso_stddevC_chicken`\permil and mean $\delta ^{15}N$ values of `r iso_meandN_chicken` ± `r iso_stddevN_chicken`\permil. The $\delta ^{13}C$ values (t-statistic: `r chicken_partridge_dC_ttest_statistic`, degrees of freedom: `r chicken_partridge_dC_ttest_df`, *p*-value: `r chicken_partridge_dC_ttest_p`) and $\delta ^{15}N$ values (t-statistic: `r chicken_partridge_dN_ttest_statistic`, degrees of freedom: `r chicken_partridge_dN_ttest_df`, *p*-value: `r chicken_partridge_dN_ttest_p`) are significantly different. The chicken owing to its domesticated status has higher $\delta ^{13}C$ and $\delta ^{15}N$ values. Chickens are usually reared in domestic spaces while being fed food scraps and possibly fed millet (a C~4~ plant) [@fernandez-crespo_etal19]. Chicken also eat insects alongside the human provided food which can lead to an increase of $\delta ^{15}N$ values. All the partridges recovered are adults whereas the chickens constitute juvenile-adult mix, further indicative that the former were hunted for human consumption. 
 
 High mean $\delta ^{13}C$ and $\delta ^{15}N$ values (Fig. \ref{fig:fauna-carbnitro-iso-plot}) of domesticates can be obtained by rearing the animals in either domestic spaces or harvested fields, while feeding them cultivated crops (cereals) and associated by-products in the animal feed along with the natural wild flora. The $\delta ^{13}C$ values of wild species are indicative of a diet from forested areas with vegetation having lower $\delta ^{15}N$ values than cultivated crops.
 
 
 ## Faunal bone collagen $\delta ^{34}S$ values {#sulphur}
+
+
+# Conclusions
+
 
 
 # References

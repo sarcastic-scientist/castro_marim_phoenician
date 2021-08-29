@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.9)  17 AUG 2021 22:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.29)  30 AUG 2021 00:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **castro_main_body.tex
 (./castro_main_body.tex
 LaTeX2e <2021-06-01> patch level 1
-L3 programming layer <2021-07-12> (./elsarticle.cls
+L3 programming layer <2021-08-27> (./elsarticle.cls
 Document Class: elsarticle 2008/05/22, 1.0.1: Elsevier Science
 \@bls=\dimen138
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
@@ -681,13 +681,6 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-(c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wasysym/wasysym.st
-y
-Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
-\symwasy=\mathgroup6
-LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
-(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
-)
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/geometry/geometry.
 sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -709,7 +702,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@dimlist=\toks39
 )
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 10
-6.
+5.
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -734,24 +727,24 @@ LaTeX Warning: Label `tab:table4' multiply defined.
 )
 \openout1 = `castro_main_body.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
 
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epsto
 pdf-base.sty
@@ -764,14 +757,14 @@ df-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 106.
+LaTeX Info: Redefining \microtypecontext on input line 105.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 106.
+LaTeX Info: Redefining \showhyphens on input line 105.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -781,7 +774,7 @@ fg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-Package hyperref Info: Link coloring OFF on input line 106.
+Package hyperref Info: Link coloring OFF on input line 105.
 
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.s
 ty
@@ -797,9 +790,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count331
 )
-LaTeX Info: Redefining \ref on input line 106.
-LaTeX Info: Redefining \pageref on input line 106.
-LaTeX Info: Redefining \nameref on input line 106.
+LaTeX Info: Redefining \ref on input line 105.
+LaTeX Info: Redefining \pageref on input line 105.
+LaTeX Info: Redefining \nameref on input line 105.
 (./castro_main_body.out) (./castro_main_body.out)
 \@outlinefile=\write4
 \openout4 = `castro_main_body.out'.
@@ -845,32 +838,32 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-37.
+34.
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-37.
+34.
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-137.
+134.
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-137.
+134.
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 137.
+(Font)              <8> on input line 134.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 137.
+(Font)              <6> on input line 134.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 137.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 137
+(Font)              <5> on input line 134.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 134
 .
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -879,7 +872,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 fg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 137
+LaTeX Font Info:    Trying to load font information for U+msb on input line 134
 .
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -888,13 +881,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 fg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 13
-7.
-(c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wasysym/uwasy.fd
-File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
-)
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-37.
+34.
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -903,173 +891,164 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 137.
+(Font)              <10> on input line 134.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 137.
+(Font)              <7> on input line 134.
 [1
 
 
 {c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdfte
 x.map}] [2]
 <C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castro_ma
-rim_map.jpg, id=145, 1297.84875pt x 793.46437pt>
+rim_map.jpg, id=161, 1297.84875pt x 793.46437pt>
 File: C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/cast
 ro_marim_map.jpg Graphic file (type jpg)
 <use C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castr
 o_marim_map.jpg>
 Package pdftex.def Info: C:/Users/rosha/Documents/R/Projects/castro_marim_phoen
-ician/./images/castro_marim_map.jpg  used on input line 158.
+ician/./images/castro_marim_map.jpg  used on input line 155.
 (pdftex.def)             Requested size: 421.40268pt x 257.63072pt.
 [3] [4 <c:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/ca
-stro_marim_map.jpg>] [5] [6] [7] [8] [9]
-LaTeX Font Info:    Calculating math sizes for size <7.5> on input line 296.
+stro_marim_map.jpg>] [5] [6] [7]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+91.
+(c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [8] [9]
+LaTeX Font Info:    Calculating math sizes for size <7.5> on input line 293.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.5> on input line 296.
+(Font)              <7.5> on input line 293.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5.24997> on input line 296.
+(Font)              <5.24997> on input line 293.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <3.75> on input line 296.
-
-LaTeX Font Warning: Font shape `U/wasy/m/n' in size <7.5> not available
-(Font)              size <7> substituted on input line 296.
-
-
-LaTeX Font Warning: Font shape `U/wasy/m/n' in size <3.75> not available
-(Font)              size <5> substituted on input line 296.
-
+(Font)              <3.75> on input line 293.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
-17.
-(c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [10] [11] [12]
+[10] [11] [12]
 <C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castro_bo
-t_assemblage.jpg, id=217, 1670.49094pt x 1872.9975pt>
+t_assemblage.jpg, id=232, 1670.49094pt x 1872.9975pt>
 File: C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/cast
 ro_bot_assemblage.jpg Graphic file (type jpg)
 <use C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castr
 o_bot_assemblage.jpg>
 Package pdftex.def Info: C:/Users/rosha/Documents/R/Projects/castro_marim_phoen
-ician/./images/castro_bot_assemblage.jpg  used on input line 347.
+ician/./images/castro_bot_assemblage.jpg  used on input line 344.
 (pdftex.def)             Requested size: 421.40268pt x 472.47801pt.
 
-Overfull \hbox (3.34944pt too wide) in paragraph at lines 387--387
-[]$\OML/lmm/m/it/7.5 ^^N[]C\OT1/lmr/m/n/7.5 (-20) ([])$|  
+Overfull \hbox (3.34944pt too wide) in paragraph at lines 384--384
+ []$\OML/lmm/m/it/7.5 ^^N[]C\OT1/lmr/m/n/7.5 (-20) ([])$|
  []
 
 
-Overfull \hbox (4.26376pt too wide) in paragraph at lines 387--387
-[]$\OML/lmm/m/it/7.5 ^^N[]N\OT1/lmr/m/n/7.5 (-20) ([])$|  
+Overfull \hbox (4.26376pt too wide) in paragraph at lines 384--384
+ []$\OML/lmm/m/it/7.5 ^^N[]N\OT1/lmr/m/n/7.5 (-20) ([])$|
  []
 
 
-Overfull \hbox (22.19635pt too wide) in paragraph at lines 387--387
-[]$\OML/lmm/m/it/7.5 ^^N[]C[]\OT1/lmr/m/n/7.5 (-20) ([])[]$|  
+Overfull \hbox (10.43556pt too wide) in paragraph at lines 384--384
+[]$\OML/lmm/m/it/7.5 ^^N[]C[]\OT1/lmr/m/n/7.5 (-20) ([])$|  
  []
 
 
-Overfull \hbox (22.8418pt too wide) in paragraph at lines 387--387
-[]$\OML/lmm/m/it/7.5 ^^N[]N[]\OT1/lmr/m/n/7.5 (-20) ([])[]$|  
+Overfull \hbox (11.08101pt too wide) in paragraph at lines 384--384
+ []$\OML/lmm/m/it/7.5 ^^N[]N[]\OT1/lmr/m/n/7.5 (-20) ([])$| 
  []
 
 
-Overfull \hbox (5.38867pt too wide) in paragraph at lines 387--387
-[]$\OT1/lmr/m/n/7.5 (-20) ^^A[]\OML/lmm/m/it/7.5 C\OT1/lmr/m/n/7.5 (-20) ([])$|
-  
+Overfull \hbox (5.38867pt too wide) in paragraph at lines 384--384
+ []$\OT1/lmr/m/n/7.5 (-20) ^^A[]\OML/lmm/m/it/7.5 C\OT1/lmr/m/n/7.5 (-20) ([])$
+|
  []
 
 
-Overfull \hbox (10.56001pt too wide) in alignment at lines 392--397
+Overfull \hbox (8.78961pt too wide) in alignment at lines 389--394
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (10.56001pt too wide) in alignment at lines 397--402
+Overfull \hbox (8.78961pt too wide) in alignment at lines 394--399
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (10.56001pt too wide) in alignment at lines 402--404
+Overfull \hbox (8.78961pt too wide) in alignment at lines 399--401
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (10.56001pt too wide) in alignment at lines 404--406
+Overfull \hbox (8.78961pt too wide) in alignment at lines 401--403
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (10.56001pt too wide) in alignment at lines 406--469
+Overfull \hbox (8.78961pt too wide) in alignment at lines 403--466
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
-[13] [14] [15] [16 <c:/Users/rosha/Documents/R/Projects/castro_marim_phoenician
-/./images/castro_bot_assemblage.jpg>] [17]
-<castro_main_body_files/figure-latex/iso-hord-plots-1.pdf, id=262, 252.945pt x 
-174.6525pt>
+[13] [14 <c:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/
+castro_bot_assemblage.jpg>] [15] [16] [17]
+<castro_main_body_files/figure-latex/iso-hord-plots-1.pdf, id=277, 263.98625pt 
+x 173.64874pt>
 File: castro_main_body_files/figure-latex/iso-hord-plots-1.pdf Graphic file (ty
 pe pdf)
 <use castro_main_body_files/figure-latex/iso-hord-plots-1.pdf>
 Package pdftex.def Info: castro_main_body_files/figure-latex/iso-hord-plots-1.p
-df  used on input line 481.
-(pdftex.def)             Requested size: 252.94438pt x 174.65207pt.
+df  used on input line 480.
+(pdftex.def)             Requested size: 263.9856pt x 173.64832pt.
 [18 <./castro_main_body_files/figure-latex/iso-hord-plots-1.pdf>]
-<castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf, id=283, 22
-0.825pt x 332.24126pt>
+<castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf, id=299, 44
+1.65pt x 404.51125pt>
 File: castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf Graphi
 c file (type pdf)
 <use castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf>
 Package pdftex.def Info: castro_main_body_files/figure-latex/fauna-carbnitro-is
-o-plot-1.pdf  used on input line 497.
-(pdftex.def)             Requested size: 220.82445pt x 332.24043pt.
-<castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf, id=284, 441.65
+o-plot-1.pdf  used on input line 498.
+(pdftex.def)             Requested size: 421.40268pt x 385.98706pt.
+[19] [20 <./castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf>
+] [21]
+<castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf, id=335, 441.65
 pt x 252.945pt>
 File: castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf Graphic fi
 le (type pdf)
 <use castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf>
 Package pdftex.def Info: castro_main_body_files/figure-latex/fauna-sulph-iso-pl
-ot-1.pdf  used on input line 504.
+ot-1.pdf  used on input line 522.
 (pdftex.def)             Requested size: 421.40268pt x 241.36163pt.
-[19 <./castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf>] [20
- <./castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf>] [21] [22]
-Underfull \hbox (badness 1859) in paragraph at lines 586--588
+[22] [23 <./castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf>] [2
+4] [25] [26]
+Underfull \hbox (badness 1859) in paragraph at lines 624--626
 [][]\T1/lmr/m/n/10 (+20) Dixon, G.R., 2006. Ori-gins and di-ver-sity of Bras-si
 ca and its rel-a-tives., in: Dixon,
  []
 
-[23]
-Underfull \hbox (badness 1205) in paragraph at lines 619--621
+[27]
+Underfull \hbox (badness 1205) in paragraph at lines 657--659
 \T1/lmr/m/n/10 (+20) south-ern Por-tu-gal, be-tween texts and ar-chae-ol-ogy. W
 orld Ar-chae-ol-ogy 50, 764--780.
  []
 
-[24] [25] [26] [27] [28] (./castro_main_body.aux)
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 1.25pt have occurred.
-
+[28] [29] [30] [31] [32] [33] (./castro_main_body.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `castro_main_body.out' has not changed.
-(rerunfilecheck)             Checksum: 0391BE67327B3E75BA19386E1BD2BFC0;5612.
+(rerunfilecheck)             Checksum: 31391D8E0B62619534ECCBFD1E487CE6;6383.
  ) 
 Here is how much of TeX's memory you used:
- 16346 strings out of 480502
- 255411 string characters out of 5898082
- 665595 words of memory out of 5000000
- 33262 multiletter control sequences out of 15000+600000
- 502188 words of font info for 224 fonts, out of 8000000 for 9000
+ 16154 strings out of 480559
+ 253546 string characters out of 5901780
+ 660233 words of memory out of 5000000
+ 32992 multiletter control sequences out of 15000+600000
+ 501379 words of font info for 224 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,19n,80p,3632b,585s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,19n,80p,2626b,583s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.e
 nc}{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mat
-hsy.enc}{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/l
-m-mathit.enc}{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips
-/lm/lm-rm.enc}{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvip
-s/lm/lm-ts1.enc}<c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/
+hit.enc}{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/l
+m-mathsy.enc}{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips
+/lm/lm-ts1.enc}{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvi
+ps/lm/lm-rm.enc}<c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/
 public/lm/lmbx10.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/t
 ype1/public/lm/lmbx8.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fon
 ts/type1/public/lm/lmmi10.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dis
@@ -1090,13 +1069,11 @@ Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 .pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/l
 msy6.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/
 lm/lmsy7.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/pub
-lic/lm/lmtt8.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1
-/public/wasy-type1/wasy10.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dis
-t/fonts/type1/public/wasy-type1/wasy8.pfb>
-Output written on castro_main_body.pdf (28 pages, 1660723 bytes).
+lic/lm/lmtt8.pfb>
+Output written on castro_main_body.pdf (33 pages, 1672769 bytes).
 PDF statistics:
- 645 PDF objects out of 1000 (max. 8388607)
- 547 compressed objects within 6 object streams
- 182 named destinations out of 1000 (max. 500000)
- 62202 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 706 PDF objects out of 1000 (max. 8388607)
+ 606 compressed objects within 7 object streams
+ 206 named destinations out of 1000 (max. 500000)
+ 62234 words of extra memory for PDF output out of 74296 (max. 10000000)
 

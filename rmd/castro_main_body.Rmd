@@ -55,7 +55,10 @@ bibliography: bibliography.bib
 layout: review #review,3p,5p
 numbersections: true
 csl: elsevier-harvard.csl
-output: 
+output:
+    bookdown::word_document2:
+      fig_caption: yes
+      reference_docx: "template.docx"
     bookdown::pdf_book:
       base_format: rticles::elsevier_article
       extra_dependencies: "subfig"
@@ -92,7 +95,7 @@ The Southwest Iberian region has been praised by Strabo (3, 2, 8) for possessing
 
 Agricultural techniques from the East, such as irrigation, were used to improve upon the native practices. The iron production technology gave more robust implements such as plowshare etc., to the farmers. Better yielding cultivars (Eg: grapes and olives) and new species of animals (Eg: horse, donkey, and chicken) were introduced [@davis07; @queiroz_etal06]. Following the "sixth century crisis", the colonies in Iberia came under Carthage's influence, and this period is referred to as the Punic period [@arruda_etal13]. The crisis had multiple facets, of which one of the leading causes was the exhaustion of Iberia's mineral resources. This crisis forced the settlements to change their economy from an industry-driven one to a more agronomic-based one. This economic change brought a drastic change in space use concerning both settlement and domain. In the Punic period, in addition to the cultivation of cash crops and wine, local usable arboreal products were identified and exploited to boost exports [@gomezbellard19; @neville98]. The exploitation of arboreal products and perennial crops meant the existence of both short-term and long-term agricultural investments. Such diverse investments with different harvest times must have led to the development of a complex agricultural economy.
 
-```{r castro-marim-loc, dpi=600, fig.show="hold", out.width='0.98\\textwidth', fig.env='figure*', fig.cap= 'Map indicating the location of Castro Marim on the banks of Guadiana Estuary, Algarve Region of Portugal (www.openstreetmap.org).'}
+```{r castro-marim-loc, dpi=600, fig.show="hold", out.width='0.98\\textwidth', fig.env='figure*', fig.cap= 'Geological map of the region around Castro Marim on the banks of Guadiana Rive, Algarve Region of Portugal (Source: Directorate General of Mines and Geological Services - Carta de Geológica de Portugal).'}
 
 
 knitr::include_graphics(

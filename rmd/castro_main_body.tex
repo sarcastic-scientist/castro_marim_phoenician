@@ -10,7 +10,6 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \usepackage{graphicx}
-\usepackage{booktabs} % book-quality tables
 %%%%%%%%%%%%%%%% end my additions to header
 
 \usepackage[T1]{fontenc}
@@ -33,7 +32,16 @@
 % use microtype if available
 \IfFileExists{microtype.sty}{\usepackage{microtype}}{}
 \bibliographystyle{elsarticle-harv}
-\usepackage{longtable}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
 \usepackage{graphicx}
 \ifxetex
   \usepackage[setpagesize=false, % page size defined by xetex
@@ -45,7 +53,7 @@
 \hypersetup{breaklinks=true,
             bookmarks=true,
             pdfauthor={},
-            pdftitle={Stable isotope approach to farming and husbandry practices at Phoenician site of Castro Marim between 8th -- 5th century B.C.E},
+            pdftitle={Stable isotope approach to farming and husbandry practices at Phoenician site of Castro Marim between 7th -- 5th century B.C.E},
             colorlinks=false,
             urlcolor=blue,
             linkcolor=magenta,
@@ -105,15 +113,17 @@
 \begin{document}
 \begin{frontmatter}
 
-  \title{Stable isotope approach to farming and husbandry practices at Phoenician site of Castro Marim between 8th -- 5th century B.C.E}
+  \title{Stable isotope approach to farming and husbandry practices at Phoenician site of Castro Marim between 7th -- 5th century B.C.E}
     \author[Universidade de Évora,Laboratório HERCULES,SAPIENZA Università di Roma]{Roshan Paladugu\corref{1}}
    \ead{rpaladugu@uevora.pt} 
-    \author[SAPIENZA Università di Roma]{Alessandra Celant}
+    \author[SAPIENZA Università di Roma]{Alessandra Celant\corref{2}}
    \ead{alessandra.celant@uniroma1.it} 
     \author[SAPIENZA Università di Roma]{Federico Di Rita\corref{2}}
    \ead{federico.dirita@uniroma1.it} 
     \author[Universidade de Lisboa]{Ana Margarida Arruda\corref{2}}
    \ead{ana2@campus.ul.pt} 
+    \author[Universidade de Lisboa]{Elisa de Sousa\corref{2}}
+   \ead{e.sousa@campus.ul.pt} 
     \author[Universidade de Évora, HERCULES]{Anne-France Maurer\corref{2}}
    \ead{annefrance.maurer@gmail.com} 
     \author[SAPIENZA Università di Roma]{Donatella Magri\corref{2}}
@@ -128,17 +138,17 @@
     \cortext[2]{Equal contribution}
   
   \begin{abstract}
-  Castro Marim is an Iron Age site from the Algarve region, Portugal. The earliest evidence of settlement dates to the 9th-century B.C.E, with the Phoenician-Punic period ending with the 3rd century B.C.E. The study focuses on stable isotope analysis of plant and faunal remains to reconstruct the cultivation and husbandry practices. Barley was the most abundantly cultivated cereal crop. The stable isotope results of barley indicate that it depended primarily on natural precipitation with a certain intensity of manuring. The extracted differences from stable isotope data of various fauna indicate a diverse management strategy for different species based on their economic importance and maximize the output of animal by-products.
+  Castro Marim is an Iron Age site from the Algarve region, Portugal. The earliest evidence of settlement, from the Late Bronze Age, dates to the 9th-century B.C.E, with the Phoenician-Punic period dating from the 7th to the 3rd century B.C.E. The study focuses on stable isotope analysis of plant and faunal remains to reconstruct the cultivation and husbandry practices. Barley was the most abundantly cultivated cereal crop. The stable isotope results of barley indicate that it depended primarily on natural precipitation with a certain intensity of manuring. The extracted differences from stable isotope data of various fauna indicate a diverse management strategy for different species based on their economic importance and maximize the output of animal by-products.
   \end{abstract}
-  
+   \begin{keyword} Agriculture, Iron Age, Portugal, Phoenician-Punic, Stable Isotopes\end{keyword}
  \end{frontmatter}
 
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-Iberian Peninsula underwent Oriental colonization by thalassocracy influences originating from the Near East in the Early Iron Age (8th -- early 5th centuries B.C.E). These colonizers, referred to as Phoenicians, were mostly culturally homogeneous and politically independent city-states with the Levant's power nucleus (present-day Lebanon) (Dietler, 2009; Gomes and Arruda, 2018; Quinn, 2019). The city-states served as nodes of an expansive trade network across the Mediterranean, including the Atlantic coast of Europe (Aubet, 2001; Markoe, 2005). It is widely accepted that the main driving force behind this westward expansion was the need to establish a stable supply of metalliferous resources (Arruda, 2009; Aubet, 2001; Eshel et al., 2019; Markoe, 2005). Phoenicians have mined the Iberian Pyrite belt for silver, tin, lead, and copper circa early 800 B.C.E (Eshel et al., 2019; Renzi et al., 2012; Wood et al., 2019). These mined metals were hauled back to the inner Mediterranean region through their well-established networks through posts along the rivers and southern shore of the Iberian Peninsula (Eshel et al., 2019).
+Iberian Peninsula underwent Oriental colonization originating from the Near East during the 9th century B.C.E. These colonizers, referred to as Phoenicians, were mostly culturally homogeneous and politically independent city-states with the Levant's power nucleus (present-day Lebanon) (Aubet, 1987; Dietler, 2009; Gomes and Arruda, 2018; Quinn, 2019). The city-states served as nodes of an expansive trade network across the Mediterranean, including the Atlantic coast of Europe (Arruda, 2000; Aubet, 2001; Markoe, 2005). It is widely accepted that the main driving force behind this westward expansion was the need to establish a stable supply of metalliferous resources (Arruda, 2009; Aubet, 2001; Aubet, 1987; Eshel et al., 2019; Markoe, 2005). Phoenicians, through the establishment of agreements and negotiations with the native Iberian communities, have mined the Iberian Pyrite belt for silver, tin, lead, and copper circa early 800 B.C.E (Eshel et al., 2019; Renzi et al., 2012; Wood et al., 2019). These mined metals were hauled back to the inner Mediterranean region through their well-established networks through posts along the rivers and southern shore of the Iberian Peninsula (Eshel et al., 2019).
 
-The intense and prolonged density of settlements along the Southern Iberian coast cannot simply be explained by the quest for mineral sources, primarily because most of them are situated in locations with neither metallogenic minerals nor indigenous settlements. This settlement pattern is further emphasized by the contrast between the densely clustered settlements of Iberia and sparsely scattered settlements of North Africa. Other factors influencing the settlement density include agricultural resources (Wagner and Alvar, 2003; Wagner and Alvar, 1989), exploitation of marine resources (salt (Manfredi, 1992), and Tyrrhenian Purple production (Uriel, 2000)), timber (Treumann, 2009; Treumann, 1998), and labor force (Arrastio, 2000, 1999). The Phoenician traders had to ensure stable sources of food for the population apart from the industrial activities. Southwestern Iberia has been noted for its rich mineral veins and abundant natural fertility, and the Phoenicians exploited this fertile landscape while actively transforming it -- including cultivable land (Arruda, 2009, 2003; Neville, 1998; Roller, 2014). The Phoenicians' metal exploitation perspective has been studied, but the agricultural aspects have received little attention. This study aims to shed light on the stable isotope approach to reconstruct the farming strategies and animal husbandry practices in the Phoenician -- Punic period of Portugal, specifically at Castro Marim.
+The intense and prolonged density of settlements along the Southern Iberian coast cannot simply be explained by the quest for mineral sources, primarily because a considerable part of them are situated in locations with neither metallogenic minerals nor indigenous settlements. This settlement pattern is further emphasized by the contrast between the densely clustered settlements of Iberia and sparsely scattered settlements of North Africa. Other factors influencing the settlement density include agricultural resources (Wagner and Alvar, 2003; Wagner and Alvar, 1989), exploitation of marine resources (salt (Manfredi, 1992), and Tyrrhenian Purple production (Uriel, 2000)), timber (Treumann, 2009; Treumann, 1998), and labor force (Arrastio, 2000, 1999). The Phoenician traders had to ensure stable sources of food for the population apart from the industrial activities. Southwestern Iberia has been noted for its rich mineral veins and abundant natural fertility, and the Phoenicians exploited this fertile landscape while actively transforming it -- including cultivable land (Arruda, 2009, 2003; Neville, 1998; Roller, 2014). The Phoenicians' metal exploitation perspective has been studied, but the agricultural aspects have received little attention. This study aims to shed light on the stable isotope approach to reconstruct the farming strategies and animal husbandry practices in the Phoenician -- Punic period of Portugal, specifically at Castro Marim.
 
 \hypertarget{context}{%
 \section{Context}\label{context}}
@@ -146,21 +156,21 @@ The intense and prolonged density of settlements along the Southern Iberian coas
 \hypertarget{phoenician---punic-agriculture}{%
 \subsection{Phoenician - Punic Agriculture}\label{phoenician---punic-agriculture}}
 
-Most knowledge about Phoenician and Punic agriculture comes from the famous treaty by Mago, of which only a few fragments have survived and subsequently translated (Martin, 1971). Other accounts are by authors from the Greek and Roman domains, usually written centuries after the demise of the Phoenician -- Punic civilization. The current understanding has been mainly developed due to systematic excavations of different Phoenician -- Punic settlements in Iberia and subsequent zooarchaeological and archaeobotanical studies on the recovered faunal and botanical remains (Aubet, 2001; Wagner and Alvar, 2003; Wagner and Alvar, 1989).
-The Southwest Iberian region has been praised by Strabo (3, 2, 8) for possessing the rare combination of abundant mineral deposits and natural fertility (Roller, 2014). From the 9th century B.C.E, Phoenician presence is noted in the Iberian Peninsula along the Atlantic's coastal zone. This strategic location gave them reasonable access to the sailing routes and provided them with a plethora of cultivable land (Aubet, 2001). Colonies in Iberia were located in a landscape similar to that in the Levant with proximity to the coast and marked with steep mountain ranges and riverine valleys. Being located in a river valley gave the colonizers the ease of adapting existing practices from the Mediterranean in the Iberian hinterland. This included modifying and adapting the landscape to suit their agricultural needs, comprising farming and animal husbandry (Gómez Bellard, 2019).
+Most knowledge about Phoenician and Punic agriculture comes from the famous treaty by Mago, of which only a few fragments have survived and subsequently translated (Martin, 1971). Other accounts are by authors from the Greek and Roman domains, usually written centuries after the pinnacle of the Phoenician -- Punic cultures. The current understanding has been mainly developed due to systematic excavations of different Phoenician -- Punic settlements in Iberia and subsequent zooarchaeological and archaeobotanical studies on the recovered faunal and botanical remains (Aubet, 2001; Wagner and Alvar, 2003; Wagner and Alvar, 1989).
+The Southwest Iberian region has been praised by Strabo (3, 2, 8) for possessing the rare combination of abundant mineral deposits and natural fertility (Roller, 2014). From the 9th century B.C.E, Phoenician presence is noted in the Iberian Peninsula along the Mediterranean and Atlantic's coastal zone. This strategic location gave them reasonable access to the sailing routes and provided them with a plethora of cultivable land (Aubet, 2001). Colonies in Iberia were located in a landscape similar to that in the Levant with proximity to the coast and marked with steep mountain ranges and riverine valleys. Being located in a river valley gave the colonizers the ease of adapting existing practices from the Mediterranean in the Iberian hinterland. This included modifying and adapting the landscape to suit their agricultural needs, comprising farming and animal husbandry (Gómez Bellard, 2019).
 
-Agricultural techniques from the East, such as irrigation, were used to improve upon the native practices. The iron production technology gave more robust implements such as plowshare etc., to the farmers. Better yielding cultivars (Eg: grapes and olives) and new species of animals (Eg: horse, donkey, and chicken) were introduced (Davis, 2007; Queiroz et al., 2006). Following the ``sixth century crisis,'' the colonies in Iberia came under Carthage's influence, and this period is referred to as the Punic period (Arruda et al., 2013). The crisis had multiple facets, of which one of the leading causes was the exhaustion of Iberia's mineral resources. This crisis forced the settlements to change their economy from an industry-driven one to a more agronomic-based one. This economic change brought a drastic change in space use concerning both settlement and domain. In the Punic period, in addition to the cultivation of cash crops and wine, local usable arboreal products were identified and exploited to boost exports (Gómez Bellard, 2019; Neville, 1998). The exploitation of arboreal products and perennial crops meant the existence of both short-term and long-term agricultural investments. Such diverse investments with different harvest times must have led to the development of a complex agricultural economy.
+Agricultural techniques from the East, such as irrigation, were probably used to improve upon the native practices, at least in some areas. The iron production technology gave more robust implements such as plowshare etc., to the farmers. Better yielding cultivars (Eg: grapes and olives) and new species of animals (Eg: horse, donkey, and chicken) were introduced (Davis, 2007; Queiroz et al., 2006; Van Leeuwaarden and Janssen, 1985). Following the ``sixth century crisis'', in the period referred to as the Punic period. This economic change brought a drastic change in space use concerning both settlement and domain. In the latter phase of the Iron Age, in addition to the cultivation of cash crops and wine, local usable arboreal products were identified and exploited to boost exports (Gómez Bellard, 2019; Neville, 1998). The exploitation of arboreal products and perennial crops meant the existence of both short-term and long-term agricultural investments. Such diverse investments with different harvest times must have led to the development of a complex agricultural economy.
 
 \begin{figure*}
-\includegraphics[width=0.98\textwidth]{C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castro_marim_map} \caption{Map indicating the location of Castro Marim on the banks of Guadiana Estuary, Algarve Region of Portugal (www.openstreetmap.org).}\label{fig:castro-marim-loc}
+\includegraphics[width=0.98\textwidth]{C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castro_marim_map} \caption{Geological map of the region around Castro Marim on the banks of Guadiana Rive, Algarve Region of Portugal (Source: Directorate General of Mines and Geological Services - Carta de Geológica de Portugal).}\label{fig:castro-marim-loc}
 \end{figure*}
 
 \hypertarget{site-background}{%
 \subsection{Site Background}\label{site-background}}
 
-Castro Marim is located on the Guadiana estuary (Fig. \ref{fig:castro-marim-loc}) as a portal to the metallogenic mineral-rich Baixo -- Alentejo region as well as to the fertile cultivable lands in the interior regions. The Iron Age settlement was located on an elevation with adequate natural defensive elements and overlooked vast swatches of land, which allowed domination of estuarine traffic and agricultural activities in its domain of influence. These conditions allowed trade and cultural networks between the indigenous communities with the Mediterranean communities to flourish. The earliest human activities are traced back to the Late Bronze Age with East-West orthogonal settlement architecture around the first half of 7th century B.C.E, in the Orientalising period (Arruda et al., 2013; Arruda, 1996). Phoenician imports and other human presence signs declined from the second half of the 6th century B.C.E till the first half of the 5th century B.C.E (Arruda, 1996). Significant changes in material culture and restructuring of the settlement architecture with a Northeast -- Southwest orientation are observed from the second half of the 5th century B.C.E (Arruda et al., 2013, 2006; Arruda and Freitas, 2008). The earlier period's departure was marked with imports from Greek products -- specifically ceramics such as kilikes, skyphoi, and kantharoi (Arruda et al., 2013). This resurgence put Castro Marim back in the Phoenician string of pearls along the Iberian Peninsula's Atlantic coast till the 3rd century B.C.E (Arruda et al., 2013, 2006; Neville, 1998; Niemeyer, 1984). The Phoenician -- Punic period is represented by archaeological phases III, IV, and V.
+Castro Marim is located on the Guadiana estuary (Fig. \ref{fig:castro-marim-loc}) as a portal to the metallogenic mineral-rich Baixo -- Alentejo region as well as to the fertile cultivable lands in the interior regions. The Iron Age settlement was located on an elevation with adequate natural defensive elements and overlooked vast swatches of land, which allowed domination of estuarine traffic and agricultural activities in its domain of influence. These conditions allowed trade and cultural networks between the indigenous communities with the Mediterranean communities to flourish. The earliest Iron Age occupation of the site is characterized by East-West orthogonal settlement architecture dating from the first half of 7th century B.C.E, in the Orientalising period (Arruda et al., 2013; Arruda, 1996).This earliest Iron Age occupation corresponds to Castro Marim´s phase II (1st half of the 7th century B.C.E.), III (2nd half of the 7th century B.C.E.) and IV (6th century B.C.E.). Phoenician imports and other human presence signs declined from the second half of the 6th century B.C.E till the first half of the 5th century B.C.E (Arruda, 1996). Significant changes in material culture and restructuring of the settlement architecture with a Northeast -- Southwest orientation are observed from the second half of the 5th century B.C.E (Arruda et al., 2013, 2006; Arruda and Freitas, 2008). The earlier period's departure was marked with imports from Greek products -- specifically ceramics such as \emph{kilikes}, \emph{skyphoi}, and \emph{kantharoi} (Arruda et al., 2020; Arruda, 1997). This resurgence put Castro Marim back in the main commercial circuits along the Iberian Peninsula's Atlantic coast till the 3rd century B.C.E {[}(Arruda et al., 2013, 2006; Arruda, 2000; Sousa, 2019). The Phoenician -- Punic period is represented by archaeological phases III, IV, and V.
 
-Being in a littoral zone made it was possible to adopt a wide range of agricultural strategies and husbandry practices at Castro Marim. The presence of cereals (\emph{Hordeum} / \emph{Triticum}), grapes (\emph{Vitis}), pulses (\emph{Vicia} / \emph{Cicer}), and other cultivated species (\emph{Olea} / \emph{Coriandrum}), as well as exploitation of wild woody plants (\emph{Pinus} / \emph{Arbutus} etc.) have been elucidated from the archaeological record (Queiroz et al., 2006). The animals (native to Portugal) include cattle (\emph{Bos taurus}), goat (\emph{Capra hircus}), sheep (\emph{Ovis aries}), pig (\emph{Sus scrofa/domesticus}), red deer (\emph{Cervus elaphus}), and rabbit (\emph{Oryctolagus cuniculus}) (Davis, 2007). The sudden arrival of chicken (\emph{Gallus domesticus}) has been documented, which the Phoenicians introduced in the second half of 5th-century B.C.E (Davis, 2007).
+Being in a littoral zone made it was possible to adopt a wide range of agricultural strategies and husbandry practices at Castro Marim. The presence of cereals (\emph{Hordeum} / \emph{Triticum}), grapes (\emph{Vitis}), pulses (\emph{Vicia} / \emph{Cicer}), and other cultivated species (\emph{Olea} / \emph{Coriandrum}), as well as exploitation of wild woody plants (\emph{Pinus} / \emph{Arbutus} etc.) have been elucidated from the archaeological record (Queiroz et al., 2006). The animals (native to Portugal) include cattle (\emph{Bos taurus}), goat (\emph{Capra hircus}), sheep (\emph{Ovis aries}), pig (\emph{Sus scrofa/domesticus}), red deer (\emph{Cervus elaphus}), and rabbit (\emph{Oryctolagus cuniculus}) (Davis, 2007). The arrival of chicken (\emph{Gallus domesticus}) has been documented, being introduced in the second half of 5th-century B.C.E (Davis, 2007).
 
 \hypertarget{zooarchaeological-assessment}{%
 \subsection{Zooarchaeological assessment}\label{zooarchaeological-assessment}}
@@ -178,7 +188,7 @@ The original archaeobotanical assessment was carried out by Queiroz et al. (2006
 \hypertarget{zooms-analysis-of-ovicaprids}{%
 \subsection{ZooMS Analysis of Ovicaprids}\label{zooms-analysis-of-ovicaprids}}
 
-Skeletal elements of goats and sheep are a common occurrence in archaeological contexts. A significant issue plaguing comparative husbandry studies between sheep and goats is the overlap of skeletal elements (Boessneck et al., 1964; Payne, 1969; Schramm, 1967). This is further complicated by the environmental modifications, which erode diagnostic markers and produce undistinguishable fragments (Buckley et al., 2010). Zooarchaeology by Mass Spectrometry (ZooMS) is a high-throughput analytical technique that can discriminate unidentifiable bone fragments. ZooMS exploits the genetically distinct alpha 2 (\(\alpha2\)) chain of the collagen (I) protein to distinguish between different species. Collagen is the most abundant protein in mammalian tissues, and this allows for its extraction in most scenarios where DNA cannot be retrieved (Lyman, 1994). The genus \emph{Capra} is identified by an m/z at 3093 whereas that of \emph{Ovis} has a peptide marker with an observed m/z at 3033 (Buckley et al., 2010).
+Skeletal elements of goats and sheep are a common occurrence in archaeological contexts. A significant issue plaguing comparative husbandry studies between sheep and goats is the overlap of skeletal elements (Boessneck et al., 1964; Payne, 1969; Schramm, 1967). Zooarchaeology through mass spectrometry applies peptide mass fingerprinting to identify archaeological remains (Buckley et al., 2009). The main protein used for the this is collagen which is the most abundant protein in bone. Due to sequence differences in the collagen sequences of sheep and goat, ZooMS is able to differentiate between these two species, which is often not possible using standard morphological analysis (Buckley et al., 2010).
 
 \hypertarget{stable-isotope-analysis-of-plants-and-animals}{%
 \subsection{Stable isotope analysis of plants and animals}\label{stable-isotope-analysis-of-plants-and-animals}}
@@ -322,6 +332,18 @@ In carbonized plant macro remains, barley grain samples consist of at least ten 
 \subsection{Collagen Extraction}\label{collagen-extraction}}
 
 The modified Longin (1971) method was used to extract collagen from faunal bones (Richards and Hedges, 1999). Approximately 600 mg of bone sample was demineralized using 0.5 M HCl at 4 \(\text{\textdegree}\)C for a fortnight with daily vortex and an acid change after 7 days. Repeated rinses with ultrapure water to reach neutral pH were performed, and the demineralized bones were subjected to an overnight treatment in 0.125 M NaOH at room temperature to remove fulvic and humic acid contamination. The samples were then rinsed repeatedly with ultrapure water to achieve neutrality and gelatinized in 0.01 M HCl at 70 \(\text{\textdegree}\)C for 48 hours. The impurities were separated by filtering the collagen-containing liquid fraction using Ezee -- Filter\(^\text{\texttrademark}\) filters (Elkay\(^\text{\textregistered}\) Laboratory Products). The solubilized collagen was frozen and subsequently lyophilized for 48 hours.
+
+\hypertarget{zooms-analysis}{%
+\subsection{ZooMS analysis}\label{zooms-analysis}}
+
+A small subsample of the extracted collagen was placed into a microfuge tube and 100 \(\mu\)L 50mM ammonium bicarbonate (Ambic) was added to the samples. The samples were digested overnight using 1 \(\mu\)L of 0.5 \(\mu\)g/\(\mu\)L porcine trypsin (Promega\(^\text{\textregistered}\), UK) at 37 \(\text{\textdegree}\)C and the digestion was stopped by the addition of trifluoroacetic acid (TFA) at a concentration of 0.5--1\(%
+\) of the total solution. The samples were desalted using C18 zip-tips (van Doorn et al., 2011) and eluted using 100 \(\mu\)L of 50\% acetonitrile (ACN)/0.1\(%
+\) TFA (v/v). The zip-tipped samples were spotted in triplicate onto a MTP384 Bruker ground steel MALDI target plate; 1 \(\mu\)L of sample was pipetted onto each sample spot and then mixed with 1 \(\mu\)L of \(\alpha\)-cyano-4-hydroxycinnamic acid matrix solution (1\(%
+\) in 50\(%
+\) acetonitrile / 0.1\(%
+\) trifluoroacetic acid (v/v/v)).
+
+The samples were analysed on a Bruker\(^\text{\textregistered}\) Ultraflex III\(^\text{\texttrademark}\) MALDI-ToF mass spectrometer. The resulting MS spectra were analysed using mMass (Strohalm et al., 2010) an Open Source mass spectrometry interpretation tool. The three spectra for each sample were averaged and the averaged spectrum was cropped between 800 and 3000 m/z and peak picking was carried out using a signal to noise ratio of 6. The resulting spectra were compared to a publicly available ZooMS database.
 
 \hypertarget{stable-carbon-and-nitrogen-isotope-analysis}{%
 \subsection{Stable carbon and nitrogen isotope analysis}\label{stable-carbon-and-nitrogen-isotope-analysis}}
@@ -478,7 +500,7 @@ The species is native to the coastal Mediterranean region, considered to be its 
 \begin{figure}
 \centering
 \includegraphics{castro_main_body_files/figure-latex/iso-hord-plots-1.pdf}
-\caption{\label{fig:iso-hord-plots}\textbf{(a).} Beeswarm plot showing \(\Delta ^{13}C\) values of barley cultivars where the blue dashed lines represent `well-watered,' `moderately-watered,' and `poorly watered' reference lines based on the study of modern crops in varying watering conditions (Wallace et al., 2013). \textbf{(b).} Beeswarm plot showing the manuring status of barley cultivars with green shaded region representing 1 SD range of estimated wild herbivore forage value (calculated from subtraction 4 \text{\textperthousand} from red deer \(\delta ^{15}N\) mean ± 1 SD range).}
+\caption{\label{fig:iso-hord-plots}\textbf{(a).} Beeswarm plot showing \(\Delta ^{13}C\) values of barley cultivars where the blue dashed lines represent `well-watered', `moderately-watered', and `poorly watered' reference lines based on the study of modern crops in varying watering conditions (Wallace et al., 2013). \textbf{(b).} Beeswarm plot showing the manuring status of barley cultivars with green shaded region representing 1 SD range of estimated wild herbivore forage value (calculated from subtraction 4 \text{\textperthousand} from red deer \(\delta ^{15}N\) mean ± 1 SD range).}
 \end{figure}
 
 \hypertarget{water-and-nutrient-nitrogen-availability-for-vegetation}{%
@@ -546,280 +568,301 @@ This project has received funding from the European Union's Horizon 2020 researc
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
-\leavevmode\hypertarget{ref-ambrose90}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-ambrose90}{}}%
 Ambrose, S.H., 1990. Preparation and characterization of bone and tooth collagen for isotopic analysis. Journal of Archaeological Science 17, 431--451. doi:\href{https://doi.org/10.1016/0305-4403(90)90007-R}{10.1016/0305-4403(90)90007-R}
 
-\leavevmode\hypertarget{ref-ambrose91}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-ambrose91}{}}%
 Ambrose, S.H., 1991. Effects of diet, climate and physiology on nitrogen isotope abundances in terrestrial foodwebs. Journal of Archaeological Science 18, 293--317. doi:\href{https://doi.org/10.1016/0305-4403(91)90067-Y}{10.1016/0305-4403(91)90067-Y}
 
-\leavevmode\hypertarget{ref-arrastio99}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-arrastio99}{}}%
 Arrastio, F.J.M., 1999. Conflictos y perspectivas en el periodo precolonial tartésico. Gerión. Revista de Historia Antigua 17, 149.
 
-\leavevmode\hypertarget{ref-arrastio00}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-arrastio00}{}}%
 Arrastio, F.J.M., 2000. Tartessos, estelas, modelos pesimistas, in: Intercambio y Comercio Preclásico En El {Mediterráneo}: Actas Del {I} Coloquio Del {CEFYP}, {Madrid}, 9-12 de Noviembre, 1998. {Centro de Estudios Fenicios y Púnicos}, pp. 153--174.
 
-\leavevmode\hypertarget{ref-arruda96}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-arruda96}{}}%
 Arruda, A.M., 1996. O {Castelo} de {Castro Marim}, in: In {De Ulisses} a {Viriato}. {O} Primeiro Milénio a.{C}.. {Ministério da Cultura, Instituto Português de Museus, Museu Nacional de Arqueologia}, {Lisboa}, pp. 95--100.
 
-\leavevmode\hypertarget{ref-arruda03}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-arruda97}{}}%
+Arruda, A.M., 1997. Os núcleos urbanos litorais da {Idade} do {Ferro} no {Algarve}. Noventa Séculos entre a Serra e o Mar 243--255.
+
+\leavevmode\vadjust pre{\hypertarget{ref-arruda00}{}}%
+Arruda, A.M., 2000. Los fenicios en {Portugal}. {Fenicios} y mundo indígena en el centro y sur de {Portugal} (siglos {VIII}-{VI aC}). {Universidad Pompeu Fabra de Barcelona/Carrera Edició, SL}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-arruda03}{}}%
 Arruda, A.M., 2003. Contributo da colonização fenícia para a domesticação da terra portuguesa. Ecohistoria del paisaje agrario-la agricultura fenicio-púnica en el mediterráneo.
 
-\leavevmode\hypertarget{ref-arruda09}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-arruda09}{}}%
 Arruda, A.M., 2009. Phoenician colonization on the {Atlantic Coast} of the {Iberian Peninsula}. {Chicago: The University of Chicago Press, 2009.}
 
-\leavevmode\hypertarget{ref-arruda_freitas08}{}%
-Arruda, A.M., Freitas, V.T. de, 2008. O castelo de castro marim durante os séculos VI e v a.n.e. Sidereum Ana I: El río Guadiana en época Post-Orientalizante. 429--446.
+\leavevmode\vadjust pre{\hypertarget{ref-arruda_etal20}{}}%
+Arruda, A.M., Ferreira, D., Sousa, E. de, 2020. A cerâmica grega do {Castelo} de {Castro Marim}. {UNIARQ. Centro de Arqueologia da Universidade de Lisboa}.
 
-\leavevmode\hypertarget{ref-arruda_etal13}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-arruda_freitas08}{}}%
+Arruda, A.M., Freitas, V.T. de, 2008. \href{https://repositorio.ul.pt/handle/10451/9778}{O castelo de castro marim durante os séculos VI e v a.n.e.} Sidereum Ana I: El río Guadiana en época Post-Orientalizante. 429--446.
+
+\leavevmode\vadjust pre{\hypertarget{ref-arruda_etal13}{}}%
 Arruda, A.M., Soares, A.M., Freitas, V.T. de, Oliveira, C.F., Martins, J.M.M., Portela, P.J., 2013. A cronologia relativa e absoluta da ocupação sidérica do {Castelo} de {Castro Marim}. Saguntum 45, 101--114.
 
-\leavevmode\hypertarget{ref-arruda_etal06}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-arruda_etal06}{}}%
 Arruda, A.M., Viegas, C., Bargão, P., Pereira, R., 2006. A importação de preparados de peixe em {Castro Marim}: Da {Idade} do {Ferro} á {Época Romana}. Setúbal Arqueológica 13, 153--176.
 
-\leavevmode\hypertarget{ref-aubet01}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-aubet87}{}}%
+Aubet, M.E., 1987. Tiro y las colonias fenicias de {Occidente}. {Ed. Bellaterra}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-aubet01}{}}%
 Aubet, M.E., 2001. The {Phoenicians} and the {West}: Politics, colonies and trade. {Cambridge Univ. Press}.
 
-\leavevmode\hypertarget{ref-boessneck_etal64}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-boessneck_etal64}{}}%
 Boessneck, J., Müller, H.-H., Teichert, M., 1964. Osteologische {Unterscheidungsmerkmale} zwischen {Schaf} ({Ovis} aries {Linné}) und {Ziege} ({Capra} hircus {Linné}). {Verlag nicht ermittelbar}.
 
-\leavevmode\hypertarget{ref-bogaard_etal13}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-bogaard_etal13}{}}%
 Bogaard, A., Fraser, R., Heaton, T.H.E., Wallace, M., Vaiglova, P., Charles, M., Jones, G., Evershed, R.P., Styring, A.K., Andersen, N.H., Arbogast, R.-M., Bartosiewicz, L., Gardeisen, A., Kanstrup, M., Maier, U., Marinova, E., Ninov, L., Schäfer, M., Stephan, E., 2013. Crop manuring and intensive land management by {Europe}'s first farmers. PNAS 110, 12589--12594. doi:\href{https://doi.org/10.1073/pnas.1305918110}{10.1073/pnas.1305918110}
 
-\leavevmode\hypertarget{ref-bogaard_etal07}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-bogaard_etal07}{}}%
 Bogaard, A., Heaton, T.H.E., Poulton, P., Merbach, I., 2007. The impact of manuring on nitrogen isotope ratios in cereals: Archaeological implications for reconstruction of diet and crop management practices. Journal of Archaeological Science 34, 335--343. doi:\href{https://doi.org/10.1016/j.jas.2006.04.009}{10.1016/j.jas.2006.04.009}
 
-\leavevmode\hypertarget{ref-bonafini_etal13}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-bonafini_etal13}{}}%
 Bonafini, M., Pellegrini, M., Ditchfield, P., Pollard, A.M., 2013. Investigation of the 'canopy effect' in the isotope ecology of temperate woodlands. Journal of Archaeological Science 40, 3926--3935. doi:\href{https://doi.org/10.1016/j.jas.2013.03.028}{10.1016/j.jas.2013.03.028}
 
-\leavevmode\hypertarget{ref-buckley_etal10}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-buckley_etal09}{}}%
+Buckley, M., Collins, M., Thomas‐Oates, J., Wilson, J.C., 2009. Species identification by analysis of bone collagen using matrix-assisted laser desorption/ionisation time-of-flight mass spectrometry. Rapid Communications in Mass Spectrometry 23, 3843--3854. doi:\href{https://doi.org/10.1002/rcm.4316}{10.1002/rcm.4316}
+
+\leavevmode\vadjust pre{\hypertarget{ref-buckley_etal10}{}}%
 Buckley, M., Whitcher Kansa, S., Howard, S., Campbell, S., Thomas-Oates, J., Collins, M., 2010. Distinguishing between archaeological sheep and goat bones using a single collagen peptide. Journal of Archaeological Science 37, 13--20. doi:\href{https://doi.org/10.1016/j.jas.2009.08.020}{10.1016/j.jas.2009.08.020}
 
-\leavevmode\hypertarget{ref-bull_etal04}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-bull_etal04}{}}%
 Bull, J., Wanless, S., Elston, D.A., Daunt, F., Lewis, S., Harris, M.P., J, B., Wanless, S., Elston, D.A., Daunt, F., Lewis, S., Harris, M.P., 2004. Local-scale variability in the diet of {Black}-legged {Kittiwakes Rissa} tridactyla. Ardea 43--52.
 
-\leavevmode\hypertarget{ref-claypool_etal80}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-claypool_etal80}{}}%
 Claypool, G.E., Holser, W.T., Kaplan, I.R., Sakai, H., Zak, I., 1980. The age curves of sulfur and oxygen isotopes in marine sulfate and their mutual interpretation. Chemical Geology 28, 199--260. doi:\href{https://doi.org/10.1016/0009-2541(80)90047-9}{10.1016/0009-2541(80)90047-9}
 
-\leavevmode\hypertarget{ref-cloern_etal02}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-cloern_etal02}{}}%
 Cloern, J.E., Canuel, E.A., Harris, D., 2002. Stable carbon and nitrogen isotope composition of aquatic and terrestrial plants of the {San Francisco Bay} estuarine system. Limnology and Oceanography 47, 713--729. doi:\href{https://doi.org/10.4319/lo.2002.47.3.0713}{10.4319/lo.2002.47.3.0713}
 
-\leavevmode\hypertarget{ref-coulson11}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-coulson11}{}}%
 Coulson, J., 2011. The kittiwake. {A\&C Black}.
 
-\leavevmode\hypertarget{ref-davis07}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-davis07}{}}%
 Davis, S., 2007. The mammals and birds from the {Iron Age} and {Roman} periods of {Castro Marim}, {Algarve}, {Portugal}. Trabalhos do CIPA 107.
 
-\leavevmode\hypertarget{ref-deniro85}{}%
-DeNiro, M.J., 1985. Postmortem preservation and alteration of in vivo bone collagen isotope ratios in relation to palaeodietary reconstruction. Nature 317, 806--809. doi:\href{https://doi.org/10.1038/317806a0}{10.1038/317806a0}
-
-\leavevmode\hypertarget{ref-deniro_epstein81}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-deniro_epstein81}{}}%
 Deniro, M.J., Epstein, S., 1981. Influence of diet on the distribution of nitrogen isotopes in animals. Geochimica et Cosmochimica Acta 45, 341--351. doi:\href{https://doi.org/10.1016/0016-7037(81)90244-1}{10.1016/0016-7037(81)90244-1}
 
-\leavevmode\hypertarget{ref-deniro_epstein78}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-deniro85}{}}%
+DeNiro, M.J., 1985. Postmortem preservation and alteration of in vivo bone collagen isotope ratios in relation to palaeodietary reconstruction. Nature 317, 806--809. doi:\href{https://doi.org/10.1038/317806a0}{10.1038/317806a0}
+
+\leavevmode\vadjust pre{\hypertarget{ref-deniro_epstein78}{}}%
 DeNiro, M.J., Epstein, S., 1978. Influence of diet on the distribution of carbon isotopes in animals. Geochimica et Cosmochimica Acta 42, 495--506. doi:\href{https://doi.org/10.1016/0016-7037(78)90199-0}{10.1016/0016-7037(78)90199-0}
 
-\leavevmode\hypertarget{ref-dietler09}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-dietler09}{}}%
 Dietler, M., 2009. Colonial encounters in {Iberia} and the {Western Mediterranean}: {An} exploratory framework.
 
-\leavevmode\hypertarget{ref-dixon06}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-dixon06}{}}%
 Dixon, G.R., 2006. Origins and diversity of {Brassica} and its relatives., in: Dixon, G.R. (Ed.), Vegetable Brassicas and Related Crucifers. {CABI}, {Wallingford}, pp. 1--33. doi:\href{https://doi.org/10.1079/9780851993959.0001}{10.1079/9780851993959.0001}
 
-\leavevmode\hypertarget{ref-eshel_etal19}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-eshel_etal19}{}}%
 Eshel, T., Erel, Y., Yahalom-Mack, N., Tirosh, O., Gilboa, A., 2019. Lead isotopes in silver reveal earliest {Phoenician} quest for metals in the west {Mediterranean}. Proc Natl Acad Sci USA 116, 6007. doi:\href{https://doi.org/10.1073/pnas.1817951116}{10.1073/pnas.1817951116}
 
-\leavevmode\hypertarget{ref-farquhar_etal89}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-farquhar_etal89}{}}%
 Farquhar, G.D., Ehleringer, J.R., Hubick, K.T., 1989. Carbon {Isotope Discrimination} and {Photosynthesis}. Annu. Rev. Plant. Physiol. Plant. Mol. Biol. 40, 503--537. doi:\href{https://doi.org/10.1146/annurev.pp.40.060189.002443}{10.1146/annurev.pp.40.060189.002443}
 
-\leavevmode\hypertarget{ref-farquhar_etal82}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-farquhar_etal82}{}}%
 Farquhar, G., O'Leary, M., Berry, J., 1982. On the {Relationship Between Carbon Isotope Discrimination} and the {Intercellular Carbon Dioxide Concentration} in {Leaves}. Functional Plant Biol. 9, 121. doi:\href{https://doi.org/10.1071/PP9820121}{10.1071/PP9820121}
 
-\leavevmode\hypertarget{ref-fernandez-crespo_etal19}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-fernandez-crespo_etal19}{}}%
 Fernández-Crespo, T., Ordoño, J., Bogaard, A., Llanos, A., Schulting, R., 2019. A snapshot of subsistence in {Iron Age Iberia}: {The} case of {La Hoya} village. Journal of Archaeological Science: Reports 28, 102037. doi:\href{https://doi.org/10.1016/j.jasrep.2019.102037}{10.1016/j.jasrep.2019.102037}
 
-\leavevmode\hypertarget{ref-ferrio_etal05}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-ferrio_etal05}{}}%
 Ferrio, J.P., Araus, J.L., Buxó, R., Voltas, J., Bort, J., 2005. Water management practices and climate in ancient agriculture: Inferences from the stable isotope composition of archaeobotanical remains. Veget Hist Archaeobot 14, 510--517. doi:\href{https://doi.org/10.1007/s00334-005-0062-2}{10.1007/s00334-005-0062-2}
 
-\leavevmode\hypertarget{ref-ferrio_etal07}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-ferrio_etal07}{}}%
 Ferrio, J.P., Voltas, J., Alonso, N., Araus, J.L., 2007. Reconstruction of {Climate} and {Crop Conditions} in the {Past Based} on the {Carbon Isotope Signature} of {Archaeobotanical Remains}, in: Terrestrial {Ecology}. {Elsevier}, pp. 319--332. doi:\href{https://doi.org/10.1016/S1936-7961(07)01020-2}{10.1016/S1936-7961(07)01020-2}
 
-\leavevmode\hypertarget{ref-fraser_etal13a}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-fraser_etal13a}{}}%
 Fraser, R.A., Bogaard, A., Charles, M., Styring, A.K., Wallace, M., Jones, G., Ditchfield, P., Heaton, T.H.E., 2013. Assessing natural variation and the effects of charring, burial and pre-treatment on the stable carbon and nitrogen isotope values of archaeobotanical cereals and pulses. Journal of Archaeological Science 40, 4754--4766. doi:\href{https://doi.org/10.1016/j.jas.2013.01.032}{10.1016/j.jas.2013.01.032}
 
-\leavevmode\hypertarget{ref-fraser_etal11}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-fraser_etal11}{}}%
 Fraser, R.A., Bogaard, A., Heaton, T., Charles, M., Jones, G., Christensen, B.T., Halstead, P., Merbach, I., Poulton, P.R., Sparkes, D., Styring, A.K., 2011. Manuring and stable nitrogen isotope ratios in cereals and pulses: Towards a new archaeobotanical approach to the inference of land use and dietary practices. Journal of Archaeological Science 38, 2790--2804. doi:\href{https://doi.org/10.1016/j.jas.2011.06.024}{10.1016/j.jas.2011.06.024}
 
-\leavevmode\hypertarget{ref-froehle_etal10}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-froehle_etal10}{}}%
 Froehle, A.W., Kellner, C.M., Schoeninger, M.J., 2010. {FOCUS}: Effect of diet and protein source on carbon stable isotope ratios in collagen: Follow up to {Warinner} and {Tuross} (2009). Journal of Archaeological Science 37, 2662--2670. doi:\href{https://doi.org/10.1016/j.jas.2010.06.003}{10.1016/j.jas.2010.06.003}
 
-\leavevmode\hypertarget{ref-gale_carruthers00}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-gale_carruthers00}{}}%
 Gale, R., Carruthers, W., 2000. Charcoal and charred seed remains from {Middle Palaeolithic} levels at {Gorham}'s and {Vanguard Caves}. Neanderthals on the Edge. Oxford: Oxbow Books 207--210.
 
-\leavevmode\hypertarget{ref-gomes_arruda18}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-gomes_arruda18}{}}%
 Gomes, F.B., Arruda, A.M., 2018. On the edge of history? {The Early Iron Age} of southern {Portugal}, between texts and archaeology. World Archaeology 50, 764--780. doi:\href{https://doi.org/10.1080/00438243.2019.1604258}{10.1080/00438243.2019.1604258}
 
-\leavevmode\hypertarget{ref-gomezbellard19}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-gomezbellard19}{}}%
 Gómez Bellard, C., 2019. Agriculture, in: The {Oxford Handbook} of {The Phoenician} and {Punic Mediterranean}. {Oxford University Press}, pp. 732--745.
 
-\leavevmode\hypertarget{ref-gramazio_etal17}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-gramazio_etal17}{}}%
 Gramazio, C.C., Laidlaw, D.H., Schloss, K.B., 2017. Colorgorical: {Creating} discriminable and preferable color palettes for information visualization. IEEE Trans. Visual. Comput. Graphics 23, 521--530. doi:\href{https://doi.org/10.1109/TVCG.2016.2598918}{10.1109/TVCG.2016.2598918}
 
-\leavevmode\hypertarget{ref-haws04}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-haws04}{}}%
 Haws, J., 2004. An {Iberian} perspective on {Upper Paleolithic} plant consumption. Promontoria 2, 49--106.
 
-\leavevmode\hypertarget{ref-heaton87}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-heaton87}{}}%
 Heaton, T.H.E., 1987. The \(^{15}N\)/\(^{14}N\) ratios of plants in {South Africa} and {Namibia}: Relationship to climate and coastal/saline environments. Oecologia 74, 236--246. doi:\href{https://doi.org/10.1007/BF00379365}{10.1007/BF00379365}
 
-\leavevmode\hypertarget{ref-hedges_reynard07}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-hedges_reynard07}{}}%
 Hedges, R.E.M., Reynard, L.M., 2007. Nitrogen isotopes and the trophic level of humans in archaeology. Journal of Archaeological Science 34, 1240--1251. doi:\href{https://doi.org/10.1016/j.jas.2006.10.015}{10.1016/j.jas.2006.10.015}
 
-\leavevmode\hypertarget{ref-hobson99}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-hobson99}{}}%
 Hobson, K.A., 1999. Tracing origins and migration of wildlife using stable isotopes: A review. Oecologia 120, 314--326. doi:\href{https://doi.org/10.1007/s004420050865}{10.1007/s004420050865}
 
-\leavevmode\hypertarget{ref-hollund_etal13}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-hollund_etal13}{}}%
 Hollund, H.I., Ariese, F., Fernandes, R., Jans, M.M.E., Kars, H., 2013. Testing an {Alternative High}-{Throughput Tool} for {Investigating Bone Diagenesis}: {Ftir} in {Attenuated Total Reflection} (atr) {Mode}*. Archaeometry 55, 507--532. doi:\href{https://doi.org/10.1111/j.1475-4754.2012.00695.x}{10.1111/j.1475-4754.2012.00695.x}
 
-\leavevmode\hypertarget{ref-kellner_schoeninger07}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-kellner_schoeninger07}{}}%
 Kellner, C.M., Schoeninger, M.J., 2007. A simple carbon isotope model for reconstructing prehistoric human diet. American Journal of Physical Anthropology 133, 1112--1127. doi:\href{https://doi.org/10.1002/ajpa.20618}{10.1002/ajpa.20618}
 
-\leavevmode\hypertarget{ref-vanklinken99}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-vanklinken99}{}}%
 Klinken, G.J. van, 1999. Bone {Collagen Quality Indicators} for {Palaeodietary} and {Radiocarbon Measurements}. Journal of Archaeological Science 26, 687--695. doi:\href{https://doi.org/10.1006/jasc.1998.0385}{10.1006/jasc.1998.0385}
 
-\leavevmode\hypertarget{ref-kohn10}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-kohn10}{}}%
 Kohn, M.J., 2010. Carbon isotope compositions of terrestrial {C3} plants as indicators of (paleo)ecology and (paleo)climate. Proc Natl Acad Sci U S A 107, 19691--19695. doi:\href{https://doi.org/10.1073/pnas.1004933107}{10.1073/pnas.1004933107}
 
-\leavevmode\hypertarget{ref-lebon_etal16}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-lebon_etal16}{}}%
 Lebon, M., Reiche, I., Gallet, X., Bellot-Gurlet, L., Zazzo, A., 2016. Rapid {Quantification} of {Bone Collagen Content} by {ATR}-{FTIR Spectroscopy}. Radiocarbon 58, 131--145. doi:\href{https://doi.org/10.1017/RDC.2015.11}{10.1017/RDC.2015.11}
 
-\leavevmode\hypertarget{ref-leegood13}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-leegood13}{}}%
 Leegood, R.C., 2013. Photosynthesis, in: Lennarz, W.J., Lane, M.D. (Eds.), Encyclopedia of {Biological Chemistry} ({Second Edition}). {Academic Press}, {Waltham}, pp. 492--496. doi:\href{https://doi.org/10.1016/B978-0-12-378630-2.00049-9}{10.1016/B978-0-12-378630-2.00049-9}
 
-\leavevmode\hypertarget{ref-longin71}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-longin71}{}}%
 Longin, R., 1971. New {Method} of {Collagen Extraction} for {Radiocarbon Dating}. Nature 230, 241--242. doi:\href{https://doi.org/10.1038/230241a0}{10.1038/230241a0}
 
-\leavevmode\hypertarget{ref-lyman94}{}%
-Lyman, R.L., 1994. Vertebrate taphonomy. {Cambridge University Press}.
-
-\leavevmode\hypertarget{ref-manfredi92}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-manfredi92}{}}%
 Manfredi, L.I., 1992. Le saline et il sale nel mundo punico. Rivista di Studi Fenici 20, 3--14.
 
-\leavevmode\hypertarget{ref-markoe05}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-markoe05}{}}%
 Markoe, G.E., 2005. Phoenicians. {London}: {The British Museum}.
 
-\leavevmode\hypertarget{ref-martin71}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-martin71}{}}%
 Martin, R., 1971. Recherches sur les agronomes latins et leurs conceptions économiques et sociales.
 
-\leavevmode\hypertarget{ref-nehlich15}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-nehlich15}{}}%
 Nehlich, O., 2015. The application of sulphur isotope analyses in archaeological research: {A} review. Earth-Science Reviews 142, 1--17. doi:\href{https://doi.org/10.1016/j.earscirev.2014.12.002}{10.1016/j.earscirev.2014.12.002}
 
-\leavevmode\hypertarget{ref-nehlich_richards09}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-nehlich_richards09}{}}%
 Nehlich, O., Richards, M.P., 2009. Establishing collagen quality criteria for sulphur isotope analysis of archaeological bone collagen. Archaeological and Anthropological Sciences 1, 59--75. doi:\href{https://doi.org/10.1007/s12520-009-0003-6}{10.1007/s12520-009-0003-6}
 
-\leavevmode\hypertarget{ref-neville98}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-neville98}{}}%
 Neville, A., 1998. The {Phoenicians} in {Iberia}: {Settlements}, {Cemetries}, {Trade} and {Agriculture}.
 
-\leavevmode\hypertarget{ref-niemeyer84}{}%
-Niemeyer, H.G., 1984. Die {Phönizier} und die {Mittelmeerwelt} im {Zeitalter Homers}. {Jahrbuch des Römisch-Germanischen Zentralmuseums}.
-
-\leavevmode\hypertarget{ref-nitsch_etal15}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-nitsch_etal15}{}}%
 Nitsch, E.K., Charles, M., Bogaard, A., 2015. Calculating a statistically robust \(\delta ^{13}C\) and \(\delta ^{15}N\) offset for charred cereal and pulse seeds. STAR: Science \& Technology of Archaeological Research 1, 1--8. doi:\href{https://doi.org/10.1179/2054892315Y.0000000001}{10.1179/2054892315Y.0000000001}
 
-\leavevmode\hypertarget{ref-nitsch_etal19}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-nitsch_etal19}{}}%
 Nitsch, E.K., Lamb, A.L., Heaton, T.H.E., Vaiglova, P., Fraser, R., Hartman, G., Moreno-Jiménez, E., López-Piñeiro, A., Peña-Abades, D., Fairbairn, A., Eriksen, J., Bogaard, A., 2019. The {Preservation} and {Interpretation} of {\(\delta^{34}\)S Values} in {Charred Archaeobotanical Remains}. Archaeometry 61, 161--178. doi:\href{https://doi.org/10.1111/arcm.12388}{10.1111/arcm.12388}
 
-\leavevmode\hypertarget{ref-payne69}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-payne69}{}}%
 Payne, S., 1969. A metrical distinction between sheep and goat metacarpals. The domestication and exploitation of plants and animals 295--305.
 
-\leavevmode\hypertarget{ref-perez-hurtado_etal97}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-perez-hurtado_etal97}{}}%
 Perez-Hurtado, A., Goss-Custard, J.D., Garcia, F., 1997. The diet of wintering waders in cádiz bay, southwest spain. Bird Study 44, 45--52. doi:\href{https://doi.org/10.1080/00063659709461037}{10.1080/00063659709461037}
 
-\leavevmode\hypertarget{ref-price_etal17}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-price_etal17}{}}%
 Price, G.C., Krigbaum, J., Shelton, K., 2017. Stable isotopes and discriminating tastes: {Faunal} management practices at the {Late Bronze Age} settlement of {Mycenae}, {Greece}. Journal of Archaeological Science: Reports 14, 116--126. doi:\href{https://doi.org/10.1016/j.jasrep.2017.05.034}{10.1016/j.jasrep.2017.05.034}
 
-\leavevmode\hypertarget{ref-queiroz_etal06}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-queiroz_etal06}{}}%
 Queiroz, P., Mateus, J., Leeuwaarden, W., Pereira, T., Dise, D., 2006. Castro {Marim} e o seu território imediato durante a {Antiguidade}. {Paleo}-etno-{Botânica}. {Relatório Final}. doi:\href{https://doi.org/10.13140/RG.2.2.25361.63848}{10.13140/RG.2.2.25361.63848}
 
-\leavevmode\hypertarget{ref-quinn19}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-quinn19}{}}%
 Quinn, J., 2019. In search of the {Phoenicians}. {Princeton University Press}.
 
-\leavevmode\hypertarget{ref-rcoreteam20}{}%
-R Core Team, 2020. R: {A Language} and {Environment} for {Statistical Computing}. {R Foundation for Statistical Computing}, {Vienna, Austria}.
+\leavevmode\vadjust pre{\hypertarget{ref-rcoreteam20}{}}%
+R Core Team, 2020. \href{https://www.R-project.org/}{R: {A Language} and {Environment} for {Statistical Computing}}. {R Foundation for Statistical Computing}, {Vienna, Austria}.
 
-\leavevmode\hypertarget{ref-renzi_etal12}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-renzi_etal12}{}}%
 Renzi, M., Rovira Llorens, S., Montero Ruiz, I., 2012. Riflessioni sulla metallurgia fenicia dell'argento nella {Penisola Iberica}.
 
-\leavevmode\hypertarget{ref-richards_hedges99}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-richards_hedges99}{}}%
 Richards, M.P., Hedges, R.E.M., 1999. Stable {Isotope Evidence} for {Similarities} in the {Types} of {Marine Foods Used} by {Late Mesolithic Humans} at {Sites Along} the {Atlantic Coast} of {Europe}. Journal of Archaeological Science 26, 717--722. doi:\href{https://doi.org/10.1006/jasc.1998.0387}{10.1006/jasc.1998.0387}
 
-\leavevmode\hypertarget{ref-riehl09}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-riehl09}{}}%
 Riehl, S., 2009. Archaeobotanical evidence for the interrelationship of agricultural decision-making and climate change in the ancient {Near East}. Quaternary International 197, 93--114. doi:\href{https://doi.org/10.1016/j.quaint.2007.08.005}{10.1016/j.quaint.2007.08.005}
 
-\leavevmode\hypertarget{ref-roller14}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-roller14}{}}%
 Roller, D.W., 2014. The geography of {Strabo}: {An English} translation, with introduction and notes. {Cambridge University Press}.
 
-\leavevmode\hypertarget{ref-rutter02}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-rutter02}{}}%
 Rutter, S.M., 2002. Behaviour of {Sheep} and {Goats}, in: The Ethology of Domestic Animals: {An} Introductory Text. pp. 148--155.
 
-\leavevmode\hypertarget{ref-schoeninger85}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-schoeninger85}{}}%
 Schoeninger, M.J., 1985. Trophic level effects on {15N}/{14N} and {13C}/{12C} ratios in bone collagen and strontium levels in bone mineral. Journal of Human Evolution 14, 515--525. doi:\href{https://doi.org/10.1016/S0047-2484(85)80030-0}{10.1016/S0047-2484(85)80030-0}
 
-\leavevmode\hypertarget{ref-schramm67}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-schramm67}{}}%
 Schramm, Z., 1967. Morphological differences of some goat and sheep bones. {Wyższa Szkoła Rolnicza}.
 
-\leavevmode\hypertarget{ref-sturtevant86}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-sousa19}{}}%
+Sousa, E. de, 2019. The use of" {Kouass Ware}" during the {Republican Period} in the {Algarve} ({Portugal}). Rei Cretariae Romanae Fautorum Acta 41 41, 523--528.
+
+\leavevmode\vadjust pre{\hypertarget{ref-strohalm_etal10}{}}%
+Strohalm, M., Kavan, D., Novák, P., Volný, M., Havlíček, V., 2010. {mMass} 3: A {Cross}-{Platform Software Environment} for {Precise Analysis} of {Mass Spectrometric Data}. Anal. Chem. 82, 4648--4651. doi:\href{https://doi.org/10.1021/ac100818g}{10.1021/ac100818g}
+
+\leavevmode\vadjust pre{\hypertarget{ref-sturtevant86}{}}%
 Sturtevant, E.L., 1886. History of {Celery}. The American Naturalist 20, 599--606. doi:\href{https://doi.org/10.1086/274288}{10.1086/274288}
 
-\leavevmode\hypertarget{ref-terrinha98}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-terrinha98}{}}%
 Terrinha, P.A.G., 1998. Structural geology and tectonic evolution of the {Algarve Basin}, {South Portugal}. {Imperial College London (University of London)}.
 
-\leavevmode\hypertarget{ref-thompsonbyrkjedal10}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-thompsonbyrkjedal10}{}}%
 Thompson, D., Byrkjedal, I., 2010. Tundra plovers: The {Eurasian}, {Pacific} and {American} golden plovers and grey plover. {A\&C Black}.
 
-\leavevmode\hypertarget{ref-tieszen91}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-tieszen91}{}}%
 Tieszen, L.L., 1991. Natural variations in the carbon isotope values of plants: {Implications} for archaeology, ecology, and paleoecology. Journal of Archaeological Science 18, 227--248. doi:\href{https://doi.org/10.1016/0305-4403(91)90063-U}{10.1016/0305-4403(91)90063-U}
 
-\leavevmode\hypertarget{ref-tobyn_etal11}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-tobyn_etal11}{}}%
 Tobyn, G., Denham, A., Whitelegg, M., 2011. {CHAPTER} 9 - {Apium} graveolens, wild celery, in: Tobyn, G., Denham, A., Whitelegg, M. (Eds.), Medical {Herbs}. {Churchill Livingstone}, {Edinburgh}, pp. 79--89. doi:\href{https://doi.org/10.1016/B978-0-443-10344-5.00014-8}{10.1016/B978-0-443-10344-5.00014-8}
 
-\leavevmode\hypertarget{ref-treumann09}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-treumann09}{}}%
 Treumann, B., 2009. Lumbermen and {Shipwrights}: {Phoenicians} on the {Mediterranean Coast} of {Southern Spain}.
 
-\leavevmode\hypertarget{ref-treumann98}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-treumann98}{}}%
 Treumann, B.W., 1998. The role of wood in the rise and decline of the {Phoenician} settlements on the {Iberian Peninsula}.
 
-\leavevmode\hypertarget{ref-trueman_etal08}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-trueman_etal08}{}}%
 Trueman, C.N., Privat, K., Field, J., 2008. Why do crystallinity values fail to predict the extent of diagenetic alteration of bone mineral? Palaeogeography, Palaeoclimatology, Palaeoecology 266, 160--167. doi:\href{https://doi.org/10.1016/j.palaeo.2008.03.038}{10.1016/j.palaeo.2008.03.038}
 
-\leavevmode\hypertarget{ref-uriel00}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-uriel00}{}}%
 Uriel, P.F., 2000. El comercio de la púrpura, in: Intercambio y Comercio Preclásico En El {Mediterráneo}: Actas Del {I} Coloquio Del {CEFYP}, {Madrid}, 9-12 de Noviembre, 1998. {Centro de Estudios Fenicios y Púnicos}, pp. 271--280.
 
-\leavevmode\hypertarget{ref-virginia_delwiche82}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-vandoorn_etal11}{}}%
+van Doorn, N.L., Hollund, H., Collins, M.J., 2011. A novel and non-destructive approach for {ZooMS} analysis: Ammonium bicarbonate buffer extraction. Archaeol Anthropol Sci 3, 281--289. doi:\href{https://doi.org/10.1007/s12520-011-0067-y}{10.1007/s12520-011-0067-y}
+
+\leavevmode\vadjust pre{\hypertarget{ref-vanleeuwaarden_janssen85}{}}%
+Van Leeuwaarden, W., Janssen, C.R., 1985. A preliminary palynological study of peat deposits near an oppidum in the {Lower Tagus Valley}, {Portugal}, in: Actas. pp. 225--236.
+
+\leavevmode\vadjust pre{\hypertarget{ref-virginia_delwiche82}{}}%
 Virginia, R.A., Delwiche, C.C., 1982. Natural \(^{15}N\) abundance of presumed \(N_{2}\) -fixing and non-\(N_{2}\)-fixing plants from selected ecosystems. Oecologia 54, 317--325.
 
-\leavevmode\hypertarget{ref-wagner_alvar89}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-wagner_alvar89}{}}%
 Wagner, C.G., Alvar, J., 1989. Fenicios en {Occidente}: La colonización agrícola. Rivista di Studi Fenici 17, 61--102.
 
-\leavevmode\hypertarget{ref-wagner_alvar03}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-wagner_alvar03}{}}%
 Wagner, C.G., Alvar, J., 2003. La colonización agrícola en la {Península Ibérica}. {Estado} de la cuestión y nuevas perspectivas. Ecohistoria del paisaje agrario. La agricultura fenicio-púnica en el Mediterráneo 95, 187--204.
 
-\leavevmode\hypertarget{ref-wallace_etal13}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-wallace_etal13}{}}%
 Wallace, M., Jones, G., Charles, M., Fraser, R., Halstead, P., Heaton, T.H.E., Bogaard, A., 2013. Stable carbon isotope analysis as a direct means of inferring crop water status and water management practices. World Archaeology 45, 388--409. doi:\href{https://doi.org/10.1080/00438243.2013.821671}{10.1080/00438243.2013.821671}
 
-\leavevmode\hypertarget{ref-webb_etal17a}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-webb_etal17a}{}}%
 Webb, E.C., Lewis, J., Shain, A., Kastrisianaki-Guyton, E., Honch, N.V., Stewart, A., Miller, B., Tarlton, J., Evershed, R.P., 2017. The influence of varying proportions of terrestrial and marine dietary protein on the stable carbon-isotope compositions of pig tissues from a controlled feeding experiment. STAR: Science \& Technology of Archaeological Research 3, 28--44. doi:\href{https://doi.org/10.1080/20548923.2016.1275477}{10.1080/20548923.2016.1275477}
 
-\leavevmode\hypertarget{ref-weiner_bar-yosef90}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-weiner_bar-yosef90}{}}%
 Weiner, S., Bar-Yosef, O., 1990. States of preservation of bones from prehistoric sites in the {Near East}: {A} survey. Journal of Archaeological Science 17, 187--196. doi:\href{https://doi.org/10.1016/0305-4403(90)90058-D}{10.1016/0305-4403(90)90058-D}
 
-\leavevmode\hypertarget{ref-wickham16}{}%
-Wickham, H., 2016. Ggplot2: {Elegant Graphics} for {Data Analysis}. {Springer-Verlag New York}.
+\leavevmode\vadjust pre{\hypertarget{ref-wickham16}{}}%
+Wickham, H., 2016. \href{https://ggplot2.tidyverse.org}{Ggplot2: {Elegant Graphics} for {Data Analysis}}. {Springer-Verlag New York}.
 
-\leavevmode\hypertarget{ref-wilson16}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-wilson16}{}}%
 Wilson, L., 2016. Spices and {Flavoring Crops}: {Fruits} and {Seeds}, in: Caballero, B., Finglas, P.M., Toldrá, F. (Eds.), Encyclopedia of {Food} and {Health}. {Academic Press}, {Oxford}, pp. 73--83. doi:\href{https://doi.org/10.1016/B978-0-12-384947-2.00647-4}{10.1016/B978-0-12-384947-2.00647-4}
 
-\leavevmode\hypertarget{ref-wood_etal19}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-wood_etal19}{}}%
 Wood, J.R., Montero-Ruiz, I., Martinón-Torres, M., 2019. From {Iberia} to the {Southern Levant}: {The Movement} of {Silver Across} the {Mediterranean} in the {Early Iron Age}. Journal of World Prehistory 32, 1--31. doi:\href{https://doi.org/10.1007/s10963-018-09128-3}{10.1007/s10963-018-09128-3}
 
-\leavevmode\hypertarget{ref-wright_schwarcz96}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-wright_schwarcz96}{}}%
 Wright, L.E., Schwarcz, H.P., 1996. Infrared and {Isotopic Evidence} for {Diagenesis} of {Bone Apatite} at {Dos Pilas}, {Guatemala}: {Palaeodietary Implications}. Journal of Archaeological Science 23, 933--944. doi:\href{https://doi.org/10.1006/jasc.1996.0087}{10.1006/jasc.1996.0087}
 
 \end{CSLReferences}

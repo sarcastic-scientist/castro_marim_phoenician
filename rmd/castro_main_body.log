@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.31)  1 NOV 2021 22:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.31)  7 NOV 2021 00:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -676,23 +676,23 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \TeXr@lab=\toks38
 ) (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.st
 y
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
 
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color
 .cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-LaTeX Info: Redefining \color on input line 709.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+LaTeX Info: Redefining \color on input line 711.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 )
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/geometry/geometry.
 sty
@@ -730,9 +730,6 @@ LaTeX Warning: Label `tab:table1' multiply defined.
 
 
 LaTeX Warning: Label `tab:table1' multiply defined.
-
-
-LaTeX Warning: Label `tab:table4' multiply defined.
 
 
 LaTeX Warning: Label `tab:table4' multiply defined.
@@ -943,7 +940,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [10] [11] [12]
 <C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castro_bo
-t_assemblage.jpg, id=236, 1670.49094pt x 1872.9975pt>
+t_assemblage.jpg, id=235, 1670.49094pt x 1872.9975pt>
 File: C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/cast
 ro_bot_assemblage.jpg Graphic file (type jpg)
 <use C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castr
@@ -979,67 +976,67 @@ Overfull \hbox (5.38867pt too wide) in paragraph at lines 406--406
  []
 
 
-Overfull \hbox (8.78961pt too wide) in alignment at lines 411--416
+Overfull \hbox (21.62111pt too wide) in alignment at lines 411--416
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (8.78961pt too wide) in alignment at lines 416--421
+Overfull \hbox (21.62111pt too wide) in alignment at lines 416--421
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (8.78961pt too wide) in alignment at lines 421--423
+Overfull \hbox (21.62111pt too wide) in alignment at lines 421--423
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (8.78961pt too wide) in alignment at lines 423--425
+Overfull \hbox (21.62111pt too wide) in alignment at lines 423--427
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (8.78961pt too wide) in alignment at lines 425--488
+Overfull \hbox (21.62111pt too wide) in alignment at lines 427--490
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 [15] [16] [17]
-<castro_main_body_files/figure-latex/iso-hord-plots-1.pdf, id=282, 263.98625pt 
+<castro_main_body_files/figure-latex/iso-hord-plots-1.pdf, id=283, 263.98625pt 
 x 173.64874pt>
 File: castro_main_body_files/figure-latex/iso-hord-plots-1.pdf Graphic file (ty
 pe pdf)
 <use castro_main_body_files/figure-latex/iso-hord-plots-1.pdf>
 Package pdftex.def Info: castro_main_body_files/figure-latex/iso-hord-plots-1.p
-df  used on input line 502.
+df  used on input line 504.
 (pdftex.def)             Requested size: 263.9856pt x 173.64832pt.
 [18] [19 <./castro_main_body_files/figure-latex/iso-hord-plots-1.pdf>]
-<castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf, id=310, 44
+<castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf, id=311, 44
 1.65pt x 403.5075pt>
 File: castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf Graphi
 c file (type pdf)
 <use castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf>
 Package pdftex.def Info: castro_main_body_files/figure-latex/fauna-carbnitro-is
-o-plot-1.pdf  used on input line 520.
+o-plot-1.pdf  used on input line 522.
 (pdftex.def)             Requested size: 421.40268pt x 385.02928pt.
 [20] [21 <./castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf>
 ] [22]
-<castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf, id=345, 441.65
+<castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf, id=346, 441.65
 pt x 252.945pt>
 File: castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf Graphic fi
 le (type pdf)
 <use castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf>
 Package pdftex.def Info: castro_main_body_files/figure-latex/fauna-sulph-iso-pl
-ot-1.pdf  used on input line 544.
+ot-1.pdf  used on input line 546.
 (pdftex.def)             Requested size: 421.40268pt x 241.36163pt.
 [23 <./castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf>] [24] [2
 5] [26] [27]
-Underfull \hbox (badness 1859) in paragraph at lines 661--663
+Underfull \hbox (badness 1859) in paragraph at lines 663--665
 []\T1/lmr/m/n/10 (+20) Dixon, G.R., 2006. Ori-gins and di-ver-sity of Bras-sica
  and its rel-a-tives., in: Dixon,
  []
 
 [28]
-Underfull \hbox (badness 1205) in paragraph at lines 694--696
+Underfull \hbox (badness 1205) in paragraph at lines 696--698
 \T1/lmr/m/n/10 (+20) south-ern Por-tu-gal, be-tween texts and ar-chae-ol-ogy. W
 orld Ar-chae-ol-ogy 50, 764--780.
  []
@@ -1052,11 +1049,11 @@ Package rerunfilecheck Info: File `castro_main_body.out' has not changed.
 (rerunfilecheck)             Checksum: DC23D5D06AEF631C9A17A0D84F914A71;6514.
  ) 
 Here is how much of TeX's memory you used:
- 16630 strings out of 480539
- 260256 string characters out of 5901136
- 675327 words of memory out of 5000000
+ 16639 strings out of 480539
+ 260415 string characters out of 5901136
+ 690460 words of memory out of 5000000
  33480 multiletter control sequences out of 15000+600000
- 500928 words of font info for 219 fonts, out of 8000000 for 9000
+ 508668 words of font info for 225 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  72i,19n,80p,2620b,580s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.e
@@ -1067,29 +1064,30 @@ m-mathsy.enc}{c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips
 ps/lm/lm-rm.enc}<c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/
 public/lm/lmbx10.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/t
 ype1/public/lm/lmbx8.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fon
-ts/type1/public/lm/lmmi10.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dis
-t/fonts/type1/public/lm/lmmi5.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf
--dist/fonts/type1/public/lm/lmmi7.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/t
-exmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/Users/rosha/AppData/Roaming/TinyT
-eX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/rosha/AppData/Roaming/T
-inyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/rosha/AppData/Roami
-ng/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/Users/rosha/AppData/Ro
-aming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/rosha/AppData
-/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/rosha/AppD
-ata/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/rosha/A
-ppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/ro
-sha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri7.pfb><c:/User
-s/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri8.pfb><c:/
-Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
-><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy5
-.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/l
-msy6.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/
-lm/lmsy7.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/pub
-lic/lm/lmtt8.pfb>
-Output written on castro_main_body.pdf (33 pages, 1314030 bytes).
+ts/type1/public/lm/lmbxi10.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-di
+st/fonts/type1/public/lm/lmmi10.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/tex
+mf-dist/fonts/type1/public/lm/lmmi5.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX
+/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/Users/rosha/AppData/Roaming/Tin
+yTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/Users/rosha/AppData/Roaming
+/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/rosha/AppData/Roa
+ming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/rosha/AppData
+/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/Users/rosha/AppD
+ata/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/rosha/A
+ppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/rosh
+a/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/r
+osha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Us
+ers/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri7.pfb><c
+:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri8.pf
+b><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy
+10.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm
+/lmsy5.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/publi
+c/lm/lmsy6.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/p
+ublic/lm/lmsy7.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/typ
+e1/public/lm/lmtt8.pfb>
+Output written on castro_main_body.pdf (33 pages, 1333846 bytes).
 PDF statistics:
- 725 PDF objects out of 1000 (max. 8388607)
- 625 compressed objects within 7 object streams
+ 730 PDF objects out of 1000 (max. 8388607)
+ 628 compressed objects within 7 object streams
  215 named destinations out of 1000 (max. 500000)
- 62242 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 66338 words of extra memory for PDF output out of 74296 (max. 10000000)
 

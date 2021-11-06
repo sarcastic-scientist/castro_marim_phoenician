@@ -183,7 +183,7 @@ df_iso_fauna %>%
 # Materials and Methods
 
 ## Sample Selection
-Fifty faunal bone samples (Table \ref{tab:table4}) from conclusively adult individuals as well as 9 charred plant macro-remains of *Hordeum vulgare* subsp. *vulgare*, *Hordeum vulgare* subsp. *nudum*, and *Pinus* sp. each have been selected for this study. The sampled faunal bones represent the Phoenician -- Punic period of the settlement (phases III, IV, and V), whereas the charred plant macro -- remains are from only from phase V due to the absence of plant remains from the older phases.
+Fifty faunal bone samples (Table \ref{tab:table1}) from conclusively adult individuals as well as 9 charred plant macro-remains of *Hordeum vulgare* subsp. *vulgare*, *Hordeum vulgare* subsp. *nudum*, and *Pinus* sp. each have been selected for this study. The sampled faunal bones represent the Phoenician -- Punic period of the settlement (phases III, IV, and V), whereas the charred plant macro -- remains are from only from phase V due to the absence of plant remains from the older phases.
 
 ## Archaeobotanical Analysis
 
@@ -247,7 +247,7 @@ knitr::include_graphics(
 ## Bone Preservation
 
 ### Fourier Transform - Infrared Spectroscopy
-The IRSF index values are in a range of 2.37 - 3.37 (accepted range is 2.96 - 4.04), and the C/P index values are in the range of 0.2-0.428 (accepted range is 0.054 - 0.47), which fall well within the accepted range for well-preserved archaeological bones [@hollund_etal13; @lebon_etal16].
+The IRSF index values (Table 1) are in a range of 2.37 - 3.37 (accepted range is 2.96 - 4.04), and the C/P index values are in the range of 0.2-0.428 (accepted range is 0.054 - 0.47), which fall well within the accepted range for well-preserved archaeological bones [@hollund_etal13; @lebon_etal16].
 
 ### Collagen Quality
 Collagen extraction was successful for all the bone samples, based on published criteria, with carbon content between 15.3% and 47.0% [@ambrose90], nitrogen content between 5.5% and 17.3% [@ambrose90], C/N values between 2.9 and 3.6 [@deniro85], C/S values between 300% and 900% [@nehlich_richards09], and collagen yields greater than 1% [@vanklinken99]. The extracted bone collagen samples exhibit C/N values ranged between 3.1 and 3.5 and C/S values between 225.9 and 688.4. Carbon and nitrogen amounts range from 20.3% to 50.0% and 7.3% and 18.1% respectively. Collagen yields range between 2.5% to 49.1%. All the faunal samples exhibited collagen quality parameters indicative of good preservation. 
@@ -318,11 +318,17 @@ hord_dN_ttest_p <- round(hord_dN_ttest$p.value,2)
 ```{r table4, echo=FALSE, results='asis'}
 options(knitr.kable.NA = "--")
 
+color.goat <- which(df_iso_fauna$Species == 'Capra hircus')
+color.sheep <- which(df_iso_fauna$Species == 'Ovis aries')
+
 df_iso_fauna %>%
   select(Sample, Species,percentC,percentN,percentS,CN,CS,NS, dC, dN, dS) %>%
   kable(caption = "Carbon, nitrogen, and sulphur isotope composition of the fauna.", digits = 2, booktabs = T,linesep = "", longtable = T, align = "ccccccccccc", format = "latex", escape = FALSE,table.env='table*', col.names=c("Sample ID","Species","\\% C","\\% N","\\% S","C:N","C:S","N:S", "$\\delta^{13}C (\\text{\\textperthousand})$","$\\delta^{15}N (\\text{\\textperthousand})$","$\\delta^{34}S (\\text{\\textperthousand})$")) %>%
   kable_styling(latex_options = c("basic", "hold_position","repeat_header"), font_size = 7.5) %>%
-  column_spec(2,italic = TRUE)
+  row_spec(color.goat, bold = T, color = "black", background = "white") %>%
+  row_spec(color.sheep, bold = T, color = "black", background = "white") %>%
+  column_spec(2,italic = TRUE) %>%
+  footnote(general = "The ovicaprid samples which were identified as goats and sheep are in bold.")
   
 ```
 

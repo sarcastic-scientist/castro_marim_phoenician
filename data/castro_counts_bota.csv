@@ -1,8 +1,8 @@
-Species,Phase,UE,Quantity
-Hordeum vulgare (vulgare/nudum),V,89,1300
+Taxa,Phase,UE,Quantity
+Hordeum vulgare,V,89,1300
 Triticum aestivum/durum,V,89,4
-Apium sp.,V,89,1
-Pinus sp.,V,89,2
+Apium graveolens,V,89,1
+Pinus pinea,V,89,2
 Brassica nigra,V,89,3
 Pisum sativum,V,89,1
 Galeopsis tetrahit,V,89,1

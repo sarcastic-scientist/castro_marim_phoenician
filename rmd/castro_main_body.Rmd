@@ -646,7 +646,7 @@ Overall, the domesticated mammals are not above one trophic level (< 4\text{\tex
 Apart from manuring, another reason for these slightly higher $\delta^{15}N$ values could be periodic movement to a territory away from the coast. Since Iron Age Castro Marim settlement was short of foraging space (Figure \ref{fig:castro-marim-pal}), the animals could be in a periodic movement between the settlement and a space more inland. This movement can be investigated further by sequential sampling of faunal enamel for future $\delta^{13}C_{carbonate}$ and $\delta^{18}O$ studies [@vaiglova_etal20]. Any substantial increase in $\delta^{15}N$ gained due to salt marsh foraging [@britton_etal08] or physiological stress from saline water [@ambrose91] would be evened by the subsequent movement of the domesticated fauna leading to slightly higher $\delta ^{15}N$ values.
 
 
-(ref:fauna-sulph-iso) Plot showing mean $\delta ^{34}S$ values (mean ± 1 SD range) of faunal bone collagen. The values are horizontally jittered to increase the visibility of the data points.
+(ref:fauna-sulph-iso) Plot showing mean $\delta ^{34}S$ values (mean ± 1 SD range) of faunal bone collagen. The values are horizontally jittered to increase the visibility of the data points. The region between the gray lines represents Western European Triassic sediment $\delta ^{34}S$ value range.
 
 ```{r fauna-sulph-iso-plot, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, out.width='0.98\\textwidth', fig.height=4, fig.env='figure*', fig.cap= '(ref:fauna-sulph-iso)'}
 
@@ -675,7 +675,7 @@ cust_sulp_colo <- c('Grey Plover'="#25738b", 'Kittiwake'="#e30293", 'Partridge'=
 cust_sulp_shp <- c('Grey Plover'=16,'Kittiwake'=17,'Partridge'=15,'Chicken'=16,'Pig'=17,'Cattle'=15,'Goat'=16,'Sheep'=17,'Rabbit'=16,'Red Deer'=17)
 
 iso_sulphur_plot <- ggplot(dffinal_iso_summ, aes(x=Common_Name,y=mean_dS, color=Common_Name, shape=Common_Name)) +
-  geom_point(size = 3, alpha = 0.65) + geom_errorbar(aes(ymin=mean_dS-std.dev_dS, ymax=mean_dS+std.dev_dS), width=.1) + theme5 + labs( x='',y=expression(paste(delta^{34}, "S (\u2030 vs. VCDT)")), shape = 'Species', colour = 'Species') + scale_color_manual(values =cust_sulp_colo) + scale_shape_manual(values = cust_sulp_shp) + geom_jitter(data = df_iso_fauna, aes(x = Common_Name, y = dS), width=0.25) + scale_x_discrete(limits = c("Grey Plover","Kittiwake","Partridge","Chicken","Pig","Cattle","Goat","Sheep","Rabbit","Red Deer"))
+  geom_point(size = 3, alpha = 0.65) + geom_errorbar(aes(ymin=mean_dS-std.dev_dS, ymax=mean_dS+std.dev_dS), width=.1) + theme5 + labs( x='',y=expression(paste(delta^{34}, "S (\u2030 vs. VCDT)")), shape = 'Species', colour = 'Species') + scale_color_manual(values =cust_sulp_colo) + scale_shape_manual(values = cust_sulp_shp) + geom_jitter(data = df_iso_fauna, aes(x = Common_Name, y = dS), width=0.25) + scale_x_discrete(limits = c("Grey Plover","Kittiwake","Partridge","Chicken","Pig","Cattle","Goat","Sheep","Rabbit","Red Deer")) + geom_hline(yintercept=9.5, linetype="dotted", color = "gray62", size=1) + geom_hline(yintercept=15, linetype="dotted", color = "gray62", size=1)
 
 iso_sulphur_plot
 

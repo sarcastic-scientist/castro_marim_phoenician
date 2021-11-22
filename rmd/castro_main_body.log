@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.14)  21 NOV 2021 00:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.14)  22 NOV 2021 12:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -729,6 +729,9 @@ File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
 LaTeX Warning: Label `tab:table1' multiply defined.
 
 
+LaTeX Warning: Label `tab:table1' multiply defined.
+
+
 LaTeX Warning: Label `tab:table4' multiply defined.
 
 
@@ -914,14 +917,14 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 {c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdfte
 x.map}] [2]
 <C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castro_ma
-rim_map.png, id=173, 844.95676pt x 597.432pt>
+rim_map.png, id=173, 1896.08376pt x 954.56625pt>
 File: C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/cast
 ro_marim_map.png Graphic file (type png)
 <use C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castr
 o_marim_map.png>
 Package pdftex.def Info: C:/Users/rosha/Documents/R/Projects/castro_marim_phoen
 ician/./images/castro_marim_map.png  used on input line 165.
-(pdftex.def)             Requested size: 421.40268pt x 297.95863pt.
+(pdftex.def)             Requested size: 421.40268pt x 212.14635pt.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 71.
 (c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
@@ -929,7 +932,7 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [3] [4 <c:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/
 castro_marim_map.png>]
 <C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castro_ma
-rim_pal.png, id=188, 2058.2496pt x 1406.3742pt>
+rim_pal.png, id=189, 2058.2496pt x 1406.3742pt>
 File: C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/cast
 ro_marim_pal.png Graphic file (type png)
 <use C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castr
@@ -937,8 +940,8 @@ o_marim_pal.png>
 Package pdftex.def Info: C:/Users/rosha/Documents/R/Projects/castro_marim_phoen
 ician/./images/castro_marim_pal.png  used on input line 182.
 (pdftex.def)             Requested size: 258.00539pt x 176.28992pt.
-[5] [6 <c:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/ca
-stro_marim_pal.png>] [7] [8] [9] [10] [11] [12] [13] [14]
+[5 <c:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castro
+_marim_pal.png>] [6] [7] [8] [9] [10] [11] [12] [13]
 LaTeX Font Info:    Calculating math sizes for size <7.5> on input line 391.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7.5> on input line 391.
@@ -946,9 +949,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5.24997> on input line 391.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <3.75> on input line 391.
-[15]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[14] [15]
 <C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castro_bo
-t_assemblage.jpg, id=280, 1670.49094pt x 1872.9975pt>
+t_assemblage.jpg, id=281, 1670.49094pt x 1872.9975pt>
 File: C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/cast
 ro_bot_assemblage.jpg Graphic file (type jpg)
 <use C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castr
@@ -1029,7 +1035,7 @@ Overfull \hbox (1.0931pt too wide) in paragraph at lines 442--442
 
 [16] [17 <c:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/
 castro_bot_assemblage.jpg>]
-<castro_main_body_files/figure-latex/iso-hord-plots-1.pdf, id=297, 278.03876pt 
+<castro_main_body_files/figure-latex/iso-hord-plots-1.pdf, id=306, 278.03876pt 
 x 173.64874pt>
 File: castro_main_body_files/figure-latex/iso-hord-plots-1.pdf Graphic file (ty
 pe pdf)
@@ -1037,7 +1043,7 @@ pe pdf)
 Package pdftex.def Info: castro_main_body_files/figure-latex/iso-hord-plots-1.p
 df  used on input line 454.
 (pdftex.def)             Requested size: 278.03807pt x 173.64832pt.
-[18]
+[18 <./castro_main_body_files/figure-latex/iso-hord-plots-1.pdf>]
 Overfull \hbox (21.62111pt too wide) in alignment at lines 463--468
  [] [] [] [] [] [] [] [] [] [] [] 
  []
@@ -1062,8 +1068,8 @@ Overfull \hbox (21.62111pt too wide) in alignment at lines 479--542
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
-[19 <./castro_main_body_files/figure-latex/iso-hord-plots-1.pdf>] [20]
-<castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf, id=335, 44
+[19] [20]
+<castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf, id=336, 44
 1.65pt x 403.5075pt>
 File: castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf Graphi
 c file (type pdf)
@@ -1073,7 +1079,7 @@ o-plot-1.pdf  used on input line 551.
 (pdftex.def)             Requested size: 421.40268pt x 385.02928pt.
 [21] [22 <./castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf>
 ] [23]
-<castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf, id=372, 441.65
+<castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf, id=373, 441.65
 pt x 252.945pt>
 File: castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf Graphic fi
 le (type pdf)
@@ -1102,11 +1108,11 @@ Package rerunfilecheck Info: File `castro_main_body.out' has not changed.
 (rerunfilecheck)             Checksum: 548388BB9C97CAF2657D1A65D70B3F65;6796.
  ) 
 Here is how much of TeX's memory you used:
- 17472 strings out of 480331
- 290131 string characters out of 5896206
- 689036 words of memory out of 5000000
+ 17474 strings out of 480331
+ 290155 string characters out of 5896206
+ 688035 words of memory out of 5000000
  34477 multiletter control sequences out of 15000+600000
- 509672 words of font info for 234 fonts, out of 8000000 for 9000
+ 509737 words of font info for 235 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  70i,19n,79p,2274b,580s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.e
@@ -1137,10 +1143,10 @@ b><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy
 c/lm/lmsy6.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/p
 ublic/lm/lmsy7.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/typ
 e1/public/lm/lmtt8.pfb>
-Output written on castro_main_body.pdf (37 pages, 7106124 bytes).
+Output written on castro_main_body.pdf (37 pages, 2021718 bytes).
 PDF statistics:
- 806 PDF objects out of 1000 (max. 8388607)
- 697 compressed objects within 7 object streams
+ 807 PDF objects out of 1000 (max. 8388607)
+ 698 compressed objects within 7 object streams
  240 named destinations out of 1000 (max. 500000)
  66359 words of extra memory for PDF output out of 74296 (max. 10000000)
 

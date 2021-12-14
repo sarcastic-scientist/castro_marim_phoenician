@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.7)  14 DEC 2021 10:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.7)  14 DEC 2021 11:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -977,7 +977,7 @@ df  used on input line 457.
 [10] [11 <c:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/
 castro_bot_assemblage.jpg>] [12 <./castro_main_body_files/figure-latex/iso-hord
 -plots-1.pdf>]
-<castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf, id=581, 44
+<castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf, id=579, 44
 1.65pt x 403.5075pt>
 File: castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf Graphi
 c file (type pdf)
@@ -987,7 +987,7 @@ o-plot-1.pdf  used on input line 553.
 (pdftex.def)             Requested size: 458.638pt x 419.04683pt.
 [13] [14 <./castro_main_body_files/figure-latex/fauna-carbnitro-iso-plot-1.pdf>
 ] [15]
-<castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf, id=652, 441.65
+<castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf, id=650, 441.65
 pt x 252.945pt>
 File: castro_main_body_files/figure-latex/fauna-sulph-iso-plot-1.pdf Graphic fi
 le (type pdf)
@@ -1004,11 +1004,11 @@ Package rerunfilecheck Info: File `castro_main_body.out' has not changed.
 (rerunfilecheck)             Checksum: 6DCDA5B765E476CE390B66264B541DE1;6796.
  ) 
 Here is how much of TeX's memory you used:
- 17544 strings out of 480313
- 291529 string characters out of 5895780
+ 17550 strings out of 480313
+ 291599 string characters out of 5895780
  692288 words of memory out of 5000000
  34551 multiletter control sequences out of 15000+600000
- 517465 words of font info for 251 fonts, out of 8000000 for 9000
+ 517819 words of font info for 254 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  70i,18n,79p,3464b,610s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.e
@@ -1040,10 +1040,10 @@ c/lm/lmsy5.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/p
 ublic/lm/lmsy6.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/typ
 e1/public/lm/lmsy7.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts
 /type1/public/lm/lmtt8.pfb>
-Output written on castro_main_body.pdf (23 pages, 11031447 bytes).
+Output written on castro_main_body.pdf (23 pages, 11031197 bytes).
 PDF statistics:
- 991 PDF objects out of 1000 (max. 8388607)
- 890 compressed objects within 9 object streams
+ 989 PDF objects out of 1000 (max. 8388607)
+ 888 compressed objects within 9 object streams
  228 named destinations out of 1000 (max. 500000)
  70455 words of extra memory for PDF output out of 74296 (max. 10000000)
 

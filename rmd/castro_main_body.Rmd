@@ -102,11 +102,11 @@ Most knowledge about Phoenician and Punic agriculture comes from the famous trea
 
 Agricultural techniques from the East, such as irrigation, were probably used to improve upon the native practices, at least in some areas. The iron production technology gave more robust implements such as plowshare, to the farmers. Better yielding cultivars (e.g., grapes and olives) and new species of animals (e.g., horse, donkey, and chicken) were introduced [@davis07; @vanleeuwaarden_janssen85; @queiroz_etal06]. Following the "sixth century crisis", in the period referred to as the Punic period, an economic change brought a drastic transformation in space use concerning both settlement and domain. In the latter phase of the Iron Age, in addition to the cultivation of cash crops and wine, local usable arboreal products such as timber and fruits were identified and exploited to boost exports [@gomezbellard19; @neville98]. The exploitation of arboreal products and perennial crops meant the existence of both short-term and long-term agricultural investments. Such diverse investments with different harvest times must have led to the development of a complex agricultural economy.
 
-```{r castro-marim-loc, dpi=600, fig.show="hold", out.width='0.98\\textwidth', fig.env='figure*', fig.cap= 'Geological map of the region around Castro Marim on the banks of Guadiana River, Algarve Region of Portugal (Source: Directorate General of Mines and Geological Services - Carta de Geológica de Portugal).'}
+```{r castro-marim-loc, dpi=600, fig.show="hold", out.width='0.98\\textwidth', fig.env='figure*', fig.cap= 'Geological map of the region around Castro Marim on the banks of Guadiana River, Algarve Region of Portugal in EPSG 4326 projection. (Source: Directorate General of Mines and Geological Services - Carta de Geológica de Portugal).'}
 
 
 knitr::include_graphics(
-  here::here('./images/castro_marim_map.png'),
+  here::here('./images/castro_marim_map.jpeg'),
   auto_pdf = getOption("knitr.graphics.auto_pdf", FALSE),
   error = getOption("knitr.graphics.error", TRUE)
 )

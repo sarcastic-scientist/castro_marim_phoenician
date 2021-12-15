@@ -7,8 +7,6 @@
 
 \usepackage{lineno} % add
   \linenumbers % turns line numbering on
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \usepackage{graphicx}
 %%%%%%%%%%%%%%%% end my additions to header
@@ -33,16 +31,6 @@
 % use microtype if available
 \IfFileExists{microtype.sty}{\usepackage{microtype}}{}
 \bibliographystyle{elsarticle-harv}
-\usepackage{longtable,booktabs,array}
-\usepackage{calc} % for calculating minipage widths
-% Correct order of tables after \paragraph or \subparagraph
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
-\makeatother
-% Allow footnotes in longtable head/foot
-\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
-\makesavenoteenv{longtable}
 \usepackage{graphicx}
 \ifxetex
   \usepackage[setpagesize=false, % page size defined by xetex
@@ -64,11 +52,30 @@
 \setcounter{secnumdepth}{5}
 % Pandoc toggle for numbering sections (defaults to be off)
 
+
+% tightlist command for lists without linebreak
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% From pandoc table feature
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+
 % Pandoc citation processing
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newlength{\csllabelwidth}
 \setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
 % for Pandoc 2.8 to 2.10.1
 \newenvironment{cslreferences}%
   {}%
@@ -78,11 +85,12 @@
  {% don't indent paragraphs
   \setlength{\parindent}{0pt}
   % turn on hanging indent if param 1 is 1
-  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
-  % set entry spacing
-  \ifnum #2 > 0
-  \setlength{\parskip}{#2\baselineskip}
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
   \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
  }%
  {}
 \usepackage{calc}
@@ -91,7 +99,6 @@
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
-% Pandoc header
 \usepackage{subfig}
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -112,6 +119,8 @@
 \sloppy
 
 \begin{document}
+
+
 \begin{frontmatter}
 
   \title{Stable isotope approach to farming and husbandry practices at the Phoenician site of Castro Marim between 7\textsuperscript{th} -- 5\textsuperscript{th} century BCE}
@@ -162,7 +171,7 @@ Most knowledge about Phoenician and Punic agriculture comes from the famous trea
 Agricultural techniques from the East, such as irrigation, were probably used to improve upon the native practices, at least in some areas. The iron production technology gave more robust implements such as plowshare, to the farmers. Better yielding cultivars (e.g., grapes and olives) and new species of animals (e.g., horse, donkey, and chicken) were introduced (\protect\hyperlink{ref-davis07}{Davis, 2007}; \protect\hyperlink{ref-queiroz_etal06}{Queiroz et al., 2006}; \protect\hyperlink{ref-vanleeuwaarden_janssen85}{Van Leeuwaarden and Janssen, 1985}). Following the ``sixth century crisis'', in the period referred to as the Punic period, an economic change brought a drastic transformation in space use concerning both settlement and domain. In the latter phase of the Iron Age, in addition to the cultivation of cash crops and wine, local usable arboreal products such as timber and fruits were identified and exploited to boost exports (\protect\hyperlink{ref-gomezbellard19}{Gómez Bellard, 2019}; \protect\hyperlink{ref-neville98}{Neville, 1998}). The exploitation of arboreal products and perennial crops meant the existence of both short-term and long-term agricultural investments. Such diverse investments with different harvest times must have led to the development of a complex agricultural economy.
 
 \begin{figure*}
-\includegraphics[width=0.98\textwidth]{C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castro_marim_map} \caption{Geological map of the region around Castro Marim on the banks of Guadiana River, Algarve Region of Portugal (Source: Directorate General of Mines and Geological Services - Carta de Geológica de Portugal).}\label{fig:castro-marim-loc}
+\includegraphics[width=0.98\textwidth]{C:/Users/rosha/Documents/R/Projects/castro_marim_phoenician/./images/castro_marim_map} \caption{Geological map of the region around Castro Marim on the banks of Guadiana River, Algarve Region of Portugal in EPSG 4326 projection. (Source: Directorate General of Mines and Geological Services - Carta de Geológica de Portugal).}\label{fig:castro-marim-loc}
 \end{figure*}
 
 \hypertarget{site-background}{%

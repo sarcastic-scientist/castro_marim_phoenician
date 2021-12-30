@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.15)  30 DEC 2021 15:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.15)  30 DEC 2021 16:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1007,7 +1007,7 @@ Package rerunfilecheck Info: File `castro_main_body.out' has not changed.
 Here is how much of TeX's memory you used:
  17557 strings out of 480313
  292153 string characters out of 5895779
- 692161 words of memory out of 5000000
+ 692152 words of memory out of 5000000
  34553 multiletter control sequences out of 15000+600000
  517903 words of font info for 255 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1041,7 +1041,7 @@ c/lm/lmsy5.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/p
 ublic/lm/lmsy6.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts/typ
 e1/public/lm/lmsy7.pfb><c:/Users/rosha/AppData/Roaming/TinyTeX/texmf-dist/fonts
 /type1/public/lm/lmtt8.pfb>
-Output written on castro_main_body.pdf (24 pages, 3095560 bytes).
+Output written on castro_main_body.pdf (24 pages, 3095543 bytes).
 PDF statistics:
  994 PDF objects out of 1000 (max. 8388607)
  892 compressed objects within 9 object streams

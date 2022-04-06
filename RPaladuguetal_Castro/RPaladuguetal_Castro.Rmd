@@ -49,24 +49,29 @@ footnote:
     text: "Equal contribution"
 abstract: |
   Castro Marim is an Iron Age site from the Algarve region, Portugal. The earliest evidence of settlement, from the Late Bronze Age, dates to the 9^th^ century BCE, with the Phoenician-Punic period dating from the 7^th^ to  the 3^rd^ century BCE. This study focuses on the stable isotope analysis of plant and collagen of faunal remains to reconstruct the cultivation and husbandry practices. Barley was the most abundantly cultivated cereal crop. The stable isotope results of barley indicate that it depended primarily on natural precipitation with a certain intensity of manuring. The differences from stable isotope data of domesticated fauna indicate a diverse management strategy for different species based on their economic importance and to capitalize from the animal by-products such as wool and dairy products.
-
-journal: "Journal of Archaeological Science"
-received date: "`r Sys.Date()`"
+keywords: 
+  - Archaeobotany
+  - Zooarchaeology
+  - Agriculture
+  - Portugal
+  - Iron Age
+journal: "Journal of Archaeological Science: Reports"
+date: "`r Sys.Date()`"
+classoption: preprint, 3p, authoryear
+bibliography: bibliography.bib
+linenumbers: TRUE
+numbersections: true
+link-citations: true
+csl: elsevier-harvard.csl
 preamble: |
   \usepackage{geometry}
   \sloppy
-bibliography: bibliography.bib
-linenumbers: true
-layout: 3p #review,3p,5p
-numbersections: true
-link-citations: true
-csl: journal-of-archaeological-science.csl
-keywords: "Archaeobotany, Zooarchaeology, Agriculture, Portugal, Iron Age"
 output:
     bookdown::pdf_book:
       keep_tex: true
       base_format: rticles::elsevier_article
       extra_dependencies: "subfig"
+      citation_package: default
 ---
 
 # Introduction
@@ -91,7 +96,6 @@ options(kableExtra.auto_format = FALSE)
 
 knitr::opts_chunk$set(echo=FALSE, message = FALSE, error = FALSE, warning = FALSE)
 
-here::here()
 ```
 
 # Context
@@ -160,7 +164,7 @@ The mean $\delta ^{34}S$ value of terrestrial sources is assumed to be 0\text{\t
 
 There are two significant inputs that humans can manipulate to cultivate plants: water and nitrogen input, which can be investigated using stable isotopes. Variation in $\delta ^{13}C$ values of plants is primarily due to water availability as any dry spells affect the movement of carbon dioxide through the stomata [@ferrio_etal05; @ferrio_etal07; @fiorentino_etal15]. The water status of crops can be artificially controlled by irrigation regimes, reflected in $\delta ^{13}C$ values [@ferrio_etal05; @wallace_etal13]. $\delta ^{13}C$ values measured in archaeological plants must be converted to carbon discrimination values to be compared with those of the modern crops grown under controlled watering regimes [@farquhar_etal89; @wallace_etal13]:
 
-$$\Delta^{13}C = \frac{\delta ^{13}C_{air} - \delta ^{13}C_{plant}}{1+\delta ^{13}C_{plant}/1000}$$ Another major factor, which affects the $\delta ^{13}C$ measurements of plants, is the canopy effect, where forested areas are more depleted in the heavier ^13^C isotope compared to open areas [@bonafini_etal13]. Thus, the $\delta ^{13}C$ measurements of plants are the result of multiple factors and should be interpreted with caution.
+$$\Delta^{13}C = \frac{\delta ^{13}C_{air} - \delta ^{13}C_{plant}}{1+\delta ^{13}C_{plant}}$$ Another major factor, which affects the $\delta ^{13}C$ measurements of plants, is the canopy effect, where forested areas are more depleted in the heavier ^13^C isotope compared to open areas [@bonafini_etal13]. Thus, the $\delta ^{13}C$ measurements of plants are the result of multiple factors and should be interpreted with caution.
 
 One of the most ancient practices to increase soil fertility is by manuring with animal waste, as animal manure is much higher than endogenous soil in terms of nitrogen isotopic composition [@bogaard_etal13]. Usually, the plants treated with manure exhibit higher $\delta ^{15}N$ values (as much as 10\text{\textperthousand}) when compared to unfertilized plants [@bogaard_etal07; @fraser_etal11]. The $\delta ^{13}C$ and $\delta ^{15}N$ values themselves do not reveal the agricultural practices but reveal patterns when interpreted within a specific site.
 
@@ -721,4 +725,5 @@ This study is the first of its kind on Phoenician-Punic fauna from the Iberian P
 
 This project has received funding from the European Union's Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No. 766311. The ZooMS analysis was carried out by Samantha Presslee at BioArCh, University of York who gratefully acknowledges the use of the Ultraflex III MALDI-ToF/ToF instrument in the York Centre of Excellence in Mass Spectrometry. The centre was created thanks to a major capital investment through Science City York, supported by Yorkshire Forward with funds from the Northern Way Initiative, and subsequent support from EPSRC (EP/K039660/1; EP/M028127/1). The authors would like to thank Rui Parreira for providing access to the samples (Direção Regional de Cultura do Algarve, Faro).
 
-# References
+# References {-}
+

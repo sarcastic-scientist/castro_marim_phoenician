@@ -239,7 +239,7 @@ Collagen yields range between 2.5% to 49.1% (Table \ref{tab:table4}). Collagen e
 Sheep and goat samples were successfully distinguished on the basis of ZooMS. The identified sample entries are in bold format (Table \ref{tab:table4}).
 
 
-## Botanical Remains
+## Botanical Remains and their stable isotopes
 
 ```{r table2, echo=FALSE, results='asis'}
 options(knitr.kable.NA = "--")
@@ -366,7 +366,7 @@ Though the plants are located close to the coast (Fig. \ref{fig:castro-marim-loc
 
 (ref:isohord-caption) **(a).** Beeswarm plot showing $\Delta ^{13}C$ values of barley cultivars where the area between the blue dashed lines represents 'moderately-watered' condition with the 'well-watered' condition being above the top blue line and 'poorly-watered' condition being below the lower blue line, based on the study of modern crops in varying watering conditions [@wallace_etal13]. **(b).** Beeswarm plot showing the manuring status of barley cultivars with green shaded region representing 1 SD range of estimated wild herbivore forage value (calculated from subtraction 4 \text{\textperthousand} from red deer $\delta ^{15}N$ mean ± 1 SD range).
 
-```{r iso-hord-plots, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, fig.width=5, fig.height=3, fig.cap= '(ref:isohord-caption)'}
+```{r iso-hord-plots, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, fig.width=5, fig.height=5,crop = NULL,fig.cap= '(ref:isohord-caption)'}
 
 
 theme1<-theme(panel.background = element_blank(), legend.box.background = element_rect(colour = "black"), legend.key = element_blank(), legend.key.size = unit(0.5, 'cm'),legend.position="right",legend.background = element_blank(), legend.title.align = 0.5, legend.text = element_text(size=4),legend.title=element_text(size=6),axis.title.x = element_blank(), axis.title.y = element_text(size=7), panel.border=element_rect(fill=NA),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),strip.background=element_blank(),axis.text.x=element_blank(),axis.text.y=element_text(colour="black"),axis.ticks.y=element_line(colour="black"), axis.ticks.x=element_blank(), plot.margin=unit(c(1,1,1,1),"line"))
@@ -408,7 +408,7 @@ df_iso_fauna %>%
 
 (ref:fauna-carbnitro-iso) Plot showing mean $\delta ^{13}C$ and $\delta ^{15}N$ values (mean ± 1 SD range) of faunal bone collagen. The colour palette is produced with the Colorgorical web app [@gramazio_etal17].
 
-```{r fauna-carbnitro-iso-plot, dpi=600, echo=FALSE, dpi=600, fig.show="hold", out.width='0.98\\textwidth', fig.height=6, fig.env='figure*', fig.cap= '(ref:fauna-carbnitro-iso)'}
+```{r fauna-carbnitro-iso-plot, dpi=600, echo=FALSE, dpi=600, fig.show="hold", out.width='0.98\\textwidth', fig.height=6,crop = NULL, fig.env='figure*', fig.cap= '(ref:fauna-carbnitro-iso)'}
 
 theme <-
   theme(
@@ -661,7 +661,7 @@ Overall, the domesticated mammals are not above one trophic level (\< 4\text{\te
 
 (ref:fauna-sulph-iso) Plot showing mean $\delta ^{34}S$ values (mean ± 1 SD range) of faunal bone collagen. The values are horizontally jittered to increase the visibility of the data points. The region between the gray lines represents Western European Triassic sediment $\delta ^{34}S$ value range.
 
-```{r fauna-sulph-iso-plot, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, out.width='0.98\\textwidth', fig.height=4, fig.env='figure*', fig.cap= '(ref:fauna-sulph-iso)'}
+```{r fauna-sulph-iso-plot, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, out.width='0.98\\textwidth', fig.height=4, crop = NULL, fig.env='figure*', fig.cap= '(ref:fauna-sulph-iso)'}
 
 theme5 <-
   theme(

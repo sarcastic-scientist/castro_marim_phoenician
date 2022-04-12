@@ -64,13 +64,12 @@ numbersections: true
 link-citations: true
 csl: elsevier-harvard.csl
 preamble: |
-  \usepackage{geometry}
   \sloppy
+
 output:
     bookdown::pdf_book:
       keep_tex: true
       base_format: rticles::elsevier_article
-      extra_dependencies: "subfig"
       citation_package: default
 ---
 
@@ -148,7 +147,7 @@ The original archaeobotanical assessment was carried out by @queiroz_etal06. Cer
 
 Ovicaprids (sheep and goats) followed by pigs and cattle dominate the Castro Marim mammal taxa [@davis07]. Both sheep and goats were equally represented with negligible fluctuations throughout the Iron Age at Castro Marim. The wild species in the assemblage consisted mainly of red deer and rabbits. Both the species (red deer and rabbits) are present consistently in all the phases of the settlement. It is worth mentioning here that no morphometric distinction could be made between wild and domesticated pigs. There is a spike in the presence of bird remains in the later phases of the Iron Age (Phase IV - V), primarily due to the introduction of domesticated chicken. The presence of partridge, a common wild species of Iberia, is also noted. Unlike the chicken, partridge has never been domesticated. Ovicaprids and cattle were kept well into maturity indicating that they were prized more for their secondary purposes than their meat. Sheep and goats were kept for their milk and wool, usually slaughtered after they reach at least two years of age. Cattle were valued for their power to plow in the fields as well as to pull heavy loads. Also, they too, were a source of milk. Pigs, on the other hand, were slaughtered as juveniles as they were primarily reared for meat. Most of the red deer found were adults, suggesting a hunting preference of that period as a vital subsidiary source of meat. Chicken seems to be slaughtered at a young age, whereas the partridges at an adult age. The slaughter age indicates the domesticated status of chicken and wild status of partridge, respectively.
 
-# Methodological approach
+# Principles of stable isotope analysis and ZooMS
 
 ## ZooMS Analysis of Ovicaprids
 
@@ -197,17 +196,14 @@ df_iso_bota <- here::here("./data/castro_iso_bota.csv") |>
 
 # Materials and Methods
 
-## Sample Selection
-
-Fifty faunal bone samples (Table \ref{tab:table1}) from conclusively adult individuals as well as 9 charred plant macro-remains of *Hordeum vulgare* subsp. *vulgare*, *Hordeum vulgare* subsp. *nudum*, and *Pinus* sp. each have been selected for this study. The sampled faunal bones represent the Phoenician -- Punic period of the settlement (phases III, IV, and V), whereas the charred plant macro -- remains are only from phase V due to the absence of plant remains from the older phases.
-
 ## Archaeobotanical Analysis
 
 200 grams of sediment from each stratigraphic layer of the excavation site was weighed and handpicked for plant macro remains (seeds/fruits and charcoal). The recovered remains were examined under a stereomicroscope and taxonomically identified (Table \ref{tab:table2}).
 
-## Bone Preservation: Fourier Transform Infrared Spectroscopy
+## Sample Selection
 
-500 -- 700 mg of bone was cut using a DREMEL$\text{\textregistered}$ rotary drill with a diamond disc and cleaned of dirt, discoloration, and other foreign content with a dental burr. Compact bone was sampled over spongy bone. Bone fragments were slightly polished with fine sandpaper to obtain a flat surface [@hollund_etal13]. Infrared spectra were collected using a Bruker$^\text{\textregistered}$ Alpha$^\text{\texttrademark}$ Spectrometer with a single-reflection diamond crystal ATR module. Each spectrum was obtained by an accumulation of 128 scans with a spectral resolution of 4 cm^-1^, from 2000 cm^-1^ to 375 cm^-1^. Infrared Splitting Factor (IRSF) and relative carbonate content (C/P) were calculated using absorbance heights at 565 cm^-1^, 590 cm^-1^, 605 cm^-1^, 1035 cm^-1^, and 1415 cm^-1^ wavenumbers [@trueman_etal08; @weiner_bar-yosef90; @wright_schwarcz96].
+Nine charred plant macro-remains (Table \ref{tab:table3}) of *Hordeum vulgare* subsp. *vulgare*, *Hordeum vulgare* subsp. *nudum*, and *Pinus* sp. each as well as fifty faunal bone samples (Table \ref{tab:table4}) from conclusively adult individuals have been selected for this study. The sampled faunal bones represent the Phoenician -- Punic period of the settlement (phases III, IV, and V), whereas the charred plant macro -- remains are only from phase V due to the absence of plant remains from the older phases.
+
 
 ## Pretreatment of plant macro-remains
 
@@ -215,7 +211,7 @@ In carbonized plant macro-remains, barley grain samples consist of at least ten 
 
 ## Collagen Extraction
 
-The modified @longin71 method was used to extract collagen from faunal bones pieces previously analysed with FTIR by demineralization [@richards_hedges99]. Approximately 600 mg of bone sample was demineralized using 0.5 M HCl at 4 $\text{\textdegree}$C for a fortnight with daily vortex and an acid change after 7 days. Repeated rinses with ultrapure water to reach neutral pH were performed, and the demineralized bones were subjected to an overnight treatment in 0.125 M NaOH at room temperature to remove fulvic and humic acid contamination. The samples were then rinsed repeatedly with ultrapure water to achieve neutrality and gelatinized in 0.01 M HCl at 70 $\text{\textdegree}$C for 48 hours. The impurities were separated by filtering the collagen-containing liquid fraction using Ezee -- Filter$^\text{\texttrademark}$ filters (Elkay$^\text{\textregistered}$ Laboratory Products). The solubilized collagen was frozen and subsequently lyophilized for 48 hours.
+500 -- 700 mg of bone was cut using a DREMEL$\text{\textregistered}$ rotary drill with a diamond disc and cleaned of dirt, discoloration, and other foreign content with a dental burr. Compact bone was sampled over spongy bone. The modified @longin71 method was used to extract collagen from faunal bones pieces previously analysed with FTIR by demineralization [@richards_hedges99]. Approximately 600 mg of bone sample was demineralized using 0.5 M HCl at 4 $\text{\textdegree}$C for a fortnight with daily vortex and an acid change after 7 days. Repeated rinses with ultrapure water to reach neutral pH were performed, and the demineralized bones were subjected to an overnight treatment in 0.125 M NaOH at room temperature to remove fulvic and humic acid contamination. The samples were then rinsed repeatedly with ultrapure water to achieve neutrality and gelatinized in 0.01 M HCl at 70 $\text{\textdegree}$C for 48 hours. The impurities were separated by filtering the collagen-containing liquid fraction using Ezee -- Filter$^\text{\texttrademark}$ filters (Elkay$^\text{\textregistered}$ Laboratory Products). The solubilized collagen was frozen and subsequently lyophilized for 48 hours.
 
 ## ZooMS analysis
 
@@ -235,31 +231,13 @@ The collagen samples were combusted with additional V~2~O~5~ and an oxygen pulse
 
 The obtained data were subjected to statistical analysis using R programming language [@rcoreteam20; @wickham16]. Initially, means and standard deviations were calculated per species. Z-scores were calculated to detect the presence of outliers. Deviance from normal distribution was assessed using the Shapiro-Wilks test. F-tests were first used to check for significant equal variance, and subsequently, unpaired Student's t-tests were used for two-sample comparison since all the datasets were normally distributed.
 
-# Results and Discussion
+# Results
 
-## Bone Preservation
+## Collagen Quality and ZooMS
 
-```{r table1, echo=FALSE, results='asis'}
-options(knitr.kable.NA = "--")
-
-df_iso_fauna %>%
-  select(Sample,Species,Phase, col, IRSF, CP) %>%
-  kable(caption = "Collagen yield and FT-IR results (IRSF and C/P) of selected faunal bone samples.", digits = 2, align="ccccccc", booktabs = T, longtable = T, linesep = "", format = "latex", escape = F, col.names=c("Sample ID", "Species","Phase","Collagen yield (\\%)","IRSF","C/P")) %>%
-  kable_styling(latex_options = c("basic","HOLD_position","repeat_header"), font_size = 7.5)
-  
-```
-
-### Fourier Transform - Infrared Spectroscopy
-
-The IRSF index values (Table \ref{tab:table1}) are in a range of 2.37 - 3.37 (accepted range is 2.96 - 4.04), and the C/P index values are in the range of 0.2-0.428 (accepted range is 0.054 - 0.47), which fall well within the accepted range for crystallinity and carbonate content of well-preserved archaeological bones [@hollund_etal13; @lebon_etal16].
-
-### Collagen Quality
-
-Collagen yields range between 2.5% to 49.1% (Table \ref{tab:table1}). Collagen extraction was considered successful for all the bone samples, based on published criteria, with carbon content between 15.3% and 47.0% [@ambrose90], nitrogen content between 5.5% and 17.3% [@ambrose90], C/N values between 2.9 and 3.6 [@deniro85], C/S values between 300% and 900% [@nehlich_richards09], and collagen yields greater than 1% [@vanklinken99]. The extracted bone collagen samples exhibit C/N values ranged between 3.1 and 3.5 and C/S values between 225.9 and 688.4. Carbon and nitrogen amounts range from 20.3% to 50.0% and 7.3% and 18.1% respectively. All the faunal samples exhibited collagen quality parameters indicative of good preservation.
-
-## ZooMS Results
-
+Collagen yields range between 2.5% to 49.1% (Table \ref{tab:table4}). Collagen extraction was considered successful for all the bone samples, based on published criteria, with carbon content between 15.3% and 47.0% [@ambrose90], nitrogen content between 5.5% and 17.3% [@ambrose90], C/N values between 3.15 and 3.50 (conservative upper limit with 0.5% tolerance) [@guiry_szpak21], C/S values between 300% and 900% [@nehlich_richards09], and collagen yields greater than 1% [@vanklinken99]. The extracted bone collagen samples exhibit C/N values ranged between 3.1 and 3.5 and C/S values between 225.9 and 688.4. Carbon and nitrogen amounts range from 20.3% to 50.0% and 7.3% and 18.1% respectively. All the faunal samples exhibited collagen quality parameters indicative of good preservation.
 Sheep and goat samples were successfully distinguished on the basis of ZooMS. The identified sample entries are in bold format (Table \ref{tab:table4}).
+
 
 ## Botanical Remains
 
@@ -377,9 +355,14 @@ hord_dN_ttest_df <- round(hord_dN_ttest$parameter,2)
 hord_dN_ttest_p <- round(hord_dN_ttest$p.value,2)
 ```
 
+Table \ref{tab:table3} shows the results of stable isotope ratios of the two barley cultivars and stone pine. In the case of barley, the isotope ratios fall within the established predicted ranges obtained from experimentally charred modern cereals [@fraser_etal13a]. Since the isotope ratios of the stone pine are similar to that of barley, they are considered consistent. The $\delta ^{13}C$ values of all the plants are within the range expected for C~3~ plants with mean values of `r meanC_hord_vn` ± `r SDC_hord_vn`\text{\textperthousand}, `r meanC_hord_vv` ± `r SDC_hord_vv`\text{\textperthousand}, and `r meanC_hord_pp` ± `r SDC_hord_pp`\text{\textperthousand} for *Hordeum vulgare* var. *nudum*, *Hordeum vulgare* subsp. *vulgare*, and *Pinus pinea* respectively. The plants analysed all exhibit high $\delta ^{15}N$ mean values of `r meanN_hord_vn` ± `r SDN_hord_vn`\text{\textperthousand}, `r meanN_hord_vv` ± `r SDN_hord_vv`\text{\textperthousand} and `r meanN_hord_pp` ± `r SDN_hord_pp`\text{\textperthousand} for *Hordeum vulgare* var. *nudum*, *Hordeum vulgare* subsp. *vulgare*, and *Pinus pinea* respectively.
+
+
+# Discussion
+
 ## Water and nutrient nitrogen availability for vegetation
 
-Table \ref{tab:table3} shows the results of stable isotope ratios of the two barley cultivars and stone pine. In the case of barley, the isotope ratios fall within the established predicted ranges obtained from experimentally charred modern cereals [@fraser_etal13a]. Since the isotope ratios of the stone pine are similar to that of barley, they are considered consistent. The $\delta ^{13}C$ values of all the plants are within the range expected for C~3~ plants with mean values of `r meanC_hord_vn` ± `r SDC_hord_vn`\text{\textperthousand}, `r meanC_hord_vv` ± `r SDC_hord_vv`\text{\textperthousand}, and `r meanC_hord_pp` ± `r SDC_hord_pp`\text{\textperthousand} for *Hordeum vulgare* var. *nudum*, *Hordeum vulgare* subsp. *vulgare*, and *Pinus pinea* respectively. Though the plants are located close to the coast (Fig. \ref{fig:castro-marim-loc}), the source of carbon is from the atmosphere [@cloern_etal02], and thus the values are similar to terrestrial plants. The $\delta ^{13}C$ means of both barley cultivars show no statistically significant difference (t-statistic: `r hord_dC_ttest_statistic`, degrees of freedom: `r hord_dC_ttest_df`, *p*-value: `r hord_dC_ttest_p`). The $\Delta ^{13}C$ values (Figure \ref{fig:iso-hord-plots} **(a)**) show barley cultivated in poor to moderate watering conditions, which would indicate that the plants have been dependent on natural precipitation with little or no artificial irrigation in an arid climatic regime [@fernandez-crespo_etal19; @fletcher_etal07].
+Though the plants are located close to the coast (Fig. \ref{fig:castro-marim-loc}), the source of carbon is from the atmosphere [@cloern_etal02], and thus the values are similar to terrestrial plants. The $\delta ^{13}C$ means of both barley cultivars show no statistically significant difference (t-statistic: `r hord_dC_ttest_statistic`, degrees of freedom: `r hord_dC_ttest_df`, *p*-value: `r hord_dC_ttest_p`). The $\Delta ^{13}C$ values (Figure \ref{fig:iso-hord-plots} **(a)**) show barley cultivated in poor to moderate watering conditions, which would indicate that the plants have been dependent on natural precipitation with little or no artificial irrigation in an arid climatic regime [@fernandez-crespo_etal19; @fletcher_etal07].
 
 (ref:isohord-caption) **(a).** Beeswarm plot showing $\Delta ^{13}C$ values of barley cultivars where the area between the blue dashed lines represents 'moderately-watered' condition with the 'well-watered' condition being above the top blue line and 'poorly-watered' condition being below the lower blue line, based on the study of modern crops in varying watering conditions [@wallace_etal13]. **(b).** Beeswarm plot showing the manuring status of barley cultivars with green shaded region representing 1 SD range of estimated wild herbivore forage value (calculated from subtraction 4 \text{\textperthousand} from red deer $\delta ^{15}N$ mean ± 1 SD range).
 
@@ -402,7 +385,7 @@ p1 | p2
 
 ```
 
-The plants analysed all exhibit high $\delta ^{15}N$ mean values of `r meanN_hord_vn` ± `r SDN_hord_vn`\text{\textperthousand}, `r meanN_hord_vv` ± `r SDN_hord_vv`\text{\textperthousand} and `r meanN_hord_pp` ± `r SDN_hord_pp`\text{\textperthousand} for *Hordeum vulgare* var. *nudum*, *Hordeum vulgare* subsp. *vulgare*, and *Pinus pinea* respectively. There is no significant difference (t-statistic: `r hord_dN_ttest_statistic`, degrees of freedom: `r hord_dN_ttest_df`, *p*-value: `r hord_dN_ttest_p`) between the two barley cultivars, but Pinus pinea yields higher $\delta ^{15}N$ values. The $\delta ^{15}N$ mean values of the plants in salt marshes are higher when compared to completely inland sites [@cloern_etal02]. The $\delta ^{15}N$ isotope ratios are elevated, as the coastal/saline soils are enriched in nutrient nitrogen because of nitrate sea-spray, nitrification, denitrification, and ammonium absorption [@ambrose91; @heaton87; @virginia_delwiche82]. The stone pine samples exhibit higher mean values than the barley cultivars despite the possibility that the latter could be subjected to manuring regimes (Figure \ref{fig:iso-hord-plots} **(b)**). This indicates that the barley was cultivated in locations farther away from the coastline than the stone pine and explains the poor to moderate watering conditions despite Castro Marim being close to Guadiana estuary. Because the settlement was located on a narrow strip of land surrounded by water (Figure \ref{fig:castro-marim-pal}), the lack of space to grow crops must have been the primary reason for growing the barley away from the coast. Thus, any effects of manure on $\delta ^{15}N$ isotope ratios of barley are masked by the increase caused by the proximity to the coast/salt marsh.
+There is no significant difference (t-statistic: `r hord_dN_ttest_statistic`, degrees of freedom: `r hord_dN_ttest_df`, *p*-value: `r hord_dN_ttest_p`) between the two barley cultivars, but Pinus pinea yields higher $\delta ^{15}N$ values. The $\delta ^{15}N$ mean values of the plants in salt marshes are higher when compared to completely inland sites [@cloern_etal02]. The $\delta ^{15}N$ isotope ratios are elevated, as the coastal/saline soils are enriched in nutrient nitrogen because of nitrate sea-spray, nitrification, denitrification, and ammonium absorption [@ambrose91; @heaton87; @virginia_delwiche82]. The stone pine samples exhibit higher mean values than the barley cultivars despite the possibility that the latter could be subjected to manuring regimes (Figure \ref{fig:iso-hord-plots} **(b)**). This indicates that the barley was cultivated in locations farther away from the coastline than the stone pine and explains the poor to moderate watering conditions despite Castro Marim being close to Guadiana estuary. Because the settlement was located on a narrow strip of land surrounded by water (Figure \ref{fig:castro-marim-pal}), the lack of space to grow crops must have been the primary reason for growing the barley away from the coast. Thus, any effects of manure on $\delta ^{15}N$ isotope ratios of barley are masked by the increase caused by the proximity to the coast/salt marsh.
 
 ```{r table4, echo=FALSE, results='asis'}
 options(knitr.kable.NA = "--")

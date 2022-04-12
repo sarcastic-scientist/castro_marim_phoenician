@@ -69,6 +69,7 @@ output:
     bookdown::pdf_book:
       keep_tex: true
       base_format: rticles::elsevier_article
+      extra_dependencies: "subfig"
       citation_package: default
 ---
 

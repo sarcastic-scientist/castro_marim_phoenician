@@ -1,5 +1,5 @@
 ---
-title: Stable isotope approach to farming and husbandry practices at the Phoenician site of Castro Marim between 7^th^ – 5^th^ century BCE
+title: Insights into agricultural practices at the Phoenician site of Castro Marim between 7^th^ – 5^th^ century BCE
 author:
   - name: Roshan Paladugu
     email: rpaladugu@uevora.pt
@@ -75,9 +75,9 @@ output:
 
 # Introduction
 
-The Iberian Peninsula underwent Oriental colonization originating from the Near East during the 9^th^ century BCE. These colonizers, referred to as Phoenicians, were mostly culturally homogeneous and politically independent city-states with the Levant's power nucleus (present-day Lebanon) [@aubet87; @dietler09; @gomes_arruda18; @quinn19]. The city-states served as nodes of an expansive trade network across the Mediterranean, including the Atlantic coast of Europe [@arruda00; @aubet01; @markoe05]. It is widely accepted that the main driving force behind this westward expansion was the need to establish a stable supply of metalliferous resources [@arruda09; @aubet87; @aubet01; @eshel_etal19; @markoe05]. Phoenicians, through the establishment of agreements and negotiations with the native Iberian communities, mined the Iberian Pyrite belt for silver, tin, lead, and copper in the early 8^th^ century BCE [@eshel_etal19; @renzi_etal12; @wood_etal19]. These mined metals were hauled back to the inner Mediterranean region through their well-established networks through posts along the rivers and the southern shore of the Iberian Peninsula [@eshel_etal19].
+Southern Portuguese coast underwent Oriental colonization originating from the Near East during the 9^th^ century BCE. These colonizers, referred to as Phoenicians, were mostly culturally homogeneous and politically independent city-states with the Levant's power nucleus (present-day Lebanon) [@aubet87; @dietler09; @gomes_arruda18; @quinn19]. The city-states served as nodes of an expansive trade network across the Mediterranean, including the Atlantic coast of Europe [@arruda00; @aubet01; @markoe05]. It is widely accepted that the main driving force behind this westward expansion was the need to establish a stable supply of metalliferous resources [@arruda09; @aubet87; @aubet01; @eshel_etal19; @markoe05]. Phoenicians, through the establishment of agreements and negotiations with the native communities, mined the Iberian Pyrite belt for silver, tin, lead, and copper in the early 8^th^ century BCE [@eshel_etal19; @renzi_etal12; @wood_etal19]. These mined metals were hauled back to the inner Mediterranean region through their well-established networks through posts along the rivers and the southern shore of the Iberian Peninsula [@eshel_etal19].
 
-The intense and prolonged settlements along the Southern Iberian coast cannot simply be explained by the quest for mineral sources, primarily because a considerable part of them are situated in locations with neither metallogenic minerals nor pre-existing indigenous settlements. This settlement pattern is further emphasized by the contrast between the densely clustered settlements of Iberia and the sparsely scattered settlements of North Africa. Other factors influencing settlement density include agricultural resources [@wagner_alvar03; @wagner_alvar89], exploitation of marine resources (e.g., salt [@manfredi92], Tyrrhenian Purple production [@uriel00]), timber [@treumann09; @treumann98], and labor force [@arrastio99; @arrastio00]. The Phoenician traders had to ensure stable sources of food for the population apart from the industrial activities. Southwestern Iberia has been noted for its rich mineral veins and abundant natural fertility, and the Phoenicians exploited this fertile landscape while actively transforming it, including cultivable land [@arruda03; @arruda09; @neville98; @roller14]. While the Phoenician metal exploitation perspective has been studied, the agricultural aspects have received little attention so far. This study aims to shed light on the farming strategies and animal husbandry practices in the Phoenician -- Punic period of Portugal, specifically at Castro Marim, based on the stable isotope approach.
+The intense and prolonged settlements along the Southern Portuguese coast cannot simply be explained by the quest for mineral sources, primarily because a considerable part of them are situated in locations with neither metallogenic minerals nor pre-existing indigenous settlements. Other factors influencing settlement density include agricultural resources [@wagner_alvar03; @wagner_alvar89], exploitation of marine resources (e.g., salt [@manfredi92], Tyrrhenian Purple production [@uriel00]), timber [@treumann09; @treumann98], and labor force [@arrastio99; @arrastio00]. The Phoenician traders had to ensure stable sources of food for the population apart from the industrial activities. Southwestern Iberia has been noted for its rich mineral veins and abundant natural fertility, and the Phoenicians exploited this fertile landscape while actively transforming it, including cultivable land [@arruda03; @arruda09; @neville98; @roller14]. While the Phoenician metal exploitation perspective has been studied, the agricultural aspects have received little attention so far. This study aims to shed light on the farming strategies and animal husbandry practices in the Phoenician -- Punic period of Portugal, specifically at Castro Marim, based on the stable isotope approach.
 
 ```{r global_options, include=FALSE, dev=c('png', 'pdf', 'svg', 'tiff')}
 library(ggplot2)
@@ -90,6 +90,7 @@ library(knitr)
 library(patchwork)
 library(ggbeeswarm)
 library(stringr)
+library(grid)
 
 options(kableExtra.auto_format = FALSE)
 
@@ -99,7 +100,7 @@ knitr::opts_chunk$set(echo=FALSE, message = FALSE, error = FALSE, warning = FALS
 
 # Context
 
-## Phoenician - Punic Agriculture
+## Phoenician - Punic agriculture
 
 Most knowledge about Phoenician and Punic agriculture comes from the famous treaty by Mago, of which only a few fragments have survived and subsequently translated [@martin71]. Other accounts are by authors from the Greek and Roman domains, usually written centuries after the pinnacle of the Phoenician -- Punic horizon. The current understanding has been mainly developed due to systematic excavations of different Phoenician -- Punic settlements in Iberia and subsequent zooarchaeological and archaeobotanical studies on the recovered faunal and plant remains [@aubet01; @wagner_alvar03; @wagner_alvar89]. The Southwest Iberian region has been praised by Strabo (3, 2, 8) for possessing the rare combination of abundant mineral deposits and natural fertility [@roller14]. From the 9^th^ century BCE, the Phoenician presence is noted in the Iberian Peninsula along the Mediterranean and Atlantic coastal zone. This strategic location gave them reasonable access to the sailing routes and provided them with a plethora of cultivable land [@aubet01]. Colonies in Iberia were located in a landscape similar to that in the Levant with proximity to the coast and marked with steep mountain ranges and riverine valleys. Being located in a river valley gave the colonizers the ease of adapting existing practices from the Mediterranean in the Iberian hinterland. This included modifying and adapting the landscape to suit their agricultural needs, comprising farming and animal husbandry [@gomezbellard19].
 
@@ -122,7 +123,7 @@ Castro Marim is located on the Guadiana estuary (Fig. \ref{fig:castro-marim-loc}
 
 Being in a littoral zone made it possible to adopt a wide range of agricultural strategies and husbandry practices at Castro Marim. The presence of cereals (*Hordeum* and *Triticum*), grapes (*Vitis vinifera/sylvestris*), pulses (*Vicia* and *Cicer*), and other cultivated species (*Olea* and *Coriandrum*), as well as the exploitation of wild woody plants (*Pinus* and *Arbutus* etc.) have been elucidated from the archaeological record [@queiroz_etal06]. Animals recovered from the excavation (native to Portugal) include cattle (*Bos taurus*), goat (*Capra hircus*), sheep (*Ovis aries*), pig (*Sus scrofa/domesticus*), red deer (*Cervus elaphus*), and rabbit (*Oryctolagus cuniculus*) [@davis07]. The arrival of chicken (*Gallus domesticus*) has been documented, being introduced at least in the second half of 5^th^ century BCE [@davis07].
 
-## Environmental Settings
+## Environmental settings
 
 (ref:castro-marim-pal-label) Reconstruction of the Guadiana estuary during the Phoenician period based on geophysical and lithological data (adapted from @wachsmann_etal09).
 
@@ -149,7 +150,7 @@ Ovicaprids (sheep and goats) followed by pigs and cattle dominate the Castro Mar
 
 # Principles of stable isotope analysis and ZooMS
 
-## ZooMS Analysis of Ovicaprids
+## ZooMS analysis of ovicaprids
 
 Skeletal elements of goats and sheep are a common occurrence in archaeological contexts. A significant issue plaguing comparative husbandry studies between sheep and goats is the overlap of skeletal elements [@boessneck_etal64; @payne69; @schramm67]. Zooarchaeology through mass spectrometry applies peptide mass fingerprinting to identify archaeological remains [@buckley_etal09]. The main protein used for this is collagen, which is the most abundant protein in bone. Due to sequence differences in collagen of sheep and goat, ZooMS is able to differentiate between these two species, which is often not possible using standard morphological analysis [@buckley_etal10].
 
@@ -161,7 +162,7 @@ $\delta ^{15}N$ values indicate the trophic position (herbivore, omnivore, carni
 
 The mean $\delta ^{34}S$ value of terrestrial sources is assumed to be 0\text{\textperthousand} [@nehlich15]. Inorganic sulphur enters the food web through plants from the weathered bedrock (in a complete terrestrial setting), precipitation (sea spray), and microbial activity due to flooding events [@nitsch_etal19]. As the inorganic sulphur passes through the food web in the form of proteins, only a negligible fractionation occurs between diet and consumer [@hobson99; @nehlich15]. Thus, the $\delta ^{34}S$ ratio of collagen closely reflects that of the native water source, bedrock, and soluble sulphur-bearing minerals.
 
-There are two significant inputs that humans can manipulate to cultivate plants: water and nitrogen input, which can be investigated using stable isotopes. Variation in $\delta ^{13}C$ values of plants is primarily due to water availability as any dry spells affect the movement of carbon dioxide through the stomata [@ferrio_etal05; @ferrio_etal07; @fiorentino_etal15]. The water status of crops can be artificially controlled by irrigation regimes, reflected in $\delta ^{13}C$ values [@ferrio_etal05; @wallace_etal13]. $\delta ^{13}C$ values measured in archaeological plants must be converted to carbon discrimination values to be compared with those of the modern crops grown under controlled watering regimes [@farquhar_etal89; @wallace_etal13]:
+There are two significant inputs that humans can manipulate to cultivate plants: water and nitrogen input, which can be investigated using stable isotopes. Variation in $\delta ^{13}C$ values of plants is primarily due to water availability as any dry spells affect the movement of carbon dioxide through the stomata [@ferrio_etal05; @ferrio_etal07; @fiorentino_etal15]. The water status of crops can be artificially controlled by irrigation regimes, reflected in $\delta ^{13}C$ values [@ferrio_etal05; @wallace_etal13]. $\delta ^{13}C$ values measured in archaeological plants must be converted to carbon discrimination values to be compared with those of the modern crops grown under controlled watering regimes [@farquhar_etal89; @wallace_etal13; @coplen11]:
 
 $$\Delta^{13}C = \frac{\delta ^{13}C_{air} - \delta ^{13}C_{plant}}{1+\delta ^{13}C_{plant}}$$ Another major factor, which affects the $\delta ^{13}C$ measurements of plants, is the canopy effect, where forested areas are more depleted in the heavier ^13^C isotope compared to open areas [@bonafini_etal13]. Thus, the $\delta ^{13}C$ measurements of plants are the result of multiple factors and should be interpreted with caution.
 
@@ -196,11 +197,11 @@ df_iso_bota <- here::here("./data/castro_iso_bota.csv") |>
 
 # Materials and Methods
 
-## Archaeobotanical Analysis
+## Archaeobotanical analysis
 
 200 grams of sediment from each stratigraphic layer of the excavation site was weighed and handpicked for plant macro remains (seeds/fruits and charcoal). The recovered remains were examined under a stereomicroscope and taxonomically identified (Table \ref{tab:table2}).
 
-## Sample Selection
+## Sample selection
 
 Nine charred plant macro-remains (Table \ref{tab:table3}) of *Hordeum vulgare* subsp. *vulgare*, *Hordeum vulgare* subsp. *nudum*, and *Pinus* sp. each as well as fifty faunal bone samples (Table \ref{tab:table4}) from conclusively adult individuals have been selected for this study. The sampled faunal bones represent the Phoenician -- Punic period of the settlement (phases III, IV, and V), whereas the charred plant macro -- remains are only from phase V due to the absence of plant remains from the older phases.
 
@@ -209,13 +210,13 @@ Nine charred plant macro-remains (Table \ref{tab:table3}) of *Hordeum vulgare* s
 
 In carbonized plant macro-remains, barley grain samples consist of at least ten whole grains, and pine samples consist of shell fragment. Morphologically intact samples were chosen after examination under a stereomicroscope (7-45x magnification) and removing any visibly adhering foreign contaminant. An acid-base-acid (ABA) treatment was applied as a pre-treatment [@bogaard_etal13; @fraser_etal13a]. First, the samples were treated with 10 mL of 0.5 M HCl at 70 $\text{\textdegree}$C for 60 minutes (or until effervescing stops) and then rinsed with ultrapure water until a neutral pH was achieved. 10 mL of 0.1 NaOH solution was added to the samples at 70 $\text{\textdegree}$C for 60 minutes and then rinsed with ultrapure water to achieve a neutral pH. Finally, the samples were treated with 0.5 M HCl at 70 $\text{\textdegree}$C for 30-60 minutes, followed by three rinses with ultrapure water and subsequent freeze-drying.
 
-## Collagen Extraction
+## Collagen extraction
 
 500 -- 700 mg of bone was cut using a DREMEL$\text{\textregistered}$ rotary drill with a diamond disc and cleaned of dirt, discoloration, and other foreign content with a dental burr. Compact bone was sampled over spongy bone. The modified @longin71 method was used to extract collagen from faunal bones pieces previously analysed with FTIR by demineralization [@richards_hedges99]. Approximately 600 mg of bone sample was demineralized using 0.5 M HCl at 4 $\text{\textdegree}$C for a fortnight with daily vortex and an acid change after 7 days. Repeated rinses with ultrapure water to reach neutral pH were performed, and the demineralized bones were subjected to an overnight treatment in 0.125 M NaOH at room temperature to remove fulvic and humic acid contamination. The samples were then rinsed repeatedly with ultrapure water to achieve neutrality and gelatinized in 0.01 M HCl at 70 $\text{\textdegree}$C for 48 hours. The impurities were separated by filtering the collagen-containing liquid fraction using Ezee -- Filter$^\text{\texttrademark}$ filters (Elkay$^\text{\textregistered}$ Laboratory Products). The solubilized collagen was frozen and subsequently lyophilized for 48 hours.
 
 ## ZooMS analysis
 
-A small subsample of the extracted collagen was placed into a microfuge tube and 100 $\mu$L 50mM ammonium bicarbonate (Ambic) was added to the samples. The samples were digested overnight using 1 $\mu$L of 0.5 $\mu$g/$\mu$L porcine trypsin (Promega$^\text{\textregistered}$, UK) at 37 $\text{\textdegree}$C and the digestion was stopped by the addition of trifluoroacetic acid (TFA) at a concentration of 0.5--1 % of the total solution. The samples were desalted using C18 zip-tips [@vandoorn_etal11] and eluted using 100 $\mu$L of 50% acetonitrile (ACN)/0.1 % TFA (v/v). The zip-tipped samples were spotted in triplicate onto a MTP384 Bruker ground steel MALDI target plate; 1 $\mu$L of sample was pipetted onto each sample spot and then mixed with 1 $\mu$L of $\alpha$-cyano-4-hydroxycinnamic acid matrix solution (1 % in 50 % acetonitrile / 0.1 % trifluoroacetic acid (v/v/v)).
+A small subsample of the extracted collagen was placed into a microfuge tube and 100 $\mu$L 50mM ammonium bicarbonate (AmBic) was added to the samples. The samples were digested overnight using 1 $\mu$L of 0.5 $\mu$g/$\mu$L porcine trypsin (Promega$^\text{\textregistered}$, UK) at 37 $\text{\textdegree}$C and the digestion was stopped by the addition of trifluoroacetic acid (TFA) at a concentration of 0.5--1 % of the total solution. The samples were desalted using C18 zip-tips [@vandoorn_etal11] and eluted using 100 $\mu$L of 50% acetonitrile (ACN)/0.1 % TFA (v/v). The zip-tipped samples were spotted in triplicate onto a MTP384 Bruker ground steel MALDI target plate; 1 $\mu$L of sample was pipetted onto each sample spot and then mixed with 1 $\mu$L of $\alpha$-cyano-4-hydroxycinnamic acid matrix solution (1 % in 50 % acetonitrile / 0.1 % trifluoroacetic acid (v/v/v)).
 
 The samples were analysed on a Bruker$^\text{\textregistered}$ Ultraflex III$^\text{\texttrademark}$ MALDI-ToF mass spectrometer. The resulting MS spectra were analysed using mMass [@strohalm_etal10] an Open Source mass spectrometry interpretation tool. The three spectra for each sample were averaged and the averaged spectrum was cropped between 800 and 3000 m/z and peak picking was carried out using a signal to noise ratio of 6. The resulting spectra were compared to a publicly available ZooMS database.
 
@@ -227,17 +228,11 @@ An amount of 0.5 - 0.7 mg of freeze-dried collagen powder/barley grain samples w
 
 The collagen samples were combusted with additional V~2~O~5~ and an oxygen pulse (IsoPrime$^\text{\texttrademark}$ Mass spectrometer, Elementar Analysensysteme GmbH$^\text{\textregistered}$, Langenselbold, Germany). Calibration of $\delta ^{34}S$ values was performed using international inorganic standards for stable sulphur isotope analysis: NBS127 (+20.3\text{\textperthousand}) and IAEA S1 (-0.3\text{\textperthousand}). B2155 protein (+6.96 ± 0.04\text{\textperthousand}) was used as an internal quality control standard. Stable sulphur isotope values are reported in parts per thousand relative to Vienna-Canyon Diablo Troilite (VCDT).
 
-## Statistical Analysis
+## Statistical analysis
 
 The obtained data were subjected to statistical analysis using R programming language [@rcoreteam20; @wickham16]. Initially, means and standard deviations were calculated per species. Z-scores were calculated to detect the presence of outliers. Deviance from normal distribution was assessed using the Shapiro-Wilks test. F-tests were first used to check for significant equal variance, and subsequently, unpaired Student's t-tests were used for two-sample comparison since all the datasets were normally distributed.
 
 # Results
-
-## Collagen Quality and ZooMS
-
-Collagen yields range between 2.5% to 49.1% (Table \ref{tab:table4}). Collagen extraction was considered successful for all the bone samples, based on published criteria, with carbon content between 15.3% and 47.0% [@ambrose90], nitrogen content between 5.5% and 17.3% [@ambrose90], C/N values between 3.15 and 3.50 (conservative upper limit with 0.5% tolerance) [@guiry_szpak21], C/S values between 300% and 900% [@nehlich_richards09], and collagen yields greater than 1% [@vanklinken99]. The extracted bone collagen samples exhibit C/N values ranged between 3.1 and 3.5 and C/S values between 225.9 and 688.4. Carbon and nitrogen amounts range from 20.3% to 50.0% and 7.3% and 18.1% respectively. All the faunal samples exhibited collagen quality parameters indicative of good preservation.
-Sheep and goat samples were successfully distinguished on the basis of ZooMS. The identified sample entries are in bold format (Table \ref{tab:table4}).
-
 
 ## Botanical Remains and their stable isotopes
 
@@ -355,171 +350,7 @@ hord_dN_ttest_df <- round(hord_dN_ttest$parameter,2)
 hord_dN_ttest_p <- round(hord_dN_ttest$p.value,2)
 ```
 
-Table \ref{tab:table3} shows the results of stable isotope ratios of the two barley cultivars and stone pine. In the case of barley, the isotope ratios fall within the established predicted ranges obtained from experimentally charred modern cereals [@fraser_etal13a]. Since the isotope ratios of the stone pine are similar to that of barley, they are considered consistent. The $\delta ^{13}C$ values of all the plants are within the range expected for C~3~ plants with mean values of `r meanC_hord_vn` ± `r SDC_hord_vn`\text{\textperthousand}, `r meanC_hord_vv` ± `r SDC_hord_vv`\text{\textperthousand}, and `r meanC_hord_pp` ± `r SDC_hord_pp`\text{\textperthousand} for *Hordeum vulgare* var. *nudum*, *Hordeum vulgare* subsp. *vulgare*, and *Pinus pinea* respectively. The plants analysed all exhibit high $\delta ^{15}N$ mean values of `r meanN_hord_vn` ± `r SDN_hord_vn`\text{\textperthousand}, `r meanN_hord_vv` ± `r SDN_hord_vv`\text{\textperthousand} and `r meanN_hord_pp` ± `r SDN_hord_pp`\text{\textperthousand} for *Hordeum vulgare* var. *nudum*, *Hordeum vulgare* subsp. *vulgare*, and *Pinus pinea* respectively.
-
-
-# Discussion
-
-## Water and nutrient nitrogen availability for vegetation
-
-Though the plants are located close to the coast (Fig. \ref{fig:castro-marim-loc}), the source of carbon is from the atmosphere [@cloern_etal02], and thus the values are similar to terrestrial plants. The $\delta ^{13}C$ means of both barley cultivars show no statistically significant difference (t-statistic: `r hord_dC_ttest_statistic`, degrees of freedom: `r hord_dC_ttest_df`, *p*-value: `r hord_dC_ttest_p`). The $\Delta ^{13}C$ values (Figure \ref{fig:iso-hord-plots} **(a)**) show barley cultivated in poor to moderate watering conditions, which would indicate that the plants have been dependent on natural precipitation with little or no artificial irrigation in an arid climatic regime [@fernandez-crespo_etal19; @fletcher_etal07].
-
-(ref:isohord-caption) **(a).** Beeswarm plot showing $\Delta ^{13}C$ values of barley cultivars where the area between the blue dashed lines represents 'moderately-watered' condition with the 'well-watered' condition being above the top blue line and 'poorly-watered' condition being below the lower blue line, based on the study of modern crops in varying watering conditions [@wallace_etal13]. **(b).** Beeswarm plot showing the manuring status of barley cultivars with green shaded region representing 1 SD range of estimated wild herbivore forage value (calculated from subtraction 4 \text{\textperthousand} from red deer $\delta ^{15}N$ mean ± 1 SD range).
-
-```{r iso-hord-plots, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, fig.width=5, fig.height=5,crop = NULL,fig.cap= '(ref:isohord-caption)'}
-
-
-theme1<-theme(panel.background = element_blank(), legend.box.background = element_rect(colour = "black"), legend.key = element_blank(), legend.key.size = unit(0.5, 'cm'),legend.position="right",legend.background = element_blank(), legend.title.align = 0.5, legend.text = element_text(size=4),legend.title=element_text(size=6),axis.title.x = element_blank(), axis.title.y = element_text(size=7), panel.border=element_rect(fill=NA),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),strip.background=element_blank(),axis.text.x=element_blank(),axis.text.y=element_text(colour="black"),axis.ticks.y=element_line(colour="black"), axis.ticks.x=element_blank(), plot.margin=unit(c(1,1,1,1),"line"))
-
-theme2<-theme(panel.background = element_blank(),legend.key.size = unit(0.5, 'cm'),legend.position="none", legend.text = element_text(size=4),legend.title=element_text(size=4),axis.title.x = element_blank(), axis.title.y = element_text(size=7), panel.border=element_rect(fill=NA),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),strip.background=element_blank(),axis.text.x=element_blank(),axis.text.y=element_text(colour="black"),axis.ticks.y=element_line(colour="black"), axis.ticks.x=element_blank(), plot.margin=unit(c(1,1,1,1),"line"))
-
-lbl1 <- c(expression(italic("Hordeum vulgare")*" "* "subsp."*" "*italic("vulgare")),expression(italic("Hordeum vulgare")*" "* "var."*" "*italic("nudum")),expression(italic("Pinus pinea")))
-
-cust_colo1 <- c('Hordeum vulgare subsp. vulgare'="#4749dc", 'Hordeum vulgare var. nudum'="#158a2c",'Pinus pinea'="#7d4400")
-
-p1<-ggplot(df_iso_hord, aes(x=Site,y=DC, color=Species)) + geom_quasirandom() + scale_color_manual(label = lbl1,values = cust_colo1)  + theme2 + labs(x='',y=expression(paste(Delta^{13}, "C (\u2030 vs. Air)")), tag = "(a)") + coord_fixed(1.65) + geom_hline(yintercept = 17, color='deepskyblue3', linetype="dotted", size=1) + geom_hline(yintercept = 19, color='deepskyblue3', linetype="dotted", size=1, show.legend = T)
-
-p2<-ggplot(df_iso_bota, aes(x=Site,y=dN, color=Species)) + geom_quasirandom() + scale_color_manual(label = lbl1, values = cust_colo1) + theme1 + labs(x='',y=expression(paste(delta^{15}, "N (\u2030 vs. Air)")), tag = "(b)") + coord_fixed(0.5) + geom_hline(yintercept = 0, color='seagreen3', linetype="dotted", size=1) + geom_hline(yintercept = 5, color='seagreen3', linetype="dotted", size=1, show.legend = T) + annotate("rect", xmin = 0, xmax = Inf, ymin = 0, ymax = 5, alpha = .2, fill = "seagreen2")
-
-p1 | p2
-
-```
-
-There is no significant difference (t-statistic: `r hord_dN_ttest_statistic`, degrees of freedom: `r hord_dN_ttest_df`, *p*-value: `r hord_dN_ttest_p`) between the two barley cultivars, but Pinus pinea yields higher $\delta ^{15}N$ values. The $\delta ^{15}N$ mean values of the plants in salt marshes are higher when compared to completely inland sites [@cloern_etal02]. The $\delta ^{15}N$ isotope ratios are elevated, as the coastal/saline soils are enriched in nutrient nitrogen because of nitrate sea-spray, nitrification, denitrification, and ammonium absorption [@ambrose91; @heaton87; @virginia_delwiche82]. The stone pine samples exhibit higher mean values than the barley cultivars despite the possibility that the latter could be subjected to manuring regimes (Figure \ref{fig:iso-hord-plots} **(b)**). This indicates that the barley was cultivated in locations farther away from the coastline than the stone pine and explains the poor to moderate watering conditions despite Castro Marim being close to Guadiana estuary. Because the settlement was located on a narrow strip of land surrounded by water (Figure \ref{fig:castro-marim-pal}), the lack of space to grow crops must have been the primary reason for growing the barley away from the coast. Thus, any effects of manure on $\delta ^{15}N$ isotope ratios of barley are masked by the increase caused by the proximity to the coast/salt marsh.
-
-```{r table4, echo=FALSE, results='asis'}
-options(knitr.kable.NA = "--")
-
-color.goat <- which(df_iso_fauna$Species == 'Capra hircus')
-color.sheep <- which(df_iso_fauna$Species == 'Ovis aries')
-
-df_iso_fauna %>%
-  select(Sample, Species,percentC,percentN,percentS,CN,CS,NS, dC, dN, dS) %>%
-  kable(caption = "Carbon, nitrogen, and sulphur isotope composition of the fauna.", digits = 2, booktabs = T,linesep = "", longtable = T, align = "ccccccccccc", format = "latex", escape = FALSE,table.env='table*', col.names=c("Sample ID","Species","\\% C","\\% N","\\% S","C:N","C:S","N:S", "$\\delta^{13}C (\\text{\\textperthousand})$","$\\delta^{15}N (\\text{\\textperthousand})$","$\\delta^{34}S (\\text{\\textperthousand})$")) %>%
-  kable_styling(latex_options = c("basic", "hold_position","repeat_header"), font_size = 7.5) %>%
-  row_spec(color.goat, bold = T, color = "black", background = "white") %>%
-  row_spec(color.sheep, bold = T, color = "black", background = "white") %>%
-  column_spec(2,italic = TRUE) %>%
-  footnote(general = "The ovicaprid samples which were identified as goats and sheep are in bold.")
-  
-```
-
-## Faunal bone collagen $\delta ^{13}C$ and $\delta ^{15}N$ values
-
-(ref:fauna-carbnitro-iso) Plot showing mean $\delta ^{13}C$ and $\delta ^{15}N$ values (mean ± 1 SD range) of faunal bone collagen. The colour palette is produced with the Colorgorical web app [@gramazio_etal17].
-
-```{r fauna-carbnitro-iso-plot, dpi=600, echo=FALSE, dpi=600, fig.show="hold", out.width='0.98\\textwidth', fig.height=6,crop = NULL, fig.env='figure*', fig.cap= '(ref:fauna-carbnitro-iso)'}
-
-theme <-
-  theme(
-    panel.background = element_blank(),
-    legend.background = element_blank(),
-    legend.key.size = unit(0.45, 'cm'),
-    legend.box.background = element_rect(colour = "black"),
-    legend.position = c(0.8, 0.18),
-    legend.text = element_text(size = 6,hjust=0),
-    legend.title.align = 0.4,
-    legend.title = element_text(size=8),
-    legend.key = element_blank(),
-    text = element_text(),
-    axis.title.x = element_text(size = 8),
-    axis.title.y = element_text(size = 8),
-    panel.border = element_rect(fill = NA),
-    panel.grid.major = element_blank(),
-    panel.grid.minor = element_blank(),
-    strip.background = element_blank(),
-    axis.text.x = element_text(colour = "black"),
-    axis.text.y = element_text(colour = "black"),
-    axis.ticks = element_line(colour = "black"),
-    plot.margin = unit(c(1, 1, 1, 1), "line")
-  )
-
-
-dffinal_iso_summ <- df_iso_fauna %>%
-  select(Species, Common_Name, dC, dN, dS) %>%
-  group_by(Common_Name) %>%
-  summarize(
-    n = n(),
-    mean_dC = mean(dC, na.rm = TRUE),
-    std.dev_dC = sd(dC, na.rm = TRUE),
-    mean_dN = mean(dN, na.rm = TRUE),
-    std.dev_dN = sd(dN, na.rm = TRUE),
-    mean_dS = mean(dS, na.rm = TRUE),
-    std.dev_dS = sd(dS, na.rm = TRUE),
-    min_dC = min(dC, na.rm = TRUE),
-    max_dC = max(dC, na.rm = TRUE),
-    min_dN = min(dN, na.rm = TRUE),
-    max_dN = max(dN, na.rm = TRUE),
-    min_dS = min(dS, na.rm = TRUE),
-    max_dS = max(dS, na.rm = TRUE))
-
-lbl <- c(expression(bold("Plants")), "Barley", "Stone Pine", expression(bold("Birds")), "Grey Plover", "Kittiwake", "Partridge", "Chicken", expression(bold("Domesticated Mammals")), "Pig", "Cattle", "Goat","Sheep", expression(bold("Wild Mammals")), "Rabbit", "Red Deer")
-
-cust_colo <- c('Plants'=NA, 'Barley'="#4749dc", 'Stone Pine'="#00344d", 'Birds'=NA, 'Grey Plover'="#25738b", 'Kittiwake'="#e30293", 'Partridge'="#b452a2", 'Chicken'="#5866ad",'Domesticated Mammals'=NA, 'Pig'="#4e052e",  'Cattle'="#071576", 'Goat'="#158a2c", 'Sheep'="#0b4512", 'Wild Mammals'=NA, 'Rabbit'="#637f4b", 'Red Deer'="#7d4400")
-
-cust_shp <- c('Plants'=NA,'Barley'=17,'Stone Pine'=15,'Birds'=NA,'Grey Plover'=16,'Kittiwake'=17,'Partridge'=15,'Chicken'=16,'Domesticated Mammals'=NA,'Pig'=17,'Cattle'=15,'Goat'=16,'Sheep'=17,'Wild Mammals'=NA,'Rabbit'=16,'Red Deer'=17)
-
-
-
-
-iso_carbnitro_mean_plot <-
-  ggplot(df_iso_total,
-         aes(
-           x = dC,
-           y = dN,
-           shape = Common_Name,
-           colour = Common_Name
-         )) +
-  geom_point(size = 3, alpha = 0.3) + labs(x = expression(paste(delta ^ {
-    13
-  }, "C (\u2030 vs. VPDB)")),
-  y = expression(paste(delta ^ {
-    15
-  }, "N (\u2030 vs. Air)"))) + scale_shape_manual(label = lbl, values = cust_shp) + scale_color_manual(label =
-                                                                                                         lbl, values = cust_colo) + scale_y_continuous(breaks = seq(2.5, 16, 1)) + scale_x_continuous(limits =
-                                                                                                                                                                                                        c(-27, -13), breaks = seq(-27, -12, 1)) + annotate(
-                                                                                                                                                                                                          "text",
-                                                                                                                                                                                                          x = -25,
-                                                                                                                                                                                                          y = 15.5,
-                                                                                                                                                                                                          colour = "gray44" ,
-                                                                                                                                                                                                          size = 3,
-                                                                                                                                                                                                          label = "Pure C3 feeders"
-                                                                                                                                                                                                        ) + annotate(
-                                                                                                                                                                                                          "text",
-                                                                                                                                                                                                          x = -18.5,
-                                                                                                                                                                                                          y = 15.5,
-                                                                                                                                                                                                          colour = "gray44" ,
-                                                                                                                                                                                                          size = 3,
-                                                                                                                                                                                                          label = "Addition of C4 plants"
-                                                                                                                                                                                                        ) + theme + geom_vline(
-                                                                                                                                                                                                          xintercept = -21,
-                                                                                                                                                                                                          color = 'gray62',
-                                                                                                                                                                                                          linetype = "dotted",
-                                                                                                                                                                                                          size = 1
-                                                                                                                                                                                                        ) + geom_point(data = df_iso_fauna_summ, size = 3, aes(x = meandC, y = meandN)) + geom_errorbar(
-  data = df_iso_fauna_summ,
-  aes(
-    x = meandC,
-    y = meandN,
-    ymin = meandN - stddevdN,
-    ymax = meandN + stddevdN
-  ),
-  width = .1,show.legend = F
-) + geom_errorbarh(
-  data = df_iso_fauna_summ,
-  aes(
-    x = meandC,
-    y = meandN,
-    xmin = meandC - stddevdC,
-    xmax = meandC + stddevdC
-  ),
-  height = .1,show.legend = F
-) + guides(col = guide_legend(ncol = 2, title = expression(bold('Species'))),
-           shape = guide_legend(ncol = 2, expression(bold('Species'))))
-
-iso_carbnitro_mean_plot
-
-```
+Table \ref{tab:table3} shows the results of stable isotope ratios of the two barley cultivars and stone pine and Table \ref{tab:table5} shows their mean summary. In the case of barley, the isotope ratios fall within the established predicted ranges obtained from experimentally charred modern cereals [@fraser_etal13a]. Since the isotope ratios of the stone pine are similar to that of barley, they are considered consistent.
 
 ```{r iso-fauna-summ, echo=FALSE, results='asis'}
 
@@ -643,36 +474,115 @@ chicken_partridge_dN_ttest_statistic <- round(chicken_partridge_dN_ttest$statist
 chicken_partridge_dN_ttest_df <- round(chicken_partridge_dN_ttest$parameter,2)
 chicken_partridge_dN_ttest_p <- round(chicken_partridge_dN_ttest$p.value,5)
 
+rabbit_reddeer_dS_ttest <- t.test(df_complete_rabbit$dS, df_complete_reddeer$dS,
+                        alternative = "two.sided", paired = FALSE,
+                        var.equal = TRUE, conf.level = 0.95)
+rabbit_reddeer_dS_ttest_statistic <- round(rabbit_reddeer_dS_ttest$statistic,2)
+rabbit_reddeer_dS_ttest_df <- round(rabbit_reddeer_dS_ttest$parameter,2)
+rabbit_reddeer_dS_ttest_p <- round(rabbit_reddeer_dS_ttest$p.value,2)
+
+sheep_goat_dS_ttest <- t.test(df_complete_sheep$dS, df_complete_goat$dS,
+                        alternative = "two.sided", paired = FALSE,
+                        var.equal = TRUE, conf.level = 0.95)
+
+sheep_goat_dS_ttest_statistic <- round(sheep_goat_dS_ttest$statistic,2)
+sheep_goat_dS_ttest_df <- round(sheep_goat_dS_ttest$parameter,2)
+sheep_goat_dS_ttest_p <- round(sheep_goat_dS_ttest$p.value,2)
+
+sheep_cattle_dS_ttest <- t.test(df_complete_sheep$dS, df_complete_cattle$dS,
+                        alternative = "two.sided", paired = FALSE,
+                        var.equal = TRUE, conf.level = 0.95)
+
+sheep_cattle_dS_ttest_statistic <- round(sheep_cattle_dS_ttest$statistic,2)
+sheep_cattle_dS_ttest_df <- round(sheep_cattle_dS_ttest$parameter,2)
+sheep_cattle_dS_ttest_p <- round(sheep_cattle_dS_ttest$p.value,2)
+
+chicken_partridge_dS_ttest <- t.test(df_complete_chicken$dS,df_complete_partridge$dS,
+                        alternative = "two.sided", paired = FALSE,
+                        var.equal = TRUE, conf.level = 0.95)
+chicken_partridge_dS_ttest_statistic <- round(chicken_partridge_dS_ttest$statistic,2)
+chicken_partridge_dS_ttest_df <- round(chicken_partridge_dS_ttest$parameter,2)
+chicken_partridge_dS_ttest_p <- round(chicken_partridge_dS_ttest$p.value,2)
+
 ```
 
-### Wild fauna (mammals)
+## Collagen quality and ZooMS
 
-All fifty faunal samples, demonstrate (Table \ref{tab:table4}) stable isotope values within the range expected for a C~3~ temperate ecosystem. The mean $\delta ^{13}C$ and $\delta ^{15}N$ values of red deer are `r iso_meandC_reddeer` ± `r iso_stddevC_reddeer`\text{\textperthousand} and `r iso_meandN_reddeer` ± `r iso_stddevN_reddeer`\text{\textperthousand} respectively. The other undomesticated mammal is the rabbit which has mean $\delta ^{13}C$ values of `r iso_meandC_rabbit` ± `r iso_stddevC_rabbit`\text{\textperthousand} and mean $\delta ^{15}N$ values of `r iso_meandN_rabbit` ± `r iso_stddevN_rabbit`\text{\textperthousand}. The mean $\delta ^{13}C$ values of red deer are significantly higher than those of rabbits (t-statistic: `r rabbit_reddeer_dC_ttest_statistic`, degrees of freedom: `r rabbit_reddeer_dC_ttest_df`, *p*-value: `r rabbit_reddeer_dC_ttest_p`). This can be attributed to the rabbits' foraging ground level flora with high recycling of CO~2~ and shade from the higher levels of the canopy in contrast with the red deer foraging at greater heights. Feeding in forested areas causes the $\delta ^{13}C$ values to deplete due to the canopy effect [@bonafini_etal13]. The $\delta ^{15}N$ values of rabbits are anomalous with a standard deviation spanning almost a trophic level (standard deviation of $\delta ^{15}N$: `r iso_stddevN_rabbit`\text{\textperthousand}). It can be observed from Fig. \ref{fig:fauna-carbnitro-iso-plot} that the rabbits consist of two distinct groups, indicative that the group with higher $\delta ^{13}C$ and $\delta ^{15}N$ values was foraging in coastal/salt-marsh zones, whereas the other group had more inland located food sources (Figure \ref{fig:fauna-carbnitro-iso-plot}).
+Collagen yields range between 2.5% to 49.1% (Table \ref{tab:table4}). Collagen extraction was considered successful for all the bone samples, based on published criteria, with carbon content between 15.3% and 47.0% [@ambrose90], nitrogen content between 5.5% and 17.3% [@ambrose90], C/N values between 3.15 and 3.50 (conservative upper limit with 0.5% tolerance) [@guiry_szpak21], C/S values between 300% and 900% [@nehlich_richards09], and collagen yields greater than 1% [@vanklinken99]. The extracted bone collagen samples exhibit C/N values ranged between 3.1 and 3.5 and C/S values between 225.9 and 688.4. Carbon and nitrogen amounts range from 20.3% to 50.0% and 7.3% and 18.1% respectively. All the faunal samples exhibited collagen quality parameters indicative of good preservation.
+Sheep and goat samples were successfully distinguished on the basis of ZooMS. The identified sample entries are in bold format (Table \ref{tab:table4}).
 
-### Domesticated fauna (mammals)
 
-Sheep show mean $\delta ^{13}C$ values of `r iso_meandC_sheep` ± `r iso_stddevC_sheep`\text{\textperthousand} and mean $\delta ^{15}N$ values of `r iso_meandN_sheep` ± `r iso_stddevN_sheep`\text{\textperthousand}, while goats exhibit mean $\delta ^{13}C$ values of `r iso_meandC_goat` ± `r iso_stddevC_goat`\text{\textperthousand} and mean $\delta ^{15}N$ values of `r iso_meandN_goat` ± `r iso_stddevN_goat`\text{\textperthousand}. Goat mean $\delta ^{13}C$ values are not significantly different from those of sheep (t-statistic: `r sheep_goat_dC_ttest_statistic`, degrees of freedom: `r sheep_goat_dC_ttest_df`, *p*-value: `r sheep_goat_dC_ttest_p`). The ovicaprids' statistically similar mean $\delta ^{13}C$ values indicate similar foraging in open forests (due to slightly positive $\delta ^{13}C$ values). Sheep exhibit significantly higher $\delta ^{15}N$ values than goats (t-statistic: `r sheep_goat_dN_ttest_statistic`, degrees of freedom: `r sheep_goat_dN_ttest_df`, *p*-value: `r sheep_goat_dN_ttest_p`), demonstrating that sheep were foddered on food sourced from manured vegetation with the assumption of uniform coastal impact on all vegetation (Figure \ref{fig:fauna-carbnitro-iso-plot}). Sheep are superior to goats both in terms of secondary products and ease of management [@davis07; @rutter02]. Owing to the more attached economic interests with sheep, it is natural to give food sourced from cultivated crops. Since the coastal/salt marsh effect masks the increase of $\delta ^{15}N$ values caused by manuring in cultivated crops, the statistically significant difference of $\delta ^{15}N$ between goats and sheep can be attributed to the consumption of manured crops. Cattle show mean $\delta ^{13}C$ values of `r iso_meandC_cattle` ± `r iso_stddevC_cattle`\text{\textperthousand} and mean $\delta ^{15}N$ values of `r iso_meandN_cattle` ± `r iso_stddevN_cattle`\text{\textperthousand}. The cattle have statistically non-significant (t-statistic: `r sheep_cattle_dC_ttest_statistic`, degrees of freedom: `r sheep_cattle_dC_ttest_df`, *p*-value: `r sheep_cattle_dC_ttest_p`) $\delta ^{13}C$ isotope ratios compared to sheep. Cattle also seem to have grazed in open areas similar to the sheep. The $\delta ^{15}N$ isotope ratios of cattle are also significantly not different from sheep (t-statistic: `r sheep_cattle_dN_ttest_statistic`, degrees of freedom: `r sheep_cattle_dN_ttest_df`, *p*-value: `r sheep_cattle_dN_ttest_p`). Though significantly not different than sheep, the mean $\delta ^{15}N$ values of cattle are lower (Figure \ref{fig:fauna-carbnitro-iso-plot}). Most of the cattle bones are from adults, which indicates that they were used as a source of power and only slaughtered for meat towards the end of their lives [@davis07]. Since they were used for labour intense tasks, their diet could have a considerable amount of cultivated crop components. Pigs show mean $\delta ^{13}C$ values of `r iso_meandC_pig` ± `r iso_stddevC_pig`\text{\textperthousand} and mean $\delta ^{15}N$ values of `r iso_meandN_pig` ± `r iso_stddevN_pig`\text{\textperthousand}. The high $\delta ^{15}N$ values of pigs reflect an omnivorous diet consisting of agricultural components and human food scraps similar to the Neolithic and Chalcolithic periods from Portugal [@waterman_etal16; @zalaite_etal18].
+## Faunal bone collagen isotope values
 
-### Wild and domesticated birds
+All fifty faunal samples, demonstrate stable isotope values within the range expected for a C~3~ temperate ecosystem with $\delta ^{34}S$ values of fauna ranging from 9.5 \text{\textperthousand} to 15.8 \text{\textperthousand}. The isotope composition of the fauna is presented in Table \ref{tab:table4} and the mean summary data by species in Table \ref{tab:table5}.
 
-Partridges show mean $\delta ^{13}C$ values of `r iso_meandC_partridge` ± `r iso_stddevC_partridge`\text{\textperthousand} and mean $\delta ^{15}N$ values of `r iso_meandN_partridge` ± `r iso_stddevN_partridge`\text{\textperthousand} while chicken exhibit mean $\delta ^{13}C$ values of `r iso_meandC_chicken` ± `r iso_stddevC_chicken`\text{\textperthousand} and mean $\delta ^{15}N$ values of `r iso_meandN_chicken` ± `r iso_stddevN_chicken`\text{\textperthousand}. The $\delta ^{13}C$ values (t-statistic: `r chicken_partridge_dC_ttest_statistic`, degrees of freedom: `r chicken_partridge_dC_ttest_df`, *p*-value: `r chicken_partridge_dC_ttest_p`) and $\delta ^{15}N$ values (t-statistic: `r chicken_partridge_dN_ttest_statistic`, degrees of freedom: `r chicken_partridge_dN_ttest_df`, *p*-value: `r chicken_partridge_dN_ttest_p`) are significantly different. The chicken owing to its domesticated status, has higher $\delta ^{13}C$ and $\delta ^{15}N$ values. In Iron Age, chickens were usually reared in domestic spaces while being fed on food scraps and possibly millet (a C~4~ plant) [@fernandez-crespo_etal19]. Chicken also eat insects alongside the human-provided food which can lead to an increase of $\delta ^{15}N$ values. Usual partridge diet consists of arthropods, grass seeds, flowers, and weeds while they prefer foraging at the edges of agricultural fields [@green84] which can explain the higher $\delta ^{15}N$ values in comparison with red deer. All the partridges recovered are adults, whereas the chickens constitute juvenile-adult mix, further indicative that the former were hunted for consumption. Grey plover has a mean $\delta ^{13}C$ value of -14.9\text{\textperthousand} and a mean $\delta ^{15}N$ value of 10.3\text{\textperthousand}. Grey plovers are known to feed in muddy intertidal zones on insects (such as Coleoptera), polychaetes, molluscs, and crustaceans [@perez-hurtado_etal97]. The isotope values are consistent with a diet including both terrestrial and marine prey. Kittiwake has a mean $\delta ^{13}C$ value of -15.5\text{\textperthousand} and a mean $\delta ^{15}N$ value of 13.9\text{\textperthousand}. Kittiwake's diet consists of fish, marine invertebrates, and plankton [@bull_etal04]. The $\delta ^{13}C$ and $\delta ^{15}N$ values are as expected of a species with a marine diet.
+# Discussion
 
-Overall, the domesticated mammals are not above one trophic level (\< 4\text{\textperthousand} $\delta^{15}N$) over the plants (both cultivated barley and stone pine) (Figure \ref{fig:fauna-carbnitro-iso-plot}). Thus, they seem to be foraging in areas away from the coastal/salt-marsh zones. Inland Iron Age domesticated mammals have mean $\delta ^{13}C$ values ranging between 21 - 23\text{\textperthousand} (for C~3~ temperate ecosystem) and $\delta ^{15}N$ mean values ranging between 3-5\text{\textperthousand} for herbivores and \> 6\text{\textperthousand} for omnivores [@fernandez-crespo_etal19; @hamilton_etal19; @schulting_etal19; @styring_etal17]. In comparison, the fauna at Castro Marim have similar $\delta ^{13}C$ values and slightly higher $\delta ^{15}N$ mean values. Apart from manuring, another reason for these slightly higher $\delta^{15}N$ values could be periodic movement to a territory away from the coast. Since Iron Age Castro Marim settlement was short of foraging space (Figure \ref{fig:castro-marim-pal}), the animals could be in a periodic movement between the settlement and a space more inland. This movement can be investigated further by sequential sampling of faunal enamel for future $\delta^{13}C_{carbonate}$ and $\delta^{18}O$ studies [@vaiglova_etal20]. Any substantial increase in $\delta^{15}N$ gained due to salt marsh foraging [@britton_etal08] or physiological stress from saline water [@ambrose91] would be evened by the subsequent migration towards inland of the domesticated fauna leading to slightly higher $\delta ^{15}N$ values.
+(ref:isohord-caption) **(a).** Beeswarm plot showing $\Delta ^{13}C$ values of barley cultivars where the area between the blue dashed lines represents 'moderately-watered' condition with the 'well-watered' condition being above the top blue line and 'poorly-watered' condition being below the lower blue line, based on the study of modern crops in varying watering conditions [@wallace_etal13]. **(b).** Beeswarm plot showing the manuring status of barley cultivars with green shaded region representing 1 SD range of estimated wild herbivore forage value (calculated from subtraction 4 \text{\textperthousand} from red deer $\delta ^{15}N$ mean ± 1 SD range).
 
-(ref:fauna-sulph-iso) Plot showing mean $\delta ^{34}S$ values (mean ± 1 SD range) of faunal bone collagen. The values are horizontally jittered to increase the visibility of the data points. The region between the gray lines represents Western European Triassic sediment $\delta ^{34}S$ value range.
+```{r iso-hord-plots, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, fig.width=5, fig.height=5,crop = NULL,fig.cap= '(ref:isohord-caption)'}
 
-```{r fauna-sulph-iso-plot, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, out.width='0.98\\textwidth', fig.height=4, crop = NULL, fig.env='figure*', fig.cap= '(ref:fauna-sulph-iso)'}
 
-theme5 <-
+theme1<-theme(panel.background = element_blank(), legend.box.background = element_rect(colour = "black"), legend.key = element_blank(), legend.key.size = unit(0.5, 'cm'),legend.position="right",legend.background = element_blank(), legend.title.align = 0.5, legend.text = element_text(size=4),legend.title=element_text(size=6),axis.title.x = element_blank(), axis.title.y = element_text(size=7), panel.border=element_rect(fill=NA),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),strip.background=element_blank(),axis.text.x=element_blank(),axis.text.y=element_text(colour="black"),axis.ticks.y=element_line(colour="black"), axis.ticks.x=element_blank(), plot.margin=unit(c(1,1,1,1),"line"))
+
+theme2<-theme(panel.background = element_blank(),legend.key.size = unit(0.5, 'cm'),legend.position="none", legend.text = element_text(size=4),legend.title=element_text(size=4),axis.title.x = element_blank(), axis.title.y = element_text(size=7), panel.border=element_rect(fill=NA),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),strip.background=element_blank(),axis.text.x=element_blank(),axis.text.y=element_text(colour="black"),axis.ticks.y=element_line(colour="black"), axis.ticks.x=element_blank(), plot.margin=unit(c(1,1,1,1),"line"))
+
+lbl1 <- c(expression(italic("Hordeum vulgare")*" "* "subsp."*" "*italic("vulgare")),expression(italic("Hordeum vulgare")*" "* "var."*" "*italic("nudum")),expression(italic("Pinus pinea")))
+
+cust_colo1 <- c('Hordeum vulgare subsp. vulgare'="#4749dc", 'Hordeum vulgare var. nudum'="#158a2c",'Pinus pinea'="#7d4400")
+
+p1<-ggplot(df_iso_hord, aes(x=Site,y=DC, color=Species)) + geom_quasirandom() + scale_color_manual(label = lbl1,values = cust_colo1)  + theme2 + labs(x='',y=expression(paste(Delta^{13}, "C (\u2030 vs. Air)")), tag = "(a)") + coord_fixed(1.65) + geom_hline(yintercept = 17, color='deepskyblue3', linetype="dotted", size=1) + geom_hline(yintercept = 19, color='deepskyblue3', linetype="dotted", size=1, show.legend = T)
+
+p2<-ggplot(df_iso_bota, aes(x=Site,y=dN, color=Species)) + geom_quasirandom() + scale_color_manual(label = lbl1, values = cust_colo1) + theme1 + labs(x='',y=expression(paste(delta^{15}, "N (\u2030 vs. Air)")), tag = "(b)") + coord_fixed(0.5) + geom_hline(yintercept = 0, color='seagreen3', linetype="dotted", size=1) + geom_hline(yintercept = 5, color='seagreen3', linetype="dotted", size=1, show.legend = T) + annotate("rect", xmin = 0, xmax = Inf, ymin = 0, ymax = 5, alpha = .2, fill = "seagreen2")
+
+p1 | p2
+
+```
+
+
+## Water and nutrient nitrogen availability for vegetation
+
+Though the plants are located close to the coast (Fig. \ref{fig:castro-marim-loc}), the source of carbon is from the atmosphere [@cloern_etal02], and thus the values are similar to terrestrial plants. The $\delta ^{13}C$ means of both barley cultivars show no statistically significant difference (t-statistic: `r hord_dC_ttest_statistic`, degrees of freedom: `r hord_dC_ttest_df`, *p*-value: `r hord_dC_ttest_p`). The $\Delta ^{13}C$ values (Figure \ref{fig:iso-hord-plots} **(a)**) show barley cultivated in poor to moderate watering conditions, which would indicate that the plants have been dependent on natural precipitation with little or no artificial irrigation in an arid climatic regime [@fernandez-crespo_etal19; @fletcher_etal07].
+
+There is no significant difference (t-statistic: `r hord_dN_ttest_statistic`, degrees of freedom: `r hord_dN_ttest_df`, *p*-value: `r hord_dN_ttest_p`) between the two barley cultivars, but Pinus pinea yields higher $\delta ^{15}N$ values. The $\delta ^{15}N$ mean values of the plants in salt marshes are higher when compared to completely inland sites [@cloern_etal02]. The $\delta ^{15}N$ isotope ratios are elevated, as the coastal/saline soils are enriched in nutrient nitrogen because of nitrate sea-spray, nitrification, denitrification, and ammonium absorption [@ambrose91; @heaton87; @virginia_delwiche82]. The stone pine samples exhibit higher mean values than the barley cultivars despite the possibility that the latter could be subjected to manuring regimes (Figure \ref{fig:iso-hord-plots} **(b)**). This indicates that the barley was cultivated in locations farther away from the coastline than the stone pine and explains the poor to moderate watering conditions despite Castro Marim being close to Guadiana estuary. Because the settlement was located on a narrow strip of land surrounded by water (Figure \ref{fig:castro-marim-pal}), the lack of space to grow crops must have been the primary reason for growing the barley away from the coast. Thus, any effects of manure on $\delta ^{15}N$ isotope ratios of barley are masked by the increase caused by the proximity to the coast/salt marsh.
+
+```{r table4, echo=FALSE, results='asis'}
+options(knitr.kable.NA = "--")
+
+color.goat <- which(df_iso_fauna$Species == 'Capra hircus')
+color.sheep <- which(df_iso_fauna$Species == 'Ovis aries')
+
+df_iso_fauna %>%
+  select(Sample, Species,percentC,percentN,percentS,CN,CS,NS, dC, dN, dS) %>%
+  kable(caption = "Carbon, nitrogen, and sulphur isotope composition of the fauna.", digits = 2, booktabs = T,linesep = "", longtable = T, align = "ccccccccccc", format = "latex", escape = FALSE,table.env='table*', col.names=c("Sample ID","Species","\\% C","\\% N","\\% S","C:N","C:S","N:S", "$\\delta^{13}C (\\text{\\textperthousand})$","$\\delta^{15}N (\\text{\\textperthousand})$","$\\delta^{34}S (\\text{\\textperthousand})$")) %>%
+  kable_styling(latex_options = c("basic", "hold_position","repeat_header"), font_size = 7.5) %>%
+  row_spec(color.goat, bold = T, color = "black", background = "white") %>%
+  row_spec(color.sheep, bold = T, color = "black", background = "white") %>%
+  column_spec(2,italic = TRUE) %>%
+  footnote(general = "The ovicaprid samples which were identified as goats and sheep are in bold.")
+  
+```
+
+## Stable isotopes of wild and domesticated fauna
+
+(ref:fauna-carbnitro-iso) Plot showing mean $\delta ^{13}C$ and $\delta ^{15}N$ values (mean ± 1 SD range) of faunal bone collagen and botanical remains. The colour palette is produced with the Colorgorical web app [@gramazio_etal17].
+
+```{r fauna-carbnitro-iso-plot, dpi=600, echo=FALSE, dpi=600, fig.show="hold", out.width='0.98\\textwidth', fig.height=6,crop = NULL, fig.env='figure*', fig.cap= '(ref:fauna-carbnitro-iso)'}
+
+theme <-
   theme(
     panel.background = element_blank(),
     legend.background = element_blank(),
-    legend.key.size = unit(0.3, 'cm'),
+    legend.key.size = unit(0.45, 'cm'),
     legend.box.background = element_rect(colour = "black"),
-    legend.position = "none",
-    text = element_text(size = 7),
-    axis.title.x = element_text(size = 6),
-    axis.title.y = element_text(size = 6),
+    legend.position = c(0.8, 0.18),
+    legend.text = element_text(size = 6,hjust=0),
+    legend.title.align = 0.4,
+    legend.title = element_text(size=8),
+    legend.key = element_blank(),
+    text = element_text(),
+    axis.title.x = element_text(size = 8),
+    axis.title.y = element_text(size = 8),
     panel.border = element_rect(fill = NA),
     panel.grid.major = element_blank(),
     panel.grid.minor = element_blank(),
@@ -683,26 +593,207 @@ theme5 <-
     plot.margin = unit(c(1, 1, 1, 1), "line")
   )
 
+
+dffinal_iso_summ <- df_iso_fauna %>%
+  select(Species, Common_Name, dC, dN, dS) %>%
+  group_by(Common_Name) %>%
+  summarize(
+    n = n(),
+    mean_dC = mean(dC, na.rm = TRUE),
+    std.dev_dC = sd(dC, na.rm = TRUE),
+    mean_dN = mean(dN, na.rm = TRUE),
+    std.dev_dN = sd(dN, na.rm = TRUE),
+    mean_dS = mean(dS, na.rm = TRUE),
+    std.dev_dS = sd(dS, na.rm = TRUE),
+    min_dC = min(dC, na.rm = TRUE),
+    max_dC = max(dC, na.rm = TRUE),
+    min_dN = min(dN, na.rm = TRUE),
+    max_dN = max(dN, na.rm = TRUE),
+    min_dS = min(dS, na.rm = TRUE),
+    max_dS = max(dS, na.rm = TRUE))
+
+lbl <- c(expression(bold("Plants")), "Barley", "Stone Pine", expression(bold("Birds")), "Grey Plover", "Kittiwake", "Partridge", "Chicken", expression(bold("Domesticated Mammals")), "Pig", "Cattle", "Goat","Sheep", expression(bold("Wild Mammals")), "Rabbit", "Red Deer")
+
+cust_colo <- c('Plants'=NA, 'Barley'="#4749dc", 'Stone Pine'="#00344d", 'Birds'=NA, 'Grey Plover'="#25738b", 'Kittiwake'="#e30293", 'Partridge'="#b452a2", 'Chicken'="#5866ad",'Domesticated Mammals'=NA, 'Pig'="#4e052e",  'Cattle'="#071576", 'Goat'="#158a2c", 'Sheep'="#0b4512", 'Wild Mammals'=NA, 'Rabbit'="#637f4b", 'Red Deer'="#7d4400")
+
+cust_shp <- c('Plants'=NA,'Barley'=17,'Stone Pine'=15,'Birds'=NA,'Grey Plover'=16,'Kittiwake'=17,'Partridge'=15,'Chicken'=16,'Domesticated Mammals'=NA,'Pig'=17,'Cattle'=15,'Goat'=16,'Sheep'=17,'Wild Mammals'=NA,'Rabbit'=16,'Red Deer'=17)
+
+
+
+
+iso_carbnitro_mean_plot <-
+  ggplot(df_iso_total,
+         aes(
+           x = dC,
+           y = dN,
+           shape = Common_Name,
+           colour = Common_Name
+         )) +
+  geom_point(size = 3, alpha = 0.3) + labs(x = expression(paste(delta ^ {
+    13
+  }, "C (\u2030 vs. VPDB)")),
+  y = expression(paste(delta ^ {
+    15
+  }, "N (\u2030 vs. Air)"))) + scale_shape_manual(label = lbl, values = cust_shp) + scale_color_manual(label =
+                                                                                                         lbl, values = cust_colo) + scale_y_continuous(breaks = seq(2.5, 16, 1)) + scale_x_continuous(limits =
+                                                                                                                                                                                                        c(-27, -13), breaks = seq(-27, -12, 1)) + annotate(
+                                                                                                                                                                                                          "text",
+                                                                                                                                                                                                          x = -25,
+                                                                                                                                                                                                          y = 15.5,
+                                                                                                                                                                                                          colour = "gray44" ,
+                                                                                                                                                                                                          size = 3,
+                                                                                                                                                                                                          label = "Pure C3 feeders"
+                                                                                                                                                                                                        ) + annotate(
+                                                                                                                                                                                                          "text",
+                                                                                                                                                                                                          x = -18.5,
+                                                                                                                                                                                                          y = 15.5,
+                                                                                                                                                                                                          colour = "gray44" ,
+                                                                                                                                                                                                          size = 3,
+                                                                                                                                                                                                          label = "Addition of C4 plants"
+                                                                                                                                                                                                        ) + theme + geom_vline(
+                                                                                                                                                                                                          xintercept = -21,
+                                                                                                                                                                                                          color = 'gray62',
+                                                                                                                                                                                                          linetype = "dotted",
+                                                                                                                                                                                                          size = 1
+                                                                                                                                                                                                        ) + geom_point(data = df_iso_fauna_summ, size = 3, aes(x = meandC, y = meandN)) + geom_errorbar(
+  data = df_iso_fauna_summ,
+  aes(
+    x = meandC,
+    y = meandN,
+    ymin = meandN - stddevdN,
+    ymax = meandN + stddevdN
+  ),
+  width = .1,show.legend = F
+) + geom_errorbarh(
+  data = df_iso_fauna_summ,
+  aes(
+    x = meandC,
+    y = meandN,
+    xmin = meandC - stddevdC,
+    xmax = meandC + stddevdC
+  ),
+  height = .1,show.legend = F
+) + guides(col = guide_legend(ncol = 2, title = expression(bold('Species'))),
+           shape = guide_legend(ncol = 2, expression(bold('Species'))))
+
+iso_carbnitro_mean_plot
+
+```
+
+<!-- _______________________________________________labels for table5 headers____________________________________________ -->
+
+(ref:fauna-iso-summ-tab) Summary of mean $\delta ^{13}C$, $\delta ^{15}N$, and $\delta ^{34}S$ values, by species.
+(ref:dC-iso-summ-tab) $\delta ^{13}C (\text{\textperthousand})$
+(ref:dN-iso-summ-tab) $\delta ^{15}N (\text{\textperthousand})$
+(ref:dS-iso-summ-tab) $\delta ^{34}S (\text{\textperthousand})$
+
+<!-- ____________________________________________________________________________________________________________ -->
+
+```{r table5, echo=FALSE, results='asis'}
+options(knitr.kable.NA = "--")
+
+
+df_iso_fauna_summ |>
+  select(Species,n,meandC,stddevdC,meandN,stddevdN,meandS,stddevdS) |>
+  kable(caption = "(ref:fauna-iso-summ-tab)", digits = 2, booktabs = T,linesep = "", longtable = T, align = "ccccccccc", format = "latex", escape = FALSE,table.env='table*', col.names=c("Species","n","$(\\bar{x})$","$(\\sigma)$","$(\\bar{x})$","$(\\sigma)$","$(\\bar{x})$","$(\\sigma)$")) %>%
+  kable_styling(latex_options = c("basic", "hold_position"), font_size = 7.5) |>
+  add_header_above(c(" " = 2, "(ref:dC-iso-summ-tab)" = 2, "(ref:dN-iso-summ-tab)" = 2, "(ref:dS-iso-summ-tab)" = 2))
+  
+```
+
+(ref:fauna-sulph-iso) Plot showing mean $\delta ^{15}N$ and $\delta ^{34}S$ values (mean ± 1 SD range) of faunal bone collagen. The yellow lines mark the range while the arrow indicates the decreasing trend of $\delta ^{34}S$ values as one moves inland away from the coast up to 30 km [@wakshal_nielsen82; @mizota_sasaki96; @nehlich15].
+
+```{r fauna-sulph-iso-plot, dpi=600, echo=FALSE, message = FALSE, error = FALSE, warning = FALSE, out.width='0.98\\textwidth', fig.height=6,fig.keep=TRUE, crop = NULL, fig.env='figure*', fig.cap= '(ref:fauna-sulph-iso)'}
+
+theme5 <-
+  theme(
+    panel.background = element_blank(),
+    legend.background = element_blank(),
+    legend.key.size = unit(0.45, 'cm'),
+    legend.box.background = element_rect(colour = "black"),
+    legend.position = "right",
+    legend.text = element_text(size = 6,hjust=0),
+    legend.title.align = 0.4,
+    legend.title = element_text(size=8),
+    legend.key = element_blank(),
+    text = element_text(),
+    axis.title.x = element_text(size = 8),
+    axis.title.y = element_text(size = 8),
+    panel.border = element_rect(fill = NA),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    strip.background = element_blank(),
+    axis.text.x = element_text(colour = "black"),
+    axis.text.y = element_text(colour = "black"),
+    axis.ticks = element_line(colour = "black"),
+    plot.margin = unit(c(1, 1, 1, 1), "line")
+  )
+
+# theme6 <-
+#   theme(
+#     panel.background = element_blank(),
+#     legend.background = element_blank(),
+#     legend.key.size = unit(0.45, 'cm'),
+#     legend.box.background = element_rect(colour = "black"),
+#     legend.position = "none",
+#     legend.text = element_text(size = 6,hjust=0),
+#     legend.title.align = 0.4,
+#     legend.title = element_text(size=8),
+#     legend.key = element_blank(),
+#     text = element_text(),
+#     axis.title.x = element_text(size = 8),
+#     axis.title.y = element_text(size = 8),
+#     panel.border = element_rect(fill = NA),
+#     panel.grid.major = element_blank(),
+#     panel.grid.minor = element_blank(),
+#     strip.background = element_blank(),
+#     axis.text.x = element_text(colour = "black",size = 5),
+#     axis.text.y = element_text(colour = "black"),
+#     axis.ticks = element_line(colour = "black"),
+#     plot.margin = unit(c(1, 1, 1, 1), "line")
+#   )
+
+
 cust_sulp_colo <- c('Grey Plover'="#25738b", 'Kittiwake'="#e30293", 'Partridge'="#b452a2", 'Chicken'="#5866ad", 'Pig'="#4e052e",  'Cattle'="#071576", 'Goat'="#158a2c", 'Sheep'="#0b4512", 'Rabbit'="#637f4b", 'Red Deer'="#7d4400")
 
 cust_sulp_shp <- c('Grey Plover'=16,'Kittiwake'=17,'Partridge'=15,'Chicken'=16,'Pig'=17,'Cattle'=15,'Goat'=16,'Sheep'=17,'Rabbit'=16,'Red Deer'=17)
 
-iso_sulphur_plot <- ggplot(dffinal_iso_summ, aes(x=Common_Name,y=mean_dS, color=Common_Name, shape=Common_Name)) +
-  geom_point(size = 3, alpha = 0.65) + geom_errorbar(aes(ymin=mean_dS-std.dev_dS, ymax=mean_dS+std.dev_dS), width=.1) + theme5 + labs( x='',y=expression(paste(delta^{34}, "S (\u2030 vs. VCDT)")), shape = 'Species', colour = 'Species') + scale_color_manual(values =cust_sulp_colo) + scale_shape_manual(values = cust_sulp_shp) + geom_jitter(data = df_iso_fauna, aes(x = Common_Name, y = dS), width=0.25) + scale_x_discrete(limits = c("Grey Plover","Kittiwake","Partridge","Chicken","Pig","Cattle","Goat","Sheep","Rabbit","Red Deer")) + geom_hline(yintercept=9.5, linetype="dotted", color = "gray62", size=1) + geom_hline(yintercept=15, linetype="dotted", color = "gray62", size=1)
 
-iso_sulphur_plot
+
+
+
+
+
+iso_nitrosulph_mean_plot <- ggplot(df_iso_fauna, aes(x=dN, y=dS, shape = Common_Name, colour= Common_Name)) +
+  geom_point(size = 3, alpha = 0.3) + labs(x = expression(paste(delta^{15}, "N (\u2030 vs. VPDB)")), y = expression(paste(delta^{34}, "S (\u2030 vs. VCDT)")), shape = 'Species', colour = 'Species') + scale_shape_manual(values = cust_sulp_shp) + scale_color_manual(values =cust_sulp_colo) + scale_y_continuous(limits=c(6,21),breaks=seq(6,21,1)) + scale_x_continuous(limits=c(2.5,16),breaks = seq(2.5, 16, 1)) + theme5 + geom_point(data = df_iso_fauna_summ,size = 3, aes(x=meandN, y=meandS)) + geom_errorbar(data = df_iso_fauna_summ,aes(x=meandN, y=meandS,ymin=meandS-stddevdS, ymax=meandS+stddevdS), width=.1) + geom_errorbarh(data = df_iso_fauna_summ,aes(x=meandC, y=meandS,xmin=meandN-stddevdN, xmax=meandN+stddevdN), height=.1) + geom_hline(yintercept=10, linetype="dotted", color = "#E69F00", size=1) + geom_hline(yintercept=20, linetype="dotted", color = "#E69F00", size=1) + annotate("segment", x = 15.5, xend = 15.5, y = 20, yend = 10, colour="#E69F00",size=0.5, arrow = arrow()) + geom_hline(yintercept=20.3, linetype="dotted", color = "#000000", size=1) + annotate("text",x = 8.5,y = 20.7,colour = "#000000",size = 3,label = expression(paste(delta^{34}, "S value of oceanic water"))) + annotate("text",x = 15,y = 15,colour = "#E69F00",size = 3,label = "Sea spray effect",angle=90)
+
+iso_nitrosulph_mean_plot
+
+# iso_sulphur_plot <- ggplot(dffinal_iso_summ, aes(x=Common_Name,y=mean_dS, color=Common_Name, shape=Common_Name)) +
+#   geom_point(size = 3, alpha = 0.65) + geom_errorbar(aes(ymin=mean_dS-std.dev_dS, ymax=mean_dS+std.dev_dS), width=.1) + theme6 + labs( x='',y=expression(paste(delta^{34}, "S (\u2030 vs. VCDT)"), shape = 'Species', colour = 'Species',tag = "(b)")) + scale_y_continuous(limits=c(6,21),breaks=seq(6,21,1)) + scale_color_manual(values =cust_sulp_colo) + scale_shape_manual(values = cust_sulp_shp) + geom_jitter(data = df_iso_fauna, aes(x = Common_Name, y = dS), width=0.25) + scale_x_discrete(limits = c("Grey Plover","Kittiwake","Partridge","Chicken","Pig","Cattle","Goat","Sheep","Rabbit","Red Deer")) + geom_hline(yintercept=10, linetype="dotted", color = "gray62", size=1) + geom_hline(yintercept=20, linetype="dotted", color = "gray62", size=1)
+
+
+# patchwork <- iso_nitrosulph_mean_plot/iso_sulphur_plot
+# 
+# patchwork + plot_annotation(tag_levels = 'a', tag_prefix = '(', tag_suffix = ')')
 
 ```
 
-## Faunal bone collagen $\delta ^{34}S$ values {#sulphur}
 
-$\delta ^{34}S$ values of fauna range from 9.5 \text{\textperthousand} to 15.8 \text{\textperthousand}. The offset of $\delta ^{34}S$ between diet to collagen is considered to be negligible [@nehlich15]. Since the diet-collagen offset is negligible, collagen $\delta ^{34}S$ values often reflect the local geological settings and sea-spray due to proximity to the coast (\<30 km). The geological substrate of areas surrounding Castro Marim consists of patches of Triassic sediments surrounded by Quaternary bedrock zones [@terrinha98]. A compilation of $\delta ^{34}S$ of Triassic sediments from Western Europe [@claypool_etal80] presents a range of 9.5\text{\textperthousand} to 15\text{\textperthousand}. Thus, any values between this range can be considered as a signal for local. Both grey plover and kittiwake are known to migrate seasonally, which makes the interpretation of their $\delta ^{34}S$ values complicated [@coulson11; @thompsonbyrkjedal10]. Kittiwake has higher $\delta ^{34}S$ value than the Triassic range that can attributed to its highly marine diet, indicated by its $\delta ^{13}C$ and $\delta ^{15}N$ values. The average $\delta ^{34}S$ values of all other fauna fall within the range of Western European Triassic sediments, thus indicating that most of them are of local origin (Figure \ref{fig:fauna-sulph-iso-plot}). Though some animals (two chicken, four cattle, five sheep, one goat, one rabbit, and two red deer) yield $\delta ^{34}S$ values outside the Triassic range. This could be due to these individuals originating from a different geological bedrock. $\delta ^{34}S$ mean values of rabbits are `r iso_meandS_rabbit` ± `r iso_stddevS_rabbit`\text{\textperthousand}, and the $\delta ^{34}S$ mean values of red deer are `r iso_meandS_reddeer` ± `r iso_stddevS_reddeer`\text{\textperthousand}. Both the wild mammals have low standard deviations indicating that individuals are of close spatial origins or with similar bedrocks (Figure \ref{fig:fauna-sulph-iso-plot}). From the domesticated species, goats have mean $\delta ^{34}S$ values of `r iso_meandS_goat` ± `r iso_stddevS_goat`\text{\textperthousand}, pigs have mean $\delta ^{34}S$ values of `r iso_meandS_pig` ± `r iso_stddevS_pig`\text{\textperthousand}, and chickens have mean $\delta ^{34}S$ values of `r iso_meandS_chicken` ± `r iso_stddevS_chicken`\text{\textperthousand}. These three species have relatively low standard deviations similar to wild mammals (Figure \ref{fig:fauna-sulph-iso-plot}). Pigs and chicken could have been penned in spaces attached to human residences, giving rise to the low standard deviations. The $\delta ^{34}S$ values of goats can be explained by foraging in areas with similar bedrocks. In the case of sheep, the mean $\delta ^{34}S$ values are `r iso_meandS_sheep` ± `r iso_stddevS_sheep`\text{\textperthousand} while the mean $\delta ^{34}S$ values of cattle are `r iso_meandS_cattle` ± `r iso_stddevS_cattle`\text{\textperthousand}. Sheep and cattle have the highest standard deviation amongst the fauna, which could be caused due to periodic movement between areas with different bedrocks (Figure \ref{fig:castro-marim-loc} and Figure \ref{fig:fauna-sulph-iso-plot}). Since the average $\delta ^{34}S$ values of sheep and cattle are still within the range of what is considered local, the movement could be somewhere inland within the territory of the settlement.
+The mean $\delta ^{13}C$ values of red deer are significantly higher than those of rabbits (t-statistic: `r rabbit_reddeer_dC_ttest_statistic`, degrees of freedom: `r rabbit_reddeer_dC_ttest_df`, *p*-value: `r rabbit_reddeer_dC_ttest_p`). This can be attributed to the rabbits' foraging ground level flora with high recycling of CO~2~ and shade from the higher levels of the canopy in contrast with the red deer foraging at greater heights. Feeding in forested areas causes the $\delta ^{13}C$ values to deplete due to the canopy effect [@bonafini_etal13]. The $\delta ^{15}N$ values of rabbits are anomalous with a standard deviation spanning almost a trophic level (standard deviation of $\delta ^{15}N$: `r iso_stddevN_rabbit`\text{\textperthousand}). It can be observed from Fig. \ref{fig:fauna-carbnitro-iso-plot} that the rabbits consist of two distinct groups, indicative that the group with higher $\delta ^{13}C$ and $\delta ^{15}N$ values was foraging in coastal/salt-marsh zones, whereas the other group had more inland located food sources (Figure \ref{fig:fauna-carbnitro-iso-plot}). Mean $\delta ^{34}S$ values of red deer are significantly higher than the rabbits (t-statistic: `r rabbit_reddeer_dS_ttest_statistic`, degrees of freedom: `r rabbit_reddeer_dS_ttest_df`, *p*-value: `r rabbit_reddeer_dS_ttest_p`). This could be due to the red deer grazing in the open forests closer to the coastline compared to the rabbits. It has been observed that the $\delta ^{34}S$ value of soil sulphates decrease as one moves inland away from the coast [@wakshal_nielsen82; @mizota_sasaki96; @nehlich15].
+
+Goat mean $\delta ^{13}C$ values are not significantly different from those of sheep (t-statistic: `r sheep_goat_dC_ttest_statistic`, degrees of freedom: `r sheep_goat_dC_ttest_df`, *p*-value: `r sheep_goat_dC_ttest_p`). The ovicaprids' statistically similar mean $\delta ^{13}C$ values indicate similar foraging in open forests (due to slightly positive $\delta ^{13}C$ values). Sheep exhibit significantly higher $\delta ^{15}N$ values than goats (t-statistic: `r sheep_goat_dN_ttest_statistic`, degrees of freedom: `r sheep_goat_dN_ttest_df`, *p*-value: `r sheep_goat_dN_ttest_p`), demonstrating that sheep were foddered on food sourced from manured vegetation with the assumption of uniform coastal impact on all vegetation (Figure \ref{fig:fauna-carbnitro-iso-plot}). Sheep are superior to goats both in terms of secondary products and ease of management [@davis07; @rutter02]. Owing to the more attached economic interests with sheep, it is natural to give food sourced from cultivated crops. Since the coastal/salt marsh effect masks the increase of $\delta ^{15}N$ values caused by manuring in cultivated crops, the statistically significant difference of $\delta ^{15}N$ between goats and sheep can be attributed to the consumption of manured crops. The $\delta ^{34}S$ values of the ovicaprids fall well within the range of the expected range of herbivores foraging on vegetation affected by sea spray with no statistically significant difference between each other (t-statistic: `r sheep_goat_dS_ttest_statistic`, degrees of freedom: `r sheep_goat_dS_ttest_df`, *p*-value: `r sheep_goat_dS_ttest_p`). The cattle have no significantly different (t-statistic: `r sheep_cattle_dC_ttest_statistic`, degrees of freedom: `r sheep_cattle_dC_ttest_df`, *p*-value: `r sheep_cattle_dC_ttest_p`) $\delta ^{13}C$ isotope ratios when compared to sheep. Cattle also seem to have grazed in open areas similar to the sheep. The $\delta ^{15}N$ isotope ratios of cattle are also significantly not different from sheep (t-statistic: `r sheep_cattle_dN_ttest_statistic`, degrees of freedom: `r sheep_cattle_dN_ttest_df`, *p*-value: `r sheep_cattle_dN_ttest_p`). Though significantly not different than sheep, the mean $\delta ^{15}N$ values of cattle are lower (Figure \ref{fig:fauna-carbnitro-iso-plot}). The $\delta ^{34}S$ values of cattle are also very similar to that of the sheep (t-statistic: `r sheep_cattle_dS_ttest_statistic`, degrees of freedom: `r sheep_cattle_dS_ttest_df`, *p*-value: `r sheep_cattle_dS_ttest_p`). Most of the cattle bones are from adults, which indicates that they were used as a source of power and only slaughtered for meat towards the end of their lives [@davis07]. Since they were used for labour intense tasks, their diet could have a considerable amount of cultivated crop components. All the three isotopic values of sheep and cattle present the image that the two domesticates were treated in a very similar manner and highly valued. The slightly positive $\delta ^{13}C$ and high $\delta ^{15}N$ values of pigs reflect an omnivorous diet consisting of agricultural components and human food scraps similar to the Neolithic and Chalcolithic periods from Portugal [@waterman_etal16; @zalaite_etal18]. The slightly positive $\delta ^{13}C$ values and $\delta ^{34}S$ are due to presence of fish and shellfish (molluscs and crustaceans) in the human food scraps. 
+
+The $\delta ^{13}C$ values (t-statistic: `r chicken_partridge_dC_ttest_statistic`, degrees of freedom: `r chicken_partridge_dC_ttest_df`, *p*-value: `r chicken_partridge_dC_ttest_p`) and $\delta ^{15}N$ values (t-statistic: `r chicken_partridge_dN_ttest_statistic`, degrees of freedom: `r chicken_partridge_dN_ttest_df`, *p*-value: `r chicken_partridge_dN_ttest_p`) of chicken and partridge are significantly different. The $\delta ^{34}S$ values on the other hand are not significantly different (t-statistic: `r chicken_partridge_dS_ttest_statistic`, degrees of freedom: `r chicken_partridge_dS_ttest_df`, *p*-value: `r chicken_partridge_dS_ttest_p`). The chicken owing to its domesticated status, has higher $\delta ^{13}C$, $\delta ^{15}N$, and $\delta ^{34}S$ values. The consistently higher isotopic values can be attributed to a diet of food scraps which have a component of marine component. Also, chicken eat insects alongside the human-provided food which can lead to an increase of $\delta ^{15}N$ values. Usual partridge diet consists of arthropods, grass seeds, flowers, and weeds while they prefer foraging at the edges of agricultural fields [@green84] which can explain the higher $\delta ^{15}N$ values in comparison with red deer. All the partridges recovered are adults, whereas the chickens constitute juvenile-adult mix, further indicative that the former were hunted for consumption. Grey plover has a mean $\delta ^{13}C$ value of -14.9\text{\textperthousand} and a mean $\delta ^{15}N$ value of 10.3\text{\textperthousand}. Grey plovers are known to feed in muddy intertidal zones on insects (such as Coleoptera), polychaetes, molluscs, and crustaceans [@perez-hurtado_etal97]. The isotope values are consistent with a diet including both terrestrial and marine prey. Kittiwake has a mean $\delta ^{13}C$ value of -15.5\text{\textperthousand} and a mean $\delta ^{15}N$ value of 13.9\text{\textperthousand}. Kittiwake's diet consists of fish, marine invertebrates, and plankton [@bull_etal04]. The $\delta ^{13}C$ and $\delta ^{15}N$ values are as expected of a species with a marine diet. The marine diet of kittiwake and the intertidal diet of the grey plover is reflected in the former's much higher $\delta ^{15}N$ and $\delta ^{34}S$ values.
+
+Overall, the domesticated mammals are not above one trophic level (\< 4\text{\textperthousand} $\delta^{15}N$) over the plants (both cultivated barley and stone pine) (Figure \ref{fig:fauna-carbnitro-iso-plot}). Thus, they seem to be also foraging in upland areas as well as the coastal/salt-marsh zones. Inland Iron Age domesticated mammals have mean $\delta ^{13}C$ values ranging between 21 - 23\text{\textperthousand} (for C~3~ temperate ecosystem) and $\delta ^{15}N$ mean values ranging between 3-5\text{\textperthousand} for herbivores and \> 6\text{\textperthousand} for omnivores [@fernandez-crespo_etal19; @hamilton_etal19; @schulting_etal19; @styring_etal17]. In comparison, the fauna at Castro Marim have similar $\delta ^{13}C$ values and slightly higher $\delta ^{15}N$ mean values. Apart from manuring, another reason for these slightly higher $\delta^{15}N$ values could be due to the proximity of the site to the coast. This is supported by the fact that most of the Castro Marim $\delta ^{34}S$ isotope values are well within the range of sea spray effect (Figure \ref{fig:fauna-sulph-iso-plot}). The large spread of the $\delta ^{34}S$ values could be due to the foraging spaces being located away from the settlement (\< 30 kms) since Iron Age Castro Marim settlement was short of foraging space (Figure \ref{fig:castro-marim-pal}). The few individuals not within the range can be considered as non-local.
+
 
 # Conclusions
 
-The $\delta ^{13}C$ values of the two barley cultivars indicate complete dependence on natural precipitation with little to no artificial irrigation. In the case of stone pine, $\delta ^{13}C$ values are non-conclusive concerning watering status due to the lack of established studies for *Pinus* species. The $\delta ^{15}N$ ratios of the plants are elevated due to the proximity of coast/salt marsh. The manuring of barley was masked by the high nitrogen nutrient soils of the salt marshes but manuring of crops fed to ovicaprids can be inferred from the significant difference between the mean $\delta ^{15}N$ values of sheep and goats. The $\delta ^{15}N$ values of stone pine are greater than those of the barley, indicating that the cultivation took place in locations far away from coast/salt marsh which is evident from the absence of space near the settlement in Iron Age. In the case of wild fauna, the $\delta ^{13}C$ values of rabbits indicate foraging at ground level in closed settings, while those of red deer indicate grazing at higher levels in more open areas. The $\delta ^{15}N$ values of rabbits indicate two different groups, with one group foraging in salt marshes and the other from a more terrestrial setting. Ovicaprid $\delta ^{13}C$ values indicate foraging in open pastures. Comparing the $\delta ^{15}N$ ratios of sheep and goats show that the former was fed agricultural produce/by-products, which the latter lacked. The cattle also foraged in open areas and had cultivated components in its diet compared to the sheep. Pigs exhibit $\delta ^{13}C$ and $\delta ^{15}N$ values consistent with an omnivorous diet. In the case of the seabirds, both grey plover and kittiwake exhibit $\delta ^{13}C$ and $\delta ^{15}N$ values consistent with their diet. Chicken has $\delta ^{13}C$ and $\delta ^{15}N$ values are reflective of its domesticated status with a mixture of C~3~ and C~4~ plants, insects, and food scraps. The $\delta ^{15}N$ values of the fauna are not a trophic level above the plants, which can be because of either periodic movement or salt stress. The $\delta ^{34}S$ values of overall fauna indicate a local origin. Goats, pigs, and chickens have a low range of values due to penning in domestic spaces. The $\delta ^{34}S$ values of cattle and sheep have a more extensive range of values which could be due to periodic migration or of being non-local origin.
+The $\delta ^{13}C$ values of the two barley cultivars indicate complete dependence on natural precipitation with little to no artificial irrigation. In the case of stone pine, $\delta ^{13}C$ values are non-conclusive concerning watering status due to the lack of established studies for *Pinus* species. The $\delta ^{15}N$ ratios of the plants are elevated due to the proximity of coast/salt marsh. The manuring of barley was masked by the high nitrogen nutrient soils of the salt marshes but manuring of crops fed to ovicaprids can be inferred from the significant difference between the mean $\delta ^{15}N$ values of sheep and goats. The $\delta ^{15}N$ values of stone pine are greater than those of the barley, indicating that the cultivation took place in locations far away from coast/salt marsh which is evident from the absence of space near the settlement in Iron Age. In the case of wild fauna, the $\delta ^{13}C$ and $\delta ^{34}S$ values of rabbits indicate foraging at ground level in closed settings, while those of red deer indicate grazing at higher levels in more coastal open areas. The $\delta ^{15}N$ values of rabbits indicate two different groups, with one group foraging in salt marshes and the other from a more terrestrial setting. Ovicaprid $\delta ^{13}C$ and $\delta ^{34}S$ values indicate foraging in open pastures in proximity to the estuary. Comparing the $\delta ^{15}N$ ratios of sheep and goats show that the former was fed agricultural produce/by-products, which the latter lacked. The cattle also foraged in open coastal areas and had cultivated components in its diet similar to the sheep. Pigs exhibit $\delta ^{13}C$ and $\delta ^{15}N$ values consistent with an omnivorous diet. In the case of the seabirds, both grey plover and kittiwake exhibit $\delta ^{13}C$, $\delta ^{15}N$, and $\delta ^{34}S$ values consistent with their diet. Chicken has $\delta ^{13}C$ and $\delta ^{15}N$ values are reflective of its domesticated status with a mixture of C~3~ plants, insects, and food scraps (inclusive of fish, molluscs, and crustaceans). The $\delta ^{15}N$ values of the fauna are not a trophic level above the plants, which can be because of salt stress. The $\delta ^{34}S$ values of overall fauna also support the salt stress hypothesis, indicative of a local origin. Goats, pigs, and chickens have a low range of $\delta ^{34}S$ values due to penning in domestic spaces. The $\delta ^{34}S$ values of cattle and sheep have a more extensive range of values which could be due to wider foraging range or some individuals being of non-local origin.
 
-This study is the first of its kind on Phoenician-Punic fauna from the Iberian Peninsula. The study has given a preliminary insight into the cultivation and husbandry practices in Castro Marim during the Iron Age. The stable isotope data has also raised the possibility of transhumance at Castro Marim, which can only be answered in future studies.
+This study is the first of its kind on Phoenician-Punic fauna from the Iberian Peninsula. The study has given a preliminary insight into the cultivation and husbandry practices in Castro Marim during the Iron Age.
 
 # Acknowledgements
 

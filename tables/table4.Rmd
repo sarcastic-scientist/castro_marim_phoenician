@@ -1,0 +1,55 @@
+---
+title: "castrotable4"
+author: "Roshan Paladugu"
+date: "2024-04-16"
+output:
+  bookdown::html_document2
+---
+
+
+```{r global_options, include=FALSE, dev=c('png', 'pdf', 'svg', 'tiff')}
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(here)
+library(ggsci)
+library(kableExtra)
+library(knitr)
+library(patchwork)
+library(ggbeeswarm)
+library(stringr)
+library(grid)
+
+options(kableExtra.auto_format = FALSE)
+options(knitr.graphics.rel_path = FALSE)
+opts_chunk$set(echo=FALSE, message = FALSE, error = FALSE, warning = FALSE)
+
+
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE)
+
+
+df_iso_fauna_summ <- here::here("./data/castro_fauna_iso_summ.csv") |>
+  readr::read_csv(col_names = TRUE)
+
+```
+
+
+```{r table5, echo=FALSE, results='asis'}
+options(knitr.kable.NA = "--")
+
+
+df_iso_fauna_summ |>
+  select(Species,n,meandC,stddevdC,meandN,stddevdN,meandS,stddevdS) |>
+  kable(caption = "Summary of mean δ^13^C, δ^15^N, and δ^34^S values, by species.", digits = 2, booktabs = T, longtable = T, align = "ccccccccc", format = "html", col.names=c("Species","n","(x̄)","(σ)","(x̄)","(σ)","(x̄)","(σ)")) %>%
+  kable_styling(full_width = T, font_size = 10) |>
+  add_header_above(c(" " = 2, "δ^13^C (‰)" = 2, "δ^15^N (‰)" = 2, "δ^34^S (‰)" = 2))
+  
+```
+
+
+
+

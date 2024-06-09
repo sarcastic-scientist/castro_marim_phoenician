@@ -1,0 +1,67 @@
+---
+title: "castrotable1"
+author: "Roshan Paladugu"
+date: "2024-04-16"
+output:
+  bookdown::html_document2
+---
+
+
+```{r global_options, include=FALSE, dev=c('png', 'pdf', 'svg', 'tiff')}
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(here)
+library(ggsci)
+library(kableExtra)
+library(knitr)
+library(patchwork)
+library(ggbeeswarm)
+library(stringr)
+library(grid)
+
+options(kableExtra.auto_format = FALSE)
+options(knitr.graphics.rel_path = FALSE)
+opts_chunk$set(echo=FALSE, message = FALSE, error = FALSE, warning = FALSE)
+
+
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE)
+
+df_iso_total <- here::here("./data/castro_iso_total.csv") |>
+  read_csv(col_names = TRUE)
+
+df_iso_fauna_summ <- here::here("./data/castro_fauna_iso_summ.csv") |>
+  readr::read_csv(col_names = TRUE)
+
+df_iso_fauna <- here::here("./data/castro_iso_fauna.csv") |>
+  readr::read_csv(col_names = TRUE)
+
+df_counts_bota <- here::here("./data/castro_counts_bota.csv") |>
+  readr::read_csv(col_names = TRUE)
+
+df_iso_hord <- here::here("./data/castro_iso_bota.csv") |>
+  readr::read_csv(col_names = TRUE) |>
+  mutate(DC = (-6.5-dC_corr) / (1+(dC_corr/1000)))
+
+df_iso_bota <- here::here("./data/castro_iso_bota.csv") |>
+  readr::read_csv(col_names = TRUE) |>
+  mutate(DC = (-6.5-dC_corr) / (1+(dC_corr/1000))) |>
+  mutate(Species2=str_replace_all(Species,"var.", "{\\\\normalfont var.}")) |>
+  mutate(Species2=str_replace_all(Species2,"subsp.", "{\\\\normalfont subsp.}"))
+
+```
+
+```{r table2, echo=FALSE, results='asis'}
+options(knitr.kable.NA = "--")
+
+df_counts_bota %>%
+  select(Taxa, Quantity, Phase) %>%
+  kable(caption = "Recovered plant remains from archaeological sediments.", align="lcc", booktabs = T,, format = "html", col.names=c("Species", "Quantity", "Phase")) %>%
+  kable_styling(full_width = T, font_size = 10) %>%
+  column_spec(1,italic = TRUE)
+  
+```

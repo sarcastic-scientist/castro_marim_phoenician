@@ -1,0 +1,79 @@
+---
+title: "castrotable2"
+author: "Roshan Paladugu"
+date: "2024-04-16"
+output:
+  bookdown::html_document2
+---
+
+
+
+```{r global_options, include=FALSE, dev=c('png', 'pdf', 'svg', 'tiff')}
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(here)
+library(ggsci)
+library(kableExtra)
+library(knitr)
+library(patchwork)
+library(ggbeeswarm)
+library(stringr)
+library(grid)
+
+options(kableExtra.auto_format = FALSE)
+options(knitr.graphics.rel_path = FALSE)
+opts_chunk$set(echo=FALSE, message = FALSE, error = FALSE, warning = FALSE)
+
+
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE)
+
+df_iso_bota <- here::here("./data/castro_iso_bota.csv") |>
+  readr::read_csv(col_names = TRUE) |>
+  mutate(DC = (-6.5-dC_corr) / (1+(dC_corr/1000))) |>
+  mutate(Species2=str_replace_all(Species,"var.", "{\\\\normalfont var.}")) |>
+  mutate(Species2=str_replace_all(Species2,"subsp.", "{\\\\normalfont subsp.}"))
+
+```
+
+
+(ref:isobot-caption) δ^13^C and δ^15^N values of the charred plant macro-remains.
+
+(ref:isobot-footnote) δ^13^C and δ^15^N values corrected for charring effect.
+
+
+```{r table3, echo=FALSE, results='asis'}
+options(knitr.kable.NA = "--")
+
+df_iso_bota |>
+  select(ID, Species2, percentC, percentN, dC, dN, dC_corr, dN_corr, DC) |>
+  kable(
+    caption = "(ref:isobot-caption)",
+    align = "ccccccccc",
+    booktabs = T,
+    digits = 1,
+    format = "html",
+    col.names = c(
+      "Sample ID",
+      "Species",
+      "%C",
+      "%N",
+      "δ^13^C (‰)",
+      "δ^15^N (‰)",
+      "δ^13^C~cr~ (‰)",
+      "δ^15^N~cr~ (‰)",
+      "Δ^13^C (‰)"
+    )
+  ) %>%
+  kable_styling(
+    font_size = 10,
+    full_width = TRUE
+  ) %>%
+  column_spec(2, italic = TRUE) |>
+  footnote(symbol = c("(ref:isobot-footnote)"))
+
+```

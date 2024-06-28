@@ -52,6 +52,8 @@ always_allow_html: true
 output:
   bookdown::word_document2:
     fig_caption: yes
+    number_sections: true
+    global_numbering: true
     pandoc_args:
       - --csl=elsevier-harvard.csl
       - --filter=pandoc-crossref
@@ -268,7 +270,7 @@ knitr::include_graphics(
 
 No botanical remains could be recovered from the soil samples of phases I -- IV. The bulk of the recovered remains are from phase V representing the most mature chronological period of the occupation. Barley (*Hordeum vulgare*) is the dominant taxon in the botanical record (Table 1). *Hordeum vulgare* var. *nudum* and *Hordeum vulgare* subsp. *vulgare* (Fig. \@ref(fig:castro-archbot-assemblage) **(f)** and **(g)**, respectively) are the two cultivars that constitute the barley fraction with equal abundance. Wheat (*Triticum aestivum/durum*) is the second most abundant taxon after barley. Large-scale cereal cultivation has been observed in sites located in river valleys near the South Iberian sea coast (including, Castillo de Doña Blanca in Guadalquivir Valley and El Villar in Guadalhorce Valley) [@semmler90; @semmler92], two sites which are located in similar geographical settings to Castro Marim). Cereal cultivation seems to be a significant activity, implying that cereals were the principal source of carbohydrates for both humans and animals. The greater presence of barley compared to wheat can be a strategy of 'minimum returns on investment' against dry climatic conditions exploiting the fact that barley has a higher tolerance to drier conditions than wheat [@riehl09]. Two taxa of pulses have been noted, namely, peas (*Pisum sativum*) and broad bean (*Vicia faba*) (Fig. \@ref(fig:castro-archbot-assemblage) **(d)** and **(i)** respectively). Pulses serve as a rich source of proteins and act as an alternative to animal-sourced protein for humans. The combined cultivation of pulses with cereals helps to maintain adequate soil nitrogen levels, leading to sustainable and diverse production. The presence of black mustard (*Brassica nigra*) (Fig. \@ref(fig:castro-archbot-assemblage) **(a)**) has been recorded. Black mustard is a common species along the rocky Mediterranean coasts and has long found its place as a culinary taste enhancer [@dixon06]. Like many members of *Brassica*, black mustard was also used as a source of oil [@pena-chocarro_etal19].
 
-A fragment of a charred fruit has been attributed to *Apium* taxon, suspected to be a seed of celery (*Apium graveolens*) (Fig. \@ref(fig:castro-archbot-assemblage) **(b)**). This attribution is done due to the presence of five slender longitudinal ridges on the surface of the fruit [@wilson16].This species is native to the coastal Mediterranean region, considered to be its center of origin. The recorded use of celery as a vegetable in Europe is only from the 1600s, originating in Italy, gradually spreading westwards in the subsequent centuries [@tobyn_etal11]. The consumption of celery as a vegetable started in the Mediterranean region only around the 16^th^ century CE. In the Phoenician - Punic period, it could have been either cultivated or foraged as a medicinal herb rather than a food plant [@sturtevant86]. Shells of pine nuts (*Pinus* sp.) (Fig. \@ref(fig:castro-archbot-assemblage) **(h)**) are suspected to be from the species *Pinus pinea*, commonly known as Mediterranean stone pine. Pine nut consumption has been documented in Portugal since the Palaeolithic period [@gale_carruthers00]. The stone pine nuts are high in protein and fat with low carbohydrates [@haws04]. The nuts are a valuable source of nutrition and could have been stored during low cultivated food production periods.
+A fragment of a charred fruit has been attributed to *Apium* taxon, suspected to be a seed of celery (*Apium graveolens*) (Fig. \@ref(fig:castro-archbot-assemblage) **(b)**). This attribution is done due to the presence of five slender longitudinal ridges on the surface of the fruit [@wilson16]. This species is native to the coastal Mediterranean region, considered to be its center of origin. The recorded use of celery as a vegetable in Europe is only from the 1600s, originating in Italy, gradually spreading westwards in the subsequent centuries [@tobyn_etal11]. The consumption of celery as a vegetable started in the Mediterranean region only around the 16^th^ century CE. In the Phoenician - Punic period, it could have been either cultivated or foraged as a medicinal herb rather than a food plant [@sturtevant86]. Shells of pine nuts (*Pinus* sp.) (Fig. \@ref(fig:castro-archbot-assemblage) **(h)**) are suspected to be from the species *Pinus pinea*, commonly known as Mediterranean stone pine. Pine nut consumption has been documented in Portugal since the Palaeolithic period [@gale_carruthers00]. The stone pine nuts are high in protein and fat with low carbohydrates [@haws04]. The nuts are a valuable source of nutrition and could have been stored during low cultivated food production periods.
 
 
 ```{r iso-bot-hv, echo=FALSE, results='asis'}
@@ -568,17 +570,17 @@ dffinal_iso_summ <- df_iso_fauna %>%
     min_dS = min(dS, na.rm = TRUE),
     max_dS = max(dS, na.rm = TRUE))
 
-lbl <- c(expression(bold("Plants")), "Barley", "Stone Pine", expression(bold("Birds")), "Grey Plover", "Kittiwake", "Partridge", "Chicken", expression(bold("Domesticated Mammals")), "Pig", "Cattle", "Goat","Sheep", expression(bold("Wild Mammals")), "Rabbit", "Red Deer")
+lbl <- c("Barley", "Stone Pine", "Grey Plover", "Kittiwake", "Partridge", "Chicken", "Pig", "Cattle", "Goat","Sheep", "Rabbit", "Red Deer")
 
-cust_colo <- c('Plants'=NA, 'Barley'="#4749dc", 'Stone Pine'="#00344d", 'Birds'=NA, 'Grey Plover'="#25738b", 'Kittiwake'="#e30293", 'Partridge'="#b452a2", 'Chicken'="#5866ad",'Domesticated Mammals'=NA, 'Pig'="#4e052e",  'Cattle'="#071576", 'Goat'="#158a2c", 'Sheep'="#0b4512", 'Wild Mammals'=NA, 'Rabbit'="#637f4b", 'Red Deer'="#7d4400")
+cust_colo <- c('Barley'="#4749dc", 'Stone Pine'="#00344d",'Grey Plover'="#25738b", 'Kittiwake'="#e30293", 'Partridge'="#b452a2", 'Chicken'="#5866ad", 'Pig'="#4e052e",  'Cattle'="#071576", 'Goat'="#158a2c", 'Sheep'="#0b4512",'Rabbit'="#637f4b", 'Red Deer'="#7d4400")
 
-cust_shp <- c('Plants'=NA,'Barley'=17,'Stone Pine'=15,'Birds'=NA,'Grey Plover'=16,'Kittiwake'=17,'Partridge'=15,'Chicken'=16,'Domesticated Mammals'=NA,'Pig'=17,'Cattle'=15,'Goat'=16,'Sheep'=17,'Wild Mammals'=NA,'Rabbit'=16,'Red Deer'=17)
+cust_shp <- c('Barley'=17,'Stone Pine'=15,'Grey Plover'=16,'Kittiwake'=17,'Partridge'=15,'Chicken'=16,'Pig'=17,'Cattle'=15,'Goat'=16,'Sheep'=17,'Rabbit'=16,'Red Deer'=17)
 
 
 
 
 iso_carbnitro_mean_plot <- ggplot(df_iso_total,aes(x = dC,y = dN,shape = Common_Name,colour = Common_Name)) +
-  geom_point(size = 3, alpha = 0.3) + labs(x = expression(paste(delta ^ {13}, "C (\u2030 vs. VPDB)")),y = expression(paste(delta ^ {15}, "N (\u2030 vs. Air)"))) + scale_shape_manual(label = lbl, values = cust_shp) + scale_color_manual(label =lbl, values = cust_colo) + scale_y_continuous(breaks = seq(2.5, 16, 1)) + scale_x_continuous(limits =c(-27, -13), breaks = seq(-27, -12, 1)) + annotate("text",x = -25,y = 15.5,colour = "gray44" ,size = 3,label = "Pure C3 feeders") + annotate("text",x = -18.5,y = 15.5,colour = "gray44" , size = 3,label = "Addition of C4 plants") + theme + geom_vline(xintercept = -21,color = 'gray62',linetype = "dotted",size = 1) + geom_point(data = df_iso_fauna_summ, size = 3, aes(x = meandC, y = meandN)) + geom_errorbar(data = df_iso_fauna_summ, aes(x = meandC,y = meandN,ymin = meandN - stddevdN,ymax = meandN + stddevdN),width = .1,show.legend = F) + geom_errorbarh(data = df_iso_fauna_summ,aes(x = meandC,y = meandN,xmin = meandC - stddevdC,xmax = meandC + stddevdC),height = .1,show.legend = F
+  geom_point(size = 3, alpha = 0.3) + labs(x = expression(paste(delta ^ {13}, "C (\u2030 vs. VPDB)")),y = expression(paste(delta ^ {15}, "N (\u2030 vs. Air)"))) + scale_shape_manual(values = cust_shp) + scale_color_manual(values = cust_colo) + scale_y_continuous(breaks = seq(2.5, 16, 1)) + scale_x_continuous(limits =c(-27, -13), breaks = seq(-27, -12, 1)) + annotate("text",x = -25,y = 15.5,colour = "gray44" ,size = 3,label = "Pure C3 feeders") + annotate("text",x = -18.5,y = 15.5,colour = "gray44" , size = 3,label = "Addition of C4 plants") + theme + geom_vline(xintercept = -21,color = 'gray62',linetype = "dotted",size = 1) + geom_point(data = df_iso_fauna_summ, size = 3, aes(x = meandC, y = meandN)) + geom_errorbar(data = df_iso_fauna_summ, aes(x = meandC,y = meandN,ymin = meandN - stddevdN,ymax = meandN + stddevdN),width = .1,show.legend = F) + geom_errorbarh(data = df_iso_fauna_summ,aes(x = meandC,y = meandN,xmin = meandC - stddevdC,xmax = meandC + stddevdC),height = .1,show.legend = F
 ) + guides(col = guide_legend(ncol = 2, title = expression(bold('Plants and Fauna'))),shape = guide_legend(ncol = 2, expression(bold('Plants and Fauna'))))
 
 iso_carbnitro_mean_plot
@@ -653,7 +655,15 @@ This study is the first of its kind on Phoenician-Punic fauna from the Iberian P
 
 # Author Contributions
 
-R.P - Writing, Lab work.....
+**R.P** - Project conception, laboratory analyses, data analysis and visualization, and manuscript writing and editing
+**A.C** - Laboratory Analyses, data analysis, article editing, and supervision
+**G.J** - Data visualization
+**F.D.R** - Project conception, manuscript editing, and supervision
+**E.D.S** - Project conception, manuscript writing and editing
+**A.M.A** - Project conception, manuscript writing and editing, and supervision
+**A.F.M** - Laboratory analyses, data analysis and visualization, manuscript editing, and supervision
+**D.M** - Project conception, manuscript writing and editing, supervision, and funding
+**C.B.D** - Project conception, manuscript writing and editing, supervision, and funding
 
 # Funding
 
@@ -661,7 +671,7 @@ This project has received funding from the European Union's Horizon 2020 researc
 
 # Acknowledgements
 
-The ZooMS analysis was carried out by Samantha Presslee at BioArCh, University of York who gratefully acknowledges the use of the Ultraflex III MALDI-ToF/ToF instrument in the York Centre of Excellence in Mass Spectrometry. The centre was created thanks to a major capital investment through Science City York, supported by Yorkshire Forward with funds from the Northern Way Initiative, and subsequent support from EPSRC (EP/K039660/1; EP/M028127/1). The authors would like to thank Rui Parreira for providing access to the samples (Direção Regional de Cultura do Algarve, Faro).
+The ZooMS analysis was carried out by Samantha Presslee at BioArCh, University of York who gratefully acknowledges the use of the Ultraflex III MALDI-ToF/ToF instrument in the York Centre of Excellence in Mass Spectrometry. The centre was created thanks to a major capital investment through Science City York, supported by Yorkshire Forward with funds from the Northern Way Initiative, and subsequent support from EPSRC (EP/K039660/1; EP/M028127/1). The authors would like to thank Rui Parreira and Frederico Tátá Regala for providing access to the samples (Direção Regional de Cultura do Algarve, Faro).
 
 
 # Data Availability Statement

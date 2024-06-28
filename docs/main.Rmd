@@ -525,65 +525,15 @@ There is no significant difference in δ^15^N (t-statistic: `r hord_dN_ttest_sta
 
 (ref:fauna-carbnitro-iso) Plot showing mean δ^13^C and δ^15^N values (mean ± 1 SD range) of faunal bone collagen and botanical remains. The colour palette is produced with the Colorgorical web app [@gramazio_etal17].
 
-```{r fauna-carbnitro-iso-plot, dpi=600, echo=FALSE, dpi=600, fig.show="hold", fig.width=8, fig.height=6,crop = NULL, fig.cap= '(ref:fauna-carbnitro-iso)'}
-
-theme <-
-  theme(
-    panel.background = element_blank(),
-    legend.background = element_blank(),
-    legend.key.size = unit(0.45, 'cm'),
-    legend.box.background = element_rect(colour = "black"),
-    legend.position = c(0.8, 0.18),
-    legend.text = element_text(size = 6,hjust=0),
-    legend.title.align = 0.4,
-    legend.title = element_text(size=8),
-    legend.key = element_blank(),
-    text = element_text(),
-    axis.title.x = element_text(size = 8),
-    axis.title.y = element_text(size = 8),
-    panel.border = element_rect(fill = NA),
-    panel.grid.major = element_blank(),
-    panel.grid.minor = element_blank(),
-    strip.background = element_blank(),
-    axis.text.x = element_text(colour = "black"),
-    axis.text.y = element_text(colour = "black"),
-    axis.ticks = element_line(colour = "black"),
-    plot.margin = unit(c(1, 1, 1, 1), "line")
-  )
+```{r fauna-carbnitro-iso-plot, echo=FALSE, dpi=600, fig.show="hold", out.width='0.98\\textwidth', fig.height=8, fig.env='figure*', fig.cap= '(ref:fauna-carbnitro-iso)'}
 
 
-dffinal_iso_summ <- df_iso_fauna %>%
-  select(Species, Common_Name, dC, dN, dS) %>%
-  group_by(Common_Name) %>%
-  summarize(
-    n = n(),
-    mean_dC = mean(dC, na.rm = TRUE),
-    std.dev_dC = sd(dC, na.rm = TRUE),
-    mean_dN = mean(dN, na.rm = TRUE),
-    std.dev_dN = sd(dN, na.rm = TRUE),
-    mean_dS = mean(dS, na.rm = TRUE),
-    std.dev_dS = sd(dS, na.rm = TRUE),
-    min_dC = min(dC, na.rm = TRUE),
-    max_dC = max(dC, na.rm = TRUE),
-    min_dN = min(dN, na.rm = TRUE),
-    max_dN = max(dN, na.rm = TRUE),
-    min_dS = min(dS, na.rm = TRUE),
-    max_dS = max(dS, na.rm = TRUE))
+knitr::include_graphics(
+  here::here('./images/fauna-carbnitro-iso-plot.jpg'),
+  auto_pdf = getOption("knitr.graphics.auto_pdf", FALSE),
+  error = getOption("knitr.graphics.error", TRUE)
+)
 
-lbl <- c("Barley", "Stone Pine", "Grey Plover", "Kittiwake", "Partridge", "Chicken", "Pig", "Cattle", "Goat","Sheep", "Rabbit", "Red Deer")
-
-cust_colo <- c('Barley'="#4749dc", 'Stone Pine'="#00344d",'Grey Plover'="#25738b", 'Kittiwake'="#e30293", 'Partridge'="#b452a2", 'Chicken'="#5866ad", 'Pig'="#4e052e",  'Cattle'="#071576", 'Goat'="#158a2c", 'Sheep'="#0b4512",'Rabbit'="#637f4b", 'Red Deer'="#7d4400")
-
-cust_shp <- c('Barley'=17,'Stone Pine'=15,'Grey Plover'=16,'Kittiwake'=17,'Partridge'=15,'Chicken'=16,'Pig'=17,'Cattle'=15,'Goat'=16,'Sheep'=17,'Rabbit'=16,'Red Deer'=17)
-
-
-
-
-iso_carbnitro_mean_plot <- ggplot(df_iso_total,aes(x = dC,y = dN,shape = Common_Name,colour = Common_Name)) +
-  geom_point(size = 3, alpha = 0.3) + labs(x = expression(paste(delta ^ {13}, "C (\u2030 vs. VPDB)")),y = expression(paste(delta ^ {15}, "N (\u2030 vs. Air)"))) + scale_shape_manual(values = cust_shp) + scale_color_manual(values = cust_colo) + scale_y_continuous(breaks = seq(2.5, 16, 1)) + scale_x_continuous(limits =c(-27, -13), breaks = seq(-27, -12, 1)) + annotate("text",x = -25,y = 15.5,colour = "gray44" ,size = 3,label = "Pure C3 feeders") + annotate("text",x = -18.5,y = 15.5,colour = "gray44" , size = 3,label = "Addition of C4 plants") + theme + geom_vline(xintercept = -21,color = 'gray62',linetype = "dotted",size = 1) + geom_point(data = df_iso_fauna_summ, size = 3, aes(x = meandC, y = meandN)) + geom_errorbar(data = df_iso_fauna_summ, aes(x = meandC,y = meandN,ymin = meandN - stddevdN,ymax = meandN + stddevdN),width = .1,show.legend = F) + geom_errorbarh(data = df_iso_fauna_summ,aes(x = meandC,y = meandN,xmin = meandC - stddevdC,xmax = meandC + stddevdC),height = .1,show.legend = F
-) + guides(col = guide_legend(ncol = 2, title = expression(bold('Plants and Fauna'))),shape = guide_legend(ncol = 2, expression(bold('Plants and Fauna'))))
-
-iso_carbnitro_mean_plot
 
 ```
 
@@ -655,15 +605,15 @@ This study is the first of its kind on Phoenician-Punic fauna from the Iberian P
 
 # Author Contributions
 
-**R.P** - Project conception, laboratory analyses, data analysis and visualization, and manuscript writing and editing
-**A.C** - Laboratory Analyses, data analysis, article editing, and supervision
-**G.J** - Data visualization
-**F.D.R** - Project conception, manuscript editing, and supervision
-**E.D.S** - Project conception, manuscript writing and editing
-**A.M.A** - Project conception, manuscript writing and editing, and supervision
-**A.F.M** - Laboratory analyses, data analysis and visualization, manuscript editing, and supervision
-**D.M** - Project conception, manuscript writing and editing, supervision, and funding
-**C.B.D** - Project conception, manuscript writing and editing, supervision, and funding
+**R.P** - Project conception, laboratory analyses, data analysis and visualization, and manuscript writing and editing;
+**A.C** - Laboratory Analyses, data analysis, article editing, and supervision;
+**G.J** - Data visualization;
+**F.D.R** - Project conception, manuscript editing, and supervision;
+**E.D.S** - Project conception, manuscript writing and editing;
+**A.M.A** - Project conception, manuscript writing and editing, and supervision;
+**A.F.M** - Laboratory analyses, data analysis and visualization, manuscript editing, and supervision;
+**D.M** - Project conception, manuscript writing and editing, supervision, and funding;
+**C.B.D** - Project conception, manuscript writing and editing, supervision, and funding;
 
 # Funding
 

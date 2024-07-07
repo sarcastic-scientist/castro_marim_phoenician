@@ -54,6 +54,6 @@ df_iso_fauna %>%
   row_spec(color.goat, bold = T, color = "black", background = "white") %>%
   row_spec(color.sheep, bold = T, color = "black", background = "white") %>%
   column_spec(2,italic = TRUE) %>%
-  footnote(general = "The ovicaprid samples which were identified as goats and sheep are in bold.")
+  footnote(general = "The ovicaprid samples which were identified as goats and sheep through ZooMS are in bold.")
   
 ```
